@@ -34,14 +34,17 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
     });
 
     let startBlock = fromBlock;
+    const stateKey = `indexing-chain-${chain}`;
     const state = await this.services.database.find({
       collection: EnvConfig.mongodb.collections.states,
       query: {
-        name: `indexing-blockchain-${chain}`,
+        name: stateKey,
       },
     });
     if (state) {
-      startBlock = state.blockNumber;
+      if (fromBlock < state.blockNumber) {
+        startBlock = state.blockNumber;
+      }
     }
 
     const web3 = await this.services.blockchain.getProvider(chain);
@@ -120,10 +123,22 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         operations: rawLogOperations,
       });
 
+      await this.services.database.update({
+        collection: EnvConfig.mongodb.collections.states,
+        keys: {
+          name: stateKey,
+        },
+        updates: {
+          name: stateKey,
+          blockNumber: toBlock,
+        },
+        upsert: true,
+      });
+
       const endExeTime = Math.floor(new Date().getTime() / 1000);
       const elapsed = endExeTime - startExeTime;
 
-      logger.info('indexed blockchain data', {
+      logger.info('got blockchain data', {
         service: this.name,
         chain: chain,
         fromBlock: startBlock,

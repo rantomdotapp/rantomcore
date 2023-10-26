@@ -1,4 +1,5 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
+import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
 
 export interface UniswapProtocolConfig extends ProtocolConfig {
   factories: Array<ContractConfig>;
@@ -17,6 +18,14 @@ export const Uniswapv2Configs: UniswapProtocolConfig = {
   protocol: 'uniswapv2',
   contracts: [Uniswapv2Contracts.factory],
   factories: [Uniswapv2Contracts.factory],
+  subgraphs: [
+    {
+      chain: 'ethereum',
+      protocol: 'uniswapv2',
+      version: 'univ2',
+      endpoint: PublicTheGraphEndpoints.uniswapv2,
+    },
+  ],
 };
 
 const Uniswapv3Contracts: { [key: string]: ContractConfig } = {
@@ -67,5 +76,37 @@ export const Uniswapv3Configs: UniswapProtocolConfig = {
     Uniswapv3Contracts.factoryBase,
     Uniswapv3Contracts.factoryOptimism,
     Uniswapv3Contracts.factoryPolygon,
+  ],
+  subgraphs: [
+    {
+      chain: 'ethereum',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3,
+    },
+    {
+      chain: 'arbitrum',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3Arbitrum,
+    },
+    {
+      chain: 'base',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3Base,
+    },
+    {
+      chain: 'optimism',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3Optimism,
+    },
+    {
+      chain: 'polygon',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3Polygon,
+    },
   ],
 };

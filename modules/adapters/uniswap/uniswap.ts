@@ -60,6 +60,18 @@ export default class UniswapAdapter extends Adapter {
     return false;
   }
 
+  /**
+   * @description parse a raw contract log entry to UniswapLiquidityPoolConstant
+   * every uniswap or fork protocol have a list of factory contracts where liquidity pool were created
+   * this function take a raw log entry (liquidity pool created event signature)
+   * and parse it into an UniswapLiquidityPoolConstant structure
+   * it supports Uniswap v2, Uniswap v3
+   *
+   * @param options includes a given chain name and raw log entry
+   * @param version it should be univ2 or univ3
+   *
+   * @return UniswapLiquidityPoolConstant on valid event, otherwise, return null
+   */
   protected async parseCreateLiquidityPoolEvent(
     options: HandleHookEventLogOptions,
     version: UniswapPoolVersion,
@@ -100,6 +112,12 @@ export default class UniswapAdapter extends Adapter {
     return null;
   }
 
+  /**
+   * @description handle a raw log event which is liquidity pool created event on factory contract
+   *
+   * @param options includes a chain name and raw log entry
+   * @param version should be univ2 or univ3
+   */
   protected async handleHookEventLogCreateLiquidityPool(
     options: HandleHookEventLogOptions,
     version: UniswapPoolVersion,

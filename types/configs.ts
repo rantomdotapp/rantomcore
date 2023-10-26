@@ -122,7 +122,21 @@ export interface ContractConfig {
   logFilters?: Array<ContractLogTopics>;
 }
 
+export type SubgraphVersion = 'univ2' | 'univ3';
+
+export interface SubgraphConfig {
+  chain: string;
+  version: SubgraphVersion;
+  protocol: string;
+  endpoint: string;
+}
+
 export interface ProtocolConfig {
   protocol: string;
   contracts: Array<ContractConfig>;
+
+  // some protocols are maintaining subgraph indexing
+  // because of that, we can use subgraph to indexing historical data
+  // on some protocols instead of reindexing historical data onchain
+  subgraphs?: Array<SubgraphConfig>;
 }

@@ -1,6 +1,7 @@
 import EnvConfig from '../../configs/envConfig';
 import { sleep } from '../../lib/helper';
 import BlockchainIndexing from '../../modules/indexing/blockchain';
+import SubgraphIndexing from '../../modules/indexing/subgraph';
 import { ContextServices, IBlockchainIndexing } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
@@ -16,13 +17,17 @@ export class IndexCommand extends BasicCommand {
     const services: ContextServices = await super.getServices();
     await super.preHook(services);
 
-    const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
-
     while (true) {
-      await indexing.run({
-        chain: argv.chain,
-        fromBlock: argv.fromBlock,
-      });
+      if (argv.subgraph) {
+        const indexing = new SubgraphIndexing(services);
+        await indexing.run();
+      } else {
+        const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
+        await indexing.run({
+          chain: argv.chain,
+          fromBlock: argv.fromBlock,
+        });
+      }
 
       if (argv.exit) {
         process.exit(0);
@@ -48,6 +53,11 @@ export class IndexCommand extends BasicCommand {
         type: 'boolean',
         default: false,
         describe: 'Do not run services as workers.',
+      },
+      subgraph: {
+        type: 'boolean',
+        default: false,
+        describe: 'Index historical data from subgraph endpoints.',
       },
       sleep: {
         type: 'number',

@@ -41,6 +41,7 @@ export default class UniswapLibs {
           params: [],
         }),
       ]);
+
       const token0 = await blockchain.getTokenInfo({
         chain: chain,
         address: token0Address,
@@ -49,6 +50,7 @@ export default class UniswapLibs {
         chain: chain,
         address: token1Address,
       });
+
       if (token0 && token1) {
         return {
           chain: chain,

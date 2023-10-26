@@ -93,8 +93,10 @@ export default class DatabaseService implements IDatabaseService {
   }
 
   public async bulkWrite(options: DatabaseBulkWriteOptions): Promise<void> {
-    const collection = await this.getCollection(options.collection);
-    await collection.bulkWrite(options.operations);
+    if (options.operations.length > 0) {
+      const collection = await this.getCollection(options.collection);
+      await collection.bulkWrite(options.operations);
+    }
   }
 
   public async find(options: DatabaseQueryOptions): Promise<any> {
