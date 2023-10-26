@@ -1,7 +1,7 @@
 {
   "name": "@rantomdotapp/rantomcore",
   "version": "1.0.0",
-  "description": "Blockchain data explorer and parser for human",
+  "description": "Opensource blockchain data explorer and analytic for human",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./build && tsc",
