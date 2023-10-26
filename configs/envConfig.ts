@@ -6,18 +6,20 @@ import { NativeTokens } from './constants/nativeTokens';
 // global env and configurations
 dotenv.config();
 
-const MongodbPrefix = 'rantomcore';
+const MongodbPrefix = 'rantom';
 
 const envConfig: EnvConfig = {
   mongodb: {
     databaseName: String(process.env.RANTOM_MONGODB_NAME),
     connectionUri: String(process.env.RANTOM_MONGODB_URI),
     collections: {
+      //
       states: `${MongodbPrefix}.states`,
       caching: `${MongodbPrefix}.caching`,
-      apilogs: `${MongodbPrefix}.apilogs`,
-      rawlogs: `${MongodbPrefix}.rawlogs`,
-      tokens: `${MongodbPrefix}.tokens`,
+
+      rawlogs: `${MongodbPrefix}.core.rawlogs`,
+      tokens: `${MongodbPrefix}.core.tokens`,
+      liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
     },
   },
   sentry: {

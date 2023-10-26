@@ -22,8 +22,7 @@
     "modules/**/*.ts",
     "services/**/*.ts",
     "types/**/*.ts",
-    "tasks/**/*.ts",
-    "tests/**/*.ts"
+    "tasks/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

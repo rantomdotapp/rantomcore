@@ -16,3 +16,9 @@ export const TokenList: {
   optimism: TokenListOptimism,
   polygon: TokenListPolygon,
 };
+
+export const DefaultQueryLogsBlockRange = 100;
+
+export const DefaultBlockNumberIndexingFrom: { [key: string]: number } = {
+  ethereum: 18426781,
+};

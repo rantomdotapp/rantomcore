@@ -17,10 +17,10 @@ const TokenErc20: Array<any> = [
 const service: IBlockchainService = new BlockchainService(null);
 
 describe('blockchain service', async function () {
-  describe('getTokenErc20Info', async function () {
+  describe('getTokenInfo', async function () {
     TokenErc20.map((item: any) =>
       it(`should get token ${item.chain}:${item.symbol} info correctly`, async function () {
-        const token = await service.getTokenErc20Info({
+        const token = await service.getTokenInfo({
           chain: item.chain,
           address: item.address,
           onchain: true,

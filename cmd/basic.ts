@@ -1,4 +1,4 @@
-import envConfig from '../configs/envConfig';
+import BlockchainService from '../services/blockchains/blockchain';
 import DatabaseService from '../services/database/database';
 import { ContextServices } from '../types/namespaces';
 
@@ -10,14 +10,12 @@ export class BasicCommand {
 
   public async getServices(): Promise<ContextServices> {
     const database = new DatabaseService();
+    const blockchain = new BlockchainService(database);
 
-    const services: ContextServices = {
+    return {
       database: database,
+      blockchain: blockchain,
     };
-
-    await services.database.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
-
-    return services;
   }
 
   public async execute(argv: any) {}

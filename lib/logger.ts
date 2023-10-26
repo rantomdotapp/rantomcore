@@ -11,9 +11,9 @@ const customFormat = winston.format.printf((entry: any) => {
 
   const service = entry.service ? entry.service : 'unknown';
 
-  return `${entry.timestamp} ${('[' + service + ']').padEnd(16)} ${entry.level.padEnd(5)}: ${entry.message.padEnd(
-    60,
-  )} ${propsLine.length > 0 ? propsLine.slice(0, -1) : ''}`;
+  return `${entry.timestamp} ${entry.level.padEnd(5)}: ${('[' + service + ']').padEnd(24)} ${entry.message}, ${
+    propsLine.length > 0 ? propsLine.slice(0, -1) : ''
+  }`;
 });
 
 const logger = winston.createLogger({

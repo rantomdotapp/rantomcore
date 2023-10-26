@@ -46,15 +46,15 @@ export interface EnvConfig {
       // make sure these data can be safety deleted without any issues on services
       caching: string;
 
-      // we serve some public api endpoints in this service
-      // we save all api request, response for analytics
-      apilogs: string;
-
       // we save all blockchain contract raw logs into this collection
       rawlogs: string;
 
       // we save all known tokens into this collections
       tokens: string;
+
+      // liquidity pools
+      // save all pool on DEXes like: Uniswap, Sushi, Curve ...
+      liquidityPools: string;
     };
   };
 
@@ -67,4 +67,58 @@ export interface EnvConfig {
   blockchains: {
     [key: string]: Blockchain;
   };
+}
+
+export interface EventMapping {
+  abi: Array<any>;
+}
+
+export interface ContractConfig {
+  chain: string;
+
+  // the protocol id
+  protocol: string;
+
+  // the factory contract address
+  address: string;
+
+  // the block number when contract was deployed
+  birthBlock: number;
+}
+
+export interface ContractLogTopics {
+  topic0: string;
+
+  // matching
+  topic1?: string;
+  topic2?: string;
+  topic3?: string;
+
+  // consider a log with these four topics
+  // '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
+  // '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9',
+  // '0x000000000000000000000000926c777c091a5a070dc24ac94ff498b5a556f92a',
+  // '0x000000000000000000000000926c777c091a5a070dc24ac94ff498b5a556f92a',
+
+  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
+  // => match
+
+  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
+  // topic1 = '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9'
+  // => match
+
+  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
+  // topic2 = '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9'
+  // => doesn't match
+}
+
+export interface ContractLogConfig {
+  chain: string;
+  address: string;
+  filters: Array<ContractLogTopics>;
+}
+
+export interface ProtocolConfig {
+  protocol: string;
+  contracts: Array<ContractConfig>;
 }

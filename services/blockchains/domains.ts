@@ -14,7 +14,7 @@ export interface ContractCall {
   blockNumber?: string;
 }
 
-export interface GetTokenErc20Options {
+export interface GetTokenOptions {
   chain: string;
   address: string;
 
@@ -29,8 +29,11 @@ export interface IBlockchainService {
   // we use web3js version 4.0 as EVM blockchain sdk
   providers: { [key: string]: Web3 };
 
-  // get ERC20 token info
-  getTokenErc20Info: (options: GetTokenErc20Options) => Promise<Token>;
+  // get provider sdk
+  getProvider: (chain: string) => Web3;
+
+  // get token info
+  getTokenInfo: (options: GetTokenOptions) => Promise<Token | null>;
 
   // query single
   singlecall: (call: ContractCall) => Promise<any>;
