@@ -60,6 +60,12 @@ const envConfig: EnvConfig = {
       nativeToken: NativeTokens.polygon,
       nodeRpc: String(process.env.RANTOM_POLYGON_NODE),
     },
+    bnbchain: {
+      name: 'bnbchain',
+      family: 'evm',
+      nativeToken: NativeTokens.bnbchain,
+      nodeRpc: String(process.env.RANTOM_BNBCHAIN_NODE),
+    },
   },
 };
 

@@ -2,7 +2,6 @@ import cors from 'cors';
 import express from 'express';
 import path from 'path';
 
-import envConfig from '../../configs/envConfig';
 import logger from '../../lib/logger';
 import { ContextServices } from '../../types/namespaces';
 import getRouter from '../api/api';
@@ -19,7 +18,7 @@ export class ServeCommand extends BasicCommand {
   public async execute(argv: any) {
     // connect database
     const services: ContextServices = await super.getServices();
-    await services.database.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
+    await super.preHook(services);
 
     const router = getRouter(services);
 

@@ -3,6 +3,8 @@
 // we only save whitelisted log signatures (topic0) and addresses in this configs
 import { ContractConfig } from '../types/configs';
 
+// this config will be used only one time
+// by manager to write these config into database
 export const ContractLogConfigs: Array<ContractConfig> = [
   // aavev2 lending pool
   {

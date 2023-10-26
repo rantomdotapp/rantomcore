@@ -18,7 +18,3 @@ export const TokenList: {
 };
 
 export const DefaultQueryLogsBlockRange = 100;
-
-export const DefaultBlockNumberIndexingFrom: { [key: string]: number } = {
-  ethereum: 18426781,
-};

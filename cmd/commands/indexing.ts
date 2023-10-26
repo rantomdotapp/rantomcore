@@ -1,5 +1,3 @@
-import { DefaultBlockNumberIndexingFrom } from '../../configs';
-import envConfig from '../../configs/envConfig';
 import EnvConfig from '../../configs/envConfig';
 import { sleep } from '../../lib/helper';
 import BlockchainIndexing from '../../modules/indexing/blockchain';
@@ -16,20 +14,14 @@ export class IndexCommand extends BasicCommand {
 
   public async execute(argv: any) {
     const services: ContextServices = await super.getServices();
+    await super.preHook(services);
 
     const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
-
-    // connect database
-    await services.database.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
 
     while (true) {
       await indexing.run({
         chain: argv.chain,
-        fromBlock: argv.fromBlock
-          ? argv.fromBlock
-          : DefaultBlockNumberIndexingFrom[argv.chain]
-          ? DefaultBlockNumberIndexingFrom[argv.chain]
-          : 0,
+        fromBlock: argv.fromBlock,
       });
 
       if (argv.exit) {

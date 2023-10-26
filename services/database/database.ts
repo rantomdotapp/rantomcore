@@ -80,6 +80,7 @@ export default class DatabaseService implements IDatabaseService {
 
     // for write documents
     rawlogsCollection.createIndex({ chain: 1, address: 1, transactionHash: 1, logIndex: 1 }, { background: true });
+    rawlogsCollection.createIndex({ chain: 1, address: 1, blockNumber: 1 }, { background: true });
 
     // for write documents
     tokensCollection.createIndex({ chain: 1, address: 1 }, { background: true });

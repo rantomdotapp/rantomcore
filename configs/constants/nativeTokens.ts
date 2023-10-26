@@ -25,4 +25,8 @@ export const NativeTokens: { [key: string]: NativeToken } = {
     symbol: 'MATIC',
     decimals: 18,
   },
+  bnbchain: {
+    symbol: 'BNB',
+    decimals: 18,
+  },
 };

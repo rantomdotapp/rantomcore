@@ -47,6 +47,11 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
     const web3 = await this.services.blockchain.getProvider(chain);
     const latestBlock = Number(await web3.eth.getBlockNumber());
 
+    if (startBlock === 0) {
+      // sync from latest 1000 blocks
+      startBlock = latestBlock - 1000;
+    }
+
     logger.info('start index blockchain data', {
       service: this.name,
       chain: chain,
