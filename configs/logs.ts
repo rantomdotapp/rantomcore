@@ -1,14 +1,15 @@
 // what is logs configs will be used for?
 // when index blockchain raw logs
 // we only save whitelisted log signatures (topic0) and addresses in this configs
-import { ContractLogConfig } from '../types/configs';
+import { ContractConfig } from '../types/configs';
 
-export const ContractLogConfigs: Array<ContractLogConfig> = [
+export const ContractLogConfigs: Array<ContractConfig> = [
   // aavev2 lending pool
   {
     chain: 'ethereum',
+    protocol: 'aavev2',
     address: '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9',
-    filters: [
+    logFilters: [
       {
         topic0: '0xde6857219544bb5b7746f48ed30be6386fefc61b2f864cacf559893bf50fd951', // Deposit
       },
@@ -33,8 +34,9 @@ export const ContractLogConfigs: Array<ContractLogConfig> = [
   // aave v3 lending pool
   {
     chain: 'ethereum',
+    protocol: 'aavev3',
     address: '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2',
-    filters: [
+    logFilters: [
       {
         topic0: '0x2b627736bca15cd5381dcf80b0bf11fd197d01a037c52b927a881a10fb73ba61', // Supply
       },

@@ -52,10 +52,17 @@ export interface EnvConfig {
       // we save all known tokens into this collections
       tokens: string;
 
+      // save all contract configs
+      contracts: string;
+
       // liquidity pools
       // save all pool on DEXes like: Uniswap, Sushi, Curve ...
       liquidityPools: string;
     };
+  };
+
+  system: {
+    managerKey: string;
   };
 
   // some sentry config for monitoring purposes
@@ -71,19 +78,6 @@ export interface EnvConfig {
 
 export interface EventMapping {
   abi: Array<any>;
-}
-
-export interface ContractConfig {
-  chain: string;
-
-  // the protocol id
-  protocol: string;
-
-  // the factory contract address
-  address: string;
-
-  // the block number when contract was deployed
-  birthBlock: number;
 }
 
 export interface ContractLogTopics {
@@ -112,10 +106,20 @@ export interface ContractLogTopics {
   // => doesn't match
 }
 
-export interface ContractLogConfig {
+export interface ContractConfig {
   chain: string;
+
+  // the protocol id
+  protocol: string;
+
+  // the factory contract address
   address: string;
-  filters: Array<ContractLogTopics>;
+
+  // the block number when contract was deployed
+  birthBlock?: number;
+
+  // used to filter logs
+  logFilters?: Array<ContractLogTopics>;
 }
 
 export interface ProtocolConfig {

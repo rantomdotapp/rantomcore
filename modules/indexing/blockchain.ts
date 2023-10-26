@@ -1,9 +1,9 @@
 import { DefaultQueryLogsBlockRange } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
-import { ContractLogConfigs } from '../../configs/logs';
 import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { utilLogMatchFilter } from '../../lib/utils';
+import { ContractConfig } from '../../types/configs';
 import { ContextServices, IAdapter, IBlockchainIndexing } from '../../types/namespaces';
 import { BlockchainIndexingRunOptions } from '../../types/options';
 import { getAdapters } from '../adapters';
@@ -12,6 +12,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
   public readonly name: string = 'indexing.blockchain';
   public readonly services: ContextServices;
 
+  protected readonly contracts: Array<ContractConfig> = [];
   protected readonly adapters: { [key: string]: IAdapter } = {};
 
   constructor(services: ContextServices) {
@@ -26,6 +27,11 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
     if (!EnvConfig.blockchains[chain]) {
       return;
     }
+
+    // get list of contract configs
+    const contractConfigs: Array<ContractConfig> = await this.services.manager.getContractConfigs({
+      chain,
+    });
 
     let startBlock = fromBlock;
     const state = await this.services.database.find({
@@ -46,6 +52,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       chain: chain,
       fromBlock: startBlock,
       toBlock: latestBlock,
+      contracts: contractConfigs.length,
     });
 
     while (startBlock <= latestBlock) {
@@ -68,32 +75,35 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
           });
         }
 
-        for (const contract of ContractLogConfigs) {
+        for (const contract of contractConfigs) {
           if (contract.chain === chain && compareAddress(contract.address, log.address)) {
-            for (const filter of contract.filters) {
-              if (utilLogMatchFilter(log, filter)) {
-                rawLogOperations.push({
-                  updateOne: {
-                    filter: {
-                      chain: chain,
-                      address: normalizeAddress(log.address),
-                      transactionHash: log.transactionHash,
-                      logIndex: Number(log.logIndex),
-                    },
-                    update: {
-                      $set: {
+            if (contract.logFilters) {
+              for (const filter of contract.logFilters) {
+                if (utilLogMatchFilter(log, filter)) {
+                  rawLogOperations.push({
+                    updateOne: {
+                      filter: {
                         chain: chain,
-                        blockNumber: Number(log.blockNumber),
                         address: normalizeAddress(log.address),
                         transactionHash: log.transactionHash,
                         logIndex: Number(log.logIndex),
-                        topics: log.topics,
-                        data: log.data,
                       },
+                      update: {
+                        $set: {
+                          chain: chain,
+                          protocol: contract.protocol,
+                          blockNumber: Number(log.blockNumber),
+                          address: normalizeAddress(log.address),
+                          transactionHash: log.transactionHash,
+                          logIndex: Number(log.logIndex),
+                          topics: log.topics,
+                          data: log.data,
+                        },
+                      },
+                      upsert: true,
                     },
-                    upsert: true,
-                  },
-                });
+                  });
+                }
               }
             }
           }

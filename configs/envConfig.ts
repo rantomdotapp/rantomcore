@@ -19,11 +19,15 @@ const envConfig: EnvConfig = {
 
       rawlogs: `${MongodbPrefix}.core.rawlogs`,
       tokens: `${MongodbPrefix}.core.tokens`,
+      contracts: `${MongodbPrefix}.core.contracts`,
       liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
     },
   },
   sentry: {
     dns: String(process.env.RANTOM_SENTRY_DNS),
+  },
+  system: {
+    managerKey: String(process.env.RANTOM_MANAGER_KEY),
   },
   blockchains: {
     ethereum: {

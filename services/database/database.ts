@@ -72,6 +72,7 @@ export default class DatabaseService implements IDatabaseService {
     const cachingCollection = await this.getCollection(envConfig.mongodb.collections.caching);
     const rawlogsCollection = await this.getCollection(envConfig.mongodb.collections.rawlogs);
     const tokensCollection = await this.getCollection(envConfig.mongodb.collections.tokens);
+    const contractsCollection = await this.getCollection(envConfig.mongodb.collections.contracts);
     const liquidityPoolsCollection = await this.getCollection(envConfig.mongodb.collections.liquidityPools);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
@@ -82,6 +83,9 @@ export default class DatabaseService implements IDatabaseService {
 
     // for write documents
     tokensCollection.createIndex({ chain: 1, address: 1 }, { background: true });
+
+    // for write documents
+    contractsCollection.createIndex({ chain: 1, address: 1 }, { background: true });
 
     // for write
     liquidityPoolsCollection.createIndex({ chain: 1, address: 1 }, { background: true });

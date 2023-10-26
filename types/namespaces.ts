@@ -1,11 +1,13 @@
 import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
+import { IManagerService } from '../services/manager/domain';
 import { ProtocolConfig } from './configs';
 import { BlockchainIndexingRunOptions, HandleHookEventLogOptions } from './options';
 
 export interface ContextServices {
   database: IDatabaseService;
   blockchain: IBlockchainService;
+  manager: IManagerService;
 }
 
 export interface IModule {
