@@ -34,20 +34,8 @@
     "address": "0x8ee73c484a26e0a5df2ee2a4960b789967dd0415",
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xD533a949740bb3306d119CC777fa900bA034cd52/logo.png"
   },
-  "DAI": {
-    "chain": "base",
-    "symbol": "DAI",
-    "decimals": 18,
-    "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
-  },
-  "ETH": {
-    "chain": "base",
-    "symbol": "ETH",
-    "decimals": 18,
-    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
-  },
+  "DAI": { "chain": "base", "symbol": "DAI", "decimals": 18, "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb" },
+  "ETH": { "chain": "base", "symbol": "ETH", "decimals": 18, "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" },
   "FARM": {
     "chain": "base",
     "symbol": "FARM",
@@ -76,19 +64,12 @@
     "address": "0xa81a52b4dda010896cdd386c7fbdc5cdc835ba23",
     "logoURI": "https://assets.coingecko.com/coins/images/1877/thumb/TRAC.jpg?1635134367"
   },
-  "USDC": {
-    "chain": "base",
-    "symbol": "USDC",
-    "decimals": 6,
-    "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
-  },
+  "USDC": { "chain": "base", "symbol": "USDC", "decimals": 6, "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913" },
   "USDbC": {
     "chain": "base",
     "symbol": "USDbC",
     "decimals": 6,
-    "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
   },
   "WAMPL": {
     "chain": "base",
@@ -101,8 +82,7 @@
     "chain": "base",
     "symbol": "WETH",
     "decimals": 18,
-    "address": "0x4200000000000000000000000000000000000006",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x4200000000000000000000000000000000000006"
   },
   "YFI": {
     "chain": "base",

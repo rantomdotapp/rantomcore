@@ -33,31 +33,31 @@ const Uniswapv3Contracts: { [key: string]: ContractConfig } = {
     chain: 'ethereum',
     protocol: 'uniswapv3',
     address: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
-    birthBlock: 12369621,
   },
   factoryArbitrum: {
     chain: 'arbitrum',
     protocol: 'uniswapv3',
     address: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
-    birthBlock: 165,
   },
   factoryBase: {
     chain: 'base',
     protocol: 'uniswapv3',
     address: '0x33128a8fc17869897dce68ed026d694621f6fdfd',
-    birthBlock: 1371680,
   },
   factoryOptimism: {
     chain: 'optimism',
     protocol: 'uniswapv3',
     address: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
-    birthBlock: 102126,
   },
   factoryPolygon: {
     chain: 'polygon',
     protocol: 'uniswapv3',
     address: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
-    birthBlock: 22757547,
+  },
+  factoryBnbchain: {
+    chain: 'bnbchain',
+    protocol: 'uniswapv3',
+    address: '0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7',
   },
 };
 
@@ -69,6 +69,7 @@ export const Uniswapv3Configs: UniswapProtocolConfig = {
     Uniswapv3Contracts.factoryBase,
     Uniswapv3Contracts.factoryOptimism,
     Uniswapv3Contracts.factoryPolygon,
+    Uniswapv3Contracts.factoryBnbchain,
   ],
   factories: [
     Uniswapv3Contracts.factory,
@@ -76,6 +77,7 @@ export const Uniswapv3Configs: UniswapProtocolConfig = {
     Uniswapv3Contracts.factoryBase,
     Uniswapv3Contracts.factoryOptimism,
     Uniswapv3Contracts.factoryPolygon,
+    Uniswapv3Contracts.factoryBnbchain,
   ],
   subgraphs: [
     {
@@ -107,6 +109,12 @@ export const Uniswapv3Configs: UniswapProtocolConfig = {
       protocol: 'uniswapv3',
       version: 'univ3',
       endpoint: PublicTheGraphEndpoints.uniswapv3Polygon,
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'uniswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.uniswapv3BnbChain,
     },
   ],
 };

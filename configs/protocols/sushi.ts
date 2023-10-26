@@ -18,12 +18,34 @@ const SushiContracts: { [key: string]: ContractConfig } = {
     protocol: 'sushi',
     address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
   },
+  factoryBase: {
+    chain: 'base',
+    protocol: 'sushi',
+    address: '0x71524b4f93c58fcbf659783284e38825f0622859',
+  },
+  factoryBnbchain: {
+    chain: 'bnbchain',
+    protocol: 'sushi',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+  },
 };
 
 export const SushiConfigs: UniswapProtocolConfig = {
   protocol: 'sushi',
-  contracts: [SushiContracts.factory, SushiContracts.factoryArbitrum, SushiContracts.factoryPolygon],
-  factories: [SushiContracts.factory, SushiContracts.factoryArbitrum, SushiContracts.factoryPolygon],
+  contracts: [
+    SushiContracts.factory,
+    SushiContracts.factoryArbitrum,
+    SushiContracts.factoryBase,
+    SushiContracts.factoryPolygon,
+    SushiContracts.factoryBnbchain,
+  ],
+  factories: [
+    SushiContracts.factory,
+    SushiContracts.factoryArbitrum,
+    SushiContracts.factoryBase,
+    SushiContracts.factoryPolygon,
+    SushiContracts.factoryBnbchain,
+  ],
   subgraphs: [
     {
       chain: 'ethereum',
@@ -35,13 +57,19 @@ export const SushiConfigs: UniswapProtocolConfig = {
       chain: 'arbitrum',
       protocol: 'sushi',
       version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.sushi,
+      endpoint: PublicTheGraphEndpoints.sushiArbitrum,
     },
     {
       chain: 'polygon',
       protocol: 'sushi',
       version: 'univ2',
       endpoint: PublicTheGraphEndpoints.sushiPolygon,
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'sushi',
+      version: 'univ2',
+      endpoint: PublicTheGraphEndpoints.sushiBnbchain,
     },
   ],
 };
@@ -72,6 +100,11 @@ const Sushiv3Contracts: { [key: string]: ContractConfig } = {
     protocol: 'sushiv3',
     address: '0x9c6522117e2ed1fe5bdb72bb0ed5e3f2bde7dbe0',
   },
+  factoryBnbchain: {
+    chain: 'bnbchain',
+    protocol: 'sushiv3',
+    address: '0x126555dd55a39328f69400d6ae4f782bd4c34abb',
+  },
 };
 
 export const Sushiv3Configs: UniswapProtocolConfig = {
@@ -82,6 +115,7 @@ export const Sushiv3Configs: UniswapProtocolConfig = {
     Sushiv3Contracts.factoryBase,
     Sushiv3Contracts.factoryPolygon,
     Sushiv3Contracts.factoryOptimism,
+    Sushiv3Contracts.factoryBnbchain,
   ],
   factories: [
     Sushiv3Contracts.factory,
@@ -89,6 +123,7 @@ export const Sushiv3Configs: UniswapProtocolConfig = {
     Sushiv3Contracts.factoryBase,
     Sushiv3Contracts.factoryPolygon,
     Sushiv3Contracts.factoryOptimism,
+    Sushiv3Contracts.factoryBnbchain,
   ],
   subgraphs: [
     {
@@ -120,6 +155,12 @@ export const Sushiv3Configs: UniswapProtocolConfig = {
       protocol: 'sushiv3',
       version: 'univ3',
       endpoint: PublicTheGraphEndpoints.sushiv3Polygon,
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'sushiv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.sushiv3Bnbchain,
     },
   ],
 };

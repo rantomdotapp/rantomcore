@@ -7,4 +7,7 @@ export const TokenDefaultList: Array<string> = [
   'https://apiv5.paraswap.io/tokens/8453',
   'https://apiv5.paraswap.io/tokens/10',
   'https://apiv5.paraswap.io/tokens/137',
+  'https://apiv5.paraswap.io/tokens/56',
+  'https://raw.githubusercontent.com/pancakeswap/token-list/main/src/tokens/pancakeswap-top-100.json',
+  'https://raw.githubusercontent.com/pancakeswap/token-list/main/src/tokens/pancakeswap-bnb-mm.json',
 ];

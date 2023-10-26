@@ -18,12 +18,27 @@ const PancakeswapContracts: { [key: string]: ContractConfig } = {
     protocol: 'pancakeswap',
     address: '0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e',
   },
+  factoryBnbchain: {
+    chain: 'bnbchain',
+    protocol: 'pancakeswap',
+    address: '0xca143ce32fe78f1f7019d7d551a6402fc5350c73',
+  },
 };
 
 export const PancakeswapConfigs: UniswapProtocolConfig = {
   protocol: 'pancakeswap',
-  contracts: [PancakeswapContracts.factory, PancakeswapContracts.factoryArbitrum, PancakeswapContracts.factoryBase],
-  factories: [PancakeswapContracts.factory, PancakeswapContracts.factoryArbitrum, PancakeswapContracts.factoryBase],
+  contracts: [
+    PancakeswapContracts.factory,
+    PancakeswapContracts.factoryArbitrum,
+    PancakeswapContracts.factoryBase,
+    PancakeswapContracts.factoryBnbchain,
+  ],
+  factories: [
+    PancakeswapContracts.factory,
+    PancakeswapContracts.factoryArbitrum,
+    PancakeswapContracts.factoryBase,
+    PancakeswapContracts.factoryBnbchain,
+  ],
   subgraphs: [
     {
       chain: 'ethereum',
@@ -38,10 +53,16 @@ export const PancakeswapConfigs: UniswapProtocolConfig = {
       endpoint: PublicTheGraphEndpoints.pancakeswapArbitrum,
     },
     {
-      chain: 'polygon',
+      chain: 'base',
       protocol: 'pancakeswap',
       version: 'univ2',
       endpoint: PublicTheGraphEndpoints.pancakeswapBase,
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'pancakeswap',
+      version: 'univ2',
+      endpoint: PublicTheGraphEndpoints.pancakeswapBnbchain,
     },
   ],
 };
@@ -62,6 +83,11 @@ const Pancakeswapv3Contracts: { [key: string]: ContractConfig } = {
     protocol: 'pancakeswapv3',
     address: '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865',
   },
+  factoryBnbchain: {
+    chain: 'bnbchain',
+    protocol: 'pancakeswapv3',
+    address: '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865',
+  },
 };
 
 export const Pancakeswapv3Configs: UniswapProtocolConfig = {
@@ -70,11 +96,13 @@ export const Pancakeswapv3Configs: UniswapProtocolConfig = {
     Pancakeswapv3Contracts.factory,
     Pancakeswapv3Contracts.factoryArbitrum,
     Pancakeswapv3Contracts.factoryBase,
+    Pancakeswapv3Contracts.factoryBnbchain,
   ],
   factories: [
     Pancakeswapv3Contracts.factory,
     Pancakeswapv3Contracts.factoryArbitrum,
     Pancakeswapv3Contracts.factoryBase,
+    Pancakeswapv3Contracts.factoryBnbchain,
   ],
   subgraphs: [
     {
@@ -90,10 +118,16 @@ export const Pancakeswapv3Configs: UniswapProtocolConfig = {
       endpoint: PublicTheGraphEndpoints.pancakeswapv3Arbitrum,
     },
     {
-      chain: 'polygon',
+      chain: 'base',
       protocol: 'pancakeswapv3',
       version: 'univ3',
       endpoint: PublicTheGraphEndpoints.pancakeswapv3Base,
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'pancakeswapv3',
+      version: 'univ3',
+      endpoint: PublicTheGraphEndpoints.pancakeswapv3Bnbchain,
     },
   ],
 };

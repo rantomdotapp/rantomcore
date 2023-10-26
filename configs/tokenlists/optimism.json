@@ -10,8 +10,7 @@
     "chain": "optimism",
     "symbol": "AAVE",
     "decimals": 18,
-    "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278"
   },
   "ARPA": {
     "chain": "optimism",
@@ -66,8 +65,7 @@
     "chain": "optimism",
     "symbol": "DAI",
     "decimals": 18,
-    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
   },
   "ENS": {
     "chain": "optimism",
@@ -80,8 +78,7 @@
     "chain": "optimism",
     "symbol": "ETH",
     "decimals": 18,
-    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
   },
   "FIS": {
     "chain": "optimism",
@@ -136,8 +133,7 @@
     "chain": "optimism",
     "symbol": "LINK",
     "decimals": 18,
-    "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6"
   },
   "LRC": {
     "chain": "optimism",
@@ -171,8 +167,7 @@
     "chain": "optimism",
     "symbol": "OP",
     "decimals": 18,
-    "address": "0x4200000000000000000000000000000000000042",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x4200000000000000000000000000000000000042"
   },
   "PEPE": {
     "chain": "optimism",
@@ -227,8 +222,7 @@
     "chain": "optimism",
     "symbol": "SUSD",
     "decimals": 18,
-    "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
   },
   "SUSHI": {
     "chain": "optimism",
@@ -269,8 +263,7 @@
     "chain": "optimism",
     "symbol": "USDC",
     "decimals": 6,
-    "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607"
   },
   "USDC.e": {
     "chain": "optimism",
@@ -283,22 +276,19 @@
     "chain": "optimism",
     "symbol": "USDT",
     "decimals": 6,
-    "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58"
   },
   "WBTC": {
     "chain": "optimism",
     "symbol": "WBTC",
     "decimals": 8,
-    "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x68f180fcce6836688e9084f035309e29bf0a2095"
   },
   "WETH": {
     "chain": "optimism",
     "symbol": "WETH",
     "decimals": 18,
-    "address": "0x4200000000000000000000000000000000000006",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x4200000000000000000000000000000000000006"
   },
   "WOO": {
     "chain": "optimism",
@@ -325,57 +315,49 @@
     "chain": "optimism",
     "symbol": "aOptAAVE",
     "decimals": 18,
-    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375"
   },
   "aOptDAI": {
     "chain": "optimism",
     "symbol": "aOptDAI",
     "decimals": 18,
-    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee"
   },
   "aOptLINK": {
     "chain": "optimism",
     "symbol": "aOptLINK",
     "decimals": 18,
-    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530"
   },
   "aOptSUSD": {
     "chain": "optimism",
     "symbol": "aOptSUSD",
     "decimals": 18,
-    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97"
   },
   "aOptUSDC": {
     "chain": "optimism",
     "symbol": "aOptUSDC",
     "decimals": 6,
-    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd"
   },
   "aOptUSDT": {
     "chain": "optimism",
     "symbol": "aOptUSDT",
     "decimals": 6,
-    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620"
   },
   "aOptWBTC": {
     "chain": "optimism",
     "symbol": "aOptWBTC",
     "decimals": 8,
-    "address": "0x078f358208685046a11c85e8ad32895ded33a249",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x078f358208685046a11c85e8ad32895ded33a249"
   },
   "aOptWETH": {
     "chain": "optimism",
     "symbol": "aOptWETH",
     "decimals": 18,
-    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8"
   },
   "cbETH": {
     "chain": "optimism",

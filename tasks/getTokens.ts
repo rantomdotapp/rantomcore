@@ -5,8 +5,9 @@ import { TokenDefaultList } from '../configs/constants/tokenDefaultList';
 
 const chains: any = {
   1: 'ethereum',
-  137: 'polygon',
   10: 'optimism',
+  56: 'bnbchain',
+  137: 'polygon',
   8453: 'base',
   42161: 'arbitrum',
 };
@@ -17,6 +18,7 @@ const chains: any = {
     arbitrum: {},
     polygon: {},
     optimism: {},
+    bnbchain: {},
     base: {},
   };
 
@@ -32,7 +34,12 @@ const chains: any = {
           symbol: token.symbol,
           decimals: token.decimals,
           address: token.address.toLowerCase(),
-          logoURI: token.img ? token.img : token.logoURI ? token.logoURI : undefined,
+          logoURI:
+            token.img && token.img !== 'https://cdn.paraswap.io/token/token.png'
+              ? token.img
+              : token.logoURI
+              ? token.logoURI
+              : undefined,
         };
       }
     }

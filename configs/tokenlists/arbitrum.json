@@ -10,8 +10,7 @@
     "chain": "arbitrum",
     "symbol": "AAVE",
     "decimals": 18,
-    "address": "0xba5ddd1f9d7f570dc94a51479a000e3bce967196",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xba5ddd1f9d7f570dc94a51479a000e3bce967196"
   },
   "AGLD": {
     "chain": "arbitrum",
@@ -87,8 +86,7 @@
     "chain": "arbitrum",
     "symbol": "ARB",
     "decimals": 18,
-    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
   },
   "ARC": {
     "chain": "arbitrum",
@@ -262,8 +260,7 @@
     "chain": "arbitrum",
     "symbol": "DAI",
     "decimals": 18,
-    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
   },
   "DEXT": {
     "chain": "arbitrum",
@@ -346,8 +343,7 @@
     "chain": "arbitrum",
     "symbol": "ETH",
     "decimals": 18,
-    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
   },
   "EUROC": {
     "chain": "arbitrum",
@@ -367,8 +363,7 @@
     "chain": "arbitrum",
     "symbol": "EURS",
     "decimals": 2,
-    "address": "0xd22a58f79e9481d1a88e00c343885a588b34b68b",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xd22a58f79e9481d1a88e00c343885a588b34b68b"
   },
   "FARM": {
     "chain": "arbitrum",
@@ -591,8 +586,7 @@
     "chain": "arbitrum",
     "symbol": "LINK",
     "decimals": 18,
-    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
   },
   "LODE": {
     "chain": "arbitrum",
@@ -1116,8 +1110,7 @@
     "chain": "arbitrum",
     "symbol": "USDC",
     "decimals": 6,
-    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
   },
   "USDC.e": {
     "chain": "arbitrum",
@@ -1130,8 +1123,7 @@
     "chain": "arbitrum",
     "symbol": "USDT",
     "decimals": 6,
-    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
   },
   "VELA": {
     "chain": "arbitrum",
@@ -1165,15 +1157,13 @@
     "chain": "arbitrum",
     "symbol": "WBTC",
     "decimals": 8,
-    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
   },
   "WETH": {
     "chain": "arbitrum",
     "symbol": "WETH",
     "decimals": 18,
-    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
   },
   "WOM": {
     "chain": "arbitrum",
@@ -1221,57 +1211,49 @@
     "chain": "arbitrum",
     "symbol": "aArbAAVE",
     "decimals": 18,
-    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375"
   },
   "aArbDAI": {
     "chain": "arbitrum",
     "symbol": "aArbDAI",
     "decimals": 18,
-    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee"
   },
   "aArbEURS": {
     "chain": "arbitrum",
     "symbol": "aArbEURS",
     "decimals": 2,
-    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97"
   },
   "aArbLINK": {
     "chain": "arbitrum",
     "symbol": "aArbLINK",
     "decimals": 18,
-    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530"
   },
   "aArbUSDC": {
     "chain": "arbitrum",
     "symbol": "aArbUSDC",
     "decimals": 6,
-    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd"
   },
   "aArbUSDT": {
     "chain": "arbitrum",
     "symbol": "aArbUSDT",
     "decimals": 6,
-    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620"
   },
   "aArbWBTC": {
     "chain": "arbitrum",
     "symbol": "aArbWBTC",
     "decimals": 8,
-    "address": "0x078f358208685046a11c85e8ad32895ded33a249",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0x078f358208685046a11c85e8ad32895ded33a249"
   },
   "aArbWETH": {
     "chain": "arbitrum",
     "symbol": "aArbWETH",
     "decimals": 18,
-    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
-    "logoURI": "https://cdn.paraswap.io/token/token.png"
+    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8"
   },
   "agEUR": {
     "chain": "arbitrum",
