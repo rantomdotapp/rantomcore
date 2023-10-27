@@ -1,3 +1,4 @@
+import { PancakeswapConfigs, Pancakeswapv3Configs } from '../../configs/protocols/pancakeswap';
 import { SushiConfigs, Sushiv3Configs } from '../../configs/protocols/sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols/uniswap';
 import { ContextServices, IAdapter } from '../../types/namespaces';
@@ -10,5 +11,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     uniswapv3: new Uniswapv3Adapter(services, Uniswapv3Configs),
     sushi: new Uniswapv2Adapter(services, SushiConfigs),
     sushiv3: new Uniswapv3Adapter(services, Sushiv3Configs),
+    pancakeswap: new Uniswapv2Adapter(services, PancakeswapConfigs),
+    pancakeswapv3: new Uniswapv3Adapter(services, Pancakeswapv3Configs),
   };
 }

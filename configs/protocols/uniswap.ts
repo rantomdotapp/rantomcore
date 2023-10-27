@@ -114,7 +114,7 @@ export const Uniswapv3Configs: UniswapProtocolConfig = {
       chain: 'bnbchain',
       protocol: 'uniswapv3',
       version: 'univ3',
-      endpoint: PublicTheGraphEndpoints.uniswapv3BnbChain,
+      endpoint: PublicTheGraphEndpoints.uniswapv3Bnbchain,
     },
   ],
 };

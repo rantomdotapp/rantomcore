@@ -101,6 +101,14 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       return;
     }
 
+    logger.info('start index subgraph historical data', {
+      service: this.name,
+      chain: this.config.chain,
+      protocol: this.config.protocol,
+      version: this.config.version,
+      endpoint: this.config.endpoint,
+    });
+
     const factoryAddress = await this.getFactoryAddress();
     if (factoryAddress) {
       let latestPoolId: string | null = null;
@@ -115,14 +123,6 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       if (state) {
         latestPoolId = state.latestPoolId;
       }
-
-      logger.info('start index subgraph historical data', {
-        service: this.name,
-        chain: this.config.chain,
-        protocol: this.config.protocol,
-        version: this.config.version,
-        endpoint: this.config.endpoint,
-      });
 
       do {
         const startExeTime = Math.floor(new Date().getTime() / 1000);
