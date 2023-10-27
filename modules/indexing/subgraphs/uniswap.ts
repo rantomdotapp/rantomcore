@@ -47,7 +47,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       this.config.endpoint,
       `
   		{
-        pools: ${fieldNames.listPools}(first: 10 ${latestPoolId ? `where: {id_gt: "${latestPoolId}"}` : ''}) {
+        pools: ${fieldNames.listPools}(first: 1000 ${latestPoolId ? `where: {id_gt: "${latestPoolId}"}` : ''}) {
           id
           token0{
             id
