@@ -144,6 +144,30 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
               upsert: true,
             },
           });
+
+          // we also update tokens too
+          await this.services.database.update({
+            collection: EnvConfig.mongodb.collections.tokens,
+            keys: {
+              chain: pool.chain,
+              address: pool.token0.address,
+            },
+            updates: {
+              ...pool.token0,
+            },
+            upsert: true,
+          });
+          await this.services.database.update({
+            collection: EnvConfig.mongodb.collections.tokens,
+            keys: {
+              chain: pool.chain,
+              address: pool.token1.address,
+            },
+            updates: {
+              ...pool.token1,
+            },
+            upsert: true,
+          });
         }
 
         await this.services.database.bulkWrite({
