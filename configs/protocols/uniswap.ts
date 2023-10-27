@@ -10,7 +10,7 @@ const Uniswapv2Contracts: { [key: string]: ContractConfig } = {
     chain: 'ethereum',
     protocol: 'uniswapv2',
     address: '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f',
-    birthBlock: 10000835,
+    birthblock: 10000835,
   },
 };
 

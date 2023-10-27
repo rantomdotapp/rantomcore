@@ -2,19 +2,19 @@ import UniswapPoolV2Abi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import UniswapPoolV3Abi from '../../../configs/abi/uniswap/UniswapV3Pool.json';
 import { normalizeAddress } from '../../../lib/helper';
 import BlockchainService from '../../../services/blockchains/blockchain';
-import { UniswapLiquidityPoolConstant, UniswapPoolVersion } from './domains';
+import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 
 export interface GetUniswapLiquidityPoolOptions {
   chain: string;
   address: string; // pool address
-  version: UniswapPoolVersion;
+  version: LiquidityPoolVersion;
   protocol: string;
 }
 
 export default class UniswapLibs {
   public static async getLiquidityPoolOnchain(
     options: GetUniswapLiquidityPoolOptions,
-  ): Promise<UniswapLiquidityPoolConstant | null> {
+  ): Promise<LiquidityPoolConstant | null> {
     const { chain, address, version, protocol } = options;
     const blockchain = new BlockchainService(null);
     try {

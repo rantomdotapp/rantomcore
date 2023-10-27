@@ -2,7 +2,7 @@ import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
 import { IManagerService } from '../services/manager/domain';
 import { ProtocolConfig } from './configs';
-import { BlockchainIndexingRunOptions, HandleHookEventLogOptions } from './options';
+import { BlockchainIndexingRunOptions, HandleHookEventLogOptions, SubgraphIndexingRunOptions } from './options';
 
 export interface ContextServices {
   database: IDatabaseService;
@@ -37,4 +37,9 @@ export interface IAdapter extends IModule {
 // after that, it passes them into every single adapter hooks to handle logs
 export interface IBlockchainIndexing extends IModule {
   run: (options: BlockchainIndexingRunOptions) => Promise<void>;
+}
+
+// this indexing service query all available data from subgraph
+export interface ISubgraphIndexing extends IModule {
+  run: (options: SubgraphIndexingRunOptions) => Promise<void>;
 }

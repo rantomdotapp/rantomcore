@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import logger from './logger';
 
-export async function querySubgraph(endpoint: string, query: string): Promise<any> {
+export async function querySubgraph(endpoint: string, query: string, options: any = {}): Promise<any> {
   try {
     const response = await axios.post(
       endpoint,
@@ -12,6 +12,7 @@ export async function querySubgraph(endpoint: string, query: string): Promise<an
       {
         headers: {
           'Content-Type': 'application/json',
+          ...options,
         },
       },
     );

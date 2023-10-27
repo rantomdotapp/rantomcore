@@ -18,9 +18,9 @@ export class IndexCommand extends BasicCommand {
     await super.preHook(services);
 
     while (true) {
-      if (argv.subgraph) {
+      if (argv.type === 'subgraph') {
         const indexing = new SubgraphIndexing(services);
-        await indexing.run();
+        await indexing.run({ protocol: argv.protocol });
       } else {
         const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
         await indexing.run({
@@ -39,10 +39,20 @@ export class IndexCommand extends BasicCommand {
 
   public setOptions(yargs: any) {
     return yargs.option({
+      type: {
+        type: 'string',
+        default: 'blockchain',
+        describe: 'Given indexing service type: blockchain, subgraph, or contract.',
+      },
       chain: {
         type: 'string',
         default: 'ethereum',
         describe: `The blockchain name to index, support: ${Object.keys(EnvConfig.blockchains).toString()}`,
+      },
+      protocol: {
+        type: 'string',
+        default: '',
+        describe: 'Run indexing service with a given protocol only.',
       },
       fromBlock: {
         type: 'number',
@@ -53,11 +63,6 @@ export class IndexCommand extends BasicCommand {
         type: 'boolean',
         default: false,
         describe: 'Do not run services as workers.',
-      },
-      subgraph: {
-        type: 'boolean',
-        default: false,
-        describe: 'Index historical data from subgraph endpoints.',
       },
       sleep: {
         type: 'number',

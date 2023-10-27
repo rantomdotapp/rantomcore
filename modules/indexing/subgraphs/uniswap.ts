@@ -5,8 +5,8 @@ import { normalizeAddress, sleep } from '../../../lib/helper';
 import logger from '../../../lib/logger';
 import { querySubgraph } from '../../../lib/subsgraph';
 import { SubgraphConfig } from '../../../types/configs';
+import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
-import { UniswapLiquidityPoolConstant, UniswapPoolVersion } from '../../adapters/uniswap/domains';
 import SubgraphIndexing from './subgraph';
 
 export default class UniswapSubgraphIndexing extends SubgraphIndexing {
@@ -35,6 +35,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
 			  }
       }
 		`,
+      this.config.requestOptions ? this.config.requestOptions : {},
     );
 
     return data ? normalizeAddress(data.factories[0].id) : null;
@@ -46,9 +47,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       this.config.endpoint,
       `
   		{
-        pools: ${fieldNames.listPools}(first: 1000 ${
-          latestPoolId ? `where: {id_gt: "${latestPoolId}"}` : ''
-        }, orderBy: id, orderDirection: asc) {
+        pools: ${fieldNames.listPools}(first: 10 ${latestPoolId ? `where: {id_gt: "${latestPoolId}"}` : ''}) {
           id
           token0{
             id
@@ -64,13 +63,15 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
         }
       }
   	`,
+      this.config.requestOptions ? this.config.requestOptions : {},
     );
 
-    const pools: Array<UniswapLiquidityPoolConstant> = [];
+    const pools: Array<LiquidityPoolConstant> = [];
     if (data) {
       for (const pool of data.pools) {
         pools.push({
           chain: this.config.chain,
+          version: this.config.version as LiquidityPoolVersion,
           protocol: this.config.protocol,
           address: normalizeAddress(pool.id),
           token0: {
@@ -88,7 +89,6 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
           factory: factoryAddress,
           fee:
             this.config.version === 'univ2' ? 0.3 : new BigNumber(pool[fieldNames.poolFee]).dividedBy(1e4).toNumber(),
-          version: this.config.version as UniswapPoolVersion,
         });
       }
     }
@@ -127,7 +127,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       do {
         const startExeTime = Math.floor(new Date().getTime() / 1000);
 
-        const pools: Array<UniswapLiquidityPoolConstant> = await this.queryPoolList(factoryAddress, latestPoolId);
+        const pools: Array<LiquidityPoolConstant> = await this.queryPoolList(factoryAddress, latestPoolId);
         const operations: Array<any> = [];
         for (const pool of pools) {
           operations.push({

@@ -116,7 +116,7 @@ export interface ContractConfig {
   address: string;
 
   // the block number when contract was deployed
-  birthBlock?: number;
+  birthblock?: number;
 
   // used to filter logs
   logFilters?: Array<ContractLogTopics>;
@@ -129,6 +129,8 @@ export interface SubgraphConfig {
   version: SubgraphVersion;
   protocol: string;
   endpoint: string;
+
+  requestOptions?: any;
 }
 
 export interface ProtocolConfig {

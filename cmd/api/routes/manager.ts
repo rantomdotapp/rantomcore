@@ -13,7 +13,7 @@ export function getRouter(services: ContextServices): Router {
 
   router.post('/config/contract/add', async (request, response) => {
     try {
-      const { chain, address, protocol, birthBlock, logFilters } = request.body as ContractConfig;
+      const { chain, address, protocol, birthblock, logFilters } = request.body as ContractConfig;
 
       const key = request.body.managerKey;
       if (EnvConfig.system.managerKey !== key) {
@@ -26,7 +26,7 @@ export function getRouter(services: ContextServices): Router {
           chain,
           address,
           protocol,
-          birthBlock,
+          birthblock,
           logFilters,
         });
         await writeResponse(services, request, response, HttpStatusCode.Created, {

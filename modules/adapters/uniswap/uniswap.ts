@@ -4,11 +4,11 @@ import EnvConfig from '../../../configs/envConfig';
 import { UniswapProtocolConfig } from '../../../configs/protocols/uniswap';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
+import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions } from '../../../types/options';
 import Adapter from '../adapter';
 import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
-import { UniswapLiquidityPoolConstant, UniswapPoolVersion } from './domains';
 import UniswapLibs from './libs';
 
 export default class UniswapAdapter extends Adapter {
@@ -27,8 +27,8 @@ export default class UniswapAdapter extends Adapter {
   protected async getLiquidityPool(
     chain: string,
     address: string,
-    version: UniswapPoolVersion,
-  ): Promise<UniswapLiquidityPoolConstant | null> {
+    version: LiquidityPoolVersion,
+  ): Promise<LiquidityPoolConstant | null> {
     const pool = await this.services.database.find({
       collection: EnvConfig.mongodb.collections.liquidityPools,
       query: {
@@ -38,7 +38,7 @@ export default class UniswapAdapter extends Adapter {
     });
 
     if (pool) {
-      return pool as UniswapLiquidityPoolConstant;
+      return pool as LiquidityPoolConstant;
     }
 
     // get on-chain data
@@ -74,8 +74,8 @@ export default class UniswapAdapter extends Adapter {
    */
   protected async parseCreateLiquidityPoolEvent(
     options: HandleHookEventLogOptions,
-    version: UniswapPoolVersion,
-  ): Promise<UniswapLiquidityPoolConstant | null> {
+    version: LiquidityPoolVersion,
+  ): Promise<LiquidityPoolConstant | null> {
     const signature = options.log.topics[0];
 
     if (this.haveFactoryAddress(options.chain, options.log.address)) {
@@ -120,7 +120,7 @@ export default class UniswapAdapter extends Adapter {
    */
   protected async handleHookEventLogCreateLiquidityPool(
     options: HandleHookEventLogOptions,
-    version: UniswapPoolVersion,
+    version: LiquidityPoolVersion,
   ): Promise<void> {
     const signature = options.log.topics[0];
     if (signature === UniswapEventSignatures.PairCreated || signature === UniswapEventSignatures.PoolCreated) {

@@ -63,6 +63,10 @@ export const PancakeswapConfigs: UniswapProtocolConfig = {
       protocol: 'pancakeswap',
       version: 'univ2',
       endpoint: PublicTheGraphEndpoints.pancakeswapBnbchain,
+      requestOptions: {
+        referer: 'https://pancakeswap.finance/',
+        origin: 'https://pancakeswap.finance',
+      },
     },
   ],
 };
