@@ -12,6 +12,8 @@ export function getSubgraph(services: ContextServices, config: SubgraphConfig): 
     return new SushiSubgraphIndexing(services, config);
   } else if (config.protocol === 'pancakeswap' || config.protocol === 'pancakeswapv3') {
     return new PancakeswapSubgraphIndexing(services, config);
+  } else if (config.protocol === 'kyberswap-elastic') {
+    return new UniswapSubgraphIndexing(services, config);
   }
 
   return null;

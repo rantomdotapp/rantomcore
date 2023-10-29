@@ -1,3 +1,4 @@
+import { KyberswapElasticConfigs } from '../../configs/protocols/kyberswap';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from '../../configs/protocols/pancakeswap';
 import { SushiConfigs, Sushiv3Configs } from '../../configs/protocols/sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols/uniswap';
@@ -14,5 +15,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     sushiv3: new Uniswapv3Adapter(services, Sushiv3Configs),
     pancakeswap: new Uniswapv2Adapter(services, PancakeswapConfigs),
     pancakeswapv3: new Pancakev3Adapter(services, Pancakeswapv3Configs),
+    'kyberswap-elastic': new Pancakev3Adapter(services, KyberswapElasticConfigs),
   };
 }

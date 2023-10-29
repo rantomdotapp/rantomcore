@@ -2,21 +2,24 @@ import { DefaultParserCachingTime } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import { getTimestamp } from '../../lib/helper';
 import { TransactionAction, TransactionInsight } from '../../types/domains';
-import { ContextServices, IAdapter, ITransactionParser } from '../../types/namespaces';
+import { ContextServices, IAdapter, ITransactionParser, ITransferAdapter } from '../../types/namespaces';
 import { ParseTransactionOptions } from '../../types/options';
 import { getAdapters } from '../adapters';
+import TransferAdapter from '../adapters/transfer/transfer';
 
 export default class TransactionParser implements ITransactionParser {
   public readonly name: string = 'parser';
   public readonly services: ContextServices;
 
   protected readonly adapters: { [key: string]: IAdapter };
+  protected readonly transferAdapter: ITransferAdapter;
 
   constructor(services: ContextServices) {
     this.services = services;
 
     // setup adapters
     this.adapters = getAdapters(services);
+    this.transferAdapter = new TransferAdapter(services);
   }
 
   public async parseTransaction(options: ParseTransactionOptions): Promise<Array<TransactionInsight>> {
@@ -70,6 +73,18 @@ export default class TransactionParser implements ITransactionParser {
             }
 
             for (const log of receipt.logs) {
+              if (this.transferAdapter.supportedSignature(log.topics[0])) {
+                const tokenTransfer = await this.transferAdapter.parseEventLog({
+                  chain: chain,
+                  log: log,
+                  allLogs: receipt.logs,
+                  transaction: transaction,
+                });
+                if (tokenTransfer) {
+                  transactionInsight.transfers.push(tokenTransfer);
+                }
+              }
+
               for (const [, adapter] of Object.entries(this.adapters)) {
                 if (adapter.supportedSignature(log.topics[0])) {
                   const actions: Array<TransactionAction> = await adapter.parseEventLog({

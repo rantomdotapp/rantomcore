@@ -93,11 +93,14 @@ export interface TransactionInputDecoded {
   params: any;
 }
 
-export interface TransactionTransfer {
+export type TokenEIP = 'ERC20' | 'ERC721' | 'ERC1155';
+
+export interface TokenTransfer {
   token: Token;
   from: string;
   to: string;
   amount: string;
+  eip: TokenEIP;
 }
 
 export interface TransactionInsight {
@@ -121,7 +124,7 @@ export interface TransactionInsight {
   inputDecoded: TransactionInputDecoded | null;
 
   // token transfer
-  transfers: Array<TransactionTransfer>;
+  transfers: Array<TokenTransfer>;
 
   // found address labels
   addressLabels: { [key: string]: string };

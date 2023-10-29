@@ -2,7 +2,7 @@ import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
 import { IManagerService } from '../services/manager/domain';
 import { ProtocolConfig } from './configs';
-import { TransactionAction, TransactionInsight } from './domains';
+import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
   BlockchainIndexingRunOptions,
   HandleHookEventLogOptions,
@@ -39,8 +39,16 @@ export interface IAdapter extends IModule {
   // this function parses the log and save liquidity pool data into database
   handleEventLog: (options: HandleHookEventLogOptions) => Promise<void>;
 
-  // parse an event log into list of transaction insights
+  // parse an event log into list of transaction actions
   parseEventLog: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
+}
+
+export interface ITransferAdapter extends IModule {
+  // every adapter should support a list of log signatures
+  supportedSignature: (signature: string) => boolean;
+
+  // parse an event log into list of transaction token transfers
+  parseEventLog: (options: ParseEventLogOptions) => Promise<TokenTransfer | null>;
 }
 
 // this indexing service query all logs from blockchain in a range
