@@ -36,6 +36,13 @@ export const Actions: Array<string> = [
 
   // define token repaid actions on lending protocols
   'repaid',
+
+  // define lock/unlock token actions
+  'lock',
+  'unlock',
+
+  // define flashloan actions
+  'flashloan',
 ];
 export type KnownAction = (typeof Actions)[number];
 
@@ -48,7 +55,10 @@ export interface TransactionAction {
 
   transactionHash: string;
 
-  logIndex: number;
+  // log index format: logIndex:actionIndex
+  // some protocol have multiple actions in a single log entry
+  // so, to make a unique action, we need to combine longIndex with the actionIndex
+  logIndex: string;
 
   blockNumber: number;
 

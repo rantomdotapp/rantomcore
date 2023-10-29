@@ -1,8 +1,12 @@
+import { BalancerConfigs } from '../../configs/protocols/balancer';
+import { BeethovenxConfigs } from '../../configs/protocols/beethovenx';
+import { CamelotConfigs, Camelotv3Configs } from '../../configs/protocols/camelot';
 import { KyberswapElasticConfigs } from '../../configs/protocols/kyberswap';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from '../../configs/protocols/pancakeswap';
 import { SushiConfigs, Sushiv3Configs } from '../../configs/protocols/sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols/uniswap';
 import { ContextServices, IAdapter } from '../../types/namespaces';
+import BalancerAdapter from './balancer/balancer';
 import Pancakev3Adapter from './pancake/pancakev3';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
@@ -16,5 +20,9 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     pancakeswap: new Uniswapv2Adapter(services, PancakeswapConfigs),
     pancakeswapv3: new Pancakev3Adapter(services, Pancakeswapv3Configs),
     'kyberswap-elastic': new Pancakev3Adapter(services, KyberswapElasticConfigs),
+    camelot: new Uniswapv2Adapter(services, CamelotConfigs),
+    camelotv3: new Uniswapv3Adapter(services, Camelotv3Configs),
+    balancer: new BalancerAdapter(services, BalancerConfigs),
+    beethovenx: new BalancerAdapter(services, BeethovenxConfigs),
   };
 }

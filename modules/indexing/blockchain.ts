@@ -83,6 +83,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
           });
         }
 
+        // process raw logs if any
         for (const contract of contractConfigs) {
           if (contract.chain === chain && compareAddress(contract.address, log.address)) {
             if (contract.logFilters) {

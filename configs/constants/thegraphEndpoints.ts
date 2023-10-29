@@ -37,4 +37,8 @@ export const PublicTheGraphEndpoints: { [key: string]: string } = {
   kyberswapElasticOptimism: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-optimism',
   kyberswapElasticPolygon: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-matic',
   kyberswapElasticBnbchain: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-bsc',
+
+  // camelot
+  camelot: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm',
+  camelotv3: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm-v3',
 };

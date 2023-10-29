@@ -74,7 +74,7 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
           protocol: this.config.protocol,
           action: 'swap',
           transactionHash: options.log.transactionHash,
-          logIndex: Number(options.log.logIndex),
+          logIndex: `${options.log.logIndex}:0`,
           blockNumber: Number(options.log.blockNumber),
           from: normalizeAddress(options.transaction.from),
           to: normalizeAddress(options.transaction.to),

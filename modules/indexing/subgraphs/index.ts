@@ -6,15 +6,25 @@ import SushiSubgraphIndexing from './sushi';
 import UniswapSubgraphIndexing from './uniswap';
 
 export function getSubgraph(services: ContextServices, config: SubgraphConfig): SubgraphIndexing | null {
-  if (config.protocol === 'uniswapv2' || config.protocol === 'uniswapv3') {
-    return new UniswapSubgraphIndexing(services, config);
-  } else if (config.protocol === 'sushi' || config.protocol === 'sushiv3') {
-    return new SushiSubgraphIndexing(services, config);
-  } else if (config.protocol === 'pancakeswap' || config.protocol === 'pancakeswapv3') {
-    return new PancakeswapSubgraphIndexing(services, config);
-  } else if (config.protocol === 'kyberswap-elastic') {
-    return new UniswapSubgraphIndexing(services, config);
-  }
+  switch (config.protocol) {
+    case 'uniswapv2':
+    case 'uniswapv3':
+    case 'kyberswap-elastic':
+    case 'camelot':
+    case 'camelotv3': {
+      return new UniswapSubgraphIndexing(services, config);
+    }
+    case 'sushi':
+    case 'sushiv3': {
+      return new SushiSubgraphIndexing(services, config);
+    }
+    case 'pancakeswap':
+    case 'pancakeswapv3': {
+      return new PancakeswapSubgraphIndexing(services, config);
+    }
 
-  return null;
+    default: {
+      return null;
+    }
+  }
 }
