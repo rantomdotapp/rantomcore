@@ -1,10 +1,6 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
 
-export interface UniswapProtocolConfig extends ProtocolConfig {
-  factories: Array<ContractConfig>;
-}
-
 const Uniswapv2Contracts: { [key: string]: ContractConfig } = {
   factory: {
     chain: 'ethereum',
@@ -14,10 +10,9 @@ const Uniswapv2Contracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const Uniswapv2Configs: UniswapProtocolConfig = {
+export const Uniswapv2Configs: ProtocolConfig = {
   protocol: 'uniswapv2',
   contracts: [Uniswapv2Contracts.factory],
-  factories: [Uniswapv2Contracts.factory],
   subgraphs: [
     {
       chain: 'ethereum',
@@ -61,17 +56,9 @@ const Uniswapv3Contracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const Uniswapv3Configs: UniswapProtocolConfig = {
+export const Uniswapv3Configs: ProtocolConfig = {
   protocol: 'uniswapv3',
   contracts: [
-    Uniswapv3Contracts.factory,
-    Uniswapv3Contracts.factoryArbitrum,
-    Uniswapv3Contracts.factoryBase,
-    Uniswapv3Contracts.factoryOptimism,
-    Uniswapv3Contracts.factoryPolygon,
-    Uniswapv3Contracts.factoryBnbchain,
-  ],
-  factories: [
     Uniswapv3Contracts.factory,
     Uniswapv3Contracts.factoryArbitrum,
     Uniswapv3Contracts.factoryBase,

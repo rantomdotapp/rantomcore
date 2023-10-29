@@ -13,10 +13,8 @@ const envConfig: EnvConfig = {
     databaseName: String(process.env.RANTOM_MONGODB_NAME),
     connectionUri: String(process.env.RANTOM_MONGODB_URI),
     collections: {
-      //
       states: `${MongodbPrefix}.states`,
       caching: `${MongodbPrefix}.caching`,
-
       rawlogs: `${MongodbPrefix}.core.rawlogs`,
       tokens: `${MongodbPrefix}.core.tokens`,
       contracts: `${MongodbPrefix}.core.contracts`,
@@ -28,6 +26,9 @@ const envConfig: EnvConfig = {
   },
   system: {
     managerKey: String(process.env.RANTOM_MANAGER_KEY),
+  },
+  policies: {
+    enableParserCaching: String(process.env.RANTOM_ENABLE_PARSER_CACHING) !== 'disabled',
   },
   blockchains: {
     ethereum: {

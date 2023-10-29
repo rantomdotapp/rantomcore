@@ -1,6 +1,5 @@
-import { ContractConfig } from '../../types/configs';
+import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
-import { UniswapProtocolConfig } from './uniswap';
 
 const SushiContracts: { [key: string]: ContractConfig } = {
   factory: {
@@ -30,16 +29,9 @@ const SushiContracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const SushiConfigs: UniswapProtocolConfig = {
+export const SushiConfigs: ProtocolConfig = {
   protocol: 'sushi',
   contracts: [
-    SushiContracts.factory,
-    SushiContracts.factoryArbitrum,
-    SushiContracts.factoryBase,
-    SushiContracts.factoryPolygon,
-    SushiContracts.factoryBnbchain,
-  ],
-  factories: [
     SushiContracts.factory,
     SushiContracts.factoryArbitrum,
     SushiContracts.factoryBase,
@@ -107,17 +99,9 @@ const Sushiv3Contracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const Sushiv3Configs: UniswapProtocolConfig = {
+export const Sushiv3Configs: ProtocolConfig = {
   protocol: 'sushiv3',
   contracts: [
-    Sushiv3Contracts.factory,
-    Sushiv3Contracts.factoryArbitrum,
-    Sushiv3Contracts.factoryBase,
-    Sushiv3Contracts.factoryPolygon,
-    Sushiv3Contracts.factoryOptimism,
-    Sushiv3Contracts.factoryBnbchain,
-  ],
-  factories: [
     Sushiv3Contracts.factory,
     Sushiv3Contracts.factoryArbitrum,
     Sushiv3Contracts.factoryBase,

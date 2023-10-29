@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { Web3 } from 'web3';
+import Web3 from 'web3';
 
 import { TokenList } from '../../configs';
 import ERC20Abi from '../../configs/abi/ERC20.json';
@@ -11,7 +11,7 @@ import logger from '../../lib/logger';
 import { Token } from '../../types/configs';
 import { CachingService } from '../caching/caching';
 import { IDatabaseService } from '../database/domains';
-import { ContractCall, GetTokenOptions, IBlockchainService } from './domains';
+import { ContractCall, GetTokenOptions, GetTransactionOptions, IBlockchainService } from './domains';
 
 export default class BlockchainService extends CachingService implements IBlockchainService {
   public readonly name: string = 'blockchain';
@@ -27,6 +27,45 @@ export default class BlockchainService extends CachingService implements IBlockc
 
   public getProvider(chain: string): Web3 {
     return this.providers[chain];
+  }
+
+  public async getBlock(chain: string, blockNumber: number): Promise<any> {
+    try {
+      return await this.providers[chain].eth.getBlock(blockNumber);
+    } catch (e: any) {
+      logger.warn('failed to get block from blockchain', {
+        service: this.name,
+        chain: chain,
+        blockNumber: blockNumber,
+        error: e.message,
+      });
+    }
+
+    return null;
+  }
+
+  public async getBlockTimestamp(chain: string, blockNumber: number): Promise<number> {
+    const cachingKey = `block-timestamp-${chain}-${blockNumber}`;
+    const caching = await this.getCachingData(cachingKey);
+    if (caching) {
+      return caching.timestamp;
+    }
+
+    try {
+      const block = await this.providers[chain].eth.getBlock(blockNumber);
+      const timestamp = Number(block.timestamp);
+      await this.setCachingData(cachingKey, { timestamp });
+      return timestamp;
+    } catch (e: any) {
+      logger.error('failed to get block from blockchain', {
+        service: this.name,
+        chain: chain,
+        blockNumber: blockNumber,
+        error: e.message,
+      });
+    }
+
+    return 0;
   }
 
   public async getTokenInfo(options: GetTokenOptions): Promise<Token | null> {
@@ -134,6 +173,22 @@ export default class BlockchainService extends CachingService implements IBlockc
     }
 
     return null;
+  }
+
+  public async getTransaction(options: GetTransactionOptions): Promise<any | null> {
+    try {
+      return await this.providers[options.chain].eth.getTransaction(options.hash);
+    } catch (e: any) {
+      return null;
+    }
+  }
+
+  public async getTransactionReceipt(options: GetTransactionOptions): Promise<any | null> {
+    try {
+      return await this.providers[options.chain].eth.getTransactionReceipt(options.hash);
+    } catch (e: any) {
+      return null;
+    }
   }
 
   public async singlecall(call: ContractCall): Promise<any> {

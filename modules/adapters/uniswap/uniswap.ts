@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
 
 import EnvConfig from '../../../configs/envConfig';
-import { UniswapProtocolConfig } from '../../../configs/protocols/uniswap';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
+import { ProtocolConfig } from '../../../types/configs';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions } from '../../../types/options';
@@ -13,9 +13,9 @@ import UniswapLibs from './libs';
 
 export default class UniswapAdapter extends Adapter {
   public readonly name: string = 'adapter.uniswap';
-  public readonly config: UniswapProtocolConfig;
+  public readonly config: ProtocolConfig;
 
-  constructor(services: ContextServices, config: UniswapProtocolConfig) {
+  constructor(services: ContextServices, config: ProtocolConfig) {
     super(services, {
       protocol: config.protocol,
       contracts: config.contracts,
@@ -24,11 +24,18 @@ export default class UniswapAdapter extends Adapter {
     this.config = config;
   }
 
+  /**
+   * @description check a liquidity pool contract is belong to this protocol or not
+   * by getting event from a liquidity pool, we can know which protocol it was owned
+   * by checking the factory address of that liquidity pool contract
+   */
   protected async getLiquidityPool(
     chain: string,
     address: string,
     version: LiquidityPoolVersion,
   ): Promise<LiquidityPoolConstant | null> {
+    // firstly, we try to get liquidity pool info from database
+    // should get a LiquidityPoolConstant object
     const pool = await this.services.database.find({
       collection: EnvConfig.mongodb.collections.liquidityPools,
       query: {
@@ -41,23 +48,14 @@ export default class UniswapAdapter extends Adapter {
       return pool as LiquidityPoolConstant;
     }
 
-    // get on-chain data
+    // if we can not find the liquidity pool in database
+    // we try to get on-chain data
     return await UniswapLibs.getLiquidityPoolOnchain({
       chain: chain,
       address: address,
       version: version,
       protocol: this.config.protocol,
     });
-  }
-
-  protected haveFactoryAddress(chain: string, factoryAddress: string): boolean {
-    for (const factory of this.config.factories) {
-      if (compareAddress(factory.address, factoryAddress)) {
-        return true;
-      }
-    }
-
-    return false;
   }
 
   /**
@@ -78,7 +76,7 @@ export default class UniswapAdapter extends Adapter {
   ): Promise<LiquidityPoolConstant | null> {
     const signature = options.log.topics[0];
 
-    if (this.haveFactoryAddress(options.chain, options.log.address)) {
+    if (this.supportedContract(options.chain, options.log.address)) {
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event: any = web3.eth.abi.decodeLog(
         UniswapAbiMappings[signature].abi,
@@ -118,7 +116,7 @@ export default class UniswapAdapter extends Adapter {
    * @param options includes a chain name and raw log entry
    * @param version should be univ2 or univ3
    */
-  protected async handleHookEventLogCreateLiquidityPool(
+  protected async handleEventLogCreateLiquidityPool(
     options: HandleHookEventLogOptions,
     version: LiquidityPoolVersion,
   ): Promise<void> {

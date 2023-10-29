@@ -1,4 +1,4 @@
-import { Web3 } from 'web3';
+import Web3 from 'web3';
 
 import { Token } from '../../types/configs';
 
@@ -22,6 +22,11 @@ export interface GetTokenOptions {
   onchain?: boolean;
 }
 
+export interface GetTransactionOptions {
+  chain: string;
+  hash: string;
+}
+
 export interface IBlockchainService {
   // should be labeled as blockchain
   name: string;
@@ -32,8 +37,20 @@ export interface IBlockchainService {
   // get provider sdk
   getProvider: (chain: string) => Web3;
 
+  // get block data
+  getBlock: (chain: string, blockNumber: number) => Promise<any>;
+
+  // get timestamp of a block
+  getBlockTimestamp: (chain: string, blockNumber: number) => Promise<number>;
+
   // get token info
   getTokenInfo: (options: GetTokenOptions) => Promise<Token | null>;
+
+  // get transaction
+  getTransaction: (options: GetTransactionOptions) => Promise<any>;
+
+  // get transaction receipt
+  getTransactionReceipt: (options: GetTransactionOptions) => Promise<any>;
 
   // query single
   singlecall: (call: ContractCall) => Promise<any>;

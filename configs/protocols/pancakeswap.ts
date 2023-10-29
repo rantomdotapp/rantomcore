@@ -1,6 +1,5 @@
-import { ContractConfig } from '../../types/configs';
+import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
-import { UniswapProtocolConfig } from './uniswap';
 
 const PancakeswapContracts: { [key: string]: ContractConfig } = {
   factory: {
@@ -25,15 +24,9 @@ const PancakeswapContracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const PancakeswapConfigs: UniswapProtocolConfig = {
+export const PancakeswapConfigs: ProtocolConfig = {
   protocol: 'pancakeswap',
   contracts: [
-    PancakeswapContracts.factory,
-    PancakeswapContracts.factoryArbitrum,
-    PancakeswapContracts.factoryBase,
-    PancakeswapContracts.factoryBnbchain,
-  ],
-  factories: [
     PancakeswapContracts.factory,
     PancakeswapContracts.factoryArbitrum,
     PancakeswapContracts.factoryBase,
@@ -94,15 +87,9 @@ const Pancakeswapv3Contracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const Pancakeswapv3Configs: UniswapProtocolConfig = {
+export const Pancakeswapv3Configs: ProtocolConfig = {
   protocol: 'pancakeswapv3',
   contracts: [
-    Pancakeswapv3Contracts.factory,
-    Pancakeswapv3Contracts.factoryArbitrum,
-    Pancakeswapv3Contracts.factoryBase,
-    Pancakeswapv3Contracts.factoryBnbchain,
-  ],
-  factories: [
     Pancakeswapv3Contracts.factory,
     Pancakeswapv3Contracts.factoryArbitrum,
     Pancakeswapv3Contracts.factoryBase,

@@ -1,5 +1,7 @@
 // given a raw log topics list and topic filter config
 // check the match
+import BigNumber from 'bignumber.js';
+
 import { ContractLogTopics } from '../types/configs';
 
 export function utilLogMatchFilter(log: any, filter: ContractLogTopics): boolean {
@@ -18,4 +20,8 @@ export function utilLogMatchFilter(log: any, filter: ContractLogTopics): boolean
   }
 
   return true;
+}
+
+export function formatFromDecimals(value: string, decimals: number): string {
+  return new BigNumber(value).dividedBy(new BigNumber(10).pow(decimals)).toString(10);
 }

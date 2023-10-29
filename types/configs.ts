@@ -74,6 +74,10 @@ export interface EnvConfig {
   blockchains: {
     [key: string]: Blockchain;
   };
+
+  policies: {
+    enableParserCaching: boolean;
+  };
 }
 
 export interface EventMapping {

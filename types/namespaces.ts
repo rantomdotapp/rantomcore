@@ -2,7 +2,14 @@ import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
 import { IManagerService } from '../services/manager/domain';
 import { ProtocolConfig } from './configs';
-import { BlockchainIndexingRunOptions, HandleHookEventLogOptions, SubgraphIndexingRunOptions } from './options';
+import { TransactionAction, TransactionInsight } from './domains';
+import {
+  BlockchainIndexingRunOptions,
+  HandleHookEventLogOptions,
+  ParseEventLogOptions,
+  ParseTransactionOptions,
+  SubgraphIndexingRunOptions,
+} from './options';
 
 export interface ContextServices {
   database: IDatabaseService;
@@ -30,7 +37,10 @@ export interface IAdapter extends IModule {
   // ex, when uniswap adapter got the log with signature:
   // 0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9
   // this function parses the log and save liquidity pool data into database
-  handleHookEventLog: (options: HandleHookEventLogOptions) => Promise<void>;
+  handleEventLog: (options: HandleHookEventLogOptions) => Promise<void>;
+
+  // parse an event log into list of transaction insights
+  parseEventLog: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
 }
 
 // this indexing service query all logs from blockchain in a range
@@ -42,4 +52,9 @@ export interface IBlockchainIndexing extends IModule {
 // this indexing service query all available data from subgraph
 export interface ISubgraphIndexing extends IModule {
   run: (options: SubgraphIndexingRunOptions) => Promise<void>;
+}
+
+// the entry point for parser service
+export interface ITransactionParser extends IModule {
+  parseTransaction: (options: ParseTransactionOptions) => Promise<Array<TransactionInsight>>;
 }

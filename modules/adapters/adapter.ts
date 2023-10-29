@@ -1,7 +1,8 @@
 import { compareAddress } from '../../lib/helper';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
+import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter } from '../../types/namespaces';
-import { HandleHookEventLogOptions } from '../../types/options';
+import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../types/options';
 
 export default class Adapter implements IAdapter {
   public readonly name: string = 'adapter';
@@ -29,8 +30,13 @@ export default class Adapter implements IAdapter {
     return !!this.eventMappings[signature];
   }
 
-  // implement on children
-  public async handleHookEventLog(options: HandleHookEventLogOptions): Promise<void> {
+  // must be implemented in children
+  public async handleEventLog(options: HandleHookEventLogOptions): Promise<void> {
     return Promise.resolve(undefined);
+  }
+
+  // must be implemented in children
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    return [];
   }
 }

@@ -77,7 +77,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       for (const log of logs) {
         // first of all, we process logs by adapter hooks
         for (const [, adapter] of Object.entries(this.adapters)) {
-          await adapter.handleHookEventLog({
+          await adapter.handleEventLog({
             chain: chain,
             log,
           });
