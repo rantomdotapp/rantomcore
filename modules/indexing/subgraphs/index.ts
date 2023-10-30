@@ -1,5 +1,6 @@
 import { SubgraphConfig } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';
+import CamelotSubgraphIndexing from './camelot';
 import PancakeswapSubgraphIndexing from './pancakeswap';
 import SubgraphIndexing from './subgraph';
 import SushiSubgraphIndexing from './sushi';
@@ -10,9 +11,11 @@ export function getSubgraph(services: ContextServices, config: SubgraphConfig): 
     case 'uniswapv2':
     case 'uniswapv3':
     case 'kyberswap-elastic':
-    case 'camelot':
-    case 'camelotv3': {
+    case 'camelot': {
       return new UniswapSubgraphIndexing(services, config);
+    }
+    case 'camelotv3': {
+      return new CamelotSubgraphIndexing(services, config);
     }
     case 'sushi':
     case 'sushiv3': {
