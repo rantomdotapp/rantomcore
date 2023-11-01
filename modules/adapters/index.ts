@@ -11,7 +11,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     uniswapv2: new Uniswapv2Adapter(services, ProtocolConfigs.uniswapv2),
     uniswapv3: new Uniswapv3Adapter(services, ProtocolConfigs.uniswapv3),
     sushi: new Uniswapv2Adapter(services, ProtocolConfigs.sushi),
-    sushiv3: new Uniswapv3Adapter(services, ProtocolConfigs.sushiv2),
+    sushiv3: new Uniswapv3Adapter(services, ProtocolConfigs.sushiv3),
     pancakeswap: new Uniswapv2Adapter(services, ProtocolConfigs.pancakeswap),
     pancakeswapv3: new Pancakev3Adapter(services, ProtocolConfigs.pancakeswapv3),
     'kyberswap-elastic': new Pancakev3Adapter(services, ProtocolConfigs['kyberswap-elastic']),

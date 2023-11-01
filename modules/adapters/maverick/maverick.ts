@@ -3,10 +3,11 @@ import BigNumber from 'bignumber.js';
 import EnvConfig from '../../../configs/envConfig';
 import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
-import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
+import { KnownAction, LiquidityPoolConstant, LiquidityPoolVersion, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
-import { HandleHookEventLogOptions } from '../../../types/options';
+import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../../types/options';
 import Adapter from '../adapter';
 import { MaverickAbiMappings, MaverickEventSignatures } from './abis';
 
@@ -21,33 +22,7 @@ export default class MaverickAdapter extends Adapter {
     });
 
     this.config = config;
-  }
-
-  /**
-   * @description check a liquidity pool contract is belong to this protocol or not
-   * by getting event from a liquidity pool, we can know which protocol it was owned
-   * by checking the factory address of that liquidity pool contract
-   */
-  protected async getLiquidityPool(
-    chain: string,
-    address: string,
-    version: LiquidityPoolVersion,
-  ): Promise<LiquidityPoolConstant | null> {
-    // firstly, we try to get liquidity pool info from database
-    // should get a LiquidityPoolConstant object
-    const pool = await this.services.database.find({
-      collection: EnvConfig.mongodb.collections.liquidityPools,
-      query: {
-        chain: chain,
-        address: normalizeAddress(address),
-      },
-    });
-
-    if (pool) {
-      return pool as LiquidityPoolConstant;
-    }
-
-    return null;
+    this.eventMappings = MaverickAbiMappings;
   }
 
   /**
@@ -135,5 +110,104 @@ export default class MaverickAdapter extends Adapter {
         });
       }
     }
+  }
+
+  /**
+   * @description turns a raw event log into TransactionActions
+   *
+   * @param options include raw log entry and transaction context
+   */
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
+
+    const signature = options.log.topics[0];
+    if (!this.eventMappings[signature]) {
+      return actions;
+    }
+
+    const liquidityPool: LiquidityPoolConstant | null = await this.services.database.find({
+      collection: EnvConfig.mongodb.collections.liquidityPools,
+      query: {
+        chain: options.chain,
+        address: normalizeAddress(options.log.address),
+      },
+    });
+    if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event: any = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1),
+      );
+
+      switch (signature) {
+        case MaverickEventSignatures.Swap: {
+          const tokenAIn = Boolean(event.tokenAIn);
+
+          let tokenIn;
+          let tokenOut;
+          if (tokenAIn) {
+            tokenIn = liquidityPool.token0;
+            tokenOut = liquidityPool.token1;
+          } else {
+            tokenIn = liquidityPool.token1;
+            tokenOut = liquidityPool.token0;
+          }
+
+          const amountIn = formatFromDecimals(event.amountIn.toString(), tokenIn.decimals);
+          const amountOut = formatFromDecimals(event.amountOut.toString(), tokenOut.decimals);
+          const sender = normalizeAddress(event.sender);
+          const recipient = normalizeAddress(event.recipient);
+
+          actions.push({
+            chain: options.chain,
+            protocol: this.config.protocol,
+            action: 'swap',
+            transactionHash: options.log.transactionHash,
+            logIndex: `${options.log.logIndex}:0`,
+            blockNumber: Number(options.log.blockNumber),
+            from: normalizeAddress(options.transaction.from),
+            to: normalizeAddress(options.transaction.to),
+            contract: normalizeAddress(options.log.address),
+            addresses: [sender, recipient],
+            tokens: [tokenIn, tokenOut],
+            tokenAmounts: [amountIn, amountOut],
+          });
+          break;
+        }
+        case MaverickEventSignatures.AddLiquidity:
+        case MaverickEventSignatures.RemoveLiquidity: {
+          let amountA = new BigNumber(0);
+          let amountB = new BigNumber(0);
+          const binDeltas = event.binDeltas as unknown as Array<any>;
+          for (const binDelta of binDeltas) {
+            amountA = amountA.plus(new BigNumber(binDelta.deltaA.toString()).dividedBy(1e18));
+            amountB = amountB.plus(new BigNumber(binDelta.deltaB.toString()).dividedBy(1e18));
+          }
+
+          const sender = normalizeAddress(event.sender);
+          const recipient = event.recipient ? normalizeAddress(event.recipient) : sender;
+          const action: KnownAction = signature === MaverickEventSignatures.AddLiquidity ? 'deposit' : 'withdraw';
+
+          actions.push({
+            chain: options.chain,
+            protocol: this.config.protocol,
+            action: action,
+            transactionHash: options.log.transactionHash,
+            logIndex: `${options.log.logIndex}:0`,
+            blockNumber: Number(options.log.blockNumber),
+            from: normalizeAddress(options.transaction.from),
+            to: normalizeAddress(options.transaction.to),
+            contract: normalizeAddress(options.log.address),
+            addresses: [sender, recipient],
+            tokens: [liquidityPool.token0, liquidityPool.token1],
+            tokenAmounts: [amountA.toString(10), amountB.toString(10)],
+          });
+          break;
+        }
+      }
+    }
+
+    return actions;
   }
 }
