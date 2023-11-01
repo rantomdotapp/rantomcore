@@ -11,6 +11,9 @@ export interface LiquidityPoolConstant {
   token0: Token;
   token1: Token;
   fee: number; // 0.3 -> // 0.3%
+
+  // the block number when this pool was created
+  createdBlockNumber: number;
 }
 
 export const Actions: Array<string> = [

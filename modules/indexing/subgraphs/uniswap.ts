@@ -7,9 +7,9 @@ import { querySubgraph } from '../../../lib/subsgraph';
 import { SubgraphConfig } from '../../../types/configs';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
-import SubgraphIndexing from './subgraph';
+import BaseSubgraphIndexing from './base';
 
-export default class UniswapSubgraphIndexing extends SubgraphIndexing {
+export default class UniswapSubgraphIndexing extends BaseSubgraphIndexing {
   public readonly name: string = 'subgraph.uniswap';
 
   constructor(services: ContextServices, config: SubgraphConfig) {
@@ -21,6 +21,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
       factories: this.config.version === 'univ2' ? 'uniswapFactories' : 'factories',
       listPools: this.config.version === 'univ2' ? 'pairs' : 'pools',
       poolFee: this.config.version === 'univ2' ? '' : 'feeTier',
+      createdAtBlockNumber: 'createdAtBlockNumber',
     };
   }
 
@@ -60,6 +61,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
             decimals
           }
           ${fieldNames.poolFee}
+          ${fieldNames.createdAtBlockNumber}
         }
       }
   	`,
@@ -89,6 +91,7 @@ export default class UniswapSubgraphIndexing extends SubgraphIndexing {
           factory: factoryAddress,
           fee:
             this.config.version === 'univ2' ? 0.3 : new BigNumber(pool[fieldNames.poolFee]).dividedBy(1e4).toNumber(),
+          createdBlockNumber: Number(pool[fieldNames.createdAtBlockNumber]),
         });
       }
     }

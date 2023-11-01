@@ -1,12 +1,12 @@
 import { SubgraphConfig } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';
+import BaseSubgraphIndexing from './base';
 import CamelotSubgraphIndexing from './camelot';
 import PancakeswapSubgraphIndexing from './pancakeswap';
-import SubgraphIndexing from './subgraph';
 import SushiSubgraphIndexing from './sushi';
 import UniswapSubgraphIndexing from './uniswap';
 
-export function getSubgraph(services: ContextServices, config: SubgraphConfig): SubgraphIndexing | null {
+export function getSubgraphIndexing(services: ContextServices, config: SubgraphConfig): BaseSubgraphIndexing | null {
   switch (config.protocol) {
     case 'uniswapv2':
     case 'uniswapv3':

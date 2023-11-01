@@ -137,6 +137,12 @@ export interface SubgraphConfig {
   requestOptions?: any;
 }
 
+export type FactoryVersion = 'univ2' | 'univ3';
+
+export interface FactoryConfig extends ContractConfig {
+  version: FactoryVersion;
+}
+
 export interface ProtocolConfig {
   protocol: string;
   contracts: Array<ContractConfig>;
@@ -145,4 +151,8 @@ export interface ProtocolConfig {
   // because of that, we can use subgraph to indexing historical data
   // on some protocols instead of reindexing historical data onchain
   subgraphs?: Array<SubgraphConfig>;
+
+  // some protocol (DEXes) have a factory contract
+  // it creates all liquidity pools or lending pairs contract
+  factories?: Array<FactoryConfig>;
 }

@@ -21,6 +21,12 @@ export const Uniswapv2Configs: ProtocolConfig = {
       endpoint: PublicTheGraphEndpoints.uniswapv2,
     },
   ],
+  factories: [
+    {
+      version: 'univ2',
+      ...Uniswapv2Contracts.factory,
+    },
+  ],
 };
 
 const Uniswapv3Contracts: { [key: string]: ContractConfig } = {

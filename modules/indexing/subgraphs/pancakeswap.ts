@@ -14,6 +14,7 @@ export default class PancakeswapSubgraphIndexing extends UniswapSubgraphIndexing
       factories: this.config.version === 'univ2' ? 'pancakeFactories' : 'factories',
       listPools: this.config.version === 'univ2' ? 'pairs' : 'pools',
       poolFee: this.config.version === 'univ2' ? '' : 'feeTier',
+      createdAtBlockNumber: this.config.version === 'univ2' ? 'block' : 'createdAtBlockNumber',
     };
   }
 }

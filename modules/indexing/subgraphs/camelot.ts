@@ -14,6 +14,7 @@ export default class CamelotSubgraphIndexing extends UniswapSubgraphIndexing {
       factories: 'factories',
       listPools: this.config.version === 'univ2' ? 'pairs' : 'pools',
       poolFee: this.config.version === 'univ2' ? '' : 'feeZtO',
+      createdAtBlockNumber: 'createdAtBlockNumber',
     };
   }
 }

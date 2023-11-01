@@ -61,6 +61,7 @@ export default class UniswapLibs {
           token0,
           token1,
           fee: 0.3,
+          createdBlockNumber: 0,
         };
       }
     } catch (e: any) {}

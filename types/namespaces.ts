@@ -5,6 +5,7 @@ import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
   BlockchainIndexingRunOptions,
+  FactoryIndexingRunOptions,
   HandleHookEventLogOptions,
   ParseEventLogOptions,
   ParseTransactionOptions,
@@ -60,6 +61,12 @@ export interface IBlockchainIndexing extends IModule {
 // this indexing service query all available data from subgraph
 export interface ISubgraphIndexing extends IModule {
   run: (options: SubgraphIndexingRunOptions) => Promise<void>;
+}
+
+// this indexing service query historical events from factory
+// and save liquidity pools or lending pairs into database
+export interface IFactoryIndexing extends IModule {
+  run: (options: FactoryIndexingRunOptions) => Promise<void>;
 }
 
 // the entry point for parser service

@@ -103,6 +103,7 @@ export default class UniswapAdapter extends Adapter {
           fee: version === 'univ2' ? 0.3 : new BigNumber(event.fee.toString()).dividedBy(1e4).toNumber(),
           token0,
           token1,
+          createdBlockNumber: Number(options.log.blockNumber),
         };
       }
     }

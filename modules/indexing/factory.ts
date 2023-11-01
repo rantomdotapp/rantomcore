@@ -1,18 +1,18 @@
 import { ProtocolConfigs } from '../../configs/protocols';
 import { ProtocolConfig } from '../../types/configs';
-import { ContextServices, ISubgraphIndexing } from '../../types/namespaces';
-import { SubgraphIndexingRunOptions } from '../../types/options';
-import { getSubgraphIndexing } from './subgraphs';
+import { ContextServices, IFactoryIndexing } from '../../types/namespaces';
+import { FactoryIndexingRunOptions } from '../../types/options';
+import { getFactoryIndexing } from './factories';
 
-export default class SubgraphIndexing implements ISubgraphIndexing {
-  public readonly name: string = 'subgraph';
+export default class FactoryIndexing implements IFactoryIndexing {
+  public readonly name: string = 'factory';
   public readonly services: ContextServices;
 
   constructor(services: ContextServices) {
     this.services = services;
   }
 
-  public async run(options: SubgraphIndexingRunOptions): Promise<void> {
+  public async run(options: FactoryIndexingRunOptions): Promise<void> {
     const { protocol } = options;
 
     const configs: Array<ProtocolConfig> = [];
@@ -27,11 +27,11 @@ export default class SubgraphIndexing implements ISubgraphIndexing {
     }
 
     for (const protocolConfig of configs) {
-      if (protocolConfig.subgraphs) {
-        for (const config of protocolConfig.subgraphs) {
-          const subgraph = getSubgraphIndexing(this.services, config);
-          if (subgraph) {
-            await subgraph.indexHistoricalData();
+      if (protocolConfig.factories) {
+        for (const config of protocolConfig.factories) {
+          const factory = getFactoryIndexing(this.services, config);
+          if (factory) {
+            await factory.indexHistoricalData();
           }
         }
       }

@@ -1,7 +1,7 @@
 import { SubgraphConfig } from '../../../types/configs';
 import { ContextServices, IModule } from '../../../types/namespaces';
 
-export default class SubgraphIndexing implements IModule {
+export default class BaseSubgraphIndexing implements IModule {
   public readonly name: string = 'subgraph.uniswap';
   public readonly services: ContextServices;
 

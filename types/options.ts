@@ -15,6 +15,8 @@ export interface SubgraphIndexingRunOptions {
   protocol: string | null;
 }
 
+export interface FactoryIndexingRunOptions extends SubgraphIndexingRunOptions {}
+
 export interface ParseTransactionOptions {
   chain?: string;
   hash: string;

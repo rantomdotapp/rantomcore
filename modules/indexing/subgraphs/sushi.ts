@@ -14,6 +14,7 @@ export default class SushiSubgraphIndexing extends UniswapSubgraphIndexing {
       factories: 'factories',
       listPools: this.config.version === 'univ2' ? 'pairs' : 'pools',
       poolFee: this.config.version === 'univ2' ? '' : 'feeTier',
+      createdAtBlockNumber: this.config.version === 'univ2' ? 'block' : 'createdAtBlockNumber',
     };
   }
 }
