@@ -4,6 +4,7 @@ import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { utilLogMatchFilter } from '../../lib/utils';
 import { ContractConfig } from '../../types/configs';
+import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, IBlockchainIndexing } from '../../types/namespaces';
 import { BlockchainIndexingRunOptions } from '../../types/options';
 import { getAdapters } from '../adapters';
@@ -74,7 +75,10 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       });
 
       const rawLogOperations: Array<any> = [];
+      const actionOperations: Array<any> = [];
       for (const log of logs) {
+        const signature = log.topics[0];
+
         // first of all, we process logs by adapter hooks
         for (const [, adapter] of Object.entries(this.adapters)) {
           await adapter.handleEventLog({
@@ -117,11 +121,50 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
             }
           }
         }
+
+        // process actions
+        for (const [, adapter] of Object.entries(this.adapters)) {
+          if (adapter.supportedSignature(signature)) {
+            const transaction = await this.services.blockchain.getTransaction({
+              chain: chain,
+              hash: log.transactionHash,
+            });
+
+            const actions: Array<TransactionAction> = await adapter.parseEventLog({
+              chain: chain,
+              log: log,
+              allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
+              transaction: transaction,
+            });
+
+            for (const action of actions) {
+              actionOperations.push({
+                updateOne: {
+                  filter: {
+                    chain: chain,
+                    transactionHash: action.transactionHash,
+                    logIndex: action.logIndex,
+                  },
+                  update: {
+                    $set: {
+                      ...action,
+                    },
+                  },
+                  upsert: true,
+                },
+              });
+            }
+          }
+        }
       }
 
       await this.services.database.bulkWrite({
         collection: EnvConfig.mongodb.collections.rawlogs,
         operations: rawLogOperations,
+      });
+      await this.services.database.bulkWrite({
+        collection: EnvConfig.mongodb.collections.actions,
+        operations: actionOperations,
       });
 
       await this.services.database.update({

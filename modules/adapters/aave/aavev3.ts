@@ -58,8 +58,8 @@ export default class Aavev3Adapter extends Adapter {
           const onBehalfOf = event.onBehalfOf
             ? normalizeAddress(event.onBehalfOf)
             : event.to
-              ? normalizeAddress(event.to)
-              : normalizeAddress(event.repayer);
+            ? normalizeAddress(event.to)
+            : normalizeAddress(event.repayer);
 
           const amount = formatFromDecimals(event.amount.toString(), token.decimals);
 

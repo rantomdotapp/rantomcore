@@ -2,12 +2,12 @@ import { ProtocolConfigs } from '../../configs/protocols';
 import { ContextServices, IAdapter } from '../../types/namespaces';
 import Aavev1Adapter from './aave/aavev1';
 import Aavev2Adapter from './aave/aavev2';
+import Aavev3Adapter from './aave/aavev3';
 import BalancerAdapter from './balancer/balancer';
 import MaverickAdapter from './maverick/maverick';
 import Pancakev3Adapter from './pancake/pancakev3';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
-import Aavev3Adapter from "./aave/aavev3";
 
 export function getAdapters(services: ContextServices): { [key: string]: IAdapter } {
   return {

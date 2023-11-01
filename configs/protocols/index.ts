@@ -1,5 +1,5 @@
 import { ProtocolConfig } from '../../types/configs';
-import {Aavev1Configs, Aavev2Configs, Aavev3Configs} from './aave';
+import { Aavev1Configs, Aavev2Configs, Aavev3Configs } from './aave';
 import { BalancerConfigs } from './balancer';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';

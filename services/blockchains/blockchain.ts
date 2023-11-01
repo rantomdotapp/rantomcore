@@ -176,8 +176,18 @@ export default class BlockchainService extends CachingService implements IBlockc
   }
 
   public async getTransaction(options: GetTransactionOptions): Promise<any | null> {
+    const transactionKey = `${options.chain}:${options.hash}`;
+    const cache = await this.getCachingData(transactionKey);
+    if (cache) {
+      return cache.transaction;
+    }
+
     try {
-      return await this.providers[options.chain].eth.getTransaction(options.hash);
+      const tx = await this.providers[options.chain].eth.getTransaction(options.hash);
+      await this.setCachingData(transactionKey, {
+        transaction: tx,
+      });
+      return tx;
     } catch (e: any) {
       return null;
     }

@@ -18,6 +18,7 @@ const envConfig: EnvConfig = {
       rawlogs: `${MongodbPrefix}.core.rawlogs`,
       tokens: `${MongodbPrefix}.core.tokens`,
       contracts: `${MongodbPrefix}.core.contracts`,
+      actions: `${MongodbPrefix}.core.actions`,
       liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
     },
   },

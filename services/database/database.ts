@@ -73,6 +73,7 @@ export default class DatabaseService implements IDatabaseService {
     const rawlogsCollection = await this.getCollection(envConfig.mongodb.collections.rawlogs);
     const tokensCollection = await this.getCollection(envConfig.mongodb.collections.tokens);
     const contractsCollection = await this.getCollection(envConfig.mongodb.collections.contracts);
+    const actionsCollection = await this.getCollection(envConfig.mongodb.collections.actions);
     const liquidityPoolsCollection = await this.getCollection(envConfig.mongodb.collections.liquidityPools);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
@@ -87,6 +88,23 @@ export default class DatabaseService implements IDatabaseService {
 
     // for write documents
     contractsCollection.createIndex({ chain: 1, address: 1 }, { background: true });
+
+    // for write actions
+    actionsCollection.createIndex({ chain: 1, transactionHash: 1, logIndex: 1 }, { background: true });
+
+    // for query by chain
+    actionsCollection.createIndex({ chain: 1, blockNumber: 1 }, { background: true });
+    // for query by tokens
+    actionsCollection.createIndex({ 'tokens.address': 1, blockNumber: 1 }, { background: true });
+    // for query by addresses
+    actionsCollection.createIndex({ addresses: 1, blockNumber: 1 }, { background: true });
+    // for query by protocol
+    actionsCollection.createIndex({ protocol: 1, blockNumber: 1 }, { background: true });
+    // for query by action
+    actionsCollection.createIndex({ action: 1, blockNumber: 1 }, { background: true });
+    // for query overall
+    actionsCollection.createIndex({ chain: 1, action: 1, addresses: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, action: 1, 'tokens.address': 1, blockNumber: 1 }, { background: true });
 
     // for write
     liquidityPoolsCollection.createIndex({ chain: 1, address: 1 }, { background: true });
