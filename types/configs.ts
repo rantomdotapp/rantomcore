@@ -137,7 +137,7 @@ export interface SubgraphConfig {
   requestOptions?: any;
 }
 
-export type FactoryVersion = 'univ2' | 'univ3';
+export type FactoryVersion = 'univ2' | 'univ3' | 'mav';
 
 export interface FactoryConfig extends ContractConfig {
   version: FactoryVersion;
