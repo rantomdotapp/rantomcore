@@ -1,4 +1,5 @@
 import { ProtocolConfig } from '../../types/configs';
+import {Aavev1Configs, Aavev2Configs, Aavev3Configs} from './aave';
 import { BalancerConfigs } from './balancer';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
@@ -9,6 +10,9 @@ import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
 
 export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
+  aavev1: Aavev1Configs,
+  aavev2: Aavev2Configs,
+  aavev3: Aavev3Configs,
   uniswapv2: Uniswapv2Configs,
   uniswapv3: Uniswapv3Configs,
   sushi: SushiConfigs,

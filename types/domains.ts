@@ -40,6 +40,9 @@ export const Actions: Array<string> = [
   // define token repaid actions on lending protocols
   'repaid',
 
+  // liquidation action
+  'liquidate',
+
   // define lock/unlock token actions
   'lock',
   'unlock',

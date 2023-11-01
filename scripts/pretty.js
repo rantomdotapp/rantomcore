@@ -1,7 +1,7 @@
 /* eslint-disable */
 const fs = require('fs');
 
-const chains = ['ethereum', 'arbitrum', 'base', 'polygon', 'optimism'];
+const chains = ['ethereum', 'arbitrum', 'base', 'polygon', 'optimism', 'bnbchain'];
 
 for (const chain of chains) {
   const tokenLis = require(`../configs/tokenlists/${chain}.json`);
