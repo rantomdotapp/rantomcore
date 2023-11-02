@@ -16,7 +16,7 @@ export interface LiquidityPoolConstant {
   createdBlockNumber: number;
 }
 
-export const Actions: Array<string> = [
+export const Actions = [
   // define atomic token exchange actions
   // for example, the exchange of USDC for ETH is a swap action
   'swap',
@@ -38,10 +38,13 @@ export const Actions: Array<string> = [
   'borrow',
 
   // define token repaid actions on lending protocols
-  'repaid',
+  'repay',
 
   // liquidation action
   'liquidate',
+
+  // collect rewards, fees, ...
+  'collect',
 
   // define lock/unlock token actions
   'lock',
@@ -49,7 +52,7 @@ export const Actions: Array<string> = [
 
   // define flashloan actions
   'flashloan',
-];
+] as const;
 export type KnownAction = (typeof Actions)[number];
 
 export interface TransactionAction {

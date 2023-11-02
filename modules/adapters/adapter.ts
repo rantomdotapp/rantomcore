@@ -1,11 +1,11 @@
 import { compareAddress, normalizeAddress } from '../../lib/helper';
 import { EventMapping, ProtocolConfig, Token } from '../../types/configs';
-import { TransactionAction } from '../../types/domains';
+import { KnownAction, TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter } from '../../types/namespaces';
 import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../types/options';
 
 export interface BuildUpActionOptions extends ParseEventLogOptions {
-  action: string;
+  action: KnownAction;
   addresses: Array<string>;
   tokens: Array<Token>;
   tokenAmounts: Array<string>;

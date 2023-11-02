@@ -4,6 +4,9 @@ import Aavev1Adapter from './aave/aavev1';
 import Aavev2Adapter from './aave/aavev2';
 import Aavev3Adapter from './aave/aavev3';
 import BalancerAdapter from './balancer/balancer';
+import CompoundAdapter from './compound/compound';
+import Compoundv3Adapter from './compound/compoundv3';
+import IronbankAdapter from './ironbank/ironbank';
 import MaverickAdapter from './maverick/maverick';
 import Pancakev3Adapter from './pancake/pancakev3';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
@@ -16,6 +19,8 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     aavev3: new Aavev3Adapter(services, ProtocolConfigs.aavev3),
     uniswapv2: new Uniswapv2Adapter(services, ProtocolConfigs.uniswapv2),
     uniswapv3: new Uniswapv3Adapter(services, ProtocolConfigs.uniswapv3),
+    compound: new CompoundAdapter(services, ProtocolConfigs.compound),
+    compoundv3: new Compoundv3Adapter(services, ProtocolConfigs.compoundv3),
     sushi: new Uniswapv2Adapter(services, ProtocolConfigs.sushi),
     sushiv3: new Uniswapv3Adapter(services, ProtocolConfigs.sushiv3),
     pancakeswap: new Uniswapv2Adapter(services, ProtocolConfigs.pancakeswap),
@@ -26,5 +31,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     balancer: new BalancerAdapter(services, ProtocolConfigs.balancer),
     beethovenx: new BalancerAdapter(services, ProtocolConfigs.beethovenx),
     maverick: new MaverickAdapter(services, ProtocolConfigs.maverick),
+    ironbank: new IronbankAdapter(services, ProtocolConfigs.ironbank),
   };
 }
