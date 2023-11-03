@@ -1,9 +1,12 @@
 import { ProtocolConfig } from '../../types/configs';
 import { Aavev1Configs, Aavev2Configs, Aavev3Configs } from './aave';
+import { AbracadabraConfigs } from './abracadabra';
 import { BalancerConfigs } from './balancer';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
+import { CrvusdConfigs } from './curve';
+import { FluxfinanceConfigs } from './fluxfinance';
 import { IronbankConfigs } from './ironbank';
 import { KyberswapElasticConfigs } from './kyberswap';
 import { MaverickConfigs } from './maverick';
@@ -30,4 +33,7 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   beethovenx: BeethovenxConfigs,
   maverick: MaverickConfigs,
   ironbank: IronbankConfigs,
+  fluxfinance: FluxfinanceConfigs,
+  crvusd: CrvusdConfigs,
+  abracadabra: AbracadabraConfigs,
 };

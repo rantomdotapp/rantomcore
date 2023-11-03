@@ -3,9 +3,11 @@ import { ContextServices, IAdapter } from '../../types/namespaces';
 import Aavev1Adapter from './aave/aavev1';
 import Aavev2Adapter from './aave/aavev2';
 import Aavev3Adapter from './aave/aavev3';
+import AbracadabraAdapter from './abracadabra/abracadabra';
 import BalancerAdapter from './balancer/balancer';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
+import CrvusdAdapter from './curve/crvusd';
 import IronbankAdapter from './ironbank/ironbank';
 import MaverickAdapter from './maverick/maverick';
 import Pancakev3Adapter from './pancake/pancakev3';
@@ -32,5 +34,8 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     beethovenx: new BalancerAdapter(services, ProtocolConfigs.beethovenx),
     maverick: new MaverickAdapter(services, ProtocolConfigs.maverick),
     ironbank: new IronbankAdapter(services, ProtocolConfigs.ironbank),
+    fluxfinance: new CompoundAdapter(services, ProtocolConfigs.fluxfinance),
+    crvusd: new CrvusdAdapter(services, ProtocolConfigs.crvusd),
+    abracadabra: new AbracadabraAdapter(services, ProtocolConfigs.abracadabra),
   };
 }
