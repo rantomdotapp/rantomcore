@@ -4,7 +4,9 @@ import Aavev1Adapter from './aave/aavev1';
 import Aavev2Adapter from './aave/aavev2';
 import Aavev3Adapter from './aave/aavev3';
 import AbracadabraAdapter from './abracadabra/abracadabra';
+import AirswapAdapter from './airswap/airswap';
 import BalancerAdapter from './balancer/balancer';
+import BancorAdapter from './bancor/bancor';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
 import CrvusdAdapter from './curve/crvusd';
@@ -13,8 +15,11 @@ import FraxlendAdapter from './fraxlend/fraxlend';
 import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
 import LiquityAdapter from './liquity/liquity';
+import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
+import MorphoAdapter from './morpho/morpho';
 import Pancakev3Adapter from './pancake/pancakev3';
+import PrismaAdapter from './prisma/prisma';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
 
@@ -45,5 +50,15 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     exactly: new ExactlyAdapter(services, ProtocolConfigs.exactly),
     liquity: new LiquityAdapter(services, ProtocolConfigs.liquity),
     gravita: new GravitaAdapter(services, ProtocolConfigs.gravita),
+    maker: new MakerAdapter(services, ProtocolConfigs.maker),
+    morpho: new MorphoAdapter(services, ProtocolConfigs.morpho),
+    prisma: new PrismaAdapter(services, ProtocolConfigs.prisma),
+    radiant: new Aavev2Adapter(services, ProtocolConfigs.radiant),
+    seamless: new Aavev3Adapter(services, ProtocolConfigs.seamless),
+    sonnefinance: new CompoundAdapter(services, ProtocolConfigs.sonnefinance),
+    spark: new Aavev3Adapter(services, ProtocolConfigs.spark),
+    sturdy: new Aavev2Adapter(services, ProtocolConfigs.sturdy),
+    airswap: new AirswapAdapter(services, ProtocolConfigs.airswap),
+    bancor: new BancorAdapter(services, ProtocolConfigs.bancor),
   };
 }

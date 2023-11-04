@@ -30,11 +30,11 @@ export default class LiquityAdapter extends Adapter {
     this.eventMappings = LiquityAbiMappings;
   }
 
-  protected getMarket(logAddress: string): LiquityMarket | null {
+  protected getMarket(options: ParseEventLogOptions): LiquityMarket | null {
     for (const market of (this.config as LiquityConfig).markets) {
       if (
-        compareAddress(market.borrowOperation.address, logAddress) ||
-        compareAddress(market.troveManager.address, logAddress)
+        compareAddress(market.borrowOperation.address, options.log.address) ||
+        compareAddress(market.troveManager.address, options.log.address)
       ) {
         return market as LiquityMarket;
       }
@@ -73,7 +73,7 @@ export default class LiquityAdapter extends Adapter {
     const actions: Array<TransactionAction> = [];
 
     if (this.supportedContract(options.chain, options.log.address)) {
-      const market = this.getMarket(options.log.address);
+      const market = this.getMarket(options);
 
       if (market) {
         const signature = options.log.topics[0];

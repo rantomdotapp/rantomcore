@@ -1,7 +1,9 @@
 import { ProtocolConfig } from '../../types/configs';
 import { Aavev1Configs, Aavev2Configs, Aavev3Configs } from './aave';
 import { AbracadabraConfigs } from './abracadabra';
+import { AirswapConfigs } from './airswap';
 import { BalancerConfigs } from './balancer';
+import { BancorConfigs } from './bancor';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
@@ -13,8 +15,17 @@ import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
 import { KyberswapElasticConfigs } from './kyberswap';
 import { LiquityConfigs } from './liquity';
+import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
+import { MorphoConfigs } from './morpho';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
+import { PrismaConfigs } from './prisma';
+import { RadiantConfigs } from './radiant';
+import { SeamlessConfigs } from './seamless';
+import { SiloConfigs } from './silo';
+import { SonnefinanceConfigs } from './sonnefinance';
+import { SparkConfigs } from './spark';
+import { SturdyConfigs } from './sturdy';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
 
@@ -44,4 +55,15 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   exactly: ExactlyConfigs,
   liquity: LiquityConfigs,
   gravita: GravitaConfigs,
+  maker: MakerConfigs,
+  morpho: MorphoConfigs,
+  prisma: PrismaConfigs,
+  radiant: RadiantConfigs,
+  seamless: SeamlessConfigs,
+  sonnefinance: SonnefinanceConfigs,
+  spark: SparkConfigs,
+  silo: SiloConfigs,
+  sturdy: SturdyConfigs,
+  airswap: AirswapConfigs,
+  bancor: BancorConfigs,
 };
