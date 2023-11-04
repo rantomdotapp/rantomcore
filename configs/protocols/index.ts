@@ -6,9 +6,13 @@ import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
 import { CrvusdConfigs } from './curve';
+import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
+import { FraxlendConfigs } from './fraxlend';
+import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
 import { KyberswapElasticConfigs } from './kyberswap';
+import { LiquityConfigs } from './liquity';
 import { MaverickConfigs } from './maverick';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
@@ -36,4 +40,8 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   fluxfinance: FluxfinanceConfigs,
   crvusd: CrvusdConfigs,
   abracadabra: AbracadabraConfigs,
+  fraxlend: FraxlendConfigs,
+  exactly: ExactlyConfigs,
+  liquity: LiquityConfigs,
+  gravita: GravitaConfigs,
 };

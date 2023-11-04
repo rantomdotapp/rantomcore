@@ -8,7 +8,11 @@ import BalancerAdapter from './balancer/balancer';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
 import CrvusdAdapter from './curve/crvusd';
+import ExactlyAdapter from './exactly/exactly';
+import FraxlendAdapter from './fraxlend/fraxlend';
+import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
+import LiquityAdapter from './liquity/liquity';
 import MaverickAdapter from './maverick/maverick';
 import Pancakev3Adapter from './pancake/pancakev3';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
@@ -37,5 +41,9 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     fluxfinance: new CompoundAdapter(services, ProtocolConfigs.fluxfinance),
     crvusd: new CrvusdAdapter(services, ProtocolConfigs.crvusd),
     abracadabra: new AbracadabraAdapter(services, ProtocolConfigs.abracadabra),
+    fraxlend: new FraxlendAdapter(services, ProtocolConfigs.fraxlend),
+    exactly: new ExactlyAdapter(services, ProtocolConfigs.exactly),
+    liquity: new LiquityAdapter(services, ProtocolConfigs.liquity),
+    gravita: new GravitaAdapter(services, ProtocolConfigs.gravita),
   };
 }

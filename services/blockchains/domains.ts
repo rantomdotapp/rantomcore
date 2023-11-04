@@ -11,7 +11,7 @@ export interface ContractCall {
 
   // sometime, we need query data at a given block
   // this call requires RPC is an archived node
-  blockNumber?: string;
+  blockNumber?: number;
 }
 
 export interface GetTokenOptions {
