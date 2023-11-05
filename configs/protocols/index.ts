@@ -17,9 +17,11 @@ import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxlendConfigs } from './fraxlend';
 import { FraxswapConfigs } from './fraxswap';
+import { GmxConfigs, Gmxv2Configs } from './gmx';
 import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
 import { KyberswapAggregatorConfigs, KyberswapElasticConfigs } from './kyberswap';
+import { LevelfinanceConfigs } from './levelfinance';
 import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
@@ -88,4 +90,7 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   zerox: ZeroxConfigs,
   clipper: ClipperConfigs,
   odos: OdosConfigs,
+  gmx: GmxConfigs,
+  gmxv2: Gmxv2Configs,
+  levelfinance: LevelfinanceConfigs,
 };

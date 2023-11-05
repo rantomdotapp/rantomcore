@@ -52,6 +52,18 @@ export const Actions = [
 
   // define flashloan actions
   'flashloan',
+
+  // perpetual increase/decrease long position
+  'increaseLong',
+  'decreaseLong',
+
+  // perpetual increase/decrease short position
+  'increaseShort',
+  'decreaseShort',
+
+  // perpetual liquidate long/short
+  'liquidateLong',
+  'liquidateShort',
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 

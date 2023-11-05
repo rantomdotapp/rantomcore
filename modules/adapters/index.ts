@@ -18,9 +18,12 @@ import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
 import ExactlyAdapter from './exactly/exactly';
 import FraxlendAdapter from './fraxlend/fraxlend';
+import GmxAdapter from './gmx/gmx';
+import Gmxv2Adapter from './gmx/gmxv2';
 import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
 import KyberswapAdapter from './kyberswap/kyberswap';
+import LevelfinanceAdapter from './levelfinance/levelfinance';
 import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
@@ -82,5 +85,8 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     zerox: new ZeroxAdapter(services, ProtocolConfigs.zerox),
     clipper: new ClipperAdapter(services, ProtocolConfigs.clipper),
     odos: new OdosAdapter(services, ProtocolConfigs.odos),
+    gmx: new GmxAdapter(services, ProtocolConfigs.gmx),
+    gmxv2: new Gmxv2Adapter(services, ProtocolConfigs.gmxv2),
+    levelfinance: new LevelfinanceAdapter(services, ProtocolConfigs.levelfinance),
   };
 }
