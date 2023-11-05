@@ -7,9 +7,14 @@ import AbracadabraAdapter from './abracadabra/abracadabra';
 import AirswapAdapter from './airswap/airswap';
 import BalancerAdapter from './balancer/balancer';
 import BancorAdapter from './bancor/bancor';
+import BasinAdapter from './basin/basin';
+import CarbonAdapter from './carbon/carbon';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
+import CowswapAdapter from './cowswap/cowswap';
 import CrvusdAdapter from './curve/crvusd';
+import DodoAdapter from './dodo/dodo';
+import DodoexAdapter from './dodo/dodoex';
 import ExactlyAdapter from './exactly/exactly';
 import FraxlendAdapter from './fraxlend/fraxlend';
 import GravitaAdapter from './gravita/gravita';
@@ -60,5 +65,10 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     sturdy: new Aavev2Adapter(services, ProtocolConfigs.sturdy),
     airswap: new AirswapAdapter(services, ProtocolConfigs.airswap),
     bancor: new BancorAdapter(services, ProtocolConfigs.bancor),
+    basin: new BasinAdapter(services, ProtocolConfigs.basin),
+    carbon: new CarbonAdapter(services, ProtocolConfigs.carbon),
+    cowswap: new CowswapAdapter(services, ProtocolConfigs.cowswap),
+    dodo: new DodoAdapter(services, ProtocolConfigs.dodo),
+    dodoex: new DodoexAdapter(services, ProtocolConfigs.dodoex),
   };
 }

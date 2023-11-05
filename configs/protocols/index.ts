@@ -4,10 +4,14 @@ import { AbracadabraConfigs } from './abracadabra';
 import { AirswapConfigs } from './airswap';
 import { BalancerConfigs } from './balancer';
 import { BancorConfigs } from './bancor';
+import { BasinConfigs } from './basin';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
+import { CarbonConfigs } from './carbon';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
+import { CowswapConfigs } from './cowswap';
 import { CrvusdConfigs } from './curve';
+import { DodoConfigs, DodoexConfigs } from './dodo';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxlendConfigs } from './fraxlend';
@@ -66,4 +70,9 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   sturdy: SturdyConfigs,
   airswap: AirswapConfigs,
   bancor: BancorConfigs,
+  basin: BasinConfigs,
+  carbon: CarbonConfigs,
+  cowswap: CowswapConfigs,
+  dodo: DodoConfigs,
+  dodoex: DodoexConfigs,
 };
