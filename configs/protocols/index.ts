@@ -15,14 +15,16 @@ import { DodoConfigs, DodoexConfigs } from './dodo';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxlendConfigs } from './fraxlend';
+import { FraxswapConfigs } from './fraxswap';
 import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
-import { KyberswapElasticConfigs } from './kyberswap';
+import { KyberswapAggregatorConfigs, KyberswapElasticConfigs } from './kyberswap';
 import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
 import { MorphoConfigs } from './morpho';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
+import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
 import { RadiantConfigs } from './radiant';
 import { SeamlessConfigs } from './seamless';
@@ -46,6 +48,7 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   pancakeswap: PancakeswapConfigs,
   pancakeswapv3: Pancakeswapv3Configs,
   'kyberswap-elastic': KyberswapElasticConfigs,
+  'kyberswap-aggregator': KyberswapAggregatorConfigs,
   camelot: CamelotConfigs,
   camelotv3: Camelotv3Configs,
   balancer: BalancerConfigs,
@@ -75,4 +78,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   cowswap: CowswapConfigs,
   dodo: DodoConfigs,
   dodoex: DodoexConfigs,
+  fraxswap: FraxswapConfigs,
+  paraswap: ParaswapConfigs,
 };

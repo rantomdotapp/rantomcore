@@ -19,11 +19,13 @@ import ExactlyAdapter from './exactly/exactly';
 import FraxlendAdapter from './fraxlend/fraxlend';
 import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
+import KyberswapAdapter from './kyberswap/kyberswap';
 import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
 import MorphoAdapter from './morpho/morpho';
 import Pancakev3Adapter from './pancake/pancakev3';
+import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
@@ -42,6 +44,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     pancakeswap: new Uniswapv2Adapter(services, ProtocolConfigs.pancakeswap),
     pancakeswapv3: new Pancakev3Adapter(services, ProtocolConfigs.pancakeswapv3),
     'kyberswap-elastic': new Pancakev3Adapter(services, ProtocolConfigs['kyberswap-elastic']),
+    'kyberswap-aggregator': new KyberswapAdapter(services, ProtocolConfigs['kyberswap-aggregator']),
     camelot: new Uniswapv2Adapter(services, ProtocolConfigs.camelot),
     camelotv3: new Uniswapv3Adapter(services, ProtocolConfigs.camelotv3),
     balancer: new BalancerAdapter(services, ProtocolConfigs.balancer),
@@ -70,5 +73,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     cowswap: new CowswapAdapter(services, ProtocolConfigs.cowswap),
     dodo: new DodoAdapter(services, ProtocolConfigs.dodo),
     dodoex: new DodoexAdapter(services, ProtocolConfigs.dodoex),
+    fraxswap: new Uniswapv2Adapter(services, ProtocolConfigs.fraxswap),
+    paraswap: new ParaswapAdapter(services, ProtocolConfigs.paraswap),
   };
 }

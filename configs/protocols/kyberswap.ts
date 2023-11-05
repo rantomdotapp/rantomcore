@@ -83,3 +83,34 @@ export const KyberswapElasticConfigs: ProtocolConfig = {
     },
   ],
 };
+
+export const KyberswapAggregatorConfigs: ProtocolConfig = {
+  protocol: 'kyberswap-aggregator',
+  contracts: [
+    {
+      chain: 'ethereum',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: 'arbitrum',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: 'base',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: 'optimism',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: 'bnbchain',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+  ],
+};
