@@ -9,7 +9,6 @@ import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions } from '../../../types/options';
 import Adapter from '../adapter';
 import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
-import UniswapLibs from './libs';
 
 export default class UniswapAdapter extends Adapter {
   public readonly name: string = 'adapter.uniswap';
@@ -50,12 +49,14 @@ export default class UniswapAdapter extends Adapter {
 
     // if we can not find the liquidity pool in database
     // we try to get on-chain data
-    return await UniswapLibs.getLiquidityPoolOnchain({
-      chain: chain,
-      address: address,
-      version: version,
-      protocol: this.config.protocol,
-    });
+    // return await UniswapLibs.getLiquidityPoolOnchain({
+    //   chain: chain,
+    //   address: address,
+    //   version: version,
+    //   protocol: this.config.protocol,
+    // });
+
+    return null;
   }
 
   /**

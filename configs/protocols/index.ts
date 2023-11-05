@@ -8,6 +8,7 @@ import { BasinConfigs } from './basin';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CarbonConfigs } from './carbon';
+import { ClipperConfigs } from './clipper';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
 import { CowswapConfigs } from './cowswap';
 import { CrvusdConfigs } from './curve';
@@ -23,17 +24,20 @@ import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
 import { MorphoConfigs } from './morpho';
+import { OdosConfigs } from './odos';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
 import { RadiantConfigs } from './radiant';
 import { SeamlessConfigs } from './seamless';
+import { ShibaswapConfigs } from './shibaswap';
 import { SiloConfigs } from './silo';
 import { SonnefinanceConfigs } from './sonnefinance';
 import { SparkConfigs } from './spark';
 import { SturdyConfigs } from './sturdy';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
+import { ZeroxConfigs } from './zerox';
 
 export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   aavev1: Aavev1Configs,
@@ -80,4 +84,8 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   dodoex: DodoexConfigs,
   fraxswap: FraxswapConfigs,
   paraswap: ParaswapConfigs,
+  shibaswap: ShibaswapConfigs,
+  zerox: ZeroxConfigs,
+  clipper: ClipperConfigs,
+  odos: OdosConfigs,
 };

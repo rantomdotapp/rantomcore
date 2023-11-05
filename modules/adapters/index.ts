@@ -9,6 +9,7 @@ import BalancerAdapter from './balancer/balancer';
 import BancorAdapter from './bancor/bancor';
 import BasinAdapter from './basin/basin';
 import CarbonAdapter from './carbon/carbon';
+import ClipperAdapter from './clipper/clipper';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
 import CowswapAdapter from './cowswap/cowswap';
@@ -24,11 +25,13 @@ import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
 import MorphoAdapter from './morpho/morpho';
+import OdosAdapter from './odos/odos';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
+import ZeroxAdapter from './zerox/zerox';
 
 export function getAdapters(services: ContextServices): { [key: string]: IAdapter } {
   return {
@@ -75,5 +78,9 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     dodoex: new DodoexAdapter(services, ProtocolConfigs.dodoex),
     fraxswap: new Uniswapv2Adapter(services, ProtocolConfigs.fraxswap),
     paraswap: new ParaswapAdapter(services, ProtocolConfigs.paraswap),
+    shibaswap: new Uniswapv2Adapter(services, ProtocolConfigs.shibaswap),
+    zerox: new ZeroxAdapter(services, ProtocolConfigs.zerox),
+    clipper: new ClipperAdapter(services, ProtocolConfigs.clipper),
+    odos: new OdosAdapter(services, ProtocolConfigs.odos),
   };
 }

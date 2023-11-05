@@ -14,6 +14,7 @@ export function getFactoryIndexing(services: ContextServices, config: FactoryCon
     case 'pancakeswapv3':
     case 'kyberswap-elastic':
     case 'fraxswap':
+    case 'shibaswap':
     case 'camelot':
     case 'camelotv3': {
       return new UniswapFactoryIndexing(services, config);
