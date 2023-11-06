@@ -17,6 +17,7 @@ export function getSubgraphIndexing(services: ContextServices, config: SubgraphC
     case 'camelotv3': {
       return new CamelotSubgraphIndexing(services, config);
     }
+    case 'traderjoe':
     case 'sushi':
     case 'sushiv3': {
       return new SushiSubgraphIndexing(services, config);

@@ -38,6 +38,7 @@ import { SonnefinanceConfigs } from './sonnefinance';
 import { SparkConfigs } from './spark';
 import { SturdyConfigs } from './sturdy';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
+import { TraderjoeConfigs, Traderjoev2Configs } from './traderjoe';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
 import { ZeroxConfigs } from './zerox';
 
@@ -93,4 +94,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   gmx: GmxConfigs,
   gmxv2: Gmxv2Configs,
   levelfinance: LevelfinanceConfigs,
+  traderjoe: TraderjoeConfigs,
+  traderjoev2: Traderjoev2Configs,
 };

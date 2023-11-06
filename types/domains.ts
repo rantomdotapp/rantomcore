@@ -1,6 +1,6 @@
 import { Token } from './configs';
 
-export type LiquidityPoolVersion = 'univ2' | 'univ3' | 'mav';
+export type LiquidityPoolVersion = 'univ2' | 'univ3' | 'mav' | 'traderjoev2.1';
 
 export interface LiquidityPoolConstant {
   chain: string;

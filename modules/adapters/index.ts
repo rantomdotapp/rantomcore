@@ -32,6 +32,7 @@ import OdosAdapter from './odos/odos';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
+import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
 import ZeroxAdapter from './zerox/zerox';
@@ -88,5 +89,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     gmx: new GmxAdapter(services, ProtocolConfigs.gmx),
     gmxv2: new Gmxv2Adapter(services, ProtocolConfigs.gmxv2),
     levelfinance: new LevelfinanceAdapter(services, ProtocolConfigs.levelfinance),
+    traderjoe: new Uniswapv2Adapter(services, ProtocolConfigs.traderjoe),
+    traderjoev2: new Traderjoev2Adapter(services, ProtocolConfigs.traderjoev2),
   };
 }
