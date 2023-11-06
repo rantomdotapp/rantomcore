@@ -27,6 +27,7 @@ import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
 import { MorphoConfigs } from './morpho';
 import { OdosConfigs } from './odos';
+import { OpenoceanConfigs } from './openocean';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
@@ -96,4 +97,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   levelfinance: LevelfinanceConfigs,
   traderjoe: TraderjoeConfigs,
   traderjoev2: Traderjoev2Configs,
+  openocean: OpenoceanConfigs,
 };

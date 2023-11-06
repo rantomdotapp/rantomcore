@@ -29,6 +29,7 @@ import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
 import MorphoAdapter from './morpho/morpho';
 import OdosAdapter from './odos/odos';
+import OpenoceanAdapter from './openocean/openocean';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
@@ -91,5 +92,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     levelfinance: new LevelfinanceAdapter(services, ProtocolConfigs.levelfinance),
     traderjoe: new Uniswapv2Adapter(services, ProtocolConfigs.traderjoe),
     traderjoev2: new Traderjoev2Adapter(services, ProtocolConfigs.traderjoev2),
+    openocean: new OpenoceanAdapter(services, ProtocolConfigs.openocean),
   };
 }

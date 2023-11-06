@@ -19,6 +19,10 @@ export default class BlockchainService extends CachingService implements IBlockc
 
   constructor(database: IDatabaseService | null) {
     super(database);
+
+    for (const [chain, config] of Object.entries(EnvConfig.blockchains)) {
+      this.providers[chain] = new Web3(config.nodeRpc);
+    }
   }
 
   public getProvider(chain: string): Web3 {
