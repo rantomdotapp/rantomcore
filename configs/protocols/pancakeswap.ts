@@ -20,6 +20,7 @@ const PancakeswapContracts: { [key: string]: ContractConfig } = {
   factoryBnbchain: {
     chain: 'bnbchain',
     protocol: 'pancakeswap',
+    birthblock: 6809737,
     address: '0xca143ce32fe78f1f7019d7d551a6402fc5350c73',
   },
 };
@@ -60,6 +61,12 @@ export const PancakeswapConfigs: ProtocolConfig = {
         referer: 'https://pancakeswap.finance/',
         origin: 'https://pancakeswap.finance',
       },
+    },
+  ],
+  factories: [
+    {
+      version: 'univ2',
+      ...PancakeswapContracts.factoryBnbchain,
     },
   ],
 };

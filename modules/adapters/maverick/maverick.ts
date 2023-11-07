@@ -8,6 +8,7 @@ import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, LiquidityPoolConstant, LiquidityPoolVersion, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../../types/options';
+import MaverickFactoryUpdater from '../../updaters/maverickFactory';
 import Adapter from '../adapter';
 import { MaverickAbiMappings, MaverickEventSignatures } from './abis';
 
@@ -23,6 +24,8 @@ export default class MaverickAdapter extends Adapter {
 
     this.config = config;
     this.eventMappings = MaverickAbiMappings;
+
+    this.updaters = [new MaverickFactoryUpdater(services, config)];
   }
 
   /**

@@ -5,11 +5,10 @@ import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
   BlockchainIndexingRunOptions,
-  FactoryIndexingRunOptions,
   HandleHookEventLogOptions,
   ParseEventLogOptions,
   ParseTransactionOptions,
-  SubgraphIndexingRunOptions,
+  UpdaterRunUpdateOptions,
 } from './options';
 
 export interface ContextServices {
@@ -23,8 +22,21 @@ export interface IModule {
   services: ContextServices;
 }
 
+// every protocol have some constant configs and info
+// this service suppose to query on-chain data and save them to database
+// for faster query when parsing event logs
+export interface IUpdater extends IModule {
+  config: ProtocolConfig;
+
+  runUpdate: (options: UpdaterRunUpdateOptions) => Promise<void>;
+}
+
 export interface IAdapter extends IModule {
   config: ProtocolConfig;
+
+  // if the updater was given
+  // it will be auto run when run the updater
+  updaters: Array<IUpdater>;
 
   // every adapter should support a list of log signatures
   supportedSignature: (signature: string) => boolean;
@@ -56,17 +68,6 @@ export interface ITransferAdapter extends IModule {
 // after that, it passes them into every single adapter hooks to handle logs
 export interface IBlockchainIndexing extends IModule {
   run: (options: BlockchainIndexingRunOptions) => Promise<void>;
-}
-
-// this indexing service query all available data from subgraph
-export interface ISubgraphIndexing extends IModule {
-  run: (options: SubgraphIndexingRunOptions) => Promise<void>;
-}
-
-// this indexing service query historical events from factory
-// and save liquidity pools or lending pairs into database
-export interface IFactoryIndexing extends IModule {
-  run: (options: FactoryIndexingRunOptions) => Promise<void>;
 }
 
 // the entry point for parser service

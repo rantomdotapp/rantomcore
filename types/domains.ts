@@ -16,6 +16,22 @@ export interface LiquidityPoolConstant {
   createdBlockNumber: number;
 }
 
+// staking pool present a staking info of a staking contract
+// which identify by poolId
+// for example, these pools on sushi masterchef or convex finance booster, ...
+export interface StakingPoolConstant {
+  chain: string;
+  protocol: string;
+
+  // the masterchef or staking contract
+  address: string;
+
+  // pool ID
+  poolId: number;
+
+  token: Token;
+}
+
 export const Actions = [
   // define atomic token exchange actions
   // for example, the exchange of USDC for ETH is a swap action

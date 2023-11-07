@@ -14,6 +14,7 @@ export async function querySubgraph(endpoint: string, query: string, options: an
           'Content-Type': 'application/json',
           ...options,
         },
+        validateStatus: (status: number) => true,
       },
     );
 
@@ -26,7 +27,7 @@ export async function querySubgraph(endpoint: string, query: string, options: an
       return null;
     }
 
-    return response.data.data;
+    return response.data.data ? response.data.data : null;
   } catch (e: any) {
     logger.warn('failed to query subgraph', {
       service: 'subgraph',

@@ -7,20 +7,17 @@ import { ProtocolConfig } from '../../../types/configs';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions } from '../../../types/options';
+import UniswapSubgraphUpdater from '../../updaters/uniswapSungraph';
 import Adapter from '../adapter';
 import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
 
 export default class UniswapAdapter extends Adapter {
   public readonly name: string = 'adapter.uniswap';
-  public readonly config: ProtocolConfig;
 
   constructor(services: ContextServices, config: ProtocolConfig) {
-    super(services, {
-      protocol: config.protocol,
-      contracts: config.contracts,
-    });
+    super(services, config);
 
-    this.config = config;
+    this.updaters = [new UniswapSubgraphUpdater(services, config)];
   }
 
   /**

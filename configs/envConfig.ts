@@ -20,6 +20,7 @@ const envConfig: EnvConfig = {
       contracts: `${MongodbPrefix}.core.contracts`,
       actions: `${MongodbPrefix}.core.actions`,
       liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
+      stakingPools: `${MongodbPrefix}.core.staking.pools`,
     },
   },
   sentry: {

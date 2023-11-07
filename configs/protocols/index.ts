@@ -2,6 +2,8 @@ import { ProtocolConfig } from '../../types/configs';
 import { Aavev1Configs, Aavev2Configs, Aavev3Configs } from './aave';
 import { AbracadabraConfigs } from './abracadabra';
 import { AirswapConfigs } from './airswap';
+import { AnkrConfigs } from './ankr';
+import { ApecoinConfigs } from './apecoin';
 import { BalancerConfigs } from './balancer';
 import { BancorConfigs } from './bancor';
 import { BasinConfigs } from './basin';
@@ -13,6 +15,7 @@ import { CompoundConfigs, Compoundv3Configs } from './compound';
 import { CowswapConfigs } from './cowswap';
 import { CrvusdConfigs } from './curve';
 import { DodoConfigs, DodoexConfigs } from './dodo';
+import { Eth2Configs } from './eth2';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxlendConfigs } from './fraxlend';
@@ -26,6 +29,7 @@ import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
 import { MorphoConfigs } from './morpho';
+import { MuxConfigs } from './mux';
 import { OdosConfigs } from './odos';
 import { OpenoceanConfigs } from './openocean';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
@@ -98,4 +102,8 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   traderjoe: TraderjoeConfigs,
   traderjoev2: Traderjoev2Configs,
   openocean: OpenoceanConfigs,
+  mux: MuxConfigs,
+  apecoin: ApecoinConfigs,
+  ankr: AnkrConfigs,
+  eth2: Eth2Configs,
 };

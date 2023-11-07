@@ -5,9 +5,12 @@ import Aavev2Adapter from './aave/aavev2';
 import Aavev3Adapter from './aave/aavev3';
 import AbracadabraAdapter from './abracadabra/abracadabra';
 import AirswapAdapter from './airswap/airswap';
+import AnkrAdapter from './ankr/ankr';
+import ApecoinAdapter from './apecoin/apecoin';
 import BalancerAdapter from './balancer/balancer';
 import BancorAdapter from './bancor/bancor';
 import BasinAdapter from './basin/basin';
+import Camelotv3Adapter from './camelot/camelotv3';
 import CarbonAdapter from './carbon/carbon';
 import ClipperAdapter from './clipper/clipper';
 import CompoundAdapter from './compound/compound';
@@ -16,6 +19,7 @@ import CowswapAdapter from './cowswap/cowswap';
 import CrvusdAdapter from './curve/crvusd';
 import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
+import Eth2Adapter from './eth2/eth2';
 import ExactlyAdapter from './exactly/exactly';
 import FraxlendAdapter from './fraxlend/fraxlend';
 import GmxAdapter from './gmx/gmx';
@@ -28,11 +32,15 @@ import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
 import MorphoAdapter from './morpho/morpho';
+import MuxAdapter from './mux/mux';
 import OdosAdapter from './odos/odos';
 import OpenoceanAdapter from './openocean/openocean';
+import PancakeAdapter from './pancake/pancake';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
+import SushiAdapter from './sushi/sushi';
+import Sushiv3Adapter from './sushi/sushiv3';
 import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
@@ -47,14 +55,14 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     uniswapv3: new Uniswapv3Adapter(services, ProtocolConfigs.uniswapv3),
     compound: new CompoundAdapter(services, ProtocolConfigs.compound),
     compoundv3: new Compoundv3Adapter(services, ProtocolConfigs.compoundv3),
-    sushi: new Uniswapv2Adapter(services, ProtocolConfigs.sushi),
-    sushiv3: new Uniswapv3Adapter(services, ProtocolConfigs.sushiv3),
-    pancakeswap: new Uniswapv2Adapter(services, ProtocolConfigs.pancakeswap),
+    sushi: new SushiAdapter(services, ProtocolConfigs.sushi),
+    sushiv3: new Sushiv3Adapter(services, ProtocolConfigs.sushiv3),
+    pancakeswap: new PancakeAdapter(services, ProtocolConfigs.pancakeswap),
     pancakeswapv3: new Pancakev3Adapter(services, ProtocolConfigs.pancakeswapv3),
-    'kyberswap-elastic': new Pancakev3Adapter(services, ProtocolConfigs['kyberswap-elastic']),
+    'kyberswap-elastic': new Uniswapv3Adapter(services, ProtocolConfigs['kyberswap-elastic']),
     'kyberswap-aggregator': new KyberswapAdapter(services, ProtocolConfigs['kyberswap-aggregator']),
     camelot: new Uniswapv2Adapter(services, ProtocolConfigs.camelot),
-    camelotv3: new Uniswapv3Adapter(services, ProtocolConfigs.camelotv3),
+    camelotv3: new Camelotv3Adapter(services, ProtocolConfigs.camelotv3),
     balancer: new BalancerAdapter(services, ProtocolConfigs.balancer),
     beethovenx: new BalancerAdapter(services, ProtocolConfigs.beethovenx),
     maverick: new MaverickAdapter(services, ProtocolConfigs.maverick),
@@ -93,5 +101,9 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     traderjoe: new Uniswapv2Adapter(services, ProtocolConfigs.traderjoe),
     traderjoev2: new Traderjoev2Adapter(services, ProtocolConfigs.traderjoev2),
     openocean: new OpenoceanAdapter(services, ProtocolConfigs.openocean),
+    mux: new MuxAdapter(services, ProtocolConfigs.mux),
+    apecoin: new ApecoinAdapter(services, ProtocolConfigs.apecoin),
+    ankr: new AnkrAdapter(services, ProtocolConfigs.ankr),
+    eth2: new Eth2Adapter(services, ProtocolConfigs.eth2),
   };
 }

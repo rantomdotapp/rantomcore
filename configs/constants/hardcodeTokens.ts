@@ -1,6 +1,22 @@
 import { Token } from '../../types/configs';
 import EulerTokens from '../data/EulerEAndDTokens.json';
 
+// some protocols using tokens which don't exist
+// an ERC20 address on blockchain
+// these mocking tokens will be used for them
+// for example, synthetix protocol allow trading ADA token
+// but the ADA token doesn't have an address on Optimism
+export const MockingTokens: { [key: string]: string } = {
+  BTC: '0x47904963fc8b2340414262125af798b9655e58cd', // from Gmx v2
+  DOGE: '0xc4da4c24fd591125c3f47b340b6f4f76111883d8', // from Gmx v2
+  LTC: '0xb46a094bc4b0adbd801e14b9db95e05e28962764', // from Gmx v2
+  XRP: '0xc14e065b0067de91534e032868f5ac6ecf2c6868', // from Gmx v2
+  ADA: '0xab1ae161655b7b15f692425a0ffd07395afa67d5', // rantom
+  ALGO: '0x6a26b547ab55064f9b4be6df20e06f5005255815', // rantom
+  DOT: '0x21c95e4d9eae57f692a3dd74d79d16ff07e27957', // rantom
+  EOS: '0x6a4fc4b66aef8c7c503d82fd7f984e2429147e04', // rantom
+};
+
 export const HardcodeTokens: { [key: string]: Token } = {
   // Maker: I don't know why they make things to be complicated :(
   'erc20-ethereum-0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2': {

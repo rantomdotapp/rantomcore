@@ -4,7 +4,7 @@ import Web3 from 'web3';
 import { TokenList } from '../../configs';
 import ERC20Abi from '../../configs/abi/ERC20.json';
 import { AddressE, AddressF, AddressZero } from '../../configs/constants/addresses';
-import { HardcodeTokens } from '../../configs/constants/hardcodeTokens';
+import { HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
 import EnvConfig from '../../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
@@ -89,6 +89,18 @@ export default class BlockchainService extends CachingService implements IBlockc
           address: normalizeAddress(address),
           ...EnvConfig.blockchains[chain].nativeToken,
         };
+      }
+
+      // get from mocking
+      for (const [symbol, mockAddress] of Object.entries(MockingTokens)) {
+        if (compareAddress(mockAddress, address)) {
+          return {
+            chain,
+            symbol,
+            decimals: 18,
+            address: normalizeAddress(address),
+          };
+        }
       }
 
       const key = `erc20-${chain}-${address}`;

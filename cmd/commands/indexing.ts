@@ -1,8 +1,6 @@
 import EnvConfig from '../../configs/envConfig';
 import { sleep } from '../../lib/helper';
 import BlockchainIndexing from '../../modules/indexing/blockchain';
-import FactoryIndexing from '../../modules/indexing/factory';
-import SubgraphIndexing from '../../modules/indexing/subgraph';
 import { ContextServices, IBlockchainIndexing } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
@@ -19,19 +17,11 @@ export class IndexCommand extends BasicCommand {
     await super.preHook(services);
 
     while (true) {
-      if (argv.type === 'subgraph') {
-        const indexing = new SubgraphIndexing(services);
-        await indexing.run({ protocol: argv.protocol });
-      } else if (argv.type === 'factory') {
-        const indexing = new FactoryIndexing(services);
-        await indexing.run({ protocol: argv.protocol });
-      } else {
-        const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
-        await indexing.run({
-          chain: argv.chain,
-          fromBlock: argv.fromBlock,
-        });
-      }
+      const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
+      await indexing.run({
+        chain: argv.chain,
+        fromBlock: argv.fromBlock,
+      });
 
       if (argv.exit) {
         process.exit(0);
@@ -46,17 +36,12 @@ export class IndexCommand extends BasicCommand {
       type: {
         type: 'string',
         default: 'blockchain',
-        describe: 'Given indexing service type: blockchain, subgraph, factory, or contract.',
+        describe: 'Given indexing service type: blockchain, or contract.',
       },
       chain: {
         type: 'string',
         default: 'ethereum',
         describe: `The blockchain name to index, support: ${Object.keys(EnvConfig.blockchains).toString()}`,
-      },
-      protocol: {
-        type: 'string',
-        default: '',
-        describe: 'Run indexing service with a given protocol only.',
       },
       fromBlock: {
         type: 'number',

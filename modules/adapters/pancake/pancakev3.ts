@@ -5,18 +5,19 @@ import { ProtocolConfig } from '../../../types/configs';
 import { LiquidityPoolConstant, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
+import PancakeSubgraphUpdater from '../../updaters/pancakeSubgraph';
 import Uniswapv3Adapter from '../uniswap/uniswapv3';
 import { PancakeAbiMappings, PancakeEventSignatures } from './abis';
 
 export default class Pancakev3Adapter extends Uniswapv3Adapter {
   public readonly name: string = 'adapter.pancakev3';
-  public readonly config: ProtocolConfig;
 
   constructor(services: ContextServices, config: ProtocolConfig) {
     super(services, config);
 
-    this.config = config;
     this.eventMappings[PancakeEventSignatures.SwapV3] = PancakeAbiMappings[PancakeEventSignatures.SwapV3];
+
+    this.updaters = [new PancakeSubgraphUpdater(services, config)];
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {

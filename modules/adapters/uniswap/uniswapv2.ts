@@ -11,12 +11,10 @@ import UniswapAdapter from './uniswap';
 
 export default class Uniswapv2Adapter extends UniswapAdapter {
   public readonly name: string = 'adapter.uniswapv2';
-  public readonly config: ProtocolConfig;
 
   constructor(services: ContextServices, config: ProtocolConfig) {
     super(services, config);
 
-    this.config = config;
     this.eventMappings[UniswapEventSignatures.SwapV2] = UniswapAbiMappings[UniswapEventSignatures.SwapV2];
     this.eventMappings[UniswapEventSignatures.MintV2] = UniswapAbiMappings[UniswapEventSignatures.MintV2];
     this.eventMappings[UniswapEventSignatures.BurnV2] = UniswapAbiMappings[UniswapEventSignatures.BurnV2];

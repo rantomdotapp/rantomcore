@@ -29,7 +29,15 @@ const SushiContracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const SushiConfigs: ProtocolConfig = {
+export interface SushiMasterchefConfig extends ContractConfig {
+  version: 'masterchef' | 'masterchefV2' | 'minichef';
+}
+
+export interface SushiConfig extends ProtocolConfig {
+  masterchefs: Array<SushiMasterchefConfig>;
+}
+
+export const SushiConfigs: SushiConfig = {
   protocol: 'sushi',
   contracts: [
     SushiContracts.factory,
@@ -37,6 +45,26 @@ export const SushiConfigs: ProtocolConfig = {
     SushiContracts.factoryBase,
     SushiContracts.factoryPolygon,
     SushiContracts.factoryBnbchain,
+  ],
+  masterchefs: [
+    {
+      chain: 'ethereum',
+      protocol: 'sushi',
+      version: 'masterchef',
+      address: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
+    },
+    {
+      chain: 'ethereum',
+      protocol: 'sushi',
+      version: 'masterchefV2',
+      address: '0xef0881ec094552b2e128cf945ef17a6752b4ec5d',
+    },
+    {
+      chain: 'arbitrum',
+      protocol: 'sushi',
+      version: 'minichef',
+      address: '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3',
+    },
   ],
   subgraphs: [
     {

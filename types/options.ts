@@ -35,3 +35,5 @@ export interface ParseEventLogOptions {
   // the main log entry
   log: any;
 }
+
+export interface UpdaterRunUpdateOptions {}

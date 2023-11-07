@@ -59,6 +59,9 @@ export interface EnvConfig {
       // save all pool on DEXes like: Uniswap, Sushi, Curve ...
       liquidityPools: string;
 
+      // save all staking pools info
+      stakingPools: string;
+
       // save transaction actions
       actions: string;
     };
