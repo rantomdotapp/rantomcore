@@ -65,6 +65,12 @@ export const SushiConfigs: SushiConfig = {
       version: 'minichef',
       address: '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3',
     },
+    {
+      chain: 'polygon',
+      protocol: 'sushi',
+      version: 'minichef',
+      address: '0x0769fd68dfb93167989c6f7254cd0d766fb2841f',
+    },
   ],
   subgraphs: [
     {

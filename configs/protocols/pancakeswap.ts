@@ -1,5 +1,6 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
+import { SushiConfig } from './sushi';
 
 const PancakeswapContracts: { [key: string]: ContractConfig } = {
   factory: {
@@ -25,7 +26,7 @@ const PancakeswapContracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const PancakeswapConfigs: ProtocolConfig = {
+export const PancakeswapConfigs: SushiConfig = {
   protocol: 'pancakeswap',
   contracts: [
     PancakeswapContracts.factory,
@@ -67,6 +68,20 @@ export const PancakeswapConfigs: ProtocolConfig = {
     {
       version: 'univ2',
       ...PancakeswapContracts.factoryBnbchain,
+    },
+  ],
+  masterchefs: [
+    {
+      version: 'masterchef',
+      chain: 'bnbchain',
+      protocol: 'pancakeswap',
+      address: '0x73feaa1ee314f8c655e354234017be2193c9e24e',
+    },
+    {
+      version: 'masterchefV2',
+      chain: 'bnbchain',
+      protocol: 'pancakeswap',
+      address: '0xa5f8c5dbd5f286960b9d90548680ae5ebff07652',
     },
   ],
 };
