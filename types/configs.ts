@@ -14,6 +14,18 @@ export interface Token extends NativeToken {
   address: string;
 }
 
+export interface NonFungibleToken {
+  eip: 'ERC721' | 'ERC1155';
+
+  chain: string;
+  name: string;
+  address: string;
+  tokenId: string;
+
+  logoURI?: string; // the collection logo image
+  imageURI?: string; // the token id image
+}
+
 export interface Blockchain {
   // ex: ethereum
   name: string;
@@ -51,6 +63,7 @@ export interface EnvConfig {
 
       // we save all known tokens into this collections
       tokens: string;
+      nonFungibleTokens: string;
 
       // save all contract configs
       contracts: string;

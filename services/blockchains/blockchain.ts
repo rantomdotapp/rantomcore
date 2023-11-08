@@ -3,15 +3,24 @@ import Web3 from 'web3';
 
 import { TokenList } from '../../configs';
 import ERC20Abi from '../../configs/abi/ERC20.json';
+import ERC721Abi from '../../configs/abi/ERC721.json';
+import ERC1155Abi from '../../configs/abi/ERC1155.json';
 import { AddressE, AddressF, AddressZero } from '../../configs/constants/addresses';
-import { HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
+import { InterfaceIdErc721, InterfaceIdErc1155 } from '../../configs/constants/eips';
+import { HardcodeNfts, HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
 import EnvConfig from '../../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
-import { Token } from '../../types/configs';
+import { NonFungibleToken, Token } from '../../types/configs';
 import { CachingService } from '../caching/caching';
 import { IDatabaseService } from '../database/domains';
-import { ContractCall, GetTokenOptions, GetTransactionOptions, IBlockchainService } from './domains';
+import {
+  ContractCall,
+  GetNonFungibleTokenOptions,
+  GetTokenOptions,
+  GetTransactionOptions,
+  IBlockchainService,
+} from './domains';
 
 export default class BlockchainService extends CachingService implements IBlockchainService {
   public readonly name: string = 'blockchain';
@@ -190,6 +199,110 @@ export default class BlockchainService extends CachingService implements IBlockc
     }
 
     return null;
+  }
+
+  public async getNonFungibleTokenInfo(options: GetNonFungibleTokenOptions): Promise<NonFungibleToken | null> {
+    const { chain, onchain } = options;
+    const address = normalizeAddress(options.address);
+
+    if (HardcodeNfts[`${options.chain}-${normalizeAddress(options.address)}`]) {
+      return {
+        chain,
+        address: normalizeAddress(address),
+        name: HardcodeNfts[`${options.chain}-${normalizeAddress(options.address)}`].name,
+        eip: HardcodeNfts[`${options.chain}-${normalizeAddress(options.address)}`].eip,
+        tokenId: options.tokenId,
+      };
+    }
+
+    if (!onchain) {
+      if (this._database) {
+        // get from database
+        const tokenFromDatabase = await this._database.find({
+          collection: EnvConfig.mongodb.collections.nonFungibleTokens,
+          query: {
+            chain: chain,
+            address: normalizeAddress(address),
+            tokenId: options.tokenId,
+          },
+        });
+        if (tokenFromDatabase) {
+          return {
+            chain,
+            address: normalizeAddress(address),
+            name: tokenFromDatabase.name,
+            eip: tokenFromDatabase.eip,
+            tokenId: tokenFromDatabase.tokenId,
+            logoURI: tokenFromDatabase.logoURI,
+            imageURI: tokenFromDatabase.imageURI,
+          };
+        }
+      }
+    }
+
+    // get EIP standard by query supportsInterface
+    let token: NonFungibleToken | null = null;
+    try {
+      const name = await this.singlecall({
+        chain: chain,
+        target: address,
+        abi: ERC721Abi,
+        method: 'name',
+        params: [],
+      });
+
+      const supportInterfaceIdErc721 = await this.singlecall({
+        chain: chain,
+        target: address,
+        abi: ERC721Abi,
+        method: 'supportsInterface',
+        params: [InterfaceIdErc721],
+      });
+
+      if (supportInterfaceIdErc721) {
+        token = {
+          chain: options.chain,
+          address: normalizeAddress(options.address),
+          eip: 'ERC721',
+          name: name,
+          tokenId: options.tokenId,
+        };
+      } else {
+        const supportInterfaceIdErc1155 = await this.singlecall({
+          chain: chain,
+          target: address,
+          abi: ERC1155Abi,
+          method: 'supportsInterface',
+          params: [InterfaceIdErc1155],
+        });
+        if (supportInterfaceIdErc1155) {
+          token = {
+            chain: options.chain,
+            address: normalizeAddress(options.address),
+            eip: 'ERC1155',
+            name: name,
+            tokenId: options.tokenId,
+          };
+        }
+      }
+    } catch (e: any) {}
+
+    if (token && this._database) {
+      await this._database.update({
+        collection: EnvConfig.mongodb.collections.nonFungibleTokens,
+        keys: {
+          chain: token.chain,
+          address: token.address,
+          tokenId: token.tokenId,
+        },
+        updates: {
+          ...token,
+        },
+        upsert: true,
+      });
+    }
+
+    return token;
   }
 
   public async getTransaction(options: GetTransactionOptions): Promise<any | null> {

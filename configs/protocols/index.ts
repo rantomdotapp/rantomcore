@@ -18,6 +18,7 @@ import { ConvexConfigs } from './convex';
 import { CowswapConfigs } from './cowswap';
 import { CrvusdConfigs } from './curve';
 import { DodoConfigs, DodoexConfigs } from './dodo';
+import { EnsConfigs } from './ens';
 import { Eth2Configs } from './eth2';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
@@ -41,6 +42,7 @@ import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
 import { RadiantConfigs } from './radiant';
+import { ReflexerConfigs } from './reflexer';
 import { RocketpoolConfigs } from './rocketpool';
 import { SeamlessConfigs } from './seamless';
 import { ShibaswapConfigs } from './shibaswap';
@@ -122,4 +124,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   rocketpool: RocketpoolConfigs,
   stakewise: StakewiseConfigs,
   swell: SwellConfigs,
+  ens: EnsConfigs,
+  reflexer: ReflexerConfigs,
 };

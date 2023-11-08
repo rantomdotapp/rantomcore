@@ -29,3 +29,26 @@ export const TransferAbiMappings: { [key: string]: EventMapping } = {
     ],
   },
 };
+
+export const TransferErc721Abi: EventMapping = {
+  abi: [
+    {
+      indexed: true,
+      internalType: 'address',
+      name: 'from',
+      type: 'address',
+    },
+    {
+      indexed: true,
+      internalType: 'address',
+      name: 'to',
+      type: 'address',
+    },
+    {
+      indexed: true,
+      internalType: 'uint256',
+      name: 'tokenId',
+      type: 'uint256',
+    },
+  ],
+};

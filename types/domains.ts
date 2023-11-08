@@ -1,4 +1,4 @@
-import { Token } from './configs';
+import { NonFungibleToken, Token } from './configs';
 
 export type LiquidityPoolVersion = 'univ2' | 'univ3' | 'mav' | 'traderjoev2.1';
 
@@ -80,6 +80,10 @@ export const Actions = [
   // perpetual liquidate long/short
   'liquidateLong',
   'liquidateShort',
+
+  // register/renew domain name, services
+  'register',
+  'renew',
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
@@ -143,11 +147,10 @@ export interface TransactionInputDecoded {
 export type TokenEIP = 'ERC20' | 'ERC721' | 'ERC1155';
 
 export interface TokenTransfer {
-  token: Token;
+  token: Token | NonFungibleToken;
   from: string;
   to: string;
   amount: string;
-  eip: TokenEIP;
 }
 
 export interface TransactionInsight {

@@ -21,6 +21,7 @@ import CowswapAdapter from './cowswap/cowswap';
 import CrvusdAdapter from './curve/crvusd';
 import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
+import EnsAdapter from './ens/ens';
 import Eth2Adapter from './eth2/eth2';
 import ExactlyAdapter from './exactly/exactly';
 import FraxethAdapter from './fraxeth/fraxeth';
@@ -43,6 +44,7 @@ import PancakeAdapter from './pancake/pancake';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
+import ReflexerAdapter from './reflexer/reflexer';
 import RocketpoolAdapter from './rocketpool/rocketpool';
 import StakewiseAdapter from './stakewise/stakewise';
 import SushiAdapter from './sushi/sushi';
@@ -120,5 +122,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     rocketpool: new RocketpoolAdapter(services, ProtocolConfigs.rocketpool),
     stakewise: new StakewiseAdapter(services, ProtocolConfigs.stakewise),
     swell: new SwellAdapter(services, ProtocolConfigs.swell),
+    ens: new EnsAdapter(services, ProtocolConfigs.ens),
+    reflexer: new ReflexerAdapter(services, ProtocolConfigs.reflexer),
   };
 }

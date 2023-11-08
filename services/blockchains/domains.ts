@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 
-import { Token } from '../../types/configs';
+import { NonFungibleToken, Token } from '../../types/configs';
 
 export interface ContractCall {
   chain: string;
@@ -17,6 +17,15 @@ export interface ContractCall {
 export interface GetTokenOptions {
   chain: string;
   address: string;
+
+  // force to query data onchain
+  onchain?: boolean;
+}
+
+export interface GetNonFungibleTokenOptions {
+  chain: string;
+  address: string;
+  tokenId: string;
 
   // force to query data onchain
   onchain?: boolean;
@@ -45,6 +54,9 @@ export interface IBlockchainService {
 
   // get token info
   getTokenInfo: (options: GetTokenOptions) => Promise<Token | null>;
+
+  // get non fungible token info
+  getNonFungibleTokenInfo: (options: GetNonFungibleTokenOptions) => Promise<NonFungibleToken | null>;
 
   // get transaction
   getTransaction: (options: GetTransactionOptions) => Promise<any>;

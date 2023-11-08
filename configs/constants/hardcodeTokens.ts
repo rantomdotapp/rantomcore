@@ -103,3 +103,10 @@ export const HardcodeTokens: { [key: string]: Token } = {
     decimals: 18,
   },
 };
+
+export const HardcodeNfts: { [key: string]: any } = {
+  'ethereum-0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85': {
+    name: 'ENS',
+    eip: 'ERC721',
+  },
+};
