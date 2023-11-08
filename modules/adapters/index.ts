@@ -12,6 +12,7 @@ import BancorAdapter from './bancor/bancor';
 import BasinAdapter from './basin/basin';
 import Camelotv3Adapter from './camelot/camelotv3';
 import CarbonAdapter from './carbon/carbon';
+import ChaiAdapter from './chai/chai';
 import ClipperAdapter from './clipper/clipper';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
@@ -22,6 +23,7 @@ import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
 import Eth2Adapter from './eth2/eth2';
 import ExactlyAdapter from './exactly/exactly';
+import FraxethAdapter from './fraxeth/fraxeth';
 import FraxlendAdapter from './fraxlend/fraxlend';
 import GmxAdapter from './gmx/gmx';
 import Gmxv2Adapter from './gmx/gmxv2';
@@ -29,6 +31,7 @@ import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
 import KyberswapAdapter from './kyberswap/kyberswap';
 import LevelfinanceAdapter from './levelfinance/levelfinance';
+import LidoAdapter from './lido/lido';
 import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
@@ -40,8 +43,11 @@ import PancakeAdapter from './pancake/pancake';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
+import RocketpoolAdapter from './rocketpool/rocketpool';
+import StakewiseAdapter from './stakewise/stakewise';
 import SushiAdapter from './sushi/sushi';
 import Sushiv3Adapter from './sushi/sushiv3';
+import SwellAdapter from './swell/swell';
 import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
@@ -108,5 +114,11 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     eth2: new Eth2Adapter(services, ProtocolConfigs.eth2),
     convex: new ConvexAdapter(services, ProtocolConfigs.convex),
     aurafinance: new ConvexAdapter(services, ProtocolConfigs.aurafinance),
+    chai: new ChaiAdapter(services, ProtocolConfigs.chai),
+    lido: new LidoAdapter(services, ProtocolConfigs.lido),
+    fraxeth: new FraxethAdapter(services, ProtocolConfigs.fraxeth),
+    rocketpool: new RocketpoolAdapter(services, ProtocolConfigs.rocketpool),
+    stakewise: new StakewiseAdapter(services, ProtocolConfigs.stakewise),
+    swell: new SwellAdapter(services, ProtocolConfigs.swell),
   };
 }

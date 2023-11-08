@@ -11,6 +11,7 @@ import { BasinConfigs } from './basin';
 import { BeethovenxConfigs } from './beethovenx';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CarbonConfigs } from './carbon';
+import { ChaiConfigs } from './chai';
 import { ClipperConfigs } from './clipper';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
 import { ConvexConfigs } from './convex';
@@ -20,6 +21,7 @@ import { DodoConfigs, DodoexConfigs } from './dodo';
 import { Eth2Configs } from './eth2';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
+import { FraxethConfigs } from './fraxeth';
 import { FraxlendConfigs } from './fraxlend';
 import { FraxswapConfigs } from './fraxswap';
 import { GmxConfigs, Gmxv2Configs } from './gmx';
@@ -27,6 +29,7 @@ import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
 import { KyberswapAggregatorConfigs, KyberswapElasticConfigs } from './kyberswap';
 import { LevelfinanceConfigs } from './levelfinance';
+import { LidoConfigs } from './lido';
 import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
@@ -38,13 +41,16 @@ import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
 import { RadiantConfigs } from './radiant';
+import { RocketpoolConfigs } from './rocketpool';
 import { SeamlessConfigs } from './seamless';
 import { ShibaswapConfigs } from './shibaswap';
 import { SiloConfigs } from './silo';
 import { SonnefinanceConfigs } from './sonnefinance';
 import { SparkConfigs } from './spark';
+import { StakewiseConfigs } from './stakewise';
 import { SturdyConfigs } from './sturdy';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
+import { SwellConfigs } from './swell';
 import { TraderjoeConfigs, Traderjoev2Configs } from './traderjoe';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
 import { ZeroxConfigs } from './zerox';
@@ -110,4 +116,10 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   eth2: Eth2Configs,
   convex: ConvexConfigs,
   aurafinance: AurafinanceConfigs,
+  chai: ChaiConfigs,
+  lido: LidoConfigs,
+  fraxeth: FraxethConfigs,
+  rocketpool: RocketpoolConfigs,
+  stakewise: StakewiseConfigs,
+  swell: SwellConfigs,
 };

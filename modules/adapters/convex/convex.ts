@@ -11,7 +11,7 @@ import Adapter from '../adapter';
 import { ConvexAbiMappings, ConvexEventSignatures } from './abis';
 
 export default class ConvexAdapter extends Adapter {
-  public readonly name: string = 'adapter.uniswap';
+  public readonly name: string = 'adapter.convex';
 
   constructor(services: ContextServices, config: ProtocolConfig) {
     super(services, config);
