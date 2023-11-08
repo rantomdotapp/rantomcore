@@ -4,6 +4,7 @@ import SushiMinichefAbi from '../../../configs/abi/sushi/Minichef.json';
 import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import { normalizeAddress } from '../../../lib/helper';
 import BlockchainService from '../../../services/blockchains/blockchain';
+import { MasterchefStakingVersion } from '../../../types/configs';
 import { StakingPoolConstant } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 
@@ -12,7 +13,7 @@ export interface GetMasterchefPoolInfoOptions {
   protocol: string;
   chain: string;
   address: string;
-  version: 'masterchef' | 'minichef' | 'masterchefV2';
+  version: MasterchefStakingVersion;
   poolId: number;
 }
 
@@ -42,7 +43,7 @@ export default class SushiLibs {
         method: 'lpToken',
         params: [options.poolId],
       });
-    } else {
+    } else if (options.version === 'minichef') {
       // minichef
       lpToken = await blockchain.singlecall({
         chain: options.chain,
@@ -51,6 +52,8 @@ export default class SushiLibs {
         method: 'lpToken',
         params: [options.poolId],
       });
+    } else {
+      return null;
     }
 
     const token = await blockchain.getTokenInfo({

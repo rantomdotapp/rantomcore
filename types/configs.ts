@@ -149,6 +149,8 @@ export interface FactoryConfig extends ContractConfig {
   version: FactoryVersion;
 }
 
+export type MasterchefStakingVersion = 'masterchef' | 'masterchefV2' | 'minichef' | 'convexBooster' | 'convexBoosterV2';
+
 export interface ProtocolConfig {
   protocol: string;
   contracts: Array<ContractConfig>;

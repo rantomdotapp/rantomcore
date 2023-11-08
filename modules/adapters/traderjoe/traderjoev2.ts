@@ -8,6 +8,7 @@ import { ProtocolConfig } from '../../../types/configs';
 import { LiquidityPoolConstant, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../../types/options';
+import Traderjoev2ApiUpdater from '../../updaters/traderjoeApi';
 import Adapter from '../adapter';
 import { Traderjoev2AbiMappings, Traderjoev2EventSignatures } from './abis';
 
@@ -23,6 +24,8 @@ export default class Traderjoev2Adapter extends Adapter {
 
     this.config = config;
     this.eventMappings = Traderjoev2AbiMappings;
+
+    this.updaters = [new Traderjoev2ApiUpdater(services, config)];
   }
 
   protected async getPool(chain: string, address: string): Promise<LiquidityPoolConstant | null> {

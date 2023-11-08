@@ -15,6 +15,7 @@ import CarbonAdapter from './carbon/carbon';
 import ClipperAdapter from './clipper/clipper';
 import CompoundAdapter from './compound/compound';
 import Compoundv3Adapter from './compound/compoundv3';
+import ConvexAdapter from './convex/convex';
 import CowswapAdapter from './cowswap/cowswap';
 import CrvusdAdapter from './curve/crvusd';
 import DodoAdapter from './dodo/dodo';
@@ -105,5 +106,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     apecoin: new ApecoinAdapter(services, ProtocolConfigs.apecoin),
     ankr: new AnkrAdapter(services, ProtocolConfigs.ankr),
     eth2: new Eth2Adapter(services, ProtocolConfigs.eth2),
+    convex: new ConvexAdapter(services, ProtocolConfigs.convex),
+    aurafinance: new ConvexAdapter(services, ProtocolConfigs.aurafinance),
   };
 }

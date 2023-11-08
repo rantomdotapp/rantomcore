@@ -18,9 +18,9 @@ export class UpdateCommand extends BasicCommand {
     const adapters = getAdapters(services);
 
     while (true) {
-      if (argv.protocol === '' || adapters[argv.protocol]) {
-        if (adapters[argv.protocol].updaters) {
-          for (const updater of adapters[argv.protocol].updaters) {
+      for (const [protocol, adapter] of Object.entries(adapters)) {
+        if (argv.protocol === '' || argv.protocol === protocol) {
+          for (const updater of adapter.updaters) {
             await (updater as IUpdater).runUpdate({});
           }
         }

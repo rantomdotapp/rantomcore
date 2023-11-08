@@ -4,6 +4,7 @@ import { AbracadabraConfigs } from './abracadabra';
 import { AirswapConfigs } from './airswap';
 import { AnkrConfigs } from './ankr';
 import { ApecoinConfigs } from './apecoin';
+import { AurafinanceConfigs } from './aurafinance';
 import { BalancerConfigs } from './balancer';
 import { BancorConfigs } from './bancor';
 import { BasinConfigs } from './basin';
@@ -12,6 +13,7 @@ import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CarbonConfigs } from './carbon';
 import { ClipperConfigs } from './clipper';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
+import { ConvexConfigs } from './convex';
 import { CowswapConfigs } from './cowswap';
 import { CrvusdConfigs } from './curve';
 import { DodoConfigs, DodoexConfigs } from './dodo';
@@ -106,4 +108,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   apecoin: ApecoinConfigs,
   ankr: AnkrConfigs,
   eth2: Eth2Configs,
+  convex: ConvexConfigs,
+  aurafinance: AurafinanceConfigs,
 };

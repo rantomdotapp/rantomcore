@@ -1,4 +1,4 @@
-import { ContractConfig, ProtocolConfig } from '../../types/configs';
+import { ContractConfig, MasterchefStakingVersion, ProtocolConfig } from '../../types/configs';
 import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
 
 const SushiContracts: { [key: string]: ContractConfig } = {
@@ -30,7 +30,7 @@ const SushiContracts: { [key: string]: ContractConfig } = {
 };
 
 export interface SushiMasterchefConfig extends ContractConfig {
-  version: 'masterchef' | 'masterchefV2' | 'minichef';
+  version: MasterchefStakingVersion;
 }
 
 export interface SushiConfig extends ProtocolConfig {
