@@ -2,7 +2,7 @@ import fs from 'fs';
 
 import CrvusdControllerAbi from '../configs/abi/curve/crvusdController.json';
 import { CrvusdMarket } from '../configs/protocols/curve';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const CrvusdMarkets: Array<string> = [

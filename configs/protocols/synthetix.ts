@@ -1,4 +1,4 @@
-import { normalizeAddress } from '../../lib/helper';
+import { normalizeAddress } from '../../lib/utils';
 import { ProtocolConfig, Token } from '../../types/configs';
 import OptimismTokens from '../tokenlists/optimism.json';
 

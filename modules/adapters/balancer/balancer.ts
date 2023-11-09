@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

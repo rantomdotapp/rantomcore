@@ -9,8 +9,8 @@ import { AddressE, AddressF, AddressZero } from '../../configs/constants/address
 import { InterfaceIdErc721, InterfaceIdErc1155 } from '../../configs/constants/eips';
 import { HardcodeNfts, HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
 import EnvConfig from '../../configs/envConfig';
-import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
+import { compareAddress, normalizeAddress } from '../../lib/utils';
 import { NonFungibleToken, Token } from '../../types/configs';
 import { CachingService } from '../caching/caching';
 import { IDatabaseService } from '../database/domains';

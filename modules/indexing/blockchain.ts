@@ -1,8 +1,6 @@
 import { DefaultQueryLogsBlockRange } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
-import { compareAddress, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
-import { utilLogMatchFilter } from '../../lib/utils';
 import { ContractConfig } from '../../types/configs';
 import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, IBlockchainIndexing } from '../../types/namespaces';
@@ -28,11 +26,6 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
     if (!EnvConfig.blockchains[chain]) {
       return;
     }
-
-    // get list of contract configs
-    const contractConfigs: Array<ContractConfig> = await this.services.manager.getContractConfigs({
-      chain,
-    });
 
     let startBlock = fromBlock;
     const stateKey = `indexing-chain-${chain}`;
@@ -61,7 +54,6 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       chain: chain,
       fromBlock: startBlock,
       toBlock: latestBlock,
-      contracts: contractConfigs.length,
     });
 
     while (startBlock <= latestBlock) {
@@ -74,7 +66,6 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         toBlock,
       });
 
-      const rawLogOperations: Array<any> = [];
       const actionOperations: Array<any> = [];
       for (const log of logs) {
         const signature = log.topics[0];
@@ -85,41 +76,6 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
             chain: chain,
             log,
           });
-        }
-
-        // process raw logs if any
-        for (const contract of contractConfigs) {
-          if (contract.chain === chain && compareAddress(contract.address, log.address)) {
-            if (contract.logFilters) {
-              for (const filter of contract.logFilters) {
-                if (utilLogMatchFilter(log, filter)) {
-                  rawLogOperations.push({
-                    updateOne: {
-                      filter: {
-                        chain: chain,
-                        address: normalizeAddress(log.address),
-                        transactionHash: log.transactionHash,
-                        logIndex: Number(log.logIndex),
-                      },
-                      update: {
-                        $set: {
-                          chain: chain,
-                          protocol: contract.protocol,
-                          blockNumber: Number(log.blockNumber),
-                          address: normalizeAddress(log.address),
-                          transactionHash: log.transactionHash,
-                          logIndex: Number(log.logIndex),
-                          topics: log.topics,
-                          data: log.data,
-                        },
-                      },
-                      upsert: true,
-                    },
-                  });
-                }
-              }
-            }
-          }
         }
 
         // process actions
@@ -158,10 +114,6 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         }
       }
 
-      await this.services.database.bulkWrite({
-        collection: EnvConfig.mongodb.collections.rawlogs,
-        operations: rawLogOperations,
-      });
       await this.services.database.bulkWrite({
         collection: EnvConfig.mongodb.collections.actions,
         operations: actionOperations,

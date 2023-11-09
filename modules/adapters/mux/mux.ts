@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 
 import { MuxConfig } from '../../../configs/protocols/mux';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';

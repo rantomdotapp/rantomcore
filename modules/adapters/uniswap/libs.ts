@@ -1,6 +1,6 @@
 import UniswapPoolV2Abi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import UniswapPoolV3Abi from '../../../configs/abi/uniswap/UniswapV3Pool.json';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
 

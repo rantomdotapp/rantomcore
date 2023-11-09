@@ -1,5 +1,5 @@
 import { BasinConfig, BasinPoolConfig } from '../../../configs/protocols/basin';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

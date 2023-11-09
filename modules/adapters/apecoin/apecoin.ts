@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 
 import { TokenList } from '../../../configs';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';

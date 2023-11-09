@@ -1,4 +1,4 @@
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';

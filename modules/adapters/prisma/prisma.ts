@@ -1,5 +1,5 @@
 import { LiquityConfig, LiquityMarket } from '../../../configs/protocols/liquity';
-import { compareAddress } from '../../../lib/helper';
+import { compareAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';

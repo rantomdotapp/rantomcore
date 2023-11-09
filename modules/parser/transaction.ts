@@ -1,6 +1,6 @@
 import { DefaultParserCachingTime } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
-import { getTimestamp } from '../../lib/helper';
+import { getTimestamp } from '../../lib/utils';
 import { TransactionAction, TransactionInsight } from '../../types/domains';
 import { ContextServices, IAdapter, ITransactionParser, ITransferAdapter } from '../../types/namespaces';
 import { ParseTransactionOptions } from '../../types/options';

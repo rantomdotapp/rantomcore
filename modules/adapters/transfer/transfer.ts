@@ -1,4 +1,4 @@
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { NonFungibleToken, Token } from '../../../types/configs';
 import { TokenTransfer } from '../../../types/domains';

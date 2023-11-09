@@ -1,5 +1,5 @@
 import { DodoConfig, DodoPoolConfig } from '../../../configs/protocols/dodo';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';

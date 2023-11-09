@@ -3,7 +3,7 @@ import fs from 'fs';
 
 import ExactlyMarketAbi from '../configs/abi/exactly/Market.json';
 import { ExactlyMarket } from '../configs/protocols/exactly';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const Markets: Array<string> = [

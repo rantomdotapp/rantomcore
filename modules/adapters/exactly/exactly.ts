@@ -1,5 +1,5 @@
 import { ExactlyConfig, ExactlyMarket } from '../../../configs/protocols/exactly';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

@@ -15,7 +15,6 @@ const envConfig: EnvConfig = {
     collections: {
       states: `${MongodbPrefix}.states`,
       caching: `${MongodbPrefix}.caching`,
-      rawlogs: `${MongodbPrefix}.core.rawlogs`,
       tokens: `${MongodbPrefix}.core.tokens`,
       nonFungibleTokens: `${MongodbPrefix}.core.nonFungibleTokens`,
       contracts: `${MongodbPrefix}.core.contracts`,
@@ -26,9 +25,6 @@ const envConfig: EnvConfig = {
   },
   sentry: {
     dns: String(process.env.RANTOM_SENTRY_DNS),
-  },
-  system: {
-    managerKey: String(process.env.RANTOM_MANAGER_KEY),
   },
   policies: {
     enableParserCaching: String(process.env.RANTOM_ENABLE_PARSER_CACHING) !== 'disabled',

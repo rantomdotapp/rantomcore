@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 import EnvConfig from '../../configs/envConfig';
-import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
+import { normalizeAddress } from '../../lib/utils';
 import { ProtocolConfig } from '../../types/configs';
 import { LiquidityPoolConstant } from '../../types/domains';
 import { ContextServices } from '../../types/namespaces';

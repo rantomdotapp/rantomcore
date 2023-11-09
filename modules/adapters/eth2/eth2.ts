@@ -1,6 +1,6 @@
 import { AddressZero } from '../../../configs/constants/addresses';
 import { NativeTokens } from '../../../configs/constants/nativeTokens';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { fromLittleEndian64 } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';

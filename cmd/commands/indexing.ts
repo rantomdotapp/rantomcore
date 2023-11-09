@@ -1,7 +1,8 @@
 import EnvConfig from '../../configs/envConfig';
-import { sleep } from '../../lib/helper';
+import { sleep } from '../../lib/utils';
 import BlockchainIndexing from '../../modules/indexing/blockchain';
-import { ContextServices, IBlockchainIndexing } from '../../types/namespaces';
+import ProtocolIndexing from '../../modules/indexing/protocol';
+import { ContextServices, IBlockchainIndexing, IProtocolIndexing } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
 export class IndexCommand extends BasicCommand {
@@ -17,11 +18,20 @@ export class IndexCommand extends BasicCommand {
     await super.preHook(services);
 
     while (true) {
-      const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
-      await indexing.run({
-        chain: argv.chain,
-        fromBlock: argv.fromBlock,
-      });
+      if (argv.type === 'blockchain') {
+        const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
+        await indexing.run({
+          chain: argv.chain,
+          fromBlock: argv.fromBlock,
+        });
+      } else if (argv.type === 'protocol' && argv.protocol !== '') {
+        const indexing: IProtocolIndexing = new ProtocolIndexing(services);
+        await indexing.run({
+          protocol: argv.protocol ? argv.protocol : 'any',
+        });
+      } else {
+        process.exit(0);
+      }
 
       if (argv.exit) {
         process.exit(0);
@@ -41,7 +51,12 @@ export class IndexCommand extends BasicCommand {
       chain: {
         type: 'string',
         default: 'ethereum',
-        describe: `The blockchain name to index, support: ${Object.keys(EnvConfig.blockchains).toString()}`,
+        describe: `The blockchain name to index, support: ${Object.keys(EnvConfig.blockchains).toString()}.`,
+      },
+      protocol: {
+        type: 'string',
+        default: '',
+        describe: `The protocol name to index in case type is protocol too.`,
       },
       fromBlock: {
         type: 'number',

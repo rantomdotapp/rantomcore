@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
 
-import { normalizeAddress } from '../../lib/helper';
+import { normalizeAddress } from '../../lib/utils';
 import { FactoryConfig, ProtocolConfig } from '../../types/configs';
 import { LiquidityPoolConstant } from '../../types/domains';
 import { ContextServices } from '../../types/namespaces';

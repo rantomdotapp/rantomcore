@@ -3,7 +3,7 @@ import fs from 'fs';
 
 import CompoundErc20Abi from '../configs/abi/compound/cErc20.json';
 import { CompoundMarket } from '../configs/protocols/compound';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const Markets: Array<string> = [

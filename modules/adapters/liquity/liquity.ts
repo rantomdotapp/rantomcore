@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js';
 
 import TroveManagerAbi from '../../../configs/abi/liquity/TroveManager.json';
 import { LiquityConfig, LiquityMarket } from '../../../configs/protocols/liquity';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';

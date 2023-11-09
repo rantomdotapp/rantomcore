@@ -1,5 +1,5 @@
 import { CrvusdConfig, CrvusdMarket } from '../../../configs/protocols/curve';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';

@@ -4,7 +4,7 @@ import { TokenList } from '../../../configs';
 import Erc20Abi from '../../../configs/abi/ERC20.json';
 import { AddressZero } from '../../../configs/constants/addresses';
 import { AbracadabraConfig, AbracadabraMarket } from '../../../configs/protocols/abracadabra';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

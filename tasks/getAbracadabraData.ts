@@ -3,7 +3,7 @@ import fs from 'fs';
 import { TokenList } from '../configs';
 import CauldronV4 from '../configs/abi/abracadabra/CauldronV4.json';
 import { AbracadabraMarket } from '../configs/protocols/abracadabra';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const AbracadabraMarkets: Array<string> = [

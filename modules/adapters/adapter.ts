@@ -1,4 +1,4 @@
-import { compareAddress, normalizeAddress } from '../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../lib/utils';
 import { EventMapping, ProtocolConfig, Token } from '../../types/configs';
 import { KnownAction, TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, IUpdater } from '../../types/namespaces';

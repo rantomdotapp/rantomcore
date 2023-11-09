@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
 
 import EnvConfig from '../../configs/envConfig';
-import { normalizeAddress, sleep } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { querySubgraph } from '../../lib/subsgraph';
+import { normalizeAddress, sleep } from '../../lib/utils';
 import { ProtocolConfig, SubgraphConfig } from '../../types/configs';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../types/domains';
 import { ContextServices } from '../../types/namespaces';

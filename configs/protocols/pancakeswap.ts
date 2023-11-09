@@ -65,10 +65,10 @@ export const PancakeswapConfigs: SushiConfig = {
     },
   ],
   factories: [
-    {
-      version: 'univ2',
-      ...PancakeswapContracts.factoryBnbchain,
-    },
+    // {
+    //   version: 'univ2',
+    //   ...PancakeswapContracts.factoryBnbchain,
+    // },
   ],
   masterchefs: [
     {

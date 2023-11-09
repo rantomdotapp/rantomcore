@@ -1,5 +1,5 @@
 import { CompoundConfig, CompoundMarket } from '../../../configs/protocols/compound';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';

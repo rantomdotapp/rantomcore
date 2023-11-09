@@ -2,8 +2,8 @@ import BigNumber from 'bignumber.js';
 
 import { DefaultQueryLogsBlockRangeSingleContract } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
-import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
+import { normalizeAddress } from '../../lib/utils';
 import { FactoryConfig, ProtocolConfig } from '../../types/configs';
 import { LiquidityPoolConstant } from '../../types/domains';
 import { ContextServices } from '../../types/namespaces';

@@ -1,8 +1,8 @@
 import { Collection, MongoClient } from 'mongodb';
 
 import envConfig from '../../configs/envConfig';
-import { sleep } from '../../lib/helper';
 import logger from '../../lib/logger';
+import { sleep } from '../../lib/utils';
 import { DatabaseBulkWriteOptions, DatabaseQueryOptions, DatabaseUpdateOptions, IDatabaseService } from './domains';
 
 export default class DatabaseService implements IDatabaseService {
@@ -70,7 +70,6 @@ export default class DatabaseService implements IDatabaseService {
   private async setupIndies(): Promise<void> {
     const statesCollection = await this.getCollection(envConfig.mongodb.collections.states);
     const cachingCollection = await this.getCollection(envConfig.mongodb.collections.caching);
-    const rawlogsCollection = await this.getCollection(envConfig.mongodb.collections.rawlogs);
     const tokensCollection = await this.getCollection(envConfig.mongodb.collections.tokens);
     const nonFungibleTokensCollection = await this.getCollection(envConfig.mongodb.collections.nonFungibleTokens);
     const contractsCollection = await this.getCollection(envConfig.mongodb.collections.contracts);
@@ -80,10 +79,6 @@ export default class DatabaseService implements IDatabaseService {
 
     statesCollection.createIndex({ name: 1 }, { background: true });
     cachingCollection.createIndex({ name: 1 }, { background: true });
-
-    // for write documents
-    rawlogsCollection.createIndex({ chain: 1, address: 1, transactionHash: 1, logIndex: 1 }, { background: true });
-    rawlogsCollection.createIndex({ chain: 1, address: 1, blockNumber: 1 }, { background: true });
 
     // for write documents
     tokensCollection.createIndex({ chain: 1, address: 1 }, { background: true });

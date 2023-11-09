@@ -2,7 +2,7 @@ import SushiMasterchefAbi from '../../../configs/abi/sushi/Masterchef.json';
 import SushiMasterchefV2Abi from '../../../configs/abi/sushi/MasterchefV2.json';
 import SushiMinichefAbi from '../../../configs/abi/sushi/Minichef.json';
 import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
 import { MasterchefStakingVersion } from '../../../types/configs';
 import { StakingPoolConstant } from '../../../types/domains';

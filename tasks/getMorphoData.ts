@@ -7,7 +7,7 @@ import MorphoCompoundAbi from '../configs/abi/morpho/MorphoCompound.json';
 import { AddressZero } from '../configs/constants/addresses';
 import { NativeTokens } from '../configs/constants/nativeTokens';
 import { MorphoMarketConfig } from '../configs/protocols/morpho';
-import { compareAddress, normalizeAddress } from '../lib/helper';
+import { compareAddress, normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const MorphoAave = '0x777777c9898d384f785ee44acfe945efdff5f3e0';

@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js';
 import { TokenList } from '../../../configs';
 import CompoundCTokenAbi from '../../../configs/abi/compound/cErc20.json';
 import { CompoundConfig, CompoundMarket } from '../../../configs/protocols/compound';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

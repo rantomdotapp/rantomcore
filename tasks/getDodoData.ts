@@ -3,7 +3,7 @@ import fs from 'fs';
 
 import DOdoDVMAbi from '../configs/abi/dodo/DVM.json';
 import { DodoPoolConfig } from '../configs/protocols/dodo';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const TopPairs = [

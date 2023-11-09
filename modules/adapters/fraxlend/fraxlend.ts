@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 
 import { FraxlendConfig, FraxlendPair } from '../../../configs/protocols/fraxlend';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

@@ -2,7 +2,7 @@
 import fs from 'fs';
 
 import { Gmxv2MarketConfig } from '../configs/protocols/gmx';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import { Gmxv2AbiMappings, Gmxv2EventSignatures } from '../modules/adapters/gmx/abis';
 import BlockchainService from '../services/blockchains/blockchain';
 

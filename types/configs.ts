@@ -58,9 +58,6 @@ export interface EnvConfig {
       // make sure these data can be safety deleted without any issues on services
       caching: string;
 
-      // we save all blockchain contract raw logs into this collection
-      rawlogs: string;
-
       // we save all known tokens into this collections
       tokens: string;
       nonFungibleTokens: string;
@@ -78,10 +75,6 @@ export interface EnvConfig {
       // save transaction actions
       actions: string;
     };
-  };
-
-  system: {
-    managerKey: string;
   };
 
   // some sentry config for monitoring purposes
@@ -103,32 +96,6 @@ export interface EventMapping {
   abi: Array<any>;
 }
 
-export interface ContractLogTopics {
-  topic0: string;
-
-  // matching
-  topic1?: string;
-  topic2?: string;
-  topic3?: string;
-
-  // consider a log with these four topics
-  // '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
-  // '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9',
-  // '0x000000000000000000000000926c777c091a5a070dc24ac94ff498b5a556f92a',
-  // '0x000000000000000000000000926c777c091a5a070dc24ac94ff498b5a556f92a',
-
-  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
-  // => match
-
-  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
-  // topic1 = '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9'
-  // => match
-
-  // topic0 = '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
-  // topic2 = '0x0000000000000000000000004cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9'
-  // => doesn't match
-}
-
 export interface ContractConfig {
   chain: string;
 
@@ -142,7 +109,15 @@ export interface ContractConfig {
   birthblock?: number;
 
   // used to filter logs
-  logFilters?: Array<ContractLogTopics>;
+  topics?: Array<string>;
+}
+
+export interface ContractHistoricalIndexConfig {
+  chain: string;
+  protocol: string;
+  address: string;
+  birthblock: number;
+  topics: Array<string>;
 }
 
 export type SubgraphVersion = 'univ2' | 'univ3';
@@ -176,4 +151,10 @@ export interface ProtocolConfig {
   // some protocol (DEXes) have a factory contract
   // it creates all liquidity pools or lending pairs contract
   factories?: Array<FactoryConfig>;
+
+  // when protocol was onboard
+  // we need to sync historical data
+  // this is a list of contract we will use to sync historical data
+  // check ProtocolIndexing for the indexing logics
+  historicalIndies?: Array<ContractConfig>;
 }

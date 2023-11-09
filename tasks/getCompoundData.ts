@@ -4,7 +4,7 @@ import fs from 'fs';
 import CompoundCometAbi from '../configs/abi/compound/Comet.json';
 import CompoundErc20Abi from '../configs/abi/compound/cErc20.json';
 import { CompoundMarket, Compoundv3Market } from '../configs/protocols/compound';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 import { Token } from '../types/configs';
 

@@ -1,6 +1,5 @@
 import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
-import { IManagerService } from '../services/manager/domain';
 import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
@@ -8,13 +7,13 @@ import {
   HandleHookEventLogOptions,
   ParseEventLogOptions,
   ParseTransactionOptions,
+  ProtocolIndexingRunOptions,
   UpdaterRunUpdateOptions,
 } from './options';
 
 export interface ContextServices {
   database: IDatabaseService;
   blockchain: IBlockchainService;
-  manager: IManagerService;
 }
 
 export interface IModule {
@@ -68,6 +67,12 @@ export interface ITransferAdapter extends IModule {
 // after that, it passes them into every single adapter hooks to handle logs
 export interface IBlockchainIndexing extends IModule {
   run: (options: BlockchainIndexingRunOptions) => Promise<void>;
+}
+
+// index historical data of a given protocol
+// it uses contracts configs from protocol config
+export interface IProtocolIndexing extends IModule {
+  run: (options: ProtocolIndexingRunOptions) => Promise<void>;
 }
 
 // the entry point for parser service

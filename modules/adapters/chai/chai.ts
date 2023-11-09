@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js';
 import { TokenList } from '../../../configs';
 import McdPotAbi from '../../../configs/abi/maker/McdPot.json';
 import { AddressZero } from '../../../configs/constants/addresses';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';

@@ -6,7 +6,7 @@ import SiloAbi from '../configs/abi/silo/Silo.json';
 import SiloDepositoryAbi from '../configs/abi/silo/SiloDepository.json';
 import EnvConfig from '../configs/envConfig';
 import { SiloMarket } from '../configs/protocols/silo';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const DepositoryAddresses = [

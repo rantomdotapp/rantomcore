@@ -3,7 +3,7 @@ import BoosterAbi from '../../../configs/abi/convex/Booster.json';
 import BoosterV2Abi from '../../../configs/abi/convex/BoosterV2.json';
 import ConvexRewardPoolAbi from '../../../configs/abi/convex/ConvexRewardPool.json';
 import { ConvexStakingPoolConstant } from '../../../configs/protocols/convex';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
 import { MasterchefStakingVersion } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';

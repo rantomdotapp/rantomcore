@@ -1,6 +1,6 @@
 import EnvConfig from '../../../configs/envConfig';
 import { ConvexConfig, ConvexStakingPoolConstant } from '../../../configs/protocols/convex';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

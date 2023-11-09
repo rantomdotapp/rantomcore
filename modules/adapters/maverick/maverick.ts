@@ -1,8 +1,8 @@
 import BigNumber from 'bignumber.js';
 
 import EnvConfig from '../../../configs/envConfig';
-import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, LiquidityPoolConstant, LiquidityPoolVersion, TransactionAction } from '../../../types/domains';

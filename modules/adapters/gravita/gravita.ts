@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js';
 
 import VesselManagerAbi from '../../../configs/abi/gravita/VesselManager.json';
 import { GravitaConfig } from '../../../configs/protocols/gravita';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';

@@ -1,4 +1,4 @@
-import { sleep } from '../../lib/helper';
+import { sleep } from '../../lib/utils';
 import { getAdapters } from '../../modules/adapters';
 import { ContextServices, IUpdater } from '../../types/namespaces';
 import { BasicCommand } from '../basic';

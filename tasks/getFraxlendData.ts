@@ -4,7 +4,7 @@ import fs from 'fs';
 import { TokenList } from '../configs';
 import FraxlendPairAbi from '../configs/abi/fraxlend/FraxlendPair.json';
 import { FraxlendPair } from '../configs/protocols/fraxlend';
-import { normalizeAddress } from '../lib/helper';
+import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 
 const PairConfigs: Array<string> = [
