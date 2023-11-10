@@ -30,6 +30,8 @@ export interface Blockchain {
   // ex: ethereum
   name: string;
 
+  chainId: number;
+
   // default: evm, more coming soon
   family: ChainFamily;
 

@@ -7,10 +7,13 @@ import { ApecoinConfigs } from './apecoin';
 import { AurafinanceConfigs } from './aurafinance';
 import { BalancerConfigs } from './balancer';
 import { BancorConfigs } from './bancor';
+import { BasebridgeConfigs } from './base';
 import { BasinConfigs } from './basin';
 import { BeethovenxConfigs } from './beethovenx';
+import { BungeeConfigs } from './bungee';
 import { CamelotConfigs, Camelotv3Configs } from './camelot';
 import { CarbonConfigs } from './carbon';
+import { CelerbridgeConfigs } from './celerbridge';
 import { ChaiConfigs } from './chai';
 import { ClipperConfigs } from './clipper';
 import { CompoundConfigs, Compoundv3Configs } from './compound';
@@ -50,6 +53,7 @@ import { SiloConfigs } from './silo';
 import { SonnefinanceConfigs } from './sonnefinance';
 import { SparkConfigs } from './spark';
 import { StakewiseConfigs } from './stakewise';
+import { StargateConfigs } from './stargate';
 import { SturdyConfigs } from './sturdy';
 import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { SwellConfigs } from './swell';
@@ -129,4 +133,8 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   reflexer: ReflexerConfigs,
   yearn: YearnConfigs,
   yearnyeth: YearnyethConfig,
+  stargate: StargateConfigs,
+  bungee: BungeeConfigs,
+  basebridge: BasebridgeConfigs,
+  celerbridge: CelerbridgeConfigs,
 };

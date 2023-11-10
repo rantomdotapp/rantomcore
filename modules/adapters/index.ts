@@ -9,9 +9,12 @@ import AnkrAdapter from './ankr/ankr';
 import ApecoinAdapter from './apecoin/apecoin';
 import BalancerAdapter from './balancer/balancer';
 import BancorAdapter from './bancor/bancor';
+import BasebridgeAdapter from './basebridge/basebridge';
 import BasinAdapter from './basin/basin';
+import BungeeAdapter from './bungee/bungee';
 import Camelotv3Adapter from './camelot/camelotv3';
 import CarbonAdapter from './carbon/carbon';
+import CelerbridgeAdapter from './celerbridge/celerbridge';
 import ChaiAdapter from './chai/chai';
 import ClipperAdapter from './clipper/clipper';
 import CompoundAdapter from './compound/compound';
@@ -47,6 +50,7 @@ import PrismaAdapter from './prisma/prisma';
 import ReflexerAdapter from './reflexer/reflexer';
 import RocketpoolAdapter from './rocketpool/rocketpool';
 import StakewiseAdapter from './stakewise/stakewise';
+import StargateAdapter from './stargate/stargate ';
 import SushiAdapter from './sushi/sushi';
 import Sushiv3Adapter from './sushi/sushiv3';
 import SwellAdapter from './swell/swell';
@@ -128,5 +132,9 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     reflexer: new ReflexerAdapter(services, ProtocolConfigs.reflexer),
     yearn: new YearnAdapter(services, ProtocolConfigs.yearn),
     yearnyeth: new YearnyethAdapter(services, ProtocolConfigs.yearnyeth),
+    stargate: new StargateAdapter(services, ProtocolConfigs.stargate),
+    bungee: new BungeeAdapter(services, ProtocolConfigs.bungee),
+    basebridge: new BasebridgeAdapter(services, ProtocolConfigs.basebridge),
+    celerbridge: new CelerbridgeAdapter(services, ProtocolConfigs.celerbridge),
   };
 }

@@ -87,6 +87,9 @@ export const Actions = [
   // register/renew domain name, services
   'register',
   'renew',
+
+  // cross-chain transfer/swap actions
+  'bridge',
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
