@@ -34,12 +34,19 @@ export default class Eth2Adapter extends Adapter {
       );
 
       const amount = fromLittleEndian64(event.amount);
+      let transaction = options.transaction;
+      if (!transaction) {
+        transaction = await this.services.blockchain.getTransaction({
+          chain: options.chain,
+          hash: options.log.transactionHash,
+        });
+      }
 
       actions.push({
         ...this.buildUpAction({
           ...options,
           action: 'deposit',
-          addresses: [normalizeAddress(options.transaction.from)],
+          addresses: [normalizeAddress(transaction.from)],
           tokens: [
             {
               ...NativeTokens.ethereum,

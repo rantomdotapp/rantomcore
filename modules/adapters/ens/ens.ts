@@ -62,7 +62,15 @@ export default class EnsAdapter extends Adapter {
         });
       } else if (signature === EnsEventSignatures.ReNew) {
         const expired = Number(event.expires);
-        const sender = options.transaction.from;
+
+        let transaction = options.transaction;
+        if (!transaction) {
+          transaction = await this.services.blockchain.getTransaction({
+            chain: options.chain,
+            hash: options.log.transactionHash,
+          });
+        }
+        const sender = transaction.from;
         const amount = formatFromDecimals(event.cost.toString(), token.decimals);
         actions.push({
           ...this.buildUpAction({
