@@ -72,7 +72,6 @@ export default class DatabaseService implements IDatabaseService {
     const cachingCollection = await this.getCollection(envConfig.mongodb.collections.caching);
     const tokensCollection = await this.getCollection(envConfig.mongodb.collections.tokens);
     const nonFungibleTokensCollection = await this.getCollection(envConfig.mongodb.collections.nonFungibleTokens);
-    const contractsCollection = await this.getCollection(envConfig.mongodb.collections.contracts);
     const actionsCollection = await this.getCollection(envConfig.mongodb.collections.actions);
     const liquidityPoolsCollection = await this.getCollection(envConfig.mongodb.collections.liquidityPools);
     const stakingPoolsCollection = await this.getCollection(envConfig.mongodb.collections.stakingPools);
@@ -83,9 +82,6 @@ export default class DatabaseService implements IDatabaseService {
     // for write documents
     tokensCollection.createIndex({ chain: 1, address: 1 }, { background: true });
     nonFungibleTokensCollection.createIndex({ chain: 1, address: 1, tokenId: 1 }, { background: true });
-
-    // for write documents
-    contractsCollection.createIndex({ chain: 1, address: 1 }, { background: true });
 
     // for write actions
     actionsCollection.createIndex({ chain: 1, transactionHash: 1, logIndex: 1 }, { background: true });

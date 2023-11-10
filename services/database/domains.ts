@@ -17,11 +17,6 @@ export interface DatabaseUpdateOptions {
   upsert: boolean;
 }
 
-export interface DatabaseInsertOptions {
-  collection: string;
-  data: any;
-}
-
 export interface DatabaseBulkWriteOptions {
   collection: string;
   operations: Array<any>;

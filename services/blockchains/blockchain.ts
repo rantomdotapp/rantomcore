@@ -332,12 +332,30 @@ export default class BlockchainService extends CachingService implements IBlockc
   }
 
   public async singlecall(call: ContractCall): Promise<any> {
+    const startExeTime = Math.floor(new Date().getTime() / 1000);
+
     const contract = new this.providers[call.chain].eth.Contract(call.abi, call.target);
 
+    let result;
     if (call.blockNumber) {
-      return await contract.methods[call.method](...(call.params as [])).call({}, call.blockNumber);
+      result = await contract.methods[call.method](...(call.params as [])).call({}, call.blockNumber);
     } else {
-      return await contract.methods[call.method](...(call.params as [])).call();
+      result = await contract.methods[call.method](...(call.params as [])).call();
     }
+
+    const endExeTime = Math.floor(new Date().getTime() / 1000);
+    const elapsed = endExeTime - startExeTime;
+
+    if (elapsed > 5) {
+      logger.debug('took too long for onchain single call', {
+        service: this.name,
+        chain: call.chain,
+        target: call.target,
+        method: call.method,
+        params: call.params.toString(),
+      });
+    }
+
+    return result;
   }
 }

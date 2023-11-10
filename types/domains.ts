@@ -30,6 +30,9 @@ export interface StakingPoolConstant {
   poolId: number;
 
   token: Token;
+
+  // the reward token if any
+  rewardToken?: Token;
 }
 
 export const Actions = [
@@ -143,8 +146,6 @@ export interface TransactionInputDecoded {
   // decoded call params
   params: any;
 }
-
-export type TokenEIP = 'ERC20' | 'ERC721' | 'ERC1155';
 
 export interface TokenTransfer {
   token: Token | NonFungibleToken;

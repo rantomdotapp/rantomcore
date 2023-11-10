@@ -17,7 +17,6 @@ const envConfig: EnvConfig = {
       caching: `${MongodbPrefix}.caching`,
       tokens: `${MongodbPrefix}.core.tokens`,
       nonFungibleTokens: `${MongodbPrefix}.core.nonFungibleTokens`,
-      contracts: `${MongodbPrefix}.core.contracts`,
       actions: `${MongodbPrefix}.core.actions`,
       liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
       stakingPools: `${MongodbPrefix}.core.staking.pools`,

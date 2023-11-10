@@ -62,9 +62,6 @@ export interface EnvConfig {
       tokens: string;
       nonFungibleTokens: string;
 
-      // save all contract configs
-      contracts: string;
-
       // liquidity pools
       // save all pool on DEXes like: Uniswap, Sushi, Curve ...
       liquidityPools: string;
@@ -110,14 +107,6 @@ export interface ContractConfig {
 
   // used to filter logs
   topics?: Array<string>;
-}
-
-export interface ContractHistoricalIndexConfig {
-  chain: string;
-  protocol: string;
-  address: string;
-  birthblock: number;
-  topics: Array<string>;
 }
 
 export type SubgraphVersion = 'univ2' | 'univ3';

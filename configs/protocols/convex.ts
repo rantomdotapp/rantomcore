@@ -22,7 +22,6 @@ const ConvexBoosterPolygon: ContractConfig = {
 
 export interface ConvexStakingPoolConstant extends StakingPoolConstant {
   rewardContract: string;
-  rewardToken: Token;
 }
 
 export interface ConvexConfig extends SushiConfig {

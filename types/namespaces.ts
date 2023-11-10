@@ -1,5 +1,6 @@
 import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
+import { IDatastoreService } from '../services/datastore/domains';
 import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
@@ -14,6 +15,7 @@ import {
 export interface ContextServices {
   database: IDatabaseService;
   blockchain: IBlockchainService;
+  datastore: IDatastoreService;
 }
 
 export interface IModule {

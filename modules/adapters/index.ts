@@ -53,6 +53,8 @@ import SwellAdapter from './swell/swell';
 import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
+import YearnAdapter from './yearn/yearn';
+import YearnyethAdapter from './yearn/yearnyeth';
 import ZeroxAdapter from './zerox/zerox';
 
 export function getAdapters(services: ContextServices): { [key: string]: IAdapter } {
@@ -124,5 +126,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     swell: new SwellAdapter(services, ProtocolConfigs.swell),
     ens: new EnsAdapter(services, ProtocolConfigs.ens),
     reflexer: new ReflexerAdapter(services, ProtocolConfigs.reflexer),
+    yearn: new YearnAdapter(services, ProtocolConfigs.yearn),
+    yearnyeth: new YearnyethAdapter(services, ProtocolConfigs.yearnyeth),
   };
 }

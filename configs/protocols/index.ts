@@ -55,6 +55,7 @@ import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { SwellConfigs } from './swell';
 import { TraderjoeConfigs, Traderjoev2Configs } from './traderjoe';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
+import { YearnConfigs, YearnyethConfig } from './yearn';
 import { ZeroxConfigs } from './zerox';
 
 export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
@@ -126,4 +127,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   swell: SwellConfigs,
   ens: EnsConfigs,
   reflexer: ReflexerConfigs,
+  yearn: YearnConfigs,
+  yearnyeth: YearnyethConfig,
 };
