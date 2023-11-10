@@ -1,9 +1,9 @@
 import { ProtocolConfig } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';
 import CamelotSubgraphUpdater from '../../updaters/camelotSubgraph';
-import Uniswapv2Adapter from '../uniswap/uniswapv2';
+import Uniswapv3Adapter from '../uniswap/uniswapv3';
 
-export default class Camelotv3Adapter extends Uniswapv2Adapter {
+export default class Camelotv3Adapter extends Uniswapv3Adapter {
   public readonly name: string = 'adapter.camelotv3';
 
   constructor(services: ContextServices, config: ProtocolConfig) {

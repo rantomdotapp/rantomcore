@@ -6,7 +6,7 @@ import UniswapFactoryUpdater from '../../updaters/uniswapFactory';
 import Uniswapv2Adapter from '../uniswap/uniswapv2';
 
 export default class PancakeAdapter extends Uniswapv2Adapter {
-  public readonly name: string = 'adapter.pancakev3';
+  public readonly name: string = 'adapter.pancake';
 
   constructor(services: ContextServices, config: ProtocolConfig) {
     super(services, config);
