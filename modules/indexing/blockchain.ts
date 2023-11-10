@@ -81,16 +81,10 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         // process actions
         for (const [, adapter] of Object.entries(this.adapters)) {
           if (adapter.supportedSignature(signature)) {
-            const transaction = await this.services.blockchain.getTransaction({
-              chain: chain,
-              hash: log.transactionHash,
-            });
-
             const actions: Array<TransactionAction> = await adapter.parseEventLog({
               chain: chain,
               log: log,
               allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
-              transaction: transaction,
             });
 
             for (const action of actions) {
@@ -140,6 +134,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         fromBlock: startBlock,
         toBlock: toBlock,
         logs: logs.length,
+        actions: actionOperations.length,
         elapses: `${elapsed}s`,
       });
 

@@ -3,7 +3,12 @@
 // however, query database every request is very cost
 // we load these data into memory when start the program
 // to save the database query operations
-import { StakingPoolConstant } from '../../types/domains';
+import { LiquidityPoolConstant, StakingPoolConstant } from '../../types/domains';
+
+export interface GetLiquidityPoolConstantOptions {
+  chain: string;
+  address: string;
+}
 
 export interface GetStakingPoolConstantOptions {
   chain: string;
@@ -16,6 +21,12 @@ export interface IDatastoreService {
 
   // load data from database into memory
   loadData: () => Promise<void>;
+
+  // get staking pool constant
+  getLiquidityPoolConstant: (options: GetLiquidityPoolConstantOptions) => Promise<LiquidityPoolConstant | null>;
+
+  // get all staking pool with a given contract address
+  getLiquidityPoolConstants: (options: GetLiquidityPoolConstantOptions) => Promise<Array<LiquidityPoolConstant>>;
 
   // get staking pool constant
   getStakingPoolConstant: (options: GetStakingPoolConstantOptions) => Promise<StakingPoolConstant | null>;

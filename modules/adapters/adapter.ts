@@ -32,8 +32,6 @@ export default class Adapter implements IAdapter {
       transactionHash: options.log.transactionHash,
       logIndex: `${options.log.logIndex}:0`,
       blockNumber: Number(options.log.blockNumber),
-      from: normalizeAddress(options.transaction.from),
-      to: normalizeAddress(options.transaction.to),
       contract: normalizeAddress(options.log.address),
       addresses: options.addresses,
       tokens: options.tokens,

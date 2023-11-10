@@ -59,8 +59,6 @@ export default class BalancerAdapter extends Adapter {
           transactionHash: options.log.transactionHash,
           logIndex: `${options.log.logIndex}:0`,
           blockNumber: Number(options.log.blockNumber),
-          from: normalizeAddress(options.transaction.from),
-          to: normalizeAddress(options.transaction.to),
           contract: normalizeAddress(options.log.address),
           addresses: [provider],
           tokens: [token],
@@ -90,7 +88,14 @@ export default class BalancerAdapter extends Adapter {
           const amountIn = formatFromDecimals(event.amountIn.toString(), tokenIn.decimals);
           const amountOut = formatFromDecimals(event.amountOut.toString(), tokenOut.decimals);
 
-          const sender = normalizeAddress(options.transaction.from);
+          let transaction = options.transaction;
+          if (!transaction) {
+            transaction = await this.services.blockchain.getTransaction({
+              chain: options.chain,
+              hash: options.log.transactionHash,
+            });
+          }
+          const sender = normalizeAddress(transaction.from);
 
           actions.push({
             chain: options.chain,
@@ -99,8 +104,6 @@ export default class BalancerAdapter extends Adapter {
             transactionHash: options.log.transactionHash,
             logIndex: `${options.log.logIndex}:0`,
             blockNumber: Number(options.log.blockNumber),
-            from: normalizeAddress(options.transaction.from),
-            to: normalizeAddress(options.transaction.to),
             contract: normalizeAddress(options.log.address),
             addresses: [sender],
             tokens: [tokenIn, tokenOut],
@@ -125,8 +128,6 @@ export default class BalancerAdapter extends Adapter {
             transactionHash: options.log.transactionHash,
             logIndex: `${options.log.logIndex}:0`,
             blockNumber: Number(options.log.blockNumber),
-            from: normalizeAddress(options.transaction.from),
-            to: normalizeAddress(options.transaction.to),
             contract: normalizeAddress(options.log.address),
             addresses: [recipient],
             tokens: [token],
@@ -169,8 +170,6 @@ export default class BalancerAdapter extends Adapter {
             transactionHash: options.log.transactionHash,
             logIndex: `${options.log.logIndex}:0`,
             blockNumber: Number(options.log.blockNumber),
-            from: normalizeAddress(options.transaction.from),
-            to: normalizeAddress(options.transaction.to),
             contract: normalizeAddress(options.log.address),
             addresses: [provider],
             tokens: tokens,

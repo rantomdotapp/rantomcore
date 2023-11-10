@@ -41,15 +41,15 @@ export interface ParseTransactionOptions {
 export interface ParseEventLogOptions {
   chain: string;
 
-  // the transaction where the log was emitted
-  transaction: any;
-
   // full list of logs were emitted in the same transaction
   // some protocol need these logs
   allLogs: Array<any>;
 
   // the main log entry
   log: any;
+
+  // the transaction where the log was emitted
+  transaction?: any;
 }
 
 export interface UpdaterRunUpdateOptions {}

@@ -109,12 +109,6 @@ export interface TransactionAction {
 
   blockNumber: number;
 
-  // the transaction sender
-  from: string;
-
-  // the transaction recipient or called contract
-  to: string;
-
   // the contract address that emitted this log
   contract: string;
 

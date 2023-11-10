@@ -77,8 +77,6 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
           transactionHash: options.log.transactionHash,
           logIndex: `${options.log.logIndex}:0`,
           blockNumber: Number(options.log.blockNumber),
-          from: normalizeAddress(options.transaction.from),
-          to: normalizeAddress(options.transaction.to),
           contract: normalizeAddress(options.log.address),
           addresses: [sender, recipient],
           tokens: [tokenIn, tokenOut],
