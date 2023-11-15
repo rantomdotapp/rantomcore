@@ -41,6 +41,9 @@ export interface IAdapter extends IModule {
 
   // parse an event log into list of transaction actions
   parseEventLog: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
+
+  // parse transaction input
+  parseInputData: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
 }
 
 export interface ITransferAdapter extends IModule {

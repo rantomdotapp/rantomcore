@@ -38,9 +38,11 @@ import LidoAdapter from './lido/lido';
 import LiquityAdapter from './liquity/liquity';
 import MakerAdapter from './maker/maker';
 import MaverickAdapter from './maverick/maverick';
+import MetamaskAdapter from './metamask/metamask';
 import MorphoAdapter from './morpho/morpho';
 import MuxAdapter from './mux/mux';
 import OdosAdapter from './odos/odos';
+import OneinchAdapter from './oneinch/oneinch';
 import OpenoceanAdapter from './openocean/openocean';
 import PancakeAdapter from './pancake/pancake';
 import Pancakev3Adapter from './pancake/pancakev3';
@@ -134,5 +136,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     bungee: new BungeeAdapter(services, ProtocolConfigs.bungee),
     basebridge: new BasebridgeAdapter(services, ProtocolConfigs.basebridge),
     celerbridge: new CelerbridgeAdapter(services, ProtocolConfigs.celerbridge),
+    oneinch: new OneinchAdapter(services, ProtocolConfigs.oneinch),
+    metamask: new MetamaskAdapter(services, ProtocolConfigs.metamask),
   };
 }

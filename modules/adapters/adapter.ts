@@ -61,4 +61,9 @@ export default class Adapter implements IAdapter {
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
     return [];
   }
+
+  // must be implemented in children
+  public async parseInputData(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    return [];
+  }
 }

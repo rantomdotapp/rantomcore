@@ -72,6 +72,24 @@ export default class TransactionParser implements ITransactionParser {
               transactionInsight.timestamp = Number(block.timestamp);
             }
 
+            // parse transaction input
+            for (const [, adapter] of Object.entries(this.adapters)) {
+              const inputActions = await adapter.parseInputData({
+                chain: chain,
+                log: receipt.logs[0], // don't care
+                allLogs: receipt.logs,
+                transaction: transaction,
+              });
+              for (const action of inputActions) {
+                transactionInsight.actions.push(action);
+              }
+              if (inputActions.length > 0) {
+                // stop going to the next adapter
+                break;
+              }
+            }
+
+            // parse transaction receipt logs
             for (const log of receipt.logs) {
               if (this.transferAdapter.supportedSignature(log.topics[0])) {
                 const tokenTransfer = await this.transferAdapter.parseEventLog({

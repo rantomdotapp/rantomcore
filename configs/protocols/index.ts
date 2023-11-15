@@ -37,9 +37,11 @@ import { LidoConfigs } from './lido';
 import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
+import { MetamaskConfigs } from './metmask';
 import { MorphoConfigs } from './morpho';
 import { MuxConfigs } from './mux';
 import { OdosConfigs } from './odos';
+import { OneinchConfigs } from './oneinch';
 import { OpenoceanConfigs } from './openocean';
 import { PancakeswapConfigs, Pancakeswapv3Configs } from './pancakeswap';
 import { ParaswapConfigs } from './paraswap';
@@ -137,4 +139,6 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   bungee: BungeeConfigs,
   basebridge: BasebridgeConfigs,
   celerbridge: CelerbridgeConfigs,
+  oneinch: OneinchConfigs,
+  metamask: MetamaskConfigs,
 };
