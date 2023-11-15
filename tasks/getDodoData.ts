@@ -2,9 +2,10 @@
 import fs from 'fs';
 
 import DOdoDVMAbi from '../configs/abi/dodo/DVM.json';
-import { DodoPoolConfig } from '../configs/protocols/dodo';
+import { AddressZero } from '../configs/constants/addresses';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import { LiquidityPoolConstant } from '../types/domains';
 
 const TopPairs = [
   'ethereum:0x3058ef90929cb8180174d74c507176cca6835d73',
@@ -45,7 +46,7 @@ const TopPairs = [
 
   const blockchain = new BlockchainService(null);
 
-  const allPairs: Array<DodoPoolConfig> = [];
+  const allPairs: Array<LiquidityPoolConstant> = [];
 
   for (const config of TopPairs) {
     const [chain, address] = config.split(':');
@@ -77,15 +78,16 @@ const TopPairs = [
     if (baseToken && quoteToken) {
       allPairs.push({
         chain,
-        address: normalizeAddress(address),
         protocol,
-        baseToken,
-        quoteToken,
+        address: normalizeAddress(address),
+        version: 'univ2',
+        factory: AddressZero,
+        tokens: [baseToken, quoteToken],
       });
 
       console.info(`Got DODO pool:${address} chain:${chain} tokens:${baseToken.symbol}-${quoteToken.symbol}`);
     }
   }
 
-  fs.writeFileSync(`./configs/data/DodoPairs.json`, JSON.stringify(allPairs));
+  fs.writeFileSync(`./configs/data/DodoLiquidityPools.json`, JSON.stringify(allPairs));
 })();

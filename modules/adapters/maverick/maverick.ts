@@ -33,6 +33,7 @@ export default class MaverickAdapter extends Adapter {
 
     const liquidityPool = await this.services.datastore.getLiquidityPoolConstant({
       chain: options.chain,
+      protocol: this.config.protocol,
       address: options.log.address,
     });
     if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {

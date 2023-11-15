@@ -43,4 +43,8 @@ export interface ParseEventLogOptions {
 
   // the transaction where the log was emitted
   transaction?: any;
+
+  // get missing data onchain
+  // this option will decrease parser speed
+  onchain?: boolean;
 }

@@ -92,6 +92,7 @@ export default class TransactionParser implements ITransactionParser {
                     log: log,
                     allLogs: receipt.logs,
                     transaction: transaction,
+                    onchain: true,
                   });
 
                   for (const action of actions) {

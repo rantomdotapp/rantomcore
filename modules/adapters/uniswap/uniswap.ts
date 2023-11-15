@@ -19,6 +19,7 @@ export default class UniswapAdapter extends Adapter {
     return await this.services.datastore.getLiquidityPoolConstant({
       chain: chain,
       address: address,
+      protocol: this.config.protocol,
     });
   }
 }

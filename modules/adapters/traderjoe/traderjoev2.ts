@@ -28,6 +28,7 @@ export default class Traderjoev2Adapter extends Adapter {
 
     const pool = await this.services.datastore.getLiquidityPoolConstant({
       chain: options.chain,
+      protocol: this.config.protocol,
       address: options.log.address,
     });
     if (pool) {

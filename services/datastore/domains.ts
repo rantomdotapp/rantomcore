@@ -7,11 +7,13 @@ import { LiquidityPoolConstant, StakingPoolConstant } from '../../types/domains'
 
 export interface GetLiquidityPoolConstantOptions {
   chain: string;
+  protocol: string;
   address: string;
 }
 
 export interface GetStakingPoolConstantOptions {
   chain: string;
+  protocol: string;
   address: string;
   poolId?: number;
 

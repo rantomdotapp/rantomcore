@@ -7,6 +7,7 @@ import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
 import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
+import UniswapLibs from './libs';
 import UniswapAdapter from './uniswap';
 
 export default class Uniswapv3Adapter extends UniswapAdapter {
@@ -36,7 +37,21 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
       return actions;
     }
 
-    const liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
+    let liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
+    if (!liquidityPool && options.onchain) {
+      liquidityPool = await UniswapLibs.getLiquidityPoolOnchain({
+        chain: options.chain,
+        address: options.log.address,
+        version: 'univ2',
+        protocol: this.config.protocol,
+      });
+
+      if (liquidityPool) {
+        if (!this.supportedContract(options.chain, liquidityPool.factory)) {
+          liquidityPool = null;
+        }
+      }
+    }
     if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event: any = web3.eth.abi.decodeLog(

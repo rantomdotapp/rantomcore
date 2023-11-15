@@ -28,7 +28,10 @@ export default class Datastore implements IDatastoreService {
     options: GetLiquidityPoolConstantOptions,
   ): Promise<LiquidityPoolConstant | null | undefined> {
     return this._liquidityPools.filter(
-      (item) => item.chain === options.chain && compareAddress(item.address, options.address),
+      (item) =>
+        item.chain === options.chain &&
+        compareAddress(item.address, options.address) &&
+        options.protocol === item.protocol,
     )[0];
   }
 
@@ -36,7 +39,10 @@ export default class Datastore implements IDatastoreService {
     options: GetLiquidityPoolConstantOptions,
   ): Promise<Array<LiquidityPoolConstant>> {
     return this._liquidityPools.filter(
-      (item) => item.chain === options.chain && compareAddress(item.address, options.address),
+      (item) =>
+        item.chain === options.chain &&
+        compareAddress(item.address, options.address) &&
+        options.protocol === item.protocol,
     );
   }
 
@@ -47,19 +53,26 @@ export default class Datastore implements IDatastoreService {
       return this._stakingPools.filter(
         (item) =>
           item.chain === options.chain &&
+          options.protocol === item.protocol &&
           options.rewardContract &&
           compareAddress((item as ConvexStakingPoolConstant).rewardContract, options.rewardContract),
       )[0];
     } else {
       return this._stakingPools.filter(
-        (item) => item.chain === options.chain && compareAddress(item.address, options.address),
+        (item) =>
+          item.chain === options.chain &&
+          compareAddress(item.address, options.address) &&
+          options.protocol === item.protocol,
       )[0];
     }
   }
 
   public async getStakingPoolConstants(options: GetStakingPoolConstantOptions): Promise<Array<StakingPoolConstant>> {
     return this._stakingPools.filter(
-      (item) => item.chain === options.chain && compareAddress(item.address, options.address),
+      (item) =>
+        item.chain === options.chain &&
+        compareAddress(item.address, options.address) &&
+        options.protocol === item.protocol,
     );
   }
 }

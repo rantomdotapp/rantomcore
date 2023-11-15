@@ -36,6 +36,7 @@ export default class StargateAdapter extends Adapter {
     ) {
       const liquidityPool = await this.services.datastore.getLiquidityPoolConstant({
         chain: options.chain,
+        protocol: this.config.protocol,
         address: normalizeAddress(options.log.address),
       });
       if (liquidityPool) {

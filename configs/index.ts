@@ -20,7 +20,7 @@ export const TokenList: {
 };
 
 export const DefaultQueryLogsBlockRange = 100;
-export const DefaultQueryLogsBlockRangeSingleContract = 2000;
+export const DefaultQueryLogsBlockRangeSingleContract = 5000;
 
 // we save latest parsed transactions into database for fast query
 // this value is the number of seconds of the caching

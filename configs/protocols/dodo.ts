@@ -1,5 +1,4 @@
-import { ContractConfig, ProtocolConfig, Token } from '../../types/configs';
-import DodoPairs from '../data/DodoPairs.json';
+import { ProtocolConfig } from '../../types/configs';
 
 // Dex aggregator
 export const DodoexConfigs: ProtocolConfig = {
@@ -98,16 +97,7 @@ export const DodoexConfigs: ProtocolConfig = {
   ],
 };
 
-export interface DodoPoolConfig extends ContractConfig {
-  baseToken: Token;
-  quoteToken: Token;
-}
-
-export interface DodoConfig extends ProtocolConfig {
-  contracts: Array<DodoPoolConfig>;
-}
-
-export const DodoConfigs: DodoConfig = {
+export const DodoConfigs: ProtocolConfig = {
   protocol: 'dodo',
-  contracts: DodoPairs,
+  contracts: [],
 };

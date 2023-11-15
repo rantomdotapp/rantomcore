@@ -40,11 +40,13 @@ export default class YearnyethAdapter extends Adapter {
           const poolIn = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
             address: normalizeAddress(options.log.address),
+            protocol: this.config.protocol,
             poolId: Number(event.asset_in),
           });
           const poolOut = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
             address: normalizeAddress(options.log.address),
+            protocol: this.config.protocol,
             poolId: Number(event.asset_out),
           });
 
@@ -75,6 +77,7 @@ export default class YearnyethAdapter extends Adapter {
           for (let i = 0; i < event.amounts_in.length; i++) {
             const stakingPool = await this.services.datastore.getStakingPoolConstant({
               chain: options.chain,
+              protocol: this.config.protocol,
               address: options.log.address,
               poolId: i,
             });
@@ -106,6 +109,7 @@ export default class YearnyethAdapter extends Adapter {
 
           const pools = await this.services.datastore.getStakingPoolConstants({
             chain: options.chain,
+            protocol: this.config.protocol,
             address: options.log.address,
           });
           for (const pool of pools) {
@@ -147,6 +151,7 @@ export default class YearnyethAdapter extends Adapter {
           const receiver = normalizeAddress(event.receiver);
           const pool = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
+            protocol: this.config.protocol,
             address: options.log.address,
             poolId: Number(event.asset),
           });

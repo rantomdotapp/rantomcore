@@ -56,6 +56,7 @@ export default class SushiAdapter extends Uniswapv2Adapter {
 
       const stakingPool = await this.services.datastore.getStakingPoolConstant({
         chain: options.chain,
+        protocol: this.config.protocol,
         address: options.log.address,
         poolId: Number(event.pid),
       });

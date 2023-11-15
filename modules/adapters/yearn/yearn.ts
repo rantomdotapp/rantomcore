@@ -58,6 +58,7 @@ export default class YearnAdapter extends Adapter {
 
       const stakingPool = await this.services.datastore.getStakingPoolConstant({
         chain: options.chain,
+        protocol: this.config.protocol,
         address: normalizeAddress(options.log.address),
       });
 
@@ -101,6 +102,7 @@ export default class YearnAdapter extends Adapter {
 
         const stakingPool = await this.services.datastore.getStakingPoolConstant({
           chain: options.chain,
+          protocol: this.config.protocol,
           address: options.log.address,
         });
         if (stakingPool) {

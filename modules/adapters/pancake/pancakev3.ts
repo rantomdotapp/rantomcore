@@ -5,6 +5,7 @@ import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
+import UniswapLibs from '../uniswap/libs';
 import Uniswapv3Adapter from '../uniswap/uniswapv3';
 import { PancakeAbiMappings, PancakeEventSignatures } from './abis';
 
@@ -23,9 +24,23 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
       return actions;
     }
 
-    const signature = options.log.topics[0];
-    const liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
+    let liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
+    if (!liquidityPool && options.onchain) {
+      liquidityPool = await UniswapLibs.getLiquidityPoolOnchain({
+        chain: options.chain,
+        address: options.log.address,
+        version: 'univ2',
+        protocol: this.config.protocol,
+      });
+
+      if (liquidityPool) {
+        if (!this.supportedContract(options.chain, liquidityPool.factory)) {
+          liquidityPool = null;
+        }
+      }
+    }
     if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
+      const signature = options.log.topics[0];
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event: any = web3.eth.abi.decodeLog(
         this.eventMappings[signature].abi,

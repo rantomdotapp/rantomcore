@@ -35,6 +35,7 @@ export default class ConvexAdapter extends Adapter {
           const poolId = Number(event.poolid);
           const stakingPool = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
+            protocol: this.config.protocol,
             address: options.log.address,
             poolId: poolId,
           });
@@ -61,6 +62,7 @@ export default class ConvexAdapter extends Adapter {
 
           const stakingPool = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
+            protocol: this.config.protocol,
             address: options.log.address,
           });
           if (stakingPool) {
@@ -103,6 +105,7 @@ export default class ConvexAdapter extends Adapter {
         case ConvexEventSignatures.CvxLockerUnstaked: {
           const stakingPool = await this.services.datastore.getStakingPoolConstant({
             chain: options.chain,
+            protocol: this.config.protocol,
             address: options.log.address,
           });
           if (stakingPool) {
@@ -149,6 +152,7 @@ export default class ConvexAdapter extends Adapter {
       // RewardPaid event on rewardContract in staking pool in datastore
       const stakingPool = await this.services.datastore.getStakingPoolConstant({
         chain: options.chain,
+        protocol: this.config.protocol,
         address: options.log.address,
         rewardContract: options.log.address,
       });
