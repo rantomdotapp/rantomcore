@@ -26,13 +26,6 @@ export interface HandleHookEventLogOptions {
   log: any;
 }
 
-export interface SubgraphIndexingRunOptions {
-  // null means run all available configs
-  protocol: string | null;
-}
-
-export interface FactoryIndexingRunOptions extends SubgraphIndexingRunOptions {}
-
 export interface ParseTransactionOptions {
   chain?: string;
   hash: string;
@@ -51,5 +44,3 @@ export interface ParseEventLogOptions {
   // the transaction where the log was emitted
   transaction?: any;
 }
-
-export interface UpdaterRunUpdateOptions {}

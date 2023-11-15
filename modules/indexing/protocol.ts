@@ -34,15 +34,6 @@ export default class ProtocolIndexing implements IProtocolIndexing {
       return;
     }
 
-    if (!config.historicalIndies) {
-      logger.debug('ignore to run protocol indexing service', {
-        service: this.name,
-        protocol: options.protocol,
-        reason: 'historical indies config not found',
-      });
-      return;
-    }
-
     const adapter: IAdapter = this.adapters[options.protocol];
     if (!adapter) {
       logger.debug('ignore to run protocol indexing service', {
@@ -53,7 +44,7 @@ export default class ProtocolIndexing implements IProtocolIndexing {
       return;
     }
 
-    const contractConfigs: Array<ContractConfig> = config.historicalIndies
+    const contractConfigs: Array<ContractConfig> = config.contracts
       .filter((item) => !options.chain || options.chain === item.chain)
       .filter((item) => !options.contract || options.contract === item.address);
 

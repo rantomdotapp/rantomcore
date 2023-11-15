@@ -14,6 +14,8 @@ export interface GetStakingPoolConstantOptions {
   chain: string;
   address: string;
   poolId?: number;
+
+  rewardContract?: string;
 }
 
 export interface IDatastoreService {
@@ -23,13 +25,15 @@ export interface IDatastoreService {
   loadData: () => Promise<void>;
 
   // get staking pool constant
-  getLiquidityPoolConstant: (options: GetLiquidityPoolConstantOptions) => Promise<LiquidityPoolConstant | null>;
+  getLiquidityPoolConstant: (
+    options: GetLiquidityPoolConstantOptions,
+  ) => Promise<LiquidityPoolConstant | null | undefined>;
 
   // get all staking pool with a given contract address
   getLiquidityPoolConstants: (options: GetLiquidityPoolConstantOptions) => Promise<Array<LiquidityPoolConstant>>;
 
   // get staking pool constant
-  getStakingPoolConstant: (options: GetStakingPoolConstantOptions) => Promise<StakingPoolConstant | null>;
+  getStakingPoolConstant: (options: GetStakingPoolConstantOptions) => Promise<StakingPoolConstant | null | undefined>;
 
   // get all staking pool with a given contract address
   getStakingPoolConstants: (options: GetStakingPoolConstantOptions) => Promise<Array<StakingPoolConstant>>;

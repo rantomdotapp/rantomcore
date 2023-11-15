@@ -12,10 +12,4 @@ const FraxswapContracts: { [key: string]: ContractConfig } = {
 export const FraxswapConfigs: ProtocolConfig = {
   protocol: 'fraxswap',
   contracts: [FraxswapContracts.factory],
-  factories: [
-    {
-      ...FraxswapContracts.factory,
-      version: 'univ2',
-    },
-  ],
 };

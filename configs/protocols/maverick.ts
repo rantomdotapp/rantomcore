@@ -24,18 +24,4 @@ const MaverickContracts: { [key: string]: ContractConfig } = {
 export const MaverickConfigs: ProtocolConfig = {
   protocol: 'maverick',
   contracts: [MaverickContracts.factory, MaverickContracts.factoryBase, MaverickContracts.factoryBnbchain],
-  factories: [
-    {
-      version: 'mav',
-      ...MaverickContracts.factory,
-    },
-    {
-      version: 'mav',
-      ...MaverickContracts.factoryBase,
-    },
-    {
-      version: 'mav',
-      ...MaverickContracts.factoryBnbchain,
-    },
-  ],
 };

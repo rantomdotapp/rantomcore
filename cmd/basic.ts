@@ -13,7 +13,7 @@ export class BasicCommand {
   public async getServices(): Promise<ContextServices> {
     const database = new DatabaseService();
     const blockchain = new BlockchainService(database);
-    const datastore = new Datastore(database);
+    const datastore = new Datastore();
 
     return {
       database: database,

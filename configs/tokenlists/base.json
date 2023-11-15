@@ -50,6 +50,13 @@
     "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b",
     "logoURI": "https://assets.coingecko.com/coins/images/29053/large/PRIMELOGOOO.png?1676976222"
   },
+  "SNX": {
+    "chain": "base",
+    "symbol": "SNX",
+    "decimals": 18,
+    "address": "0x22e6966b799c4d5b13be962e1d117b56327fda66",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F/logo.png"
+  },
   "SUSHI": {
     "chain": "base",
     "symbol": "SUSHI",

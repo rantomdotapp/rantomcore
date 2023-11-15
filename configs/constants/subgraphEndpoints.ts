@@ -1,4 +1,4 @@
-export const PublicTheGraphEndpoints: { [key: string]: string } = {
+export const PublicSubGraphEndpoints: { [key: string]: string } = {
   // uniswap
   uniswapv2: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
   uniswapv3: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
@@ -45,4 +45,7 @@ export const PublicTheGraphEndpoints: { [key: string]: string } = {
   // traderjoe
   traderjoeArbitrum: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/joe-v1-arbitrum',
   traderjoeBnbchain: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/joe-v1-bnb',
+
+  // shibaswap
+  shibaswap: 'https://api.thegraph.com/subgraphs/name/shibaswaparmy/exchange',
 };

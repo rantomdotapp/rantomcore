@@ -1,4 +1,5 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
+import { StakingPoolConstant } from '../../types/domains';
 
 const BalancerContracts: { [key: string]: ContractConfig } = {
   vault: {
@@ -25,6 +26,20 @@ const BalancerContracts: { [key: string]: ContractConfig } = {
     chain: 'polygon',
     protocol: 'balancer',
     address: '0xba12222222228d8ba445958a75a0704d566bf2c8',
+  },
+};
+
+export const BalancerVeBalStaking: StakingPoolConstant = {
+  chain: 'ethereum',
+  protocol: 'balancer',
+  version: 'basic',
+  poolId: 0, // don't care
+  address: BalancerContracts.veBAL.address,
+  token: {
+    chain: 'ethereum',
+    symbol: 'B-80BAL-20WETH',
+    decimals: 18,
+    address: '0x5c6ee304399dbdb9c8ef030ab642b10820db8f56',
   },
 };
 

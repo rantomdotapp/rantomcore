@@ -1,10 +1,8 @@
-import EnvConfig from '../../configs/envConfig';
-import logger from '../../lib/logger';
-import { ProtocolConfig } from '../../types/configs';
-import { ContextServices } from '../../types/namespaces';
-import { UpdaterRunUpdateOptions } from '../../types/options';
-import StargateLibs from '../adapters/stargate/libs';
-import Updater from './updater';
+// get static data of stargate finance
+import fs from 'fs';
+
+import StargateLibs from '../modules/adapters/stargate/libs';
+import { LiquidityPoolConstant } from '../types/domains';
 
 const StargatePools = [
   'ethereum:0x101816545f6bd2b1076434b54383a1e633390a2e', // Pool ETH
@@ -50,49 +48,23 @@ const StargatePools = [
   'optimism:0x5421FA1A48f9FF81e4580557E86C7C0D24C18036',
 ];
 
-export default class StargatePoolUpdater extends Updater {
-  public readonly name: string = 'updater.stargatePool';
+const StargatePoolFilePath = './configs/data/StargateLiquidityPools.json';
 
-  constructor(services: ContextServices, config: ProtocolConfig) {
-    super(services, config);
-  }
-
-  public async runUpdate(options: UpdaterRunUpdateOptions): Promise<void> {
-    logger.info('start to run api updater', {
-      service: this.name,
-      protocol: this.config.protocol,
+(async function () {
+  const pools: Array<LiquidityPoolConstant> = [];
+  for (const config of StargatePools) {
+    const [chain, address] = config.split(':');
+    const liquidityPool = await StargateLibs.getLiquidityPoolInfo({
+      protocol: 'protocol',
+      services: null,
+      chain: chain,
+      address: address,
     });
+    if (liquidityPool) {
+      pools.push(liquidityPool);
+      console.log(`Got stargate liquidity pool ${chain} ${address} ${liquidityPool.tokens[0].symbol}`);
 
-    for (const config of StargatePools) {
-      const [chain, address] = config.split(':');
-      const stakingPool = await StargateLibs.getPoolInfo({
-        protocol: this.config.protocol,
-        services: this.services,
-        chain: chain,
-        address: address,
-      });
-      if (stakingPool) {
-        await this.services.database.update({
-          collection: EnvConfig.mongodb.collections.stakingPools,
-          keys: {
-            chain: stakingPool.chain,
-            address: stakingPool.address,
-            poolId: stakingPool.poolId,
-          },
-          updates: {
-            ...stakingPool,
-          },
-          upsert: true,
-        });
-
-        logger.info('updated pool info', {
-          service: this.name,
-          chain: chain,
-          protocol: this.config.protocol,
-          address: stakingPool.address,
-          token: stakingPool.token.symbol,
-        });
-      }
+      fs.writeFileSync(StargatePoolFilePath, JSON.stringify(pools));
     }
   }
-}
+})();

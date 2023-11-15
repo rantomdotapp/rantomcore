@@ -172,6 +172,13 @@
     "address": "0xef171a5ba71348eff16616fd692855c2fe606eb2",
     "logoURI": "https://assets.coingecko.com/coins/images/28453/large/blur.png?1670745921"
   },
+  "BNT": {
+    "chain": "arbitrum",
+    "symbol": "BNT",
+    "decimals": 18,
+    "address": "0x7a24159672b83ed1b89467c9d6a99556ba06d073",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C/logo.png"
+  },
   "BOND": {
     "chain": "arbitrum",
     "symbol": "BOND",
@@ -192,6 +199,13 @@
     "decimals": 18,
     "address": "0x31190254504622cefdfa55a7d3d272e6462629a2",
     "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
+  },
+  "CELO": {
+    "chain": "arbitrum",
+    "symbol": "CELO",
+    "decimals": 18,
+    "address": "0x4e51ac49bc5e2d87e0ef713e9e5ab2d71ef4f336",
+    "logoURI": "https://raw.githubusercontent.com/wormhole-foundation/wormhole-token-list/main/assets/celo_wh.png"
   },
   "CELR": {
     "chain": "arbitrum",
@@ -255,6 +269,13 @@
     "decimals": 18,
     "address": "0xaafcfd42c9954c6689ef1901e03db742520829c5",
     "logoURI": "https://assets.coingecko.com/coins/images/15585/thumb/convex.png?1621256328"
+  },
+  "Chaos": {
+    "chain": "arbitrum",
+    "symbol": "Chaos",
+    "decimals": 18,
+    "address": "0x6d9d8b50a0cccdf510f681a85472626c26377876",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x6D9D8b50a0cCCdF510F681A85472626C26377876/logo.png"
   },
   "DAI": {
     "chain": "arbitrum",
@@ -435,6 +456,13 @@
     "address": "0xd9f9d2ee2d3efe420699079f16d9e924afffdea4",
     "logoURI": "https://assets.coingecko.com/coins/images/13423/thumb/frax_share.png?1608478989"
   },
+  "GAL": {
+    "chain": "arbitrum",
+    "symbol": "GAL",
+    "decimals": 18,
+    "address": "0xc27e7325a6bea1fcc06de7941473f5279bfd1182",
+    "logoURI": "https://assets.coingecko.com/coins/images/24530/thumb/GAL-Token-Icon.png?1651483533"
+  },
   "GALA": {
     "chain": "arbitrum",
     "symbol": "GALA",
@@ -448,6 +476,13 @@
     "decimals": 18,
     "address": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
     "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x4945970EfeEc98D393b4b979b9bE265A3aE28A8B/logo.png"
+  },
+  "GMLP": {
+    "chain": "arbitrum",
+    "symbol": "GMLP",
+    "decimals": 18,
+    "address": "0xc16ce97d04de6c5e0391e308dbc17a397183067b",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xc16cE97d04DE6C5E0391E308Dbc17A397183067b/logo.png"
   },
   "GMX": {
     "chain": "arbitrum",
@@ -546,6 +581,13 @@
     "decimals": 18,
     "address": "0x2a2053cb633cad465b4a8975ed3d7f09df608f80",
     "logoURI": "https://assets.coingecko.com/coins/images/12882/thumb/Secondary_Symbol.png?1628233237"
+  },
+  "JASMY": {
+    "chain": "arbitrum",
+    "symbol": "JASMY",
+    "decimals": 18,
+    "address": "0x25f05699548d3a0820b99f93c10c8bb573e27083",
+    "logoURI": "https://assets.coingecko.com/coins/images/13876/thumb/JASMY200x200.jpg?1612473259"
   },
   "JIMBO": {
     "chain": "arbitrum",
@@ -1064,6 +1106,13 @@
     "address": "0x0945cae3ae47cb384b2d47bc448dc6a9dec21f55",
     "logoURI": "https://assets.coingecko.com/coins/images/22228/thumb/nFPNiSbL_400x400.jpg?1641220340"
   },
+  "TIA.n": {
+    "chain": "arbitrum",
+    "symbol": "TIA.n",
+    "decimals": 6,
+    "address": "0xd56734d7f9979dd94fae3d67c7e928234e71cd4c",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xD56734d7f9979dD94FAE3d67C7e928234e71cD4C/logo.png"
+  },
   "TRB": {
     "chain": "arbitrum",
     "symbol": "TRB",
@@ -1192,6 +1241,13 @@
     "decimals": 6,
     "address": "0xa05245ade25cc1063ee50cf7c083b4524c1c4302",
     "logoURI": "https://assets.coingecko.com/coins/images/12832/standard/StraitsX_Singapore_Dollar_%28XSGD%29_Token_Logo.png?1696512623"
+  },
+  "YAK": {
+    "chain": "arbitrum",
+    "symbol": "YAK",
+    "decimals": 18,
+    "address": "0x7f4db37d7beb31f445307782bc3da0f18df13696",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x7f4dB37D7bEb31F445307782Bc3Da0F18dF13696/logo.png"
   },
   "YFI": {
     "chain": "arbitrum",

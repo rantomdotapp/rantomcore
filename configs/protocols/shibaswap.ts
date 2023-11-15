@@ -12,10 +12,4 @@ const ShibaswapContracts: { [key: string]: ContractConfig } = {
 export const ShibaswapConfigs: ProtocolConfig = {
   protocol: 'shibaswap',
   contracts: [ShibaswapContracts.factory],
-  factories: [
-    {
-      ...ShibaswapContracts.factory,
-      version: 'univ2',
-    },
-  ],
 };

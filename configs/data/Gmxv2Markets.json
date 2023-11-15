@@ -5,9 +5,9 @@
     "address": "0x47c031236e19d024b42f8ae6780e44a573170703",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0x47904963fc8b2340414262125af798b9655e58cd",
       "symbol": "BTC",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x47904963fc8b2340414262125af798b9655e58cd"
     },
     "longToken": {
       "chain": "arbitrum",
@@ -28,9 +28,9 @@
     "address": "0x0ccb4faa6f1f1b30911619f1184082ab4e25813c",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0xc14e065b0067de91534e032868f5ac6ecf2c6868",
       "symbol": "XRP",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xc14e065b0067de91534e032868f5ac6ecf2c6868"
     },
     "longToken": {
       "chain": "arbitrum",
@@ -74,9 +74,9 @@
     "address": "0x6853ea96ff216fab11d2d930ce3c508556a4bdc4",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8",
       "symbol": "DOGE",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8"
     },
     "longToken": {
       "chain": "arbitrum",
@@ -120,9 +120,9 @@
     "address": "0xd9535bb5f58a1a75032416f2dfe7880c30575a41",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764",
       "symbol": "LTC",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764"
     },
     "longToken": {
       "chain": "arbitrum",

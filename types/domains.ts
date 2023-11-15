@@ -1,34 +1,41 @@
 import { NonFungibleToken, Token } from './configs';
 
-export type LiquidityPoolVersion = 'univ2' | 'univ3' | 'mav' | 'traderjoev2.1';
+export type LiquidityPoolVersion = 'basic' | 'univ2' | 'univ3' | 'mav' | 'traderjoev2.1' | 'stableswap';
 
 export interface LiquidityPoolConstant {
   chain: string;
   version: LiquidityPoolVersion;
   protocol: string;
-  address: string; // pool contract address
-  factory: string;
-  token0: Token;
-  token1: Token;
-  fee: number; // 0.3 -> // 0.3%
 
-  // the block number when this pool was created
-  createdBlockNumber: number;
+  // the factory address if any
+  factory: string;
+
+  // pool contract address
+  address: string;
+
+  // a list of tokens
+  tokens: Array<Token>;
 }
+
+export type StakingPoolVersion = 'basic' | 'masterchef' | 'booster';
 
 // staking pool present a staking info of a staking contract
 // which identify by poolId
 // for example, these pools on sushi masterchef or convex finance booster, ...
 export interface StakingPoolConstant {
   chain: string;
+
   protocol: string;
 
-  // the masterchef or staking contract
+  version: StakingPoolVersion;
+
+  // the staking contract address
   address: string;
 
   // pool ID
   poolId: number;
 
+  // staking or locking token
   token: Token;
 
   // the reward token if any

@@ -3,10 +3,10 @@ import { NativeTokens } from '../../../configs/constants/nativeTokens';
 import logger from '../../../lib/logger';
 import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
-import { StakingPoolConstant } from '../../../types/domains';
+import { LiquidityPoolConstant } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 
-export interface GetStargatePoolOptions {
+export interface GetStargateLiquidityPoolOptions {
   services: ContextServices | null;
   chain: string;
   address: string;
@@ -29,7 +29,9 @@ const TokenFunctionAbi = [
 ];
 
 export default class StargateLibs {
-  public static async getPoolInfo(options: GetStargatePoolOptions): Promise<StakingPoolConstant | null> {
+  public static async getLiquidityPoolInfo(
+    options: GetStargateLiquidityPoolOptions,
+  ): Promise<LiquidityPoolConstant | null> {
     const blockchain = new BlockchainService(options.services ? options.services.database : null);
     try {
       const tokenAddress = await blockchain.singlecall({
@@ -51,16 +53,16 @@ export default class StargateLibs {
         }
 
         return {
-          poolId: 0, // ignore, don't use this value on Yearn vaults
-
+          version: 'basic',
           protocol: options.protocol,
           chain: options.chain,
           address: normalizeAddress(options.address),
-          token: token,
+          factory: AddressZero,
+          tokens: [token],
         };
       }
     } catch (e: any) {
-      logger.warn('failed to get pool info', {
+      logger.warn('failed to get liquidity pool info', {
         service: 'lib.stargate',
         chain: options.chain,
         address: options.address,

@@ -2,10 +2,9 @@ import BigNumber from 'bignumber.js';
 
 import { normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
-import { LiquidityPoolConstant, TransactionAction } from '../../../types/domains';
+import { TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
-import PancakeSubgraphUpdater from '../../updaters/pancakeSubgraph';
 import Uniswapv3Adapter from '../uniswap/uniswapv3';
 import { PancakeAbiMappings, PancakeEventSignatures } from './abis';
 
@@ -16,8 +15,6 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
     super(services, config);
 
     this.eventMappings[PancakeEventSignatures.SwapV3] = PancakeAbiMappings[PancakeEventSignatures.SwapV3];
-
-    this.updaters = [new PancakeSubgraphUpdater(services, config)];
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
@@ -27,11 +24,7 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
     }
 
     const signature = options.log.topics[0];
-    const liquidityPool: LiquidityPoolConstant | null = await this.getLiquidityPool(
-      options.chain,
-      options.log.address,
-      'univ3',
-    );
+    const liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
     if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event: any = web3.eth.abi.decodeLog(
@@ -43,26 +36,26 @@ export default class Pancakev3Adapter extends Uniswapv3Adapter {
       if (signature === PancakeEventSignatures.SwapV3) {
         let amountIn = '0';
         let amountOut = '0';
-        let tokenIn = liquidityPool.token0;
-        let tokenOut = liquidityPool.token1;
+        let tokenIn = liquidityPool.tokens[0];
+        let tokenOut = liquidityPool.tokens[1];
 
         const amount0 = new BigNumber(event.amount0.toString()).dividedBy(
-          new BigNumber(10).pow(liquidityPool.token0.decimals),
+          new BigNumber(10).pow(liquidityPool.tokens[0].decimals),
         );
         const amount1 = new BigNumber(event.amount1.toString()).dividedBy(
-          new BigNumber(10).pow(liquidityPool.token1.decimals),
+          new BigNumber(10).pow(liquidityPool.tokens[1].decimals),
         );
 
         if (amount0.lt(0)) {
           // swap from token1 -> token0
-          tokenIn = liquidityPool.token1;
-          tokenOut = liquidityPool.token0;
+          tokenIn = liquidityPool.tokens[1];
+          tokenOut = liquidityPool.tokens[0];
           amountIn = amount1.abs().toString(10);
           amountOut = amount0.abs().toString(10);
         } else {
           // swap from token0 -> token1
-          tokenIn = liquidityPool.token0;
-          tokenOut = liquidityPool.token1;
+          tokenIn = liquidityPool.tokens[0];
+          tokenOut = liquidityPool.tokens[1];
           amountIn = amount0.abs().toString(10);
           amountOut = amount1.abs().toString(10);
         }

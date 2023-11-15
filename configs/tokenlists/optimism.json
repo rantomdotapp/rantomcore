@@ -47,6 +47,13 @@
     "address": "0x9c9e5fd8bbc25984b178fdce6117defa39d2db39",
     "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
   },
+  "CELO": {
+    "chain": "optimism",
+    "symbol": "CELO",
+    "decimals": 18,
+    "address": "0x9b88d293b7a791e40d36a39765ffd5a1b9b5c349",
+    "logoURI": "https://raw.githubusercontent.com/wormhole-foundation/wormhole-token-list/main/assets/celo_wh.png"
+  },
   "CRV": {
     "chain": "optimism",
     "symbol": "CRV",
@@ -196,6 +203,13 @@
     "decimals": 18,
     "address": "0xb548f63d4405466b36c0c0ac3318a22fdcec711a",
     "logoURI": "https://assets.coingecko.com/coins/images/12900/thumb/Rari_Logo_Transparent.png?1613978014"
+  },
+  "SNT": {
+    "chain": "optimism",
+    "symbol": "SNT",
+    "decimals": 18,
+    "address": "0x650af3c15af43dcb218406d30784416d64cfb6b2",
+    "logoURI": "https://assets.coingecko.com/coins/images/779/thumb/status.png?1548610778"
   },
   "SNX": {
     "chain": "optimism",

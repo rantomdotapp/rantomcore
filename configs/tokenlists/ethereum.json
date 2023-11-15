@@ -28741,6 +28741,13 @@
     "decimals": 18,
     "address": "0xf256cc7847e919fac9b808cc216cac87ccf2f47a"
   },
+  "axlTIA": {
+    "chain": "ethereum",
+    "symbol": "axlTIA",
+    "decimals": 6,
+    "address": "0x65e3fa51c4ce0af1b9cd5cbc7c5fdb80a09d431d",
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/ethereum/0x65e3fA51C4ce0af1B9CD5CBC7C5fDb80a09D431D.jpg"
+  },
   "bALPHA": {
     "chain": "ethereum",
     "symbol": "bALPHA",
@@ -29731,6 +29738,13 @@
     "decimals": 18,
     "address": "0x8daebade922df735c38c80c7ebd708af50815faa",
     "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/tbtc.jpg"
+  },
+  "uniETH": {
+    "chain": "ethereum",
+    "symbol": "uniETH",
+    "decimals": 18,
+    "address": "0xf1376bcef0f78459c0ed0ba5ddce976f1ddf51f4",
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/ethereum/0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4.jpg"
   },
   "unshETH": {
     "chain": "ethereum",

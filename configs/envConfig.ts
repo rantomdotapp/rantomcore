@@ -18,8 +18,6 @@ const envConfig: EnvConfig = {
       tokens: `${MongodbPrefix}.core.tokens`,
       nonFungibleTokens: `${MongodbPrefix}.core.nonFungibleTokens`,
       actions: `${MongodbPrefix}.core.actions`,
-      liquidityPools: `${MongodbPrefix}.core.liquidity.pools`,
-      stakingPools: `${MongodbPrefix}.core.staking.pools`,
     },
   },
   sentry: {

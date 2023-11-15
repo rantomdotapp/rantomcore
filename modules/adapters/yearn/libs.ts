@@ -31,7 +31,7 @@ export default class YearnLibs {
       if (token) {
         return {
           poolId: 0, // ignore, don't use this value on Yearn vaults
-
+          version: 'basic',
           protocol: options.protocol,
           chain: options.chain,
           address: normalizeAddress(options.address),

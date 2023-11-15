@@ -64,13 +64,6 @@ export interface EnvConfig {
       tokens: string;
       nonFungibleTokens: string;
 
-      // liquidity pools
-      // save all pool on DEXes like: Uniswap, Sushi, Curve ...
-      liquidityPools: string;
-
-      // save all staking pools info
-      stakingPools: string;
-
       // save transaction actions
       actions: string;
     };
@@ -111,41 +104,7 @@ export interface ContractConfig {
   topics?: Array<string>;
 }
 
-export type SubgraphVersion = 'univ2' | 'univ3';
-
-export interface SubgraphConfig {
-  chain: string;
-  version: SubgraphVersion;
-  protocol: string;
-  endpoint: string;
-
-  requestOptions?: any;
-}
-
-export type FactoryVersion = 'univ2' | 'univ3' | 'mav';
-
-export interface FactoryConfig extends ContractConfig {
-  version: FactoryVersion;
-}
-
-export type MasterchefStakingVersion = 'masterchef' | 'masterchefV2' | 'minichef' | 'convexBooster' | 'convexBoosterV2';
-
 export interface ProtocolConfig {
   protocol: string;
   contracts: Array<ContractConfig>;
-
-  // some protocols are maintaining subgraph indexing
-  // because of that, we can use subgraph to indexing historical data
-  // on some protocols instead of reindexing historical data onchain
-  subgraphs?: Array<SubgraphConfig>;
-
-  // some protocol (DEXes) have a factory contract
-  // it creates all liquidity pools or lending pairs contract
-  factories?: Array<FactoryConfig>;
-
-  // when protocol was onboard
-  // we need to sync historical data
-  // this is a list of contract we will use to sync historical data
-  // check ProtocolIndexing for the indexing logics
-  historicalIndies?: Array<ContractConfig>;
 }

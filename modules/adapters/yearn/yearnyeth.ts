@@ -5,7 +5,6 @@ import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
-import YearnVaultUpdater from '../../updaters/yearnVault';
 import Adapter from '../adapter';
 import { TransferAbiMappings } from '../transfer/abis';
 import { YearnEventSignatures, YearnyethAbiMappings } from './abis';
@@ -22,8 +21,6 @@ export default class YearnyethAdapter extends Adapter {
 
     this.config = config;
     this.eventMappings = YearnyethAbiMappings;
-
-    this.updaters = [new YearnVaultUpdater(services, config)];
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {

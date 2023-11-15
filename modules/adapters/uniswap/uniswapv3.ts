@@ -3,9 +3,9 @@ import BigNumber from 'bignumber.js';
 import { compareAddress, normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
-import { KnownAction, LiquidityPoolConstant, TransactionAction } from '../../../types/domains';
+import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
-import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../../types/options';
+import { ParseEventLogOptions } from '../../../types/options';
 import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
 import UniswapAdapter from './uniswap';
 
@@ -24,16 +24,6 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
   }
 
   /**
-   * @description save a new liquidity pool info into database on created event on factory contract
-   * this function is compatible with Uniswap v3 factory contract only!
-   *
-   * @param options includes a chain name and raw log entry
-   */
-  public async handleEventLog(options: HandleHookEventLogOptions): Promise<void> {
-    await this.handleEventLogCreateLiquidityPool(options, 'univ3');
-  }
-
-  /**
    * @description turns a raw event log into TransactionActions
    *
    * @param options include raw log entry and transaction context
@@ -46,11 +36,7 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
       return actions;
     }
 
-    const liquidityPool: LiquidityPoolConstant | null = await this.getLiquidityPool(
-      options.chain,
-      options.log.address,
-      'univ3',
-    );
+    const liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
     if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event: any = web3.eth.abi.decodeLog(
@@ -63,26 +49,26 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
         case UniswapEventSignatures.SwapV3: {
           let amountIn = '0';
           let amountOut = '0';
-          let tokenIn = liquidityPool.token0;
-          let tokenOut = liquidityPool.token1;
+          let tokenIn = liquidityPool.tokens[0];
+          let tokenOut = liquidityPool.tokens[1];
 
           const amount0 = new BigNumber(event.amount0.toString()).dividedBy(
-            new BigNumber(10).pow(liquidityPool.token0.decimals),
+            new BigNumber(10).pow(liquidityPool.tokens[0].decimals),
           );
           const amount1 = new BigNumber(event.amount1.toString()).dividedBy(
-            new BigNumber(10).pow(liquidityPool.token1.decimals),
+            new BigNumber(10).pow(liquidityPool.tokens[1].decimals),
           );
 
           if (amount0.lt(0)) {
             // swap from token1 -> token0
-            tokenIn = liquidityPool.token1;
-            tokenOut = liquidityPool.token0;
+            tokenIn = liquidityPool.tokens[1];
+            tokenOut = liquidityPool.tokens[0];
             amountIn = amount1.abs().toString(10);
             amountOut = amount0.abs().toString(10);
           } else {
             // swap from token0 -> token1
-            tokenIn = liquidityPool.token0;
-            tokenOut = liquidityPool.token1;
+            tokenIn = liquidityPool.tokens[0];
+            tokenOut = liquidityPool.tokens[1];
             amountIn = amount0.abs().toString(10);
             amountOut = amount1.abs().toString(10);
           }
@@ -106,8 +92,8 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
         }
         case UniswapEventSignatures.MintV3:
         case UniswapEventSignatures.BurnV3: {
-          const amount0 = formatFromDecimals(event.amount0.toString(), liquidityPool.token0.decimals);
-          const amount1 = formatFromDecimals(event.amount1.toString(), liquidityPool.token1.decimals);
+          const amount0 = formatFromDecimals(event.amount0.toString(), liquidityPool.tokens[0].decimals);
+          const amount1 = formatFromDecimals(event.amount1.toString(), liquidityPool.tokens[1].decimals);
 
           let action: KnownAction = 'deposit';
           let addresses: Array<string> = [];
@@ -128,7 +114,7 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
             blockNumber: Number(options.log.blockNumber),
             contract: normalizeAddress(options.log.address),
             addresses: addresses,
-            tokens: [liquidityPool.token0, liquidityPool.token1],
+            tokens: [liquidityPool.tokens[0], liquidityPool.tokens[1]],
             tokenAmounts: [amount0, amount1],
           });
           break;
@@ -153,11 +139,11 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
 
               const amount0 = formatFromDecimals(
                 collectedAmount0.minus(burnAmount0).toString(10),
-                liquidityPool.token0.decimals,
+                liquidityPool.tokens[0].decimals,
               );
               const amount1 = formatFromDecimals(
                 collectedAmount1.minus(burnAmount1).toString(10),
-                liquidityPool.token1.decimals,
+                liquidityPool.tokens[1].decimals,
               );
 
               actions.push({
@@ -169,7 +155,7 @@ export default class Uniswapv3Adapter extends UniswapAdapter {
                 blockNumber: Number(options.log.blockNumber),
                 contract: normalizeAddress(options.log.address),
                 addresses: [normalizeAddress(event.owner), normalizeAddress(event.recipient)],
-                tokens: [liquidityPool.token0, liquidityPool.token1],
+                tokens: [liquidityPool.tokens[0], liquidityPool.tokens[1]],
                 tokenAmounts: [amount0, amount1],
               });
             }

@@ -1,12 +1,9 @@
-import EnvConfig from '../../../configs/envConfig';
-import { ConvexConfig, ConvexStakingPoolConstant } from '../../../configs/protocols/convex';
 import { normalizeAddress } from '../../../lib/utils';
 import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
-import ConvexBoosterUpdater from '../../updaters/convexBooster';
 import Adapter from '../adapter';
 import { ConvexAbiMappings, ConvexEventSignatures } from './abis';
 
@@ -17,27 +14,6 @@ export default class ConvexAdapter extends Adapter {
     super(services, config);
 
     this.eventMappings = ConvexAbiMappings;
-    this.updaters = [new ConvexBoosterUpdater(services, config)];
-  }
-
-  protected async getStakingPool(
-    chain: string,
-    booster: string,
-    poolId: number,
-  ): Promise<ConvexStakingPoolConstant | null> {
-    const stakingPool = await this.services.database.find({
-      collection: EnvConfig.mongodb.collections.stakingPools,
-      query: {
-        chain,
-        address: normalizeAddress(booster),
-        poolId: poolId,
-      },
-    });
-    if (stakingPool) {
-      return stakingPool as ConvexStakingPoolConstant;
-    }
-
-    return null;
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
@@ -57,7 +33,11 @@ export default class ConvexAdapter extends Adapter {
         case ConvexEventSignatures.Deposit:
         case ConvexEventSignatures.Withdraw: {
           const poolId = Number(event.poolid);
-          const stakingPool = await this.getStakingPool(options.chain, options.log.address, poolId);
+          const stakingPool = await this.services.datastore.getStakingPoolConstant({
+            chain: options.chain,
+            address: options.log.address,
+            poolId: poolId,
+          });
 
           if (stakingPool) {
             const amount = formatFromDecimals(event.amount, stakingPool.token.decimals);
@@ -79,15 +59,15 @@ export default class ConvexAdapter extends Adapter {
         case ConvexEventSignatures.RewardPaid: {
           let token: Token | null = null;
 
-          const config: ConvexConfig = this.config as ConvexConfig;
-          if (
-            config.stakingTokens[options.chain] &&
-            config.stakingTokens[options.chain][normalizeAddress(options.log.address)]
-          ) {
-            token = config.stakingTokens[options.chain][normalizeAddress(options.log.address)].stakingToken;
-
+          const stakingPool = await this.services.datastore.getStakingPoolConstant({
+            chain: options.chain,
+            address: options.log.address,
+          });
+          if (stakingPool) {
             if (signature === ConvexEventSignatures.RewardPaid) {
-              token = config.stakingTokens[options.chain][normalizeAddress(options.log.address)].rewardToken;
+              token = stakingPool.rewardToken ? stakingPool.rewardToken : null;
+            } else {
+              token = stakingPool.token;
             }
           }
 
@@ -121,13 +101,15 @@ export default class ConvexAdapter extends Adapter {
         case ConvexEventSignatures.CvxLockerStakedV2:
         case ConvexEventSignatures.AuraLockerStakedV2:
         case ConvexEventSignatures.CvxLockerUnstaked: {
-          const config = this.config as ConvexConfig;
-          const token = config.lockingTokens[options.chain];
-          if (token) {
+          const stakingPool = await this.services.datastore.getStakingPoolConstant({
+            chain: options.chain,
+            address: options.log.address,
+          });
+          if (stakingPool) {
             const user = normalizeAddress(event._user);
             const amount = formatFromDecimals(
               event._lockedAmount ? event._lockedAmount.toString() : event._amount.toString(),
-              token.decimals,
+              stakingPool.token.decimals,
             );
             const action: KnownAction = signature === ConvexEventSignatures.CvxLockerUnstaked ? 'unlock' : 'lock';
             actions.push(
@@ -135,11 +117,12 @@ export default class ConvexAdapter extends Adapter {
                 ...options,
                 action: action,
                 addresses: [user],
-                tokens: [token],
+                tokens: [stakingPool.token],
                 tokenAmounts: [amount],
               }),
             );
           }
+
           break;
         }
         case ConvexEventSignatures.CvxLockerRewardPaid: {
@@ -163,15 +146,14 @@ export default class ConvexAdapter extends Adapter {
         }
       }
     } else if (signature === ConvexEventSignatures.RewardPaid || signature === ConvexEventSignatures.RewardPaidV2) {
-      // RewardPaid even on rewardContract in staking pool in database
-      const stakingPool = await this.services.database.find({
-        collection: EnvConfig.mongodb.collections.stakingPools,
-        query: {
-          protocol: this.config.protocol,
-          rewardContract: normalizeAddress(options.log.address),
-        },
+      // RewardPaid event on rewardContract in staking pool in datastore
+      const stakingPool = await this.services.datastore.getStakingPoolConstant({
+        chain: options.chain,
+        address: options.log.address,
+        rewardContract: options.log.address,
       });
-      if (stakingPool) {
+
+      if (stakingPool && stakingPool.protocol === this.config.protocol) {
         const event = web3.eth.abi.decodeLog(
           this.eventMappings[signature].abi,
           options.log.data,

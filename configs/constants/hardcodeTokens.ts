@@ -11,10 +11,10 @@ export const MockingTokens: { [key: string]: string } = {
   DOGE: '0xc4da4c24fd591125c3f47b340b6f4f76111883d8', // from Gmx v2
   LTC: '0xb46a094bc4b0adbd801e14b9db95e05e28962764', // from Gmx v2
   XRP: '0xc14e065b0067de91534e032868f5ac6ecf2c6868', // from Gmx v2
-  ADA: '0xab1ae161655b7b15f692425a0ffd07395afa67d5', // rantom
-  ALGO: '0x6a26b547ab55064f9b4be6df20e06f5005255815', // rantom
-  DOT: '0x21c95e4d9eae57f692a3dd74d79d16ff07e27957', // rantom
-  EOS: '0x6a4fc4b66aef8c7c503d82fd7f984e2429147e04', // rantom
+  ADA: '0xab1ae161655b7b15f692425a0ffd07395afa67d5', // random
+  ALGO: '0x6a26b547ab55064f9b4be6df20e06f5005255815', // random
+  DOT: '0x21c95e4d9eae57f692a3dd74d79d16ff07e27957', // random
+  EOS: '0x6a4fc4b66aef8c7c503d82fd7f984e2429147e04', // random
 };
 
 export const HardcodeTokens: { [key: string]: Token } = {

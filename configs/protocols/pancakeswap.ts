@@ -1,6 +1,4 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
-import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
-import { SushiConfig } from './sushi';
 
 const PancakeswapContracts: { [key: string]: ContractConfig } = {
   factory: {
@@ -26,59 +24,19 @@ const PancakeswapContracts: { [key: string]: ContractConfig } = {
   },
 };
 
-export const PancakeswapConfigs: SushiConfig = {
+export const PancakeswapConfigs: ProtocolConfig = {
   protocol: 'pancakeswap',
   contracts: [
     PancakeswapContracts.factory,
     PancakeswapContracts.factoryArbitrum,
     PancakeswapContracts.factoryBase,
     PancakeswapContracts.factoryBnbchain,
-  ],
-  subgraphs: [
     {
-      chain: 'ethereum',
-      protocol: 'pancakeswap',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.pancakeswap,
-    },
-    {
-      chain: 'arbitrum',
-      protocol: 'pancakeswap',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.pancakeswapArbitrum,
-    },
-    {
-      chain: 'base',
-      protocol: 'pancakeswap',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.pancakeswapBase,
-    },
-    {
-      chain: 'bnbchain',
-      protocol: 'pancakeswap',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.pancakeswapBnbchain,
-      requestOptions: {
-        referer: 'https://pancakeswap.finance/',
-        origin: 'https://pancakeswap.finance',
-      },
-    },
-  ],
-  factories: [
-    // {
-    //   version: 'univ2',
-    //   ...PancakeswapContracts.factoryBnbchain,
-    // },
-  ],
-  masterchefs: [
-    {
-      version: 'masterchef',
       chain: 'bnbchain',
       protocol: 'pancakeswap',
       address: '0x73feaa1ee314f8c655e354234017be2193c9e24e',
     },
     {
-      version: 'masterchefV2',
       chain: 'bnbchain',
       protocol: 'pancakeswap',
       address: '0xa5f8c5dbd5f286960b9d90548680ae5ebff07652',
@@ -116,31 +74,5 @@ export const Pancakeswapv3Configs: ProtocolConfig = {
     Pancakeswapv3Contracts.factoryArbitrum,
     Pancakeswapv3Contracts.factoryBase,
     Pancakeswapv3Contracts.factoryBnbchain,
-  ],
-  subgraphs: [
-    {
-      chain: 'ethereum',
-      protocol: 'pancakeswapv3',
-      version: 'univ3',
-      endpoint: PublicTheGraphEndpoints.pancakeswapv3,
-    },
-    {
-      chain: 'arbitrum',
-      protocol: 'pancakeswapv3',
-      version: 'univ3',
-      endpoint: PublicTheGraphEndpoints.pancakeswapv3Arbitrum,
-    },
-    {
-      chain: 'base',
-      protocol: 'pancakeswapv3',
-      version: 'univ3',
-      endpoint: PublicTheGraphEndpoints.pancakeswapv3Base,
-    },
-    {
-      chain: 'bnbchain',
-      protocol: 'pancakeswapv3',
-      version: 'univ3',
-      endpoint: PublicTheGraphEndpoints.pancakeswapv3Bnbchain,
-    },
   ],
 };

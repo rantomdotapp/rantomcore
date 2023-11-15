@@ -1,7 +1,7 @@
 import { compareAddress, normalizeAddress } from '../../lib/utils';
 import { EventMapping, ProtocolConfig, Token } from '../../types/configs';
 import { KnownAction, TransactionAction } from '../../types/domains';
-import { ContextServices, IAdapter, IUpdater } from '../../types/namespaces';
+import { ContextServices, IAdapter } from '../../types/namespaces';
 import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../types/options';
 
 export interface BuildUpActionOptions extends ParseEventLogOptions {
@@ -15,7 +15,6 @@ export default class Adapter implements IAdapter {
   public readonly name: string = 'adapter';
   public readonly services: ContextServices;
   public readonly config: ProtocolConfig;
-  public updaters: Array<IUpdater> = [];
 
   protected eventMappings: { [key: string]: EventMapping } = {};
 

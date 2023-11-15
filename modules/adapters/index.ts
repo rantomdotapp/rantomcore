@@ -12,7 +12,6 @@ import BancorAdapter from './bancor/bancor';
 import BasebridgeAdapter from './basebridge/basebridge';
 import BasinAdapter from './basin/basin';
 import BungeeAdapter from './bungee/bungee';
-import Camelotv3Adapter from './camelot/camelotv3';
 import CarbonAdapter from './carbon/carbon';
 import CelerbridgeAdapter from './celerbridge/celerbridge';
 import ChaiAdapter from './chai/chai';
@@ -50,9 +49,8 @@ import PrismaAdapter from './prisma/prisma';
 import ReflexerAdapter from './reflexer/reflexer';
 import RocketpoolAdapter from './rocketpool/rocketpool';
 import StakewiseAdapter from './stakewise/stakewise';
-import StargateAdapter from './stargate/stargate ';
+import StargateAdapter from './stargate/stargate';
 import SushiAdapter from './sushi/sushi';
-import Sushiv3Adapter from './sushi/sushiv3';
 import SwellAdapter from './swell/swell';
 import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
@@ -71,13 +69,13 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     compound: new CompoundAdapter(services, ProtocolConfigs.compound),
     compoundv3: new Compoundv3Adapter(services, ProtocolConfigs.compoundv3),
     sushi: new SushiAdapter(services, ProtocolConfigs.sushi),
-    sushiv3: new Sushiv3Adapter(services, ProtocolConfigs.sushiv3),
+    sushiv3: new Uniswapv3Adapter(services, ProtocolConfigs.sushiv3),
     pancakeswap: new PancakeAdapter(services, ProtocolConfigs.pancakeswap),
     pancakeswapv3: new Pancakev3Adapter(services, ProtocolConfigs.pancakeswapv3),
     'kyberswap-elastic': new Uniswapv3Adapter(services, ProtocolConfigs['kyberswap-elastic']),
     'kyberswap-aggregator': new KyberswapAdapter(services, ProtocolConfigs['kyberswap-aggregator']),
     camelot: new Uniswapv2Adapter(services, ProtocolConfigs.camelot),
-    camelotv3: new Camelotv3Adapter(services, ProtocolConfigs.camelotv3),
+    camelotv3: new Uniswapv3Adapter(services, ProtocolConfigs.camelotv3),
     balancer: new BalancerAdapter(services, ProtocolConfigs.balancer),
     beethovenx: new BalancerAdapter(services, ProtocolConfigs.beethovenx),
     maverick: new MaverickAdapter(services, ProtocolConfigs.maverick),

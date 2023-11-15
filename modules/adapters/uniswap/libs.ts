@@ -1,5 +1,6 @@
 import UniswapPoolV2Abi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import UniswapPoolV3Abi from '../../../configs/abi/uniswap/UniswapV3Pool.json';
+import { querySubgraph } from '../../../lib/subsgraph';
 import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
 import { LiquidityPoolConstant, LiquidityPoolVersion } from '../../../types/domains';
@@ -9,6 +10,19 @@ export interface GetUniswapLiquidityPoolOptions {
   address: string; // pool address
   version: LiquidityPoolVersion;
   protocol: string;
+}
+
+export interface GetTopLiquidityPoolSubgraphOptions {
+  top: number;
+  chain: string;
+  protocol: string;
+  version: LiquidityPoolVersion;
+  factoryAddress: string;
+  endpoint: string;
+  filters: any;
+
+  // http request custom headers
+  httpRequestOptions?: any;
 }
 
 export default class UniswapLibs {
@@ -58,14 +72,68 @@ export default class UniswapLibs {
           address: normalizeAddress(address),
           protocol: protocol,
           factory: normalizeAddress(factoryAddress),
-          token0,
-          token1,
-          fee: 0.3,
-          createdBlockNumber: 0,
+          tokens: [token0, token1],
         };
       }
     } catch (e: any) {}
 
     return null;
+  }
+
+  public static async getTopLiquidityPools(
+    options: GetTopLiquidityPoolSubgraphOptions,
+  ): Promise<Array<LiquidityPoolConstant>> {
+    const pools: Array<LiquidityPoolConstant> = [];
+
+    const filterPools = options.version === 'univ2' ? 'pairs' : 'pools';
+
+    const data = await querySubgraph(
+      options.endpoint,
+      `
+            {
+              pools: ${filterPools}(first: ${options.top}, orderBy: ${options.filters.orderBy}, orderDirection:desc) {
+            id
+            token0 {
+              id
+              symbol
+              decimals
+            }
+            token1 {
+              id
+              symbol
+              decimals
+            }
+          }
+        }
+      `,
+      options.httpRequestOptions ? options.httpRequestOptions : {},
+    );
+
+    const rawPools: Array<any> = data.pools;
+    for (const rawPool of rawPools) {
+      pools.push({
+        protocol: options.protocol,
+        chain: options.chain,
+        version: options.version,
+        address: normalizeAddress(rawPool.id),
+        factory: normalizeAddress(options.factoryAddress),
+        tokens: [
+          {
+            chain: options.chain,
+            address: normalizeAddress(rawPool.token0.id),
+            symbol: rawPool.token0.symbol,
+            decimals: Number(rawPool.token0.decimals),
+          },
+          {
+            chain: options.chain,
+            address: normalizeAddress(rawPool.token1.id),
+            symbol: rawPool.token1.symbol,
+            decimals: Number(rawPool.token1.decimals),
+          },
+        ],
+      });
+    }
+
+    return pools;
   }
 }

@@ -5,7 +5,6 @@ import ConvexRewardPoolAbi from '../../../configs/abi/convex/ConvexRewardPool.js
 import { ConvexStakingPoolConstant } from '../../../configs/protocols/convex';
 import { normalizeAddress } from '../../../lib/utils';
 import BlockchainService from '../../../services/blockchains/blockchain';
-import { MasterchefStakingVersion } from '../../../types/configs';
 import { ContextServices } from '../../../types/namespaces';
 
 export interface GetBoosterPoolInfoOptions {
@@ -13,7 +12,7 @@ export interface GetBoosterPoolInfoOptions {
   protocol: string;
   chain: string;
   address: string;
-  version: MasterchefStakingVersion;
+  version: 'convexBooster' | 'convexBoosterV2';
   poolId: number;
 }
 
@@ -52,6 +51,7 @@ export default class ConvexLibs {
           return {
             chain: options.chain,
             protocol: options.protocol,
+            version: 'booster',
             address: normalizeAddress(options.address),
             poolId: options.poolId,
             token: token,
@@ -91,6 +91,7 @@ export default class ConvexLibs {
             protocol: options.protocol,
             address: normalizeAddress(options.address),
             poolId: options.poolId,
+            version: 'booster',
             token: token,
             rewardContract: normalizeAddress(poolInfo.rewards),
             rewardToken: rewardToken,

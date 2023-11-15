@@ -1,13 +1,11 @@
 import BigNumber from 'bignumber.js';
 
 import { AddressZero } from '../../../configs/constants/addresses';
-import { YearnConfig } from '../../../configs/protocols/yearn';
 import { compareAddress, formatFromDecimals, normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
-import YearnVaultUpdater from '../../updaters/yearnVault';
 import Adapter from '../adapter';
 import { TransferAbiMappings, TransferEventSignatures } from '../transfer/abis';
 import { YearnAbiMappings, YearnEventSignatures } from './abis';
@@ -42,8 +40,6 @@ export default class YearnAdapter extends Adapter {
       ...TransferAbiMappings,
       ...YearnAbiMappings,
     };
-
-    this.updaters = [new YearnVaultUpdater(services, config)];
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
@@ -103,9 +99,10 @@ export default class YearnAdapter extends Adapter {
           options.log.topics.slice(1),
         );
 
-        const stakingPool = (this.config as YearnConfig).staking.filter(
-          (item) => item.chain === options.chain && compareAddress(item.address, options.log.address),
-        )[0];
+        const stakingPool = await this.services.datastore.getStakingPoolConstant({
+          chain: options.chain,
+          address: options.log.address,
+        });
         if (stakingPool) {
           const provider = normalizeAddress(event.user);
           const amount = formatFromDecimals(event.amount.toString(), stakingPool.token.decimals);

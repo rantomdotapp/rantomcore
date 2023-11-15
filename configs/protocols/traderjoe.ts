@@ -1,5 +1,4 @@
-import { ContractConfig, ProtocolConfig, Token } from '../../types/configs';
-import { PublicTheGraphEndpoints } from '../constants/thegraphEndpoints';
+import { ContractConfig, ProtocolConfig } from '../../types/configs';
 
 const TraderjoeContracts: { [key: string]: ContractConfig } = {
   factoryArbitrum: {
@@ -17,26 +16,7 @@ const TraderjoeContracts: { [key: string]: ContractConfig } = {
 export const TraderjoeConfigs: ProtocolConfig = {
   protocol: 'traderjoe',
   contracts: [TraderjoeContracts.factoryArbitrum, TraderjoeContracts.factoryBnbchain],
-  subgraphs: [
-    {
-      chain: 'arbitrum',
-      protocol: 'traderjoe',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.traderjoeArbitrum,
-    },
-    {
-      chain: 'bnbchain',
-      protocol: 'traderjoe',
-      version: 'univ2',
-      endpoint: PublicTheGraphEndpoints.traderjoeBnbchain,
-    },
-  ],
 };
-
-export interface Traderjoev2PoolConfig extends ContractConfig {
-  token0: Token;
-  token1: Token;
-}
 
 const Traderjoev2Contracts: { [key: string]: ContractConfig } = {
   factoryEthereum: {
