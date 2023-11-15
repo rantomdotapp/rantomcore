@@ -28,6 +28,7 @@ import Eth2Adapter from './eth2/eth2';
 import ExactlyAdapter from './exactly/exactly';
 import FraxethAdapter from './fraxeth/fraxeth';
 import FraxlendAdapter from './fraxlend/fraxlend';
+import GearboxAdapter from './gearbox/gearbox';
 import GmxAdapter from './gmx/gmx';
 import Gmxv2Adapter from './gmx/gmxv2';
 import GravitaAdapter from './gravita/gravita';
@@ -138,5 +139,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     celerbridge: new CelerbridgeAdapter(services, ProtocolConfigs.celerbridge),
     oneinch: new OneinchAdapter(services, ProtocolConfigs.oneinch),
     metamask: new MetamaskAdapter(services, ProtocolConfigs.metamask),
+    gearbox: new GearboxAdapter(services, ProtocolConfigs.gearbox),
   };
 }

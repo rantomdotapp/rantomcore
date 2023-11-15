@@ -28,6 +28,7 @@ import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxethConfigs } from './fraxeth';
 import { FraxlendConfigs } from './fraxlend';
 import { FraxswapConfigs } from './fraxswap';
+import { GearboxConfigs } from './gearbox';
 import { GmxConfigs, Gmxv2Configs } from './gmx';
 import { GravitaConfigs } from './gravita';
 import { IronbankConfigs } from './ironbank';
@@ -141,4 +142,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   celerbridge: CelerbridgeConfigs,
   oneinch: OneinchConfigs,
   metamask: MetamaskConfigs,
+  gearbox: GearboxConfigs,
 };
