@@ -37,3 +37,42 @@ export async function querySubgraph(endpoint: string, query: string, options: an
     return null;
   }
 }
+
+export interface BlockTimestamps {
+  [key: number]: number;
+}
+
+export async function queryBlockTimestamps(
+  endpoint: string,
+  fromBlock: number,
+  toBlock: number,
+): Promise<BlockTimestamps | null> {
+  const blockTimestamps: BlockTimestamps = {};
+
+  let startBlock = fromBlock;
+  const endBlock = toBlock;
+
+  const queryLimit = 1000;
+  while (startBlock <= endBlock) {
+    const response = await querySubgraph(
+      endpoint,
+      `
+        {
+          blocks(first: ${queryLimit}, where: {number_gte: ${startBlock}}, orderBy: number, orderDirection: asc) {
+            number
+            timestamp
+          }
+        }
+      `,
+    );
+    if (response) {
+      for (const block of response.blocks) {
+        blockTimestamps[Number(block.number)] = Number(Number(block.timestamp));
+      }
+    }
+
+    startBlock += queryLimit;
+  }
+
+  return blockTimestamps;
+}

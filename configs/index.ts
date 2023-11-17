@@ -25,3 +25,6 @@ export const DefaultQueryLogsBlockRangeSingleContract = 5000;
 // we save latest parsed transactions into database for fast query
 // this value is the number of seconds of the caching
 export const DefaultParserCachingTime = 5 * 60;
+
+// api server
+export const DefaultQueryResultLimit = 200;
