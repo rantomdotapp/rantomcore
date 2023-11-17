@@ -115,11 +115,22 @@ export default class DatabaseService implements IDatabaseService {
 
   public async query(options: DatabaseQueryOptions): Promise<Array<any>> {
     const collection = await this.getCollection(options.collection);
-    return await collection
-      .find({
-        ...options.query,
-      })
-      .toArray();
+
+    if (options.options) {
+      return await collection
+        .find({
+          ...options.query,
+        })
+        .limit(options.options.limit)
+        .sort(options.options.order)
+        .toArray();
+    } else {
+      return await collection
+        .find({
+          ...options.query,
+        })
+        .toArray();
+    }
   }
 
   public async update(options: DatabaseUpdateOptions): Promise<void> {
