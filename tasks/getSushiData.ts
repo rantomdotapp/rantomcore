@@ -7,6 +7,7 @@ import SushiLibs from '../modules/adapters/sushi/libs';
 import UniswapLibs from '../modules/adapters/uniswap/libs';
 import BlockchainService from '../services/blockchains/blockchain';
 import { LiquidityPoolConstant, StakingPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const SushiFactories: Array<any> = [
   {
@@ -137,6 +138,11 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
       poolId,
     });
     if (poolInfo) {
+      updateToken(poolInfo.token);
+      if (poolInfo.rewardToken) {
+        updateToken(poolInfo.rewardToken);
+      }
+
       allPools.push(poolInfo);
       fs.writeFileSync(options.filePath, JSON.stringify(allPools));
 
@@ -195,4 +201,15 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
     );
   }
   fs.writeFileSync('./configs/data/Sushiv3Pools.json', JSON.stringify(v3Pools));
+
+  for (const pool of pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
+  for (const pool of v3Pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
 })();

@@ -6,6 +6,7 @@ import FraxlendPairAbi from '../configs/abi/fraxlend/FraxlendPair.json';
 import { FraxlendPair } from '../configs/protocols/fraxlend';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const PairConfigs: Array<string> = [
   'ethereum:0x794F6B13FBd7EB7ef10d1ED205c9a416910207Ff', // WETH
@@ -44,6 +45,7 @@ const PairConfigs: Array<string> = [
         address: collateralAddress,
       });
       if (collateral) {
+        updateToken(collateral);
         allPairs.push({
           chain: chain,
           address: normalizeAddress(address),

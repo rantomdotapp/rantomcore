@@ -192,17 +192,6 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x7858e59e0c01ea06df3af3d20ac7b0003275d4bf",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 },
-      { "chain": "ethereum", "address": "0xdac17f958d2ee523a2206206994597c13d831ec7", "symbol": "USDT", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "ethereum",
-    "version": "univ3",
     "address": "0x290a6a7460b308ee3f19023d2d00de604bcf5b42",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -213,6 +202,17 @@
         "decimals": 18
       },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "ethereum",
+    "version": "univ3",
+    "address": "0x7858e59e0c01ea06df3af3d20ac7b0003275d4bf",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 },
+      { "chain": "ethereum", "address": "0xdac17f958d2ee523a2206206994597c13d831ec7", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -533,6 +533,17 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
+    "address": "0x510100d5143e011db24e2aa38abe85d73d5b2177",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "ethereum", "address": "0x046eee2cc3188071c02bfc1745a6b17c656e3f3d", "symbol": "RLB", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "ethereum",
+    "version": "univ3",
     "address": "0x98409d8ca9629fbe01ab1b914ebf304175e384c8",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -543,17 +554,6 @@
         "decimals": 18
       },
       { "chain": "ethereum", "address": "0xf411903cbc70a74d22900a5de66a2dda66507255", "symbol": "VRA", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "ethereum",
-    "version": "univ3",
-    "address": "0x510100d5143e011db24e2aa38abe85d73d5b2177",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "ethereum", "address": "0x046eee2cc3188071c02bfc1745a6b17c656e3f3d", "symbol": "RLB", "decimals": 18 },
-      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -726,10 +726,10 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x6ce6d6d40a4c4088309293b0582372a2e6bb632e",
+    "address": "0x498498fa386ef2860e7abf8c60254580c8c41ec5",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "ethereum", "address": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6", "symbol": "STG", "decimals": 18 },
+      { "chain": "ethereum", "address": "0x7b4328c127b85369d9f82ca0503b000d09cf9180", "symbol": "DC", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -737,10 +737,10 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x498498fa386ef2860e7abf8c60254580c8c41ec5",
+    "address": "0x6ce6d6d40a4c4088309293b0582372a2e6bb632e",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "ethereum", "address": "0x7b4328c127b85369d9f82ca0503b000d09cf9180", "symbol": "DC", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6", "symbol": "STG", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -824,10 +824,15 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0xcbbc981bd5b358d09a9346726115d3ac8822d00b",
+    "address": "0xd8de6af55f618a7bc69835d55ddc6582220c36c0",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "ethereum", "address": "0x7d29a64504629172a429e64183d6673b9dacbfce", "symbol": "VXV", "decimals": 18 },
+      {
+        "chain": "ethereum",
+        "address": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
+        "symbol": "DYDX",
+        "decimals": 18
+      },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -851,15 +856,10 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0xd8de6af55f618a7bc69835d55ddc6582220c36c0",
+    "address": "0xcbbc981bd5b358d09a9346726115d3ac8822d00b",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      {
-        "chain": "ethereum",
-        "address": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
-        "symbol": "DYDX",
-        "decimals": 18
-      },
+      { "chain": "ethereum", "address": "0x7d29a64504629172a429e64183d6673b9dacbfce", "symbol": "VXV", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -1050,22 +1050,6 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x3328ca5b535d537f88715b305375c591cf52d541",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "ethereum",
-        "address": "0x34f0915a5f15a66eba86f6a58be1a471fb7836a7",
-        "symbol": "PLSD",
-        "decimals": 12
-      },
-      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "ethereum",
-    "version": "univ3",
     "address": "0x19c10e1f20df3a8c2ac93a62d7fba719fa777026",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -1082,10 +1066,15 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x84383fb05f610222430f69727aa638f8fdbf5cc1",
+    "address": "0x3328ca5b535d537f88715b305375c591cf52d541",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "ethereum", "address": "0x6b4c7a5e3f0b99fcd83e9c089bddd6c7fce5c611", "symbol": "MM", "decimals": 18 },
+      {
+        "chain": "ethereum",
+        "address": "0x34f0915a5f15a66eba86f6a58be1a471fb7836a7",
+        "symbol": "PLSD",
+        "decimals": 12
+      },
       { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 }
     ]
   },
@@ -1098,6 +1087,17 @@
     "tokens": [
       { "chain": "ethereum", "address": "0x78a0a62fba6fb21a83fe8a3433d44c73a4017a6f", "symbol": "OX", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "ethereum",
+    "version": "univ3",
+    "address": "0x84383fb05f610222430f69727aa638f8fdbf5cc1",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "ethereum", "address": "0x6b4c7a5e3f0b99fcd83e9c089bddd6c7fce5c611", "symbol": "MM", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -1120,17 +1120,6 @@
     "protocol": "uniswapv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x3ee301ed8f42d106def4f9d9730ea3367880b771",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "ethereum", "address": "0x64d91f12ece7362f91a6f8e7940cd55f05060b92", "symbol": "ASH", "decimals": 18 },
-      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "ethereum",
-    "version": "univ3",
     "address": "0x8661ae7918c0115af9e3691662f605e9c550ddc9",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -1140,6 +1129,17 @@
         "symbol": "MANA",
         "decimals": 18
       },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "ethereum",
+    "version": "univ3",
+    "address": "0x3ee301ed8f42d106def4f9d9730ea3367880b771",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "ethereum", "address": "0x64d91f12ece7362f91a6f8e7940cd55f05060b92", "symbol": "ASH", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -1696,17 +1696,6 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xd37af656abf91c7f548fffc0133175b5e4d3d5e6",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0x446bf9748b4ea044dd759d9b9311c70491df8f29",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -1717,6 +1706,17 @@
         "decimals": 18
       },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd37af656abf91c7f548fffc0133175b5e4d3d5e6",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -1772,6 +1772,17 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
+    "address": "0xac70bd92f89e6739b3a08db9b6081a923912f73d",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
     "address": "0x08687dd94b1e084808b549fb5594d6e3d3b7b948",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -1782,17 +1793,6 @@
         "decimals": 18
       },
       { "chain": "arbitrum", "address": "0xd3f1da62cafb7e7bc6531ff1cef6f414291f03d3", "symbol": "DBL", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0xac70bd92f89e6739b3a08db9b6081a923912f73d",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
-      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -2073,10 +2073,15 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xc94560e81ce1a78b2a5f686a9a913e8560c00234",
+    "address": "0xdbaeb7f0dfe3a0aafd798ccecb5b22e708f7852c",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "arbitrum", "address": "0x5575552988a3a80504bbaeb1311674fcfd40ad4b", "symbol": "SPA", "decimals": 18 },
+      {
+        "chain": "arbitrum",
+        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "symbol": "PENDLE",
+        "decimals": 18
+      },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -2095,15 +2100,10 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xdbaeb7f0dfe3a0aafd798ccecb5b22e708f7852c",
+    "address": "0xc94560e81ce1a78b2a5f686a9a913e8560c00234",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
-        "symbol": "PENDLE",
-        "decimals": 18
-      },
+      { "chain": "arbitrum", "address": "0x5575552988a3a80504bbaeb1311674fcfd40ad4b", "symbol": "SPA", "decimals": 18 },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -2300,6 +2300,17 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
+    "address": "0xb791ad21ba45c76629003b4a2f04c0d544406e37",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
     "address": "0x92fd143a8fa0c84e016c2765648b9733b0aa519e",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2321,17 +2332,6 @@
     "tokens": [
       { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 },
       { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0xb791ad21ba45c76629003b4a2f04c0d544406e37",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -2387,17 +2387,6 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xea263b98314369f2245c7b7e6a9f72e25cb8cded",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0x35218a1cbac5bbc3e57fd9bd38219d37571b3537",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2408,6 +2397,17 @@
         "decimals": 18
       },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xea263b98314369f2245c7b7e6a9f72e25cb8cded",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -2425,22 +2425,6 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xaf773d842787cb1b238fe3c8dad6292c3910b5d2",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-        "symbol": "WETH",
-        "decimals": 18
-      },
-      { "chain": "arbitrum", "address": "0xb5de3f06af62d8428a8bf7b4400ea42ad2e0bc53", "symbol": "BRC", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0xdd092f5dce127961af6ebe975978c084c935bcc8",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2451,6 +2435,22 @@
         "decimals": 18
       },
       { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xaf773d842787cb1b238fe3c8dad6292c3910b5d2",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xb5de3f06af62d8428a8bf7b4400ea42ad2e0bc53", "symbol": "BRC", "decimals": 18 }
     ]
   },
   {
@@ -2559,6 +2559,17 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
+    "address": "0x52f9d14bed8ce6536da063aaf274ae2747ef4853",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60", "symbol": "LDO", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
     "address": "0x2334d412da299a21486b663d12c392185b313aaa",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2600,17 +2611,6 @@
         "symbol": "RDNT",
         "decimals": 18
       },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0x52f9d14bed8ce6536da063aaf274ae2747ef4853",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60", "symbol": "LDO", "decimals": 18 },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -2682,22 +2682,6 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x485c6c996488479cca19de83292602f0a83d1a8d",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x53bcf6698c911b2a7409a740eacddb901fc2a2c6",
-        "symbol": "KABOSU",
-        "decimals": 18
-      },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0xaebdca1bc8d89177ebe2308d62af5e74885dccc3",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2720,6 +2704,22 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
+    "address": "0x485c6c996488479cca19de83292602f0a83d1a8d",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x53bcf6698c911b2a7409a740eacddb901fc2a2c6",
+        "symbol": "KABOSU",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
     "address": "0xb5c88537d8f5f356e43ec94e20f7eb26bd1ac967",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -2731,18 +2731,7 @@
     "protocol": "uniswapv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xba80cede54bf09f8160f7d6ad4a9d6ae3a9852d9",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978", "symbol": "CRV", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0x4e335c2a3638032d99b3e482a06a53a4ab266146",
+    "address": "0x05bbaaa020ff6bea107a9a1e06d2feb7bfd79ed2",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
@@ -2751,7 +2740,18 @@
         "symbol": "WETH",
         "decimals": 18
       },
-      { "chain": "arbitrum", "address": "0xb5de3f06af62d8428a8bf7b4400ea42ad2e0bc53", "symbol": "BRC", "decimals": 18 }
+      { "chain": "arbitrum", "address": "0x83d6c8c06ac276465e4c92e7ac8c23740f435140", "symbol": "HMX", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xba80cede54bf09f8160f7d6ad4a9d6ae3a9852d9",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978", "symbol": "CRV", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -2930,13 +2930,13 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0x6c0bc93a4208eb1648af4ed44cb3b4df9547b42b",
+    "address": "0xc64f9436f8ca50cdcc096105c62dad52faeb1f2e",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
         "chain": "optimism",
-        "address": "0x34235c8489b06482a99bb7fcab6d7c467b92d248",
-        "symbol": "vAAVE",
+        "address": "0x86f1e0420c26a858fc203a3645dd1a36868f18e5",
+        "symbol": "vBTC",
         "decimals": 18
       },
       { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
@@ -2946,13 +2946,13 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0xc64f9436f8ca50cdcc096105c62dad52faeb1f2e",
+    "address": "0x6c0bc93a4208eb1648af4ed44cb3b4df9547b42b",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
         "chain": "optimism",
-        "address": "0x86f1e0420c26a858fc203a3645dd1a36868f18e5",
-        "symbol": "vBTC",
+        "address": "0x34235c8489b06482a99bb7fcab6d7c467b92d248",
+        "symbol": "vAAVE",
         "decimals": 18
       },
       { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
@@ -3021,13 +3021,13 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0x2534d4f1325aa7d3fc8d5d14f224e5c587a719b0",
+    "address": "0xaec0bf409bb28efe308108d400034650c4d9ec75",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
         "chain": "optimism",
-        "address": "0x3fb3282e3ba34a0bff94845f1800eb93cc6850d4",
-        "symbol": "vNEAR",
+        "address": "0x2db8d2db86ca3a4c7040e778244451776570359b",
+        "symbol": "vFTM",
         "decimals": 18
       },
       { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
@@ -3037,13 +3037,13 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0xaec0bf409bb28efe308108d400034650c4d9ec75",
+    "address": "0x2534d4f1325aa7d3fc8d5d14f224e5c587a719b0",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
         "chain": "optimism",
-        "address": "0x2db8d2db86ca3a4c7040e778244451776570359b",
-        "symbol": "vFTM",
+        "address": "0x3fb3282e3ba34a0bff94845f1800eb93cc6850d4",
+        "symbol": "vNEAR",
         "decimals": 18
       },
       { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
@@ -3069,6 +3069,17 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
+    "address": "0x252cbdff917169775be2b552ec9f6781af95e7f6",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "optimism", "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607", "symbol": "USDC", "decimals": 6 },
+      { "chain": "optimism", "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9", "symbol": "sUSD", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "optimism",
+    "version": "univ3",
     "address": "0xb98e6912ae77c643957ed51dcf755895ec4bc6b4",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -3079,17 +3090,6 @@
         "decimals": 18
       },
       { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "optimism",
-    "version": "univ3",
-    "address": "0x252cbdff917169775be2b552ec9f6781af95e7f6",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "optimism", "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607", "symbol": "USDC", "decimals": 6 },
-      { "chain": "optimism", "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9", "symbol": "sUSD", "decimals": 18 }
     ]
   },
   {
@@ -3999,6 +3999,17 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
+    "address": "0x1fb3cf6e48f1e7b10213e7b6d87d4c073c7fdb7b",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "optimism", "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85", "symbol": "USDC", "decimals": 6 },
+      { "chain": "optimism", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "optimism",
+    "version": "univ3",
     "address": "0x4a5a2a152e985078e1a4aa9c3362c412b7dd0a86",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -4006,6 +4017,22 @@
         "chain": "optimism",
         "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
         "symbol": "wstETH",
+        "decimals": 18
+      },
+      { "chain": "optimism", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "optimism",
+    "version": "univ3",
+    "address": "0x8531e48a8611729185be9eaad945acbd6b32e256",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
+        "symbol": "LINK",
         "decimals": 18
       },
       { "chain": "optimism", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
@@ -4036,22 +4063,6 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0x8531e48a8611729185be9eaad945acbd6b32e256",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "optimism",
-        "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
-        "symbol": "LINK",
-        "decimals": 18
-      },
-      { "chain": "optimism", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "optimism",
-    "version": "univ3",
     "address": "0x01e37e62733d1792e3cf8ce45630589b8ac7c2ba",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -4062,6 +4073,17 @@
         "decimals": 18
       },
       { "chain": "optimism", "address": "0x67ccea5bb16181e7b4109c9c2143c24a1c2205be", "symbol": "FXS", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "optimism",
+    "version": "univ3",
+    "address": "0x2ab22ac86b25bd448a4d9dc041bd2384655299c4",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "optimism", "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85", "symbol": "USDC", "decimals": 6 },
+      { "chain": "optimism", "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -4111,10 +4133,10 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0x2ab22ac86b25bd448a4d9dc041bd2384655299c4",
+    "address": "0x2582886f65ea71ecd3cffd12089c55fb9c75e9db",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "optimism", "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85", "symbol": "USDC", "decimals": 6 },
+      { "chain": "optimism", "address": "0x73cb180bf0521828d8849bc8cf2b920918e23032", "symbol": "USD+", "decimals": 6 },
       { "chain": "optimism", "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607", "symbol": "USDC", "decimals": 6 }
     ]
   },
@@ -4122,11 +4144,16 @@
     "protocol": "uniswapv3",
     "chain": "optimism",
     "version": "univ3",
-    "address": "0x2582886f65ea71ecd3cffd12089c55fb9c75e9db",
+    "address": "0xeb429a0b45d23107e0ade850638124d8de85dfea",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "optimism", "address": "0x73cb180bf0521828d8849bc8cf2b920918e23032", "symbol": "USD+", "decimals": 6 },
-      { "chain": "optimism", "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607", "symbol": "USDC", "decimals": 6 }
+      {
+        "chain": "optimism",
+        "address": "0x35af19826c79c21f54612d1913f3f471dbad44e0",
+        "symbol": "vSNX",
+        "decimals": 18
+      },
+      { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
     ]
   },
   {
@@ -4148,22 +4175,6 @@
         "symbol": "COLLAB",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "optimism",
-    "version": "univ3",
-    "address": "0xeb429a0b45d23107e0ade850638124d8de85dfea",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "optimism",
-        "address": "0x35af19826c79c21f54612d1913f3f471dbad44e0",
-        "symbol": "vSNX",
-        "decimals": 18
-      },
-      { "chain": "optimism", "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04", "symbol": "vUSD", "decimals": 18 }
     ]
   },
   {
@@ -4196,17 +4207,6 @@
         "decimals": 18
       },
       { "chain": "optimism", "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278", "symbol": "AAVE", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "optimism",
-    "version": "univ3",
-    "address": "0x1fb3cf6e48f1e7b10213e7b6d87d4c073c7fdb7b",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "optimism", "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85", "symbol": "USDC", "decimals": 6 },
-      { "chain": "optimism", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -4413,17 +4413,6 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x254aa3a898071d6a2da0db11da73b02b4646078f",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063", "symbol": "DAI", "decimals": 18 },
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x6b75f2189f0e11c52e814e09e280eb1a9a8a094a",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -4434,6 +4423,17 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6", "symbol": "WBTC", "decimals": 8 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x254aa3a898071d6a2da0db11da73b02b4646078f",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063", "symbol": "DAI", "decimals": 18 },
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -4456,6 +4456,22 @@
     "tokens": [
       { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
       { "chain": "polygon", "address": "0xe0b52e49357fd4daf2c15e02058dce6bc0057db4", "symbol": "agEUR", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x0a28c2f5e0e8463e047c203f00f649812ae67e4f",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39", "symbol": "LINK", "decimals": 18 }
     ]
   },
   {
@@ -4500,22 +4516,6 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x0a28c2f5e0e8463e047c203f00f649812ae67e4f",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39", "symbol": "LINK", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x67a9fe12fa6082d9d0203c84c6c56d3c4b269f28",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -4538,17 +4538,6 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x3a5329ee48a06671ad1bf295b8a233ee9b9b975e",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 },
-      { "chain": "polygon", "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b", "symbol": "BOB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0xa9077cdb3d13f45b8b9d87c43e11bce0e73d8631",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -4565,16 +4554,11 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x7de263d0ad6e5d208844e65118c3a02a9a5d56b6",
+    "address": "0x3a5329ee48a06671ad1bf295b8a233ee9b9b975e",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      {
-        "chain": "polygon",
-        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
-        "symbol": "miMATIC",
-        "decimals": 18
-      }
+      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 },
+      { "chain": "polygon", "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b", "symbol": "BOB", "decimals": 18 }
     ]
   },
   {
@@ -4591,6 +4575,22 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x7de263d0ad6e5d208844e65118c3a02a9a5d56b6",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
+      {
+        "chain": "polygon",
+        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+        "symbol": "miMATIC",
+        "decimals": 18
+      }
     ]
   },
   {
@@ -5024,6 +5024,17 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0xbeaf7156ba07c3df8fac42e90188c5a752470db7",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
+      { "chain": "polygon", "address": "0x45c32fa6df82ead1e2ef74d17b76547eddfaff89", "symbol": "FRAX", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0x14d428249aaca553df22b0abb3e09cc186b6734b",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5034,17 +5045,6 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x7ff54b5c384c9f3a3fece70e150d2ce2d70da6f7", "symbol": "TBAC", "decimals": 8 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0xbeaf7156ba07c3df8fac42e90188c5a752470db7",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      { "chain": "polygon", "address": "0x45c32fa6df82ead1e2ef74d17b76547eddfaff89", "symbol": "FRAX", "decimals": 18 }
     ]
   },
   {
@@ -5067,6 +5067,22 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x0312692e9cadd3ddaace2e112a4e36397bd2f18a",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a",
+        "symbol": "SUSHI",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0x7c169eadb6a1abade56a20724ea6f03648fa1c4d",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5082,22 +5098,6 @@
         "symbol": "SROCKET",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x0312692e9cadd3ddaace2e112a4e36397bd2f18a",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a",
-        "symbol": "SUSHI",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -5180,17 +5180,6 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x78a750ca5f8dd1ef1c87e29e8a267ff4c8d12b38",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 },
-      { "chain": "polygon", "address": "0xf9cea445c2ac1668f50caa2c2924f93606a4a37d", "symbol": "RIA", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x26770cc2c612e5c97eb70a6531fa9d5098ef74ab",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5201,6 +5190,17 @@
         "symbol": "stMATIC",
         "decimals": 18
       }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x78a750ca5f8dd1ef1c87e29e8a267ff4c8d12b38",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 },
+      { "chain": "polygon", "address": "0xf9cea445c2ac1668f50caa2c2924f93606a4a37d", "symbol": "RIA", "decimals": 18 }
     ]
   },
   {
@@ -5223,17 +5223,6 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0xf7abb7dee889da4300a82c26f8c0c725c64bd493",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      { "chain": "polygon", "address": "0xadbe0eac80f955363f4ff47b0f70189093908c04", "symbol": "XMT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0xe6c36eed27c2e8ecb9a233bf12da06c9730b5955",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5244,6 +5233,17 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x311434160d7537be358930def317afb606c0d737", "symbol": "NAKA", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0xf7abb7dee889da4300a82c26f8c0c725c64bd493",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
+      { "chain": "polygon", "address": "0xadbe0eac80f955363f4ff47b0f70189093908c04", "symbol": "XMT", "decimals": 18 }
     ]
   },
   {
@@ -5315,6 +5315,17 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x1de01edb36d0f51762dac6645f0639462cf73933",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x3ce1327867077b551ae9a6987bf10c9fd08edce1", "symbol": "SWCH", "decimals": 18 },
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0xa35e3bca4377b3fd99b5ede28fcc3d154e128745",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5352,6 +5363,22 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x94f98d16c6ba5c2f649d6d7efb9767b14b0f325b", "symbol": "TBAC", "decimals": 8 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x941061770214613ba0ca3db9a700c39587bb89b6",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0x430ef9263e76dae63c84292c3409d61c598e9682", "symbol": "PYR", "decimals": 18 }
     ]
   },
   {
@@ -5396,38 +5423,11 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x1de01edb36d0f51762dac6645f0639462cf73933",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x3ce1327867077b551ae9a6987bf10c9fd08edce1", "symbol": "SWCH", "decimals": 18 },
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x400734738a64c0d1cfc855022bffbff4b46954de",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       { "chain": "polygon", "address": "0x584017c897326a220086b2c37d46b7e46cf9909e", "symbol": "Au", "decimals": 9 },
       { "chain": "polygon", "address": "0xbe48e08db415cc17b9a2f12cd943558a2d5a7163", "symbol": "WUSD", "decimals": 9 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x941061770214613ba0ca3db9a700c39587bb89b6",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0x430ef9263e76dae63c84292c3409d61c598e9682", "symbol": "PYR", "decimals": 18 }
     ]
   },
   {
@@ -5445,6 +5445,17 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x74171a9a649ec0f081be9557298d02f68bd79dc0",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      { "chain": "polygon", "address": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b", "symbol": "ADF", "decimals": 18 },
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0x078ba7cbb8feebf6d9a0450cf024c63c48ccdc49",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
@@ -5455,6 +5466,22 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x7f36c54da31b2dd355caffec0249f26da41e3fcd", "symbol": "ENO", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x67e708986a809acefde16f2417fa5701241e3935",
+    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -5493,7 +5520,7 @@
     "protocol": "uniswapv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x67e708986a809acefde16f2417fa5701241e3935",
+    "address": "0x5cd1c9488f1ccc197cf75eb340db38d46ae523db",
     "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
     "tokens": [
       {
@@ -5502,7 +5529,7 @@
         "symbol": "WMATIC",
         "decimals": 18
       },
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
+      { "chain": "polygon", "address": "0x50b728d8d964fd00c2d0aad81718b71311fef68a", "symbol": "SNX", "decimals": 18 }
     ]
   },
   {
@@ -5530,33 +5557,6 @@
         "symbol": "miMATIC",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x5cd1c9488f1ccc197cf75eb340db38d46ae523db",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0x50b728d8d964fd00c2d0aad81718b71311fef68a", "symbol": "SNX", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x74171a9a649ec0f081be9557298d02f68bd79dc0",
-    "factory": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
-    "tokens": [
-      { "chain": "polygon", "address": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b", "symbol": "ADF", "decimals": 18 },
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -5618,17 +5618,6 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x22f9623817f152148b4e080e98af66fbe9c5adf8",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 },
-      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
     "address": "0xd0b53d9277642d899df5c87a3966a349a798f224",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -5640,11 +5629,11 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xe6e16fa8f4c2b9f56a3378b227bede63940a657c",
+    "address": "0x22f9623817f152148b4e080e98af66fbe9c5adf8",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0x8544fe9d190fd7ec52860abbf45088e81ee24a8c", "symbol": "TOSHI", "decimals": 18 }
+      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 },
+      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
     ]
   },
   {
@@ -5656,6 +5645,17 @@
     "tokens": [
       { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 },
       { "chain": "base", "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215", "symbol": "axlUSDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
+    "address": "0xe6e16fa8f4c2b9f56a3378b227bede63940a657c",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
+      { "chain": "base", "address": "0x8544fe9d190fd7ec52860abbf45088e81ee24a8c", "symbol": "TOSHI", "decimals": 18 }
     ]
   },
   {
@@ -5783,6 +5783,17 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
+    "address": "0x018046b1d182f7c0978c07610e1173c8e11913fd",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
+      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
     "address": "0x15f1fabeff0c33331004a4038992a07f870a9ae7",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -5799,17 +5810,6 @@
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
       { "chain": "base", "address": "0x81e8294a3027a4a0858928e08fbf1dca151364ca", "symbol": "UNIBASE", "decimals": 9 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
-    "address": "0x018046b1d182f7c0978c07610e1173c8e11913fd",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
-      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
     ]
   },
   {
@@ -5838,6 +5838,17 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
+    "address": "0x9fee7385a2979d15277c3467db7d99ef1a2669d7",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
     "address": "0xdcf81663e68f076ef9763442de134fd0699de4ef",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -5854,17 +5865,6 @@
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
       { "chain": "base", "address": "0xc5bebd5a6ae6be4fcf383eea014fb1dbd43789ca", "symbol": "BNS", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
-    "address": "0x9fee7385a2979d15277c3467db7d99ef1a2669d7",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -5937,22 +5937,22 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x1ba31393df657a0aefa796b85cd18122dde8072d",
+    "address": "0xdd44c0e83c2570062d1e6fdd440b4724862e8f31",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0x71e8f538f47397cd9a544041555cafc7a0ce9ae3", "symbol": "BOOST", "decimals": 18 }
+      { "chain": "base", "address": "0xee9e3123dbb3ac5e75c65a1fc4617b2acc082d85", "symbol": "GECKO", "decimals": 18 }
     ]
   },
   {
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xdd44c0e83c2570062d1e6fdd440b4724862e8f31",
+    "address": "0x1ba31393df657a0aefa796b85cd18122dde8072d",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xee9e3123dbb3ac5e75c65a1fc4617b2acc082d85", "symbol": "GECKO", "decimals": 18 }
+      { "chain": "base", "address": "0x71e8f538f47397cd9a544041555cafc7a0ce9ae3", "symbol": "BOOST", "decimals": 18 }
     ]
   },
   {
@@ -6036,22 +6036,22 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x92722287d2819012dd8ec07b4e426ac00dd11103",
+    "address": "0x3bc5180d5439b500f381f9a46f15dd6608101671",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 },
-      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
+      { "chain": "base", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "symbol": "PRIME", "decimals": 18 }
     ]
   },
   {
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x3bc5180d5439b500f381f9a46f15dd6608101671",
+    "address": "0x92722287d2819012dd8ec07b4e426ac00dd11103",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "symbol": "PRIME", "decimals": 18 }
+      { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 },
+      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
     ]
   },
   {
@@ -6157,6 +6157,17 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
+    "address": "0x19a8b1542b807cd6a76fcbb5ff5f53c6169f36d7",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 },
+      { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
     "address": "0x82896892f73f4884c0ff41c0b396a67f66e26080",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -6184,6 +6195,17 @@
     "tokens": [
       { "chain": "base", "address": "0x2a17040122dc1757226034a423c57018d784daf4", "symbol": "BAND", "decimals": 18 },
       { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
+    "address": "0x091359b536390a6f22c8df02f43e14082b4454ff",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
+      { "chain": "base", "address": "0xe3b53af74a4bf62ae5511055290838050bf764df", "symbol": "STG", "decimals": 18 }
     ]
   },
   {
@@ -6223,17 +6245,6 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x19a8b1542b807cd6a76fcbb5ff5f53c6169f36d7",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 },
-      { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
     "address": "0x141d9e06a23d4e4326000e30285e2648f2e04634",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -6267,11 +6278,11 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x091359b536390a6f22c8df02f43e14082b4454ff",
+    "address": "0xc055f66f228105072315247785c00299d0ce27e8",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xe3b53af74a4bf62ae5511055290838050bf764df", "symbol": "STG", "decimals": 18 }
+      { "chain": "base", "address": "0x17d2628d30f8e9e966c9ba831c9b9b01ea8ea75c", "symbol": "ISK", "decimals": 18 },
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -6283,17 +6294,6 @@
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
       { "chain": "base", "address": "0xf881f4da116149328248914d68fb029c04fdd284", "symbol": "69", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
-    "address": "0xc055f66f228105072315247785c00299d0ce27e8",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x17d2628d30f8e9e966c9ba831c9b9b01ea8ea75c", "symbol": "ISK", "decimals": 18 },
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -6322,10 +6322,10 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x466660c1907c28a1a66af3d017df1c1151df7e8a",
+    "address": "0x0f1ab94784f8ddd61d80e39a415278f335c240d1",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x703d57164ca270b0b330a87fd159cfef1490c0a5", "symbol": "SOFI", "decimals": 18 },
+      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
       { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
     ]
   },
@@ -6333,10 +6333,10 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x0f1ab94784f8ddd61d80e39a415278f335c240d1",
+    "address": "0x466660c1907c28a1a66af3d017df1c1151df7e8a",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b", "symbol": "tBTC", "decimals": 18 },
+      { "chain": "base", "address": "0x703d57164ca270b0b330a87fd159cfef1490c0a5", "symbol": "SOFI", "decimals": 18 },
       { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 }
     ]
   },
@@ -6355,11 +6355,22 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xf42123a67cf6745bbd72e8ad42e6cd9c0dcaaad2",
+    "address": "0x2b8c5953a11986bbab250bfb472af3b3c44f7aa8",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 },
+      { "chain": "base", "address": "0xf34e0cff046e154cafcae502c7541b9e5fd8c249", "symbol": "THALES", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
+    "address": "0x4b0aaf3ebb163dd45f663b38b6d93f6093ebc2d3",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0x52c45d3068c937cb1e6b4a7f2c2a66b85056dd24", "symbol": "SHARD", "decimals": 8 }
+      { "chain": "base", "address": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4", "symbol": "TOSHI", "decimals": 18 }
     ]
   },
   {
@@ -6377,22 +6388,11 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x2b8c5953a11986bbab250bfb472af3b3c44f7aa8",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 },
-      { "chain": "base", "address": "0xf34e0cff046e154cafcae502c7541b9e5fd8c249", "symbol": "THALES", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
-    "address": "0x48ad1e2e7c447f6814e69aefe3f0203a0cc128af",
+    "address": "0xf42123a67cf6745bbd72e8ad42e6cd9c0dcaaad2",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 }
+      { "chain": "base", "address": "0x52c45d3068c937cb1e6b4a7f2c2a66b85056dd24", "symbol": "SHARD", "decimals": 8 }
     ]
   },
   {
@@ -6404,6 +6404,17 @@
     "tokens": [
       { "chain": "base", "address": "0x2f3b1a07e3efb1fcc64bd09b86bd0fa885d93552", "symbol": "MST", "decimals": 18 },
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "base",
+    "version": "univ3",
+    "address": "0x48ad1e2e7c447f6814e69aefe3f0203a0cc128af",
+    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+    "tokens": [
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
+      { "chain": "base", "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb", "symbol": "DAI", "decimals": 18 }
     ]
   },
   {
@@ -6520,17 +6531,6 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x4b0aaf3ebb163dd45f663b38b6d93f6093ebc2d3",
-    "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
-    "tokens": [
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4", "symbol": "TOSHI", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "base",
-    "version": "univ3",
     "address": "0xd847b395d1434337033db6e80c9529f1ffede63a",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
@@ -6630,22 +6630,22 @@
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x60dd1cdaa6130f1b64a1f1687f6ee5d696d40796",
+    "address": "0xbcef1945385237e66df2dff36f0177d303cb8f2e",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xc1bc0e1521d4ece2332c2673914caa99dfe77cc0", "symbol": "Unidoge", "decimals": 18 }
+      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 },
+      { "chain": "base", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "symbol": "PRIME", "decimals": 18 }
     ]
   },
   {
     "protocol": "uniswapv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xbcef1945385237e66df2dff36f0177d303cb8f2e",
+    "address": "0x60dd1cdaa6130f1b64a1f1687f6ee5d696d40796",
     "factory": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
     "tokens": [
-      { "chain": "base", "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca", "symbol": "USDbC", "decimals": 6 },
-      { "chain": "base", "address": "0xfa980ced6895ac314e7de34ef1bfae90a5add21b", "symbol": "PRIME", "decimals": 18 }
+      { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
+      { "chain": "base", "address": "0xc1bc0e1521d4ece2332c2673914caa99dfe77cc0", "symbol": "Unidoge", "decimals": 18 }
     ]
   },
   {
@@ -7032,22 +7032,6 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x7fe20c1b2c726b2384f44dde3ca91ee430650d09",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xd691d9a68c887bdf34da8c36f63487333acfd103", "symbol": "MAV", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
     "address": "0xb3709d0e16b618b15ee4bcf82d19b9e7d4100914",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
@@ -7069,140 +7053,26 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x7fe20c1b2c726b2384f44dde3ca91ee430650d09",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xd691d9a68c887bdf34da8c36f63487333acfd103", "symbol": "MAV", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0x41bf5eeae051fbd2e97b76b5f8f0fdcc1a1e526b",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       { "chain": "bnbchain", "address": "0x031b41e504677879370e9dbcf937283a8691fa7f", "symbol": "FET", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xb483167465fc5bea7f89a5bb137ba406b9260403",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x31fadea5f486fa28fbc2b7d1f1f7da2ef51d0cf7", "symbol": "KOI", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x4fb87838a29b37598099ef5aa6b3fbeeef987c50",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xad49a27684df5a1dcc13ac30fc8081a1b5f3fc09",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x4c1d39e6b736a6a99105ee2a9e7c44bfc56af860",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
-        "symbol": "Cake",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x9b501a7ad3087d603ceb34424b7b2a6c348ad0b7",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-        "symbol": "USDC",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbe2b6c5e31f292009f495ddbda88e28391c9815e", "symbol": "LGO", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x329eeb1a58bdb3b804d1f94623c7a29a67a9b6b7",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe", "symbol": "XRP", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "symbol": "USDC", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x06396509195eb9e07c38a016694dc9ff535b128a",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x84e47c7f2fe86f6b5efbe14fee46b8bb871b2e05",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56", "symbol": "BUSD", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x17507bef4c3abc1bc715be723ee1baf571256e05",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "symbol": "USDC", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xf422a9292434e4592ea044177e89939b9d7bd881",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406", "symbol": "ID", "decimals": 18 },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
@@ -7231,58 +7101,10 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x7bcc079855b3c8930a5f172b8d8bdeb68d9214ef",
+    "address": "0xb483167465fc5bea7f89a5bb137ba406b9260403",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df", "symbol": "RDNT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xd37e6ecb991d1a0e7610c89666817665713362a7",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x47c454ca6be2f6def6f32b638c80f91c9c3c5949",
-        "symbol": "GFAL",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xefe64730fa4a0c0dd01e68011af58c30e0e5f152",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbe2b6c5e31f292009f495ddbda88e28391c9815e", "symbol": "LGO", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x6dc04bc2c9d354ce6a449eaabdeb7fe595214d2e",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x974e9f2075b8cc77a54f8b439042f242df353990", "symbol": "RNT", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x31fadea5f486fa28fbc2b7d1f1f7da2ef51d0cf7", "symbol": "KOI", "decimals": 18 },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
@@ -7290,40 +7112,13 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xc8b4b9d7fc77000fde9a17cd1fb1e9394412ab6e",
+    "address": "0x4c1d39e6b736a6a99105ee2a9e7c44bfc56af860",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       {
         "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xb64e280e9d1b5dbec4accedb2257a87b400db149", "symbol": "LVL", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x3fb2623567e21f8c50f0ae86f54ef4849b4eb47b",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xbb124e35ab9e85f8d59ba83500e559dc052b9368",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x111111111117dc0aa78b770fa6a738034120c302",
-        "symbol": "1INCH",
+        "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "symbol": "Cake",
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
@@ -7348,6 +7143,243 @@
         "symbol": "PRCRM",
         "decimals": 18
       }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xae3773f69b07e17d81539666b84cf2387f514ecd",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x2c16627ed63b82f6690a6919f8e1ece92bcf5868",
+        "symbol": "AICREA",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x4fb87838a29b37598099ef5aa6b3fbeeef987c50",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xad49a27684df5a1dcc13ac30fc8081a1b5f3fc09",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x9b501a7ad3087d603ceb34424b7b2a6c348ad0b7",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "symbol": "USDC",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xbe2b6c5e31f292009f495ddbda88e28391c9815e", "symbol": "LGO", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x93465e7eaf20b874e0986c6cd56150a53b232dd8",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x4edff5eb8731b6d4eeaa662804b7282d1c22103a",
+        "symbol": "ADDCLAS",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x06396509195eb9e07c38a016694dc9ff535b128a",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x329eeb1a58bdb3b804d1f94623c7a29a67a9b6b7",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe", "symbol": "XRP", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "symbol": "USDC", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x17507bef4c3abc1bc715be723ee1baf571256e05",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "symbol": "USDC", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x84e47c7f2fe86f6b5efbe14fee46b8bb871b2e05",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56", "symbol": "BUSD", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xd37e6ecb991d1a0e7610c89666817665713362a7",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x47c454ca6be2f6def6f32b638c80f91c9c3c5949",
+        "symbol": "GFAL",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xf422a9292434e4592ea044177e89939b9d7bd881",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406", "symbol": "ID", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x7bcc079855b3c8930a5f172b8d8bdeb68d9214ef",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df", "symbol": "RDNT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x6dc04bc2c9d354ce6a449eaabdeb7fe595214d2e",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x974e9f2075b8cc77a54f8b439042f242df353990", "symbol": "RNT", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xbb124e35ab9e85f8d59ba83500e559dc052b9368",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+        "symbol": "1INCH",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x3fb2623567e21f8c50f0ae86f54ef4849b4eb47b",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", "symbol": "BTCB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xefe64730fa4a0c0dd01e68011af58c30e0e5f152",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xbe2b6c5e31f292009f495ddbda88e28391c9815e", "symbol": "LGO", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0xc8b4b9d7fc77000fde9a17cd1fb1e9394412ab6e",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xb64e280e9d1b5dbec4accedb2257a87b400db149", "symbol": "LVL", "decimals": 18 }
     ]
   },
   {
@@ -7397,6 +7429,17 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0xbae622d0fa237a5105b0c445864a419620a59d83",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x12dae26ffc1c608dc6fcb1c4a1c4abc409bf92cd", "symbol": "CTX", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0x6cd641dba04b3547121296343940df3adee5e282",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
@@ -7407,17 +7450,6 @@
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xd88aa56e7214e9bd8e5a5df5312b516c7bd4fd27", "symbol": "BCP", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xbae622d0fa237a5105b0c445864a419620a59d83",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x12dae26ffc1c608dc6fcb1c4a1c4abc409bf92cd", "symbol": "CTX", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
     ]
   },
   {
@@ -7472,16 +7504,16 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x93465e7eaf20b874e0986c6cd56150a53b232dd8",
+    "address": "0x4d170f8714367c44787ae98259ce8adb72240067",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       {
         "chain": "bnbchain",
-        "address": "0x4edff5eb8731b6d4eeaa662804b7282d1c22103a",
-        "symbol": "ADDCLAS",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
         "decimals": 18
       },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
   {
@@ -7495,22 +7527,6 @@
         "chain": "bnbchain",
         "address": "0x90ed8f1dc86388f14b64ba8fb4bbd23099f18240",
         "symbol": "SDAO",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x4d170f8714367c44787ae98259ce8adb72240067",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
@@ -7595,38 +7611,6 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x023b6298e2f9ae728b324757599f2a36e002a55a",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43", "symbol": "DOGE", "decimals": 8 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xae3773f69b07e17d81539666b84cf2387f514ecd",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x2c16627ed63b82f6690a6919f8e1ece92bcf5868",
-        "symbol": "AICREA",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
     "address": "0x4a978a2d4fb7393063babfb0cee741b8bcd4dd4b",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
@@ -7637,6 +7621,22 @@
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x023b6298e2f9ae728b324757599f2a36e002a55a",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43", "symbol": "DOGE", "decimals": 8 }
     ]
   },
   {
@@ -7654,6 +7654,22 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x3373a22cb07cb49651b82cf6f174ef434e4dbaa8",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xfb6115445bff7b52feb98650c87f44907e58f802", "symbol": "AAVE", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0xe920985aa7ea6e6eb4eb72d09eedd743005262c4",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
@@ -7665,16 +7681,16 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x3373a22cb07cb49651b82cf6f174ef434e4dbaa8",
+    "address": "0xcd8ec24720426fe384be64246076b5b0e7a61cb2",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       {
         "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "symbol": "USDC",
         "decimals": 18
       },
-      { "chain": "bnbchain", "address": "0xfb6115445bff7b52feb98650c87f44907e58f802", "symbol": "AAVE", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd", "symbol": "LINK", "decimals": 18 }
     ]
   },
   {
@@ -7713,44 +7729,6 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x20a0120fe770cf1354bf9c991178d653639757cd",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b", "symbol": "BOB", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0xcd8ec24720426fe384be64246076b5b0e7a61cb2",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-        "symbol": "USDC",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd", "symbol": "LINK", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x4ef938b633d704f29e593a8b51148d43429d0bc4",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x4b0f1812e5df2a09796481ff14017e6005508003", "symbol": "TWT", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
     "address": "0x44d23658a5d5ce0e7e12007b67748f07c4fad4f9",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
@@ -7767,16 +7745,22 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xe7df69cc69f5a9425865e30625ce516269c43ad1",
+    "address": "0x20a0120fe770cf1354bf9c991178d653639757cd",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xafda600b05e21a732e1d1755a63945d96c1121aa", "symbol": "TEO", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b", "symbol": "BOB", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x4ef938b633d704f29e593a8b51148d43429d0bc4",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x4b0f1812e5df2a09796481ff14017e6005508003", "symbol": "TWT", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
     ]
   },
   {
@@ -7799,10 +7783,37 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0xe7df69cc69f5a9425865e30625ce516269c43ad1",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xafda600b05e21a732e1d1755a63945d96c1121aa", "symbol": "TEO", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0xfa7d79f971a70771e5e92bd80ab955edc8602f4d",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       { "chain": "bnbchain", "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe", "symbol": "XRP", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "uniswapv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x0ab8855c73d567f0ec633cddec43580c5f7e2555",
+    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47", "symbol": "ADA", "decimals": 18 },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
@@ -7826,11 +7837,11 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x0ab8855c73d567f0ec633cddec43580c5f7e2555",
+    "address": "0xa054937d1c683aa204a0474a9d0a2f9e2bbfde2f",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      { "chain": "bnbchain", "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47", "symbol": "ADA", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x4db5a66e937a9f4473fa95b1caf1d1e1d62e29ea", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -7848,11 +7859,16 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xa054937d1c683aa204a0474a9d0a2f9e2bbfde2f",
+    "address": "0xb873e889f28e3d2c86f2495820dd5eca329bddf4",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x4db5a66e937a9f4473fa95b1caf1d1e1d62e29ea", "symbol": "WETH", "decimals": 18 }
+      {
+        "chain": "bnbchain",
+        "address": "0x200f73aba0d6f8919086f64035ef900669ea2de2",
+        "symbol": "CCDAO",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
     ]
   },
   {
@@ -7907,16 +7923,16 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xb873e889f28e3d2c86f2495820dd5eca329bddf4",
+    "address": "0x534d3930edba2c0b90a7973549a0287141c987ef",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
       {
         "chain": "bnbchain",
-        "address": "0x200f73aba0d6f8919086f64035ef900669ea2de2",
-        "symbol": "CCDAO",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
         "decimals": 18
       },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd", "symbol": "LINK", "decimals": 18 }
     ]
   },
   {
@@ -7934,16 +7950,11 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x534d3930edba2c0b90a7973549a0287141c987ef",
+    "address": "0x039df62583ddc1c5fda75db152b87113d863b6d6",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd", "symbol": "LINK", "decimals": 18 }
+      { "chain": "bnbchain", "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3", "symbol": "DAI", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
     ]
   },
   {
@@ -7975,17 +7986,6 @@
         "symbol": "bCFX",
         "decimals": 18
       },
-      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "uniswapv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x039df62583ddc1c5fda75db152b87113d863b6d6",
-    "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3", "symbol": "DAI", "decimals": 18 },
       { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
     ]
   },
@@ -8095,21 +8095,11 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xc6252dd39789c3a11b20297f17e42374aad24b74",
+    "address": "0xffaad343776d30fd85bed48e8a7831c98b4ce4a2",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      {
-        "chain": "bnbchain",
-        "address": "0xee89bd9af5e72b19b48cac3e51acde3a09a3ade3",
-        "symbol": "TRUSTK",
-        "decimals": 18
-      }
+      { "chain": "bnbchain", "address": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45", "symbol": "DAO", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
   {
@@ -8132,11 +8122,21 @@
     "protocol": "uniswapv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xffaad343776d30fd85bed48e8a7831c98b4ce4a2",
+    "address": "0xc6252dd39789c3a11b20297f17e42374aad24b74",
     "factory": "0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7",
     "tokens": [
-      { "chain": "bnbchain", "address": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45", "symbol": "DAO", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      {
+        "chain": "bnbchain",
+        "address": "0xee89bd9af5e72b19b48cac3e51acde3a09a3ade3",
+        "symbol": "TRUSTK",
+        "decimals": 18
+      }
     ]
   }
 ]

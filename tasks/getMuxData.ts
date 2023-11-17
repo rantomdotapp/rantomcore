@@ -4,6 +4,7 @@ import fs from 'fs';
 import MuxLiquidityPoolAbi from '../configs/abi/mux/LiquidityPoolHop1.json';
 import { MuxAssetConfig } from '../configs/protocols/mux';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const LiquidityPools = [
   'arbitrum:0x3e0199792Ce69DC29A0a36146bFa68bd7C8D6633',
@@ -32,6 +33,7 @@ const LiquidityPools = [
         address: allAssets[i][1],
       });
       if (token) {
+        updateToken(token);
         assets.push({
           chain,
           protocol,

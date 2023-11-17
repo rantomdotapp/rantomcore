@@ -81,19 +81,6 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 5,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x5e63360e891bd60c69445970256c260b0a6a54c6",
-      "symbol": "LEND-WETH SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 6,
     "version": "masterchef",
     "token": {
@@ -198,19 +185,6 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 13,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x611cde65dea90918c0078ac0400a72b0d25b9bb1",
-      "symbol": "REN-WETH SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 14,
     "version": "masterchef",
     "token": {
@@ -289,51 +263,12 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 19,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x36e2fcccc59e5747ff63a03ea2e5c0c2c14911e7",
-      "symbol": "xSUSHI-WETH SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 20,
     "version": "masterchef",
     "token": {
       "chain": "ethereum",
       "address": "0x0cfe7968e7c34a51217a7c9b9dc1690f416e027e",
       "symbol": "cDAI-DAI SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 20,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x0cfe7968e7c34a51217a7c9b9dc1690f416e027e",
-      "symbol": "cDAI-DAI SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 21,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
-      "symbol": "WBTC-WETH SLP",
       "decimals": 18
     }
   },
@@ -373,19 +308,6 @@
       "chain": "ethereum",
       "address": "0x17b3c19bd640a59e832ab73eccf716cb47419846",
       "symbol": "WETH-MEME SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 24,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xfcff3b04c499a57778ae2cf05584ab24278a7fcb",
-      "symbol": "wNXM-WETH SLP",
       "decimals": 18
     }
   },
@@ -471,19 +393,6 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 29,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xe954c2d9ff2a4d260dcd32386b1f9fc8135d2522",
-      "symbol": "DUMMY",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 31,
     "version": "masterchef",
     "token": {
@@ -502,7 +411,7 @@
     "token": {
       "chain": "ethereum",
       "address": "0x2dbc7dd86c6cd87b525bd54ea73ebeebbc307f68",
-      "symbol": "WBTC-tBTC SLP",
+      "symbol": "WBTC-tBTCv1 SLP",
       "decimals": 18
     }
   },
@@ -555,32 +464,6 @@
       "chain": "ethereum",
       "address": "0x742c15d71ea7444964bc39b0ed729b3729adc361",
       "symbol": "WETH-OMG SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 36,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x742c15d71ea7444964bc39b0ed729b3729adc361",
-      "symbol": "WETH-OMG SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 37,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
-      "symbol": "AAVE-WETH SLP",
       "decimals": 18
     }
   },
@@ -671,7 +554,7 @@
     "token": {
       "chain": "ethereum",
       "address": "0xbcedc25cbb0ea44e03e41dc2d00d54fe6d4646db",
-      "symbol": "tBTC-vBTC SLP",
+      "symbol": "tBTCv1-vBTC SLP",
       "decimals": 18
     }
   },
@@ -775,7 +658,7 @@
     "token": {
       "chain": "ethereum",
       "address": "0xee6d78755e06c31ae7a5ea2b29b35c073dfc00a9",
-      "symbol": "tBTC-WETH SLP",
+      "symbol": "tBTCv1-WETH SLP",
       "decimals": 18
     }
   },
@@ -2179,7 +2062,7 @@
     "token": {
       "chain": "ethereum",
       "address": "0xfe308fe2eb938f772807aec2e87fc762d47c40e0",
-      "symbol": "USDP-DUCKUNIT SLP",
+      "symbol": "USDP-DUCK SLP",
       "decimals": 18
     }
   },
@@ -2309,7 +2192,7 @@
     "token": {
       "chain": "ethereum",
       "address": "0x31fa985bb0c282a814e7f3f0dce88b2a44197f60",
-      "symbol": "MASKNTWRK-USDC SLP",
+      "symbol": "MASK-USDC SLP",
       "decimals": 18
     }
   },
@@ -3942,19 +3825,6 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 294,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xeefa3b448768dd561af4f743c9e925987a1f8d09",
-      "symbol": "WETH-NFD SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 295,
     "version": "masterchef",
     "token": {
@@ -4514,6 +4384,19 @@
     "chain": "ethereum",
     "protocol": "sushi",
     "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 338,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x481ddaf90c59d91f3e480e6793122e62612ca5a9",
+      "symbol": "FLOAT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
     "poolId": 339,
     "version": "masterchef",
     "token": {
@@ -4741,6 +4624,19 @@
       "chain": "ethereum",
       "address": "0x69cb9f3d42cf6e3706d62db661c30d048220637a",
       "symbol": "NOVADUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 357,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2377e68f0f909e208884e707db4a7cd493911280",
+      "symbol": "METISDUMMY",
       "decimals": 0
     }
   },
@@ -5650,7 +5546,7 @@
     "token": {
       "chain": "arbitrum",
       "address": "0x905dfcd5649217c42684f23958568e533c711aa3",
-      "symbol": "WETH-USDC SLP",
+      "symbol": "WETH-USDC.e SLP",
       "decimals": 18
     }
   },
@@ -5677,45 +5573,6 @@
       "chain": "arbitrum",
       "address": "0x3221022e37029923ace4235d812273c5a42c322d",
       "symbol": "WETH-SUSHI SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "arbitrum",
-    "protocol": "sushi",
-    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
-    "poolId": 3,
-    "version": "masterchef",
-    "token": {
-      "chain": "arbitrum",
-      "address": "0x515e252b2b5c22b4b2b6df66c2ebeea871aa4d69",
-      "symbol": "WBTC-WETH SLP",
-      "decimals": 18
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-    "poolId": 361,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x11b66abb675b955bd6f066fde849442865c60e29",
-      "symbol": "OPDUMMY",
-      "decimals": 0
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "sushi",
-    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
-    "poolId": 64,
-    "version": "masterchef",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xd27b7d42d24d8f7c1cf5c46ccd3b986c396fde17",
-      "symbol": "LINK-SDL SLP",
       "decimals": 18
     }
   },
@@ -5892,6 +5749,19 @@
     "chain": "arbitrum",
     "protocol": "sushi",
     "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 16,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x863eed6056918258626b653065588105c54ff2ac",
+      "symbol": "axlUSDC-USDC.e SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
     "poolId": 17,
     "version": "masterchef",
     "token": {
@@ -5923,7 +5793,7 @@
     "token": {
       "chain": "arbitrum",
       "address": "0x32ef0f8af29f7b67be6b48a12ca0e09f1f302035",
-      "symbol": "NISHIB-USDC SLP",
+      "symbol": "NISHIB-USDC.e SLP",
       "decimals": 18
     }
   },
@@ -5949,7 +5819,7 @@
     "token": {
       "chain": "arbitrum",
       "address": "0x79bf7147ebcd0d55e83cb42ed3ba1bb2bb23ef20",
-      "symbol": "USDT-USDC SSLP",
+      "symbol": "USDT-USDC.e SSLP",
       "decimals": 18
     }
   },
@@ -5962,7 +5832,7 @@
     "token": {
       "chain": "arbitrum",
       "address": "0x6dbe389142e40b01aa10fb069ae448fc4460dae4",
-      "symbol": "DAI-USDC SSLP",
+      "symbol": "DAI-USDC.e SSLP",
       "decimals": 18
     }
   },
@@ -5988,7 +5858,7 @@
     "token": {
       "chain": "arbitrum",
       "address": "0x9d134c24191183ef5ac53780a643ae81dcec9b89",
-      "symbol": "NUON-USDC SLP",
+      "symbol": "NUON-USDC.e SLP",
       "decimals": 18
     }
   },

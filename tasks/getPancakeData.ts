@@ -8,6 +8,7 @@ import UniswapLibs from '../modules/adapters/uniswap/libs';
 import BlockchainService from '../services/blockchains/blockchain';
 import { LiquidityPoolConstant, StakingPoolConstant } from '../types/domains';
 import { GetMasterChefPoolsOptions } from './getSushiData';
+import updateToken from './helpers/updateToken';
 
 const Factories: Array<any> = [
   {
@@ -170,4 +171,15 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
     );
   }
   fs.writeFileSync('./configs/data/Pancakeswapv3Pools.json', JSON.stringify(v3Pools));
+
+  for (const pool of pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
+  for (const pool of v3Pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
 })();

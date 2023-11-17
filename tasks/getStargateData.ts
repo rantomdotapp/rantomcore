@@ -3,6 +3,7 @@ import fs from 'fs';
 
 import StargateLibs from '../modules/adapters/stargate/libs';
 import { LiquidityPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const StargatePools = [
   'ethereum:0x101816545f6bd2b1076434b54383a1e633390a2e', // Pool ETH
@@ -51,20 +52,32 @@ const StargatePools = [
 const StargatePoolFilePath = './configs/data/StargateLiquidityPools.json';
 
 (async function () {
-  const pools: Array<LiquidityPoolConstant> = [];
+  let pools: Array<LiquidityPoolConstant> = [];
+
+  if (fs.existsSync(StargatePoolFilePath)) {
+    pools = JSON.parse(fs.readFileSync(StargatePoolFilePath).toString());
+  }
+
   for (const config of StargatePools) {
     const [chain, address] = config.split(':');
-    const liquidityPool = await StargateLibs.getLiquidityPoolInfo({
-      protocol: 'protocol',
-      services: null,
-      chain: chain,
-      address: address,
-    });
-    if (liquidityPool) {
-      pools.push(liquidityPool);
-      console.log(`Got stargate liquidity pool ${chain} ${address} ${liquidityPool.tokens[0].symbol}`);
 
-      fs.writeFileSync(StargatePoolFilePath, JSON.stringify(pools));
+    if (pools.filter((item) => item.chain === chain && item.address === address).length === 0) {
+      const liquidityPool = await StargateLibs.getLiquidityPoolInfo({
+        protocol: 'protocol',
+        services: null,
+        chain: chain,
+        address: address,
+      });
+      if (liquidityPool) {
+        for (const token of liquidityPool.tokens) {
+          updateToken(token);
+        }
+
+        pools.push(liquidityPool);
+        console.log(`Got stargate liquidity pool ${chain} ${address} ${liquidityPool.tokens[0].symbol}`);
+
+        fs.writeFileSync(StargatePoolFilePath, JSON.stringify(pools));
+      }
     }
   }
 })();

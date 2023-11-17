@@ -5,6 +5,7 @@ import { normalizeAddress } from '../lib/utils';
 import { MaverickAbiMappings } from '../modules/adapters/maverick/abis';
 import BlockchainService from '../services/blockchains/blockchain';
 import { LiquidityPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const Factories: Array<any> = [
   {
@@ -71,6 +72,8 @@ const poolFilePath = './configs/data/MaverickPools.json';
           address: event.tokenB,
         });
         if (token0 && token1) {
+          updateToken(token0);
+          updateToken(token1);
           pools.push({
             chain: config.chain,
             address: poolAddress,

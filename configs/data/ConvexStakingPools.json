@@ -5502,6 +5502,27 @@
     }
   },
   {
+    "chain": "ethereum",
+    "protocol": "convex",
+    "version": "booster",
+    "address": "0xf403c135812408bfbe8713b5a23a04b3d48aae31",
+    "poolId": 258,
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3b21c2868b6028cfb38ff86127ef22e68d16d53b",
+      "symbol": "cvxprismlp-f",
+      "decimals": 18
+    },
+    "rewardContract": "0x4b10c7fad37cb7a9dacceeee40c0d97549918298",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "CRV",
+      "decimals": 18,
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "logoURI": "https://cdn.paraswap.io/token/CRV.png"
+    }
+  },
+  {
     "chain": "arbitrum",
     "protocol": "convex",
     "address": "0xf403c135812408bfbe8713b5a23a04b3d48aae31",
@@ -5919,26 +5940,6 @@
     "chain": "polygon",
     "protocol": "convex",
     "address": "0xf403c135812408bfbe8713b5a23a04b3d48aae31",
-    "poolId": 6,
-    "version": "booster",
-    "token": {
-      "chain": "polygon",
-      "address": "0x81c86081d533f280a8daae17f672fb84b6ed65e3",
-      "symbol": "aMATICb-f",
-      "decimals": 18
-    },
-    "rewardContract": "0x01cee975430f845ba5484ac5673f1beca79d5801",
-    "rewardToken": {
-      "chain": "polygon",
-      "symbol": "CRV",
-      "decimals": 18,
-      "address": "0x172370d5cd63279efa6d502dab29171933a610af"
-    }
-  },
-  {
-    "chain": "polygon",
-    "protocol": "convex",
-    "address": "0xf403c135812408bfbe8713b5a23a04b3d48aae31",
     "poolId": 7,
     "version": "booster",
     "token": {
@@ -6028,6 +6029,26 @@
       "decimals": 18
     },
     "rewardContract": "0x3d17b2bcfcd7e0dc4d6a0d6ba67c29fbc592b323",
+    "rewardToken": {
+      "chain": "polygon",
+      "symbol": "CRV",
+      "decimals": 18,
+      "address": "0x172370d5cd63279efa6d502dab29171933a610af"
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "convex",
+    "address": "0xf403c135812408bfbe8713b5a23a04b3d48aae31",
+    "poolId": 6,
+    "version": "booster",
+    "token": {
+      "chain": "polygon",
+      "address": "0x81c86081d533f280a8daae17f672fb84b6ed65e3",
+      "symbol": "aMATICb-f",
+      "decimals": 18
+    },
+    "rewardContract": "0x01cee975430f845ba5484ac5673f1beca79d5801",
     "rewardToken": {
       "chain": "polygon",
       "symbol": "CRV",

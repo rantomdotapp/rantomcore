@@ -5,6 +5,7 @@ import { PublicSubGraphEndpoints } from '../configs/constants/subgraphEndpoints'
 import { normalizeAddress } from '../lib/utils';
 import UniswapLibs from '../modules/adapters/uniswap/libs';
 import { LiquidityPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const Factories: Array<any> = [
   {
@@ -34,4 +35,10 @@ const Factories: Array<any> = [
   }
 
   fs.writeFileSync('./configs/data/ShibaswapPools.json', JSON.stringify(pools));
+
+  for (const pool of pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
 })();

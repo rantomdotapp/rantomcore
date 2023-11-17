@@ -5,9 +5,10 @@
     "assetId": 0,
     "token": {
       "chain": "arbitrum",
-      "symbol": "USDC",
+      "symbol": "USDC.e",
       "decimals": 6,
-      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xff970a61a04b1ca14834a43f5de4533ebddb5cc8/logo.png"
     }
   },
   {

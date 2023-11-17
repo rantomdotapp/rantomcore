@@ -8,6 +8,7 @@ import { compareAddress, normalizeAddress } from '../lib/utils';
 import YearnLibs from '../modules/adapters/yearn/libs';
 import BlockchainService from '../services/blockchains/blockchain';
 import { LiquidityPoolConstant, StakingPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const YearnExporterEndpoints = [
   'ethereum:::https://api.yexporter.io/v1/chains/1/vaults/all',
@@ -51,6 +52,8 @@ const YearnyethLiquidityPool = '0x2cced4ffa804adbe1269cdfc22d7904471abde63';
       address: asset,
     });
     if (token) {
+      updateToken(token);
+
       yearnyethLiquidityPool.tokens.push(token);
       console.log(`Got yearnyeth liquidity pool asset ${poolId} ${token.symbol}`);
     }
@@ -80,6 +83,8 @@ const YearnyethLiquidityPool = '0x2cced4ffa804adbe1269cdfc22d7904471abde63';
           address: vault.address,
         });
         if (vaultInfo) {
+          updateToken(vaultInfo.token);
+
           existedVaults.push(vaultInfo);
           fs.writeFileSync(stakingPoolFilePath, JSON.stringify(existedVaults));
 

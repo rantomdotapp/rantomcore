@@ -5,6 +5,7 @@ import CompoundErc20Abi from '../configs/abi/compound/cErc20.json';
 import { CompoundMarket } from '../configs/protocols/compound';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const Markets: Array<string> = [
   'ethereum:0x465a5a630482f3abd6d3b84b39b29b07214d19e5', // fUSDC
@@ -36,6 +37,7 @@ const Markets: Array<string> = [
       });
 
       if (token) {
+        updateToken(token);
         allMarkets.push({
           protocol: protocol,
           chain,

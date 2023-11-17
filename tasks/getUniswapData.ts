@@ -4,6 +4,7 @@ import fs from 'fs';
 import { PublicSubGraphEndpoints } from '../configs/constants/subgraphEndpoints';
 import UniswapLibs from '../modules/adapters/uniswap/libs';
 import { LiquidityPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const Uniswapv3Factories: Array<any> = [
   {
@@ -73,4 +74,15 @@ const Uniswapv3Factories: Array<any> = [
   }
 
   fs.writeFileSync('./configs/data/Uniswapv3Pools.json', JSON.stringify(v3Pools));
+
+  for (const pool of pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
+  for (const pool of v3Pools) {
+    for (const token of pool.tokens) {
+      updateToken(token);
+    }
+  }
 })();

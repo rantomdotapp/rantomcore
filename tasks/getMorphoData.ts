@@ -9,6 +9,7 @@ import { NativeTokens } from '../configs/constants/nativeTokens';
 import { MorphoMarketConfig } from '../configs/protocols/morpho';
 import { compareAddress, normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const MorphoAave = '0x777777c9898d384f785ee44acfe945efdff5f3e0';
 const MorphoCompound = '0x8888882f8f843896699869179fB6E4f7e3B58888';
@@ -41,6 +42,7 @@ const MorphoCompound = '0x8888882f8f843896699869179fB6E4f7e3B58888';
       address: marketInfo.underlyingToken,
     });
     if (token) {
+      updateToken(token);
       allMarkets.push({
         chain: chain,
         protocol: protocol,
@@ -89,6 +91,7 @@ const MorphoCompound = '0x8888882f8f843896699869179fB6E4f7e3B58888';
       address: underlyingAddress,
     });
     if (token) {
+      updateToken(token);
       allMarkets.push({
         chain: chain,
         protocol,

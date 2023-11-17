@@ -8,6 +8,7 @@ import EthereumTokenList from '../configs/tokenlists/ethereum.json';
 import { compareAddress } from '../lib/utils';
 import ConvexLibs from '../modules/adapters/convex/libs';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const ConvexBoosters: Array<any> = [
   {
@@ -108,6 +109,11 @@ const stakingPoolFilePath = './configs/data/ConvexStakingPools.json';
           poolId: poolId,
         });
         if (stakingPool) {
+          updateToken(stakingPool.token);
+          if (stakingPool.rewardToken) {
+            updateToken(stakingPool.rewardToken);
+          }
+
           existedPools.push(stakingPool);
           fs.writeFileSync(stakingPoolFilePath, JSON.stringify(existedPools));
 

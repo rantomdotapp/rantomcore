@@ -193,9 +193,10 @@
     "tokens": [
       {
         "chain": "arbitrum",
-        "symbol": "USDC",
+        "symbol": "USDC.e",
         "decimals": 6,
-        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xff970a61a04b1ca14834a43f5de4533ebddb5cc8/logo.png"
       }
     ]
   },
@@ -208,9 +209,9 @@
     "tokens": [
       {
         "chain": "arbitrum",
+        "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
         "symbol": "USDT",
-        "decimals": 6,
-        "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+        "decimals": 6
       }
     ]
   },
@@ -253,10 +254,9 @@
     "tokens": [
       {
         "chain": "arbitrum",
-        "symbol": "LUSD",
-        "decimals": 18,
         "address": "0x93b346b6bc2548da6a1e7d98e9a421b42541425b",
-        "logoURI": "https://assets.coingecko.com/coins/images/14666/thumb/Group_3.png?1617631327"
+        "symbol": "LUSD",
+        "decimals": 18
       }
     ]
   },
@@ -299,10 +299,9 @@
     "tokens": [
       {
         "chain": "bnbchain",
-        "symbol": "USDT",
-        "decimals": 18,
         "address": "0x55d398326f99059ff775485246999027b3197955",
-        "logoURI": "https://tokens.pancakeswap.finance/images/0x55d398326f99059fF775485246999027B3197955.png"
+        "symbol": "USDT",
+        "decimals": 18
       }
     ]
   },
@@ -315,10 +314,9 @@
     "tokens": [
       {
         "chain": "bnbchain",
-        "symbol": "BUSD",
-        "decimals": 18,
         "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
-        "logoURI": "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        "symbol": "BUSD",
+        "decimals": 18
       }
     ]
   },
@@ -377,10 +375,163 @@
     "tokens": [
       {
         "chain": "bnbchain",
-        "symbol": "USDT",
-        "decimals": 18,
         "address": "0x55d398326f99059ff775485246999027b3197955",
-        "logoURI": "https://tokens.pancakeswap.finance/images/0x55d398326f99059fF775485246999027B3197955.png"
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "polygon",
+    "address": "0x1205f31718499dbf1fca446663b532ef87481fe1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "symbol": "USDC",
+        "decimals": 6,
+        "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "polygon",
+    "address": "0x29e38769f23701a2e4a8ef0492e19da4604be62c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "symbol": "USDT",
+        "decimals": 6,
+        "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "polygon",
+    "address": "0x1c272232df0bb6225da87f4decd9d37c32f63eea",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "symbol": "DAI",
+        "decimals": 18,
+        "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "polygon",
+    "address": "0x8736f92646b2542b3e5f3c63590ca7fe313e283b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+        "symbol": "miMATIC",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0x9aa83081aa06af7208dcc7a4cb72c94d057d2cda",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0x98a5737749490856b401db5dc27f522fc314a4e1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "symbol": "BUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0x4e145a589e4c03cbe3d28520e4bf3089834289df",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+        "symbol": "USDD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0x7bfd7f2498c4796f10b6c611d9db393d3052510c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0xd4cec732b3b135ec52a3c0bc8ce4b8cfb9dace46",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "symbol": "METIS",
+        "decimals": 18,
+        "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+        "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "protocol",
+    "chain": "bnbchain",
+    "address": "0x68c6c27fb0e02285829e69240be16f32c5f8befe",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
       }
     ]
   },

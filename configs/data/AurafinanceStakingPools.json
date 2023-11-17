@@ -213,27 +213,6 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 7,
-    "token": {
-      "chain": "ethereum",
-      "address": "0x27c9f71cc31464b906e0006d4fcbc8900f48f15f",
-      "symbol": "80D2D-20USDC",
-      "decimals": 18
-    },
-    "rewardContract": "0x07bd9b4a3e364cd4b3bb49035972af70b2e8961f",
-    "rewardToken": {
-      "chain": "ethereum",
-      "symbol": "BAL",
-      "decimals": 18,
-      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
-      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "aurafinance",
-    "version": "booster",
-    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
     "poolId": 8,
     "token": {
       "chain": "ethereum",
@@ -696,27 +675,6 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 30,
-    "token": {
-      "chain": "ethereum",
-      "address": "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8",
-      "symbol": "B-50USDC-50WETH",
-      "decimals": 18
-    },
-    "rewardContract": "0x9a004491d82894e8d52698d5924bde960530da37",
-    "rewardToken": {
-      "chain": "ethereum",
-      "symbol": "BAL",
-      "decimals": 18,
-      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
-      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "aurafinance",
-    "version": "booster",
-    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
     "poolId": 31,
     "token": {
       "chain": "ethereum",
@@ -851,6 +809,48 @@
       "decimals": 18
     },
     "rewardContract": "0x7d67beb5cf289b015fca7b3fc408860731d826e1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
+    "poolId": 7,
+    "token": {
+      "chain": "ethereum",
+      "address": "0x27c9f71cc31464b906e0006d4fcbc8900f48f15f",
+      "symbol": "80D2D-20USDC",
+      "decimals": 18
+    },
+    "rewardContract": "0x07bd9b4a3e364cd4b3bb49035972af70b2e8961f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
+    "poolId": 30,
+    "token": {
+      "chain": "ethereum",
+      "address": "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8",
+      "symbol": "B-50USDC-50WETH",
+      "decimals": 18
+    },
+    "rewardContract": "0x9a004491d82894e8d52698d5924bde960530da37",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -1746,27 +1746,6 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 80,
-    "token": {
-      "chain": "ethereum",
-      "address": "0xd278166dabaf26707362f7cfdd204b277fd2a460",
-      "symbol": "50USH-50WETH",
-      "decimals": 18
-    },
-    "rewardContract": "0x162623b5943ce426ac7935bf37780eefaf1682fd",
-    "rewardToken": {
-      "chain": "ethereum",
-      "symbol": "BAL",
-      "decimals": 18,
-      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
-      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "aurafinance",
-    "version": "booster",
-    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
     "poolId": 81,
     "token": {
       "chain": "ethereum",
@@ -1985,6 +1964,27 @@
       "decimals": 18
     },
     "rewardContract": "0x56166cbb458fce514ae04decbd4af5e4068ada91",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
+    "poolId": 80,
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd278166dabaf26707362f7cfdd204b277fd2a460",
+      "symbol": "50USH-50WETH",
+      "decimals": 18
+    },
+    "rewardContract": "0x162623b5943ce426ac7935bf37780eefaf1682fd",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -2439,27 +2439,6 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 113,
-    "token": {
-      "chain": "ethereum",
-      "address": "0x441b8a1980f2f2e43a9397099d15cc2fe6d36250",
-      "symbol": "50INV-50DOLA",
-      "decimals": 18
-    },
-    "rewardContract": "0x6992299d078858c2f64d046a172ac963b89038f7",
-    "rewardToken": {
-      "chain": "ethereum",
-      "symbol": "BAL",
-      "decimals": 18,
-      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
-      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "aurafinance",
-    "version": "booster",
-    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
     "poolId": 114,
     "token": {
       "chain": "ethereum",
@@ -2481,14 +2460,14 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 115,
+    "poolId": 113,
     "token": {
       "chain": "ethereum",
-      "address": "0x32296969ef14eb0c6d29669c550d4a0449130230",
-      "symbol": "B-stETH-STABLE",
+      "address": "0x441b8a1980f2f2e43a9397099d15cc2fe6d36250",
+      "symbol": "50INV-50DOLA",
       "decimals": 18
     },
-    "rewardContract": "0x59d66c58e83a26d6a0e35114323f65c3945c89c1",
+    "rewardContract": "0x6992299d078858c2f64d046a172ac963b89038f7",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -2502,14 +2481,14 @@
     "protocol": "aurafinance",
     "version": "booster",
     "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 116,
+    "poolId": 115,
     "token": {
       "chain": "ethereum",
-      "address": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b",
-      "symbol": "B-80GNO-20WETH",
+      "address": "0x32296969ef14eb0c6d29669c550d4a0449130230",
+      "symbol": "B-stETH-STABLE",
       "decimals": 18
     },
-    "rewardContract": "0x971faf6be8c20f53fe3acf065fe6e14fba0b8a9a",
+    "rewardContract": "0x59d66c58e83a26d6a0e35114323f65c3945c89c1",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -2573,6 +2552,27 @@
       "decimals": 18
     },
     "rewardContract": "0x77e20717a5a77893d1a94bbebc5f990b957062a7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
+    "poolId": 116,
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b",
+      "symbol": "B-80GNO-20WETH",
+      "decimals": 18
+    },
+    "rewardContract": "0x971faf6be8c20f53fe3acf065fe6e14fba0b8a9a",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -3119,27 +3119,6 @@
       "decimals": 18
     },
     "rewardContract": "0x1f8413fbab3ac3c578176aa1422dd7d1eaf371a4",
-    "rewardToken": {
-      "chain": "ethereum",
-      "symbol": "BAL",
-      "decimals": 18,
-      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
-      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
-    }
-  },
-  {
-    "chain": "ethereum",
-    "protocol": "aurafinance",
-    "version": "booster",
-    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
-    "poolId": 146,
-    "token": {
-      "chain": "ethereum",
-      "address": "0x759fabc513accd292ada967c4dd7bb94da39232e",
-      "symbol": "80RATE/20WETH-BPT",
-      "decimals": 18
-    },
-    "rewardContract": "0x76eef7d83c152c14375f216743bfddb525cbafa4",
     "rewardToken": {
       "chain": "ethereum",
       "symbol": "BAL",
@@ -3965,6 +3944,27 @@
       "decimals": 18,
       "address": "0x040d1edc9569d4bab2d15287dc5a4f10f56a56b8",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png"
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0xa57b8d98dae62b26ec3bcc4a365338157060b234",
+    "poolId": 146,
+    "token": {
+      "chain": "ethereum",
+      "address": "0x759fabc513accd292ada967c4dd7bb94da39232e",
+      "symbol": "80RATE/20WETH-BPT",
+      "decimals": 18
+    },
+    "rewardContract": "0x76eef7d83c152c14375f216743bfddb525cbafa4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "logoURI": "https://cdn.paraswap.io/token/BAL.png"
     }
   },
   {
@@ -4979,6 +4979,48 @@
     }
   },
   {
+    "chain": "base",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0x98ef32edd24e2c92525e59afc4475c1242a30184",
+    "poolId": 5,
+    "token": {
+      "chain": "base",
+      "address": "0x036d68e4e0005da4ef1c9ebd53b948d2c083495e",
+      "symbol": " 50tBTC-50USD",
+      "decimals": 18
+    },
+    "rewardContract": "0xde18d8129ef4b9032e2df26c5d4f3ed31bfbf7cd",
+    "rewardToken": {
+      "chain": "base",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0x4158734d47fc9692176b5085e0f52ee0da5d47f1",
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0x98ef32edd24e2c92525e59afc4475c1242a30184",
+    "poolId": 6,
+    "token": {
+      "chain": "base",
+      "address": "0x52e281318fed4efffb8e46c0847a8f9b71a461a8",
+      "symbol": " 50tBTC-50WETH",
+      "decimals": 18
+    },
+    "rewardContract": "0x331a1213953e324955b2a121079d8ffd08eae9fd",
+    "rewardToken": {
+      "chain": "base",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0x4158734d47fc9692176b5085e0f52ee0da5d47f1",
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png"
+    }
+  },
+  {
     "chain": "optimism",
     "protocol": "aurafinance",
     "version": "booster",
@@ -5306,6 +5348,27 @@
       "decimals": 18
     },
     "rewardContract": "0xd791654b87666ed1c5d0a5ae341a87a588641939",
+    "rewardToken": {
+      "chain": "optimism",
+      "symbol": "BAL",
+      "decimals": 18,
+      "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "aurafinance",
+    "version": "booster",
+    "address": "0x98ef32edd24e2c92525e59afc4475c1242a30184",
+    "poolId": 16,
+    "token": {
+      "chain": "optimism",
+      "address": "0x0244b0025264dc5f5c113d472d579c9c994a59ce",
+      "symbol": "BPT-OPARA",
+      "decimals": 18
+    },
+    "rewardContract": "0x2bf59c2c2e8f26738ad3f9eb3c8e85598a4a4c34",
     "rewardToken": {
       "chain": "optimism",
       "symbol": "BAL",

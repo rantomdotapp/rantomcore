@@ -5,6 +5,7 @@ import CompoundErc20Abi from '../configs/abi/compound/cErc20.json';
 import { CompoundMarket } from '../configs/protocols/compound';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const IronbankMarkets: Array<string> = [
   'base:0x5F5c479fe590cD4442A05aE4a941dd991A633B8E', // WETH
@@ -47,6 +48,8 @@ const IronbankMarkets: Array<string> = [
       });
 
       if (token) {
+        updateToken(token);
+
         allMarkets.push({
           protocol: protocol,
           chain,

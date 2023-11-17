@@ -5,6 +5,7 @@ import ExactlyMarketAbi from '../configs/abi/exactly/Market.json';
 import { ExactlyMarket } from '../configs/protocols/exactly';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const Markets: Array<string> = [
   'ethereum:0x163538E22F4d38c1eb21B79939f3d2ee274198Ff', // DAI
@@ -40,6 +41,7 @@ const Markets: Array<string> = [
         address: assetAddress,
       });
       if (asset) {
+        updateToken(asset);
         allMarkets.push({
           chain: chain,
           address: normalizeAddress(address),

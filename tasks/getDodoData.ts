@@ -6,6 +6,7 @@ import { AddressZero } from '../configs/constants/addresses';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 import { LiquidityPoolConstant } from '../types/domains';
+import updateToken from './helpers/updateToken';
 
 const TopPairs = [
   'ethereum:0x3058ef90929cb8180174d74c507176cca6835d73',
@@ -76,6 +77,8 @@ const TopPairs = [
     });
 
     if (baseToken && quoteToken) {
+      updateToken(baseToken);
+      updateToken(quoteToken);
       allPairs.push({
         chain,
         protocol,

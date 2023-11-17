@@ -45,9 +45,9 @@
     },
     "collateralToken": {
       "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
       "symbol": "wstETH",
-      "decimals": 18,
-      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+      "decimals": 18
     }
   },
   {
@@ -62,10 +62,9 @@
     },
     "collateralToken": {
       "chain": "ethereum",
-      "symbol": "WBTC",
-      "decimals": 8,
       "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
+      "symbol": "WBTC",
+      "decimals": 8
     }
   },
   {
@@ -80,10 +79,9 @@
     },
     "collateralToken": {
       "chain": "ethereum",
-      "symbol": "WETH",
-      "decimals": 18,
       "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      "logoURI": "https://cdn.paraswap.io/token/WETH.png"
+      "symbol": "WETH",
+      "decimals": 18
     }
   },
   {

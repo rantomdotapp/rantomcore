@@ -7,6 +7,7 @@ import { CompoundMarket, Compoundv3Market } from '../configs/protocols/compound'
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 import { Token } from '../types/configs';
+import updateToken from './helpers/updateToken';
 
 const CompoundMarkets: Array<string> = [
   'ethereum:0xe65cdb6479bac1e22340e4e755fae7e509ecd06c', // AAVE
@@ -75,6 +76,7 @@ const CompoundMarketsV3 = [
       });
 
       if (token) {
+        updateToken(token);
         allMarkets.push({
           protocol: protocol,
           chain,
@@ -106,6 +108,7 @@ const CompoundMarketsV3 = [
     });
 
     if (baseToken) {
+      updateToken(baseToken);
       const market: Compoundv3Market = {
         chain,
         protocol,
@@ -134,6 +137,7 @@ const CompoundMarketsV3 = [
           address: assetInfo[1].toString(),
         });
         if (asset) {
+          updateToken(asset);
           market.collaterals.push(asset);
         }
       }

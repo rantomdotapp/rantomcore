@@ -4,6 +4,7 @@ import CrvusdControllerAbi from '../configs/abi/curve/crvusdController.json';
 import { CrvusdMarket } from '../configs/protocols/curve';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const CrvusdMarkets: Array<string> = [
   'ethereum:0x8472a9a7632b173c8cf3a86d3afec50c35548e76', // sfrxETH
@@ -35,6 +36,7 @@ const CrvusdMarkets: Array<string> = [
       });
 
       if (token) {
+        updateToken(token);
         crvusdMarkets.push({
           protocol: 'crvusd',
           chain,

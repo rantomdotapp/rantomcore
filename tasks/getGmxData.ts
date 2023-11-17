@@ -5,6 +5,7 @@ import { Gmxv2MarketConfig } from '../configs/protocols/gmx';
 import { normalizeAddress } from '../lib/utils';
 import { Gmxv2AbiMappings, Gmxv2EventSignatures } from '../modules/adapters/gmx/abis';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const Transactions: Array<string> = [
   'arbitrum:0x8421bfe6f90cb4715b184ab13d3f1a0df8b413bae0e076fa2d9591f66c6ebc53',
@@ -55,6 +56,9 @@ const Transactions: Array<string> = [
           });
 
           if (indexToken && longToken && shortToken) {
+            updateToken(indexToken);
+            updateToken(longToken);
+            updateToken(shortToken);
             markets.push({
               chain,
               protocol,

@@ -5,6 +5,7 @@ import CauldronV4 from '../configs/abi/abracadabra/CauldronV4.json';
 import { AbracadabraMarket } from '../configs/protocols/abracadabra';
 import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
+import updateToken from './helpers/updateToken';
 
 const AbracadabraMarkets: Array<string> = [
   'ethereum:2:0x7b7473a76D6ae86CE19f7352A1E89F6C9dc39020', // ALCX
@@ -58,6 +59,8 @@ const AbracadabraMarkets: Array<string> = [
       });
 
       if (token) {
+        updateToken(token);
+
         allMarkets.push({
           protocol: 'abracadabra',
           chain,

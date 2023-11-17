@@ -62,22 +62,20 @@ export default class SushiLibs {
     if (token) {
       // try to check where it
       try {
-        const [token0Address, token1Address] = await Promise.all([
-          blockchain.singlecall({
-            chain: options.chain,
-            abi: UniswapV2PairAbi,
-            target: token.address,
-            method: 'token0',
-            params: [],
-          }),
-          blockchain.singlecall({
-            chain: options.chain,
-            abi: UniswapV2PairAbi,
-            target: token.address,
-            method: 'token1',
-            params: [],
-          }),
-        ]);
+        const token0Address = await blockchain.singlecall({
+          chain: options.chain,
+          abi: UniswapV2PairAbi,
+          target: token.address,
+          method: 'token0',
+          params: [],
+        });
+        const token1Address = await blockchain.singlecall({
+          chain: options.chain,
+          abi: UniswapV2PairAbi,
+          target: token.address,
+          method: 'token1',
+          params: [],
+        });
 
         const token0 = await blockchain.getTokenInfo({
           chain: options.chain,

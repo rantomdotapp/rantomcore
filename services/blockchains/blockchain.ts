@@ -149,22 +149,20 @@ export default class BlockchainService extends CachingService implements IBlockc
 
     // query on-chain data
     try {
-      const [symbol, decimals] = await Promise.all([
-        this.singlecall({
-          chain: chain,
-          target: address,
-          abi: ERC20Abi,
-          method: 'symbol',
-          params: [],
-        }),
-        this.singlecall({
-          chain: chain,
-          target: address,
-          abi: ERC20Abi,
-          method: 'decimals',
-          params: [],
-        }),
-      ]);
+      const symbol = await this.singlecall({
+        chain: chain,
+        target: address,
+        abi: ERC20Abi,
+        method: 'symbol',
+        params: [],
+      });
+      const decimals = await this.singlecall({
+        chain: chain,
+        target: address,
+        abi: ERC20Abi,
+        method: 'decimals',
+        params: [],
+      });
 
       const token: Token = {
         chain,

@@ -90,10 +90,9 @@
     "address": "0xcb550a6d4c8e3517a939bc79d0c7093eb7cf56b5",
     "token": {
       "chain": "ethereum",
-      "symbol": "WBTC",
-      "decimals": 8,
       "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
+      "symbol": "WBTC",
+      "decimals": 8
     }
   },
   {
@@ -117,10 +116,9 @@
     "address": "0xa9fe4601811213c340e850ea305481aff02f5b28",
     "token": {
       "chain": "ethereum",
-      "symbol": "WETH",
-      "decimals": 18,
       "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      "logoURI": "https://cdn.paraswap.io/token/WETH.png"
+      "symbol": "WETH",
+      "decimals": 18
     }
   },
   {
@@ -315,10 +313,9 @@
     "address": "0xa696a63cc78dffa1a63e9e50587c197387ff6c7e",
     "token": {
       "chain": "ethereum",
-      "symbol": "WBTC",
-      "decimals": 8,
       "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
+      "symbol": "WBTC",
+      "decimals": 8
     }
   },
   {
@@ -499,10 +496,9 @@
     "address": "0xf29ae508698bdef169b89834f76704c3b205aedf",
     "token": {
       "chain": "ethereum",
-      "symbol": "SNX",
-      "decimals": 18,
       "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
-      "logoURI": "https://cdn.paraswap.io/token/SNX.png"
+      "symbol": "SNX",
+      "decimals": 18
     }
   },
   {
@@ -643,10 +639,9 @@
     "address": "0x671a912c10bba0cfa74cfc2d6fba9ba1ed9530b2",
     "token": {
       "chain": "ethereum",
-      "symbol": "LINK",
-      "decimals": 18,
       "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
-      "logoURI": "https://cdn.paraswap.io/token/LINK.png"
+      "symbol": "LINK",
+      "decimals": 18
     }
   },
   {
@@ -670,10 +665,9 @@
     "address": "0xa258c4606ca8206d8aa700ce2143d7db854d168c",
     "token": {
       "chain": "ethereum",
-      "symbol": "WETH",
-      "decimals": 18,
       "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      "logoURI": "https://cdn.paraswap.io/token/WETH.png"
+      "symbol": "WETH",
+      "decimals": 18
     }
   },
   {
@@ -804,10 +798,9 @@
     "address": "0x6d765cbe5bc922694afe112c140b8878b9fb0390",
     "token": {
       "chain": "ethereum",
-      "symbol": "SUSHI",
-      "decimals": 18,
       "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
-      "logoURI": "https://cdn.paraswap.io/token/SUSHI.png"
+      "symbol": "SUSHI",
+      "decimals": 18
     }
   },
   {
@@ -818,10 +811,9 @@
     "address": "0xfd0877d9095789caf24c98f7cce092fa8e120775",
     "token": {
       "chain": "ethereum",
-      "symbol": "TUSD",
-      "decimals": 18,
       "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
-      "logoURI": "https://cdn.paraswap.io/token/TUSD.png"
+      "symbol": "TUSD",
+      "decimals": 18
     }
   },
   {
@@ -834,19 +826,6 @@
       "chain": "ethereum",
       "address": "0xfd5db7463a3ab53fd211b4af195c5bccc1a03890",
       "symbol": "EURT-f",
-      "decimals": 18
-    }
-  },
-  {
-    "poolId": 0,
-    "version": "basic",
-    "protocol": "yearn",
-    "chain": "ethereum",
-    "address": "0x2dfb14e32e2f8156ec15a2c21c3a6c053af52be8",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
-      "symbol": "MIM-3LP3CRV-f",
       "decimals": 18
     }
   },
@@ -1586,6 +1565,19 @@
     "version": "basic",
     "protocol": "yearn",
     "chain": "ethereum",
+    "address": "0x2dfb14e32e2f8156ec15a2c21c3a6c053af52be8",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
+      "symbol": "MIM-3LP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "poolId": 0,
+    "version": "basic",
+    "protocol": "yearn",
+    "chain": "ethereum",
     "address": "0xb5de7250128775a317b3f775a7afcec73571b732",
     "token": {
       "chain": "ethereum",
@@ -1604,19 +1596,6 @@
       "chain": "ethereum",
       "address": "0xb9446c4ef5ebe66268da6700d26f96273de3d571",
       "symbol": "3EURpool-f",
-      "decimals": 18
-    }
-  },
-  {
-    "poolId": 0,
-    "version": "basic",
-    "protocol": "yearn",
-    "chain": "ethereum",
-    "address": "0xb37094c1b5614bd6ece40afb295c26f4377069d3",
-    "token": {
-      "chain": "ethereum",
-      "address": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
-      "symbol": "FRAX3CRV-f",
       "decimals": 18
     }
   },
@@ -1911,6 +1890,19 @@
     "version": "basic",
     "protocol": "yearn",
     "chain": "ethereum",
+    "address": "0xb37094c1b5614bd6ece40afb295c26f4377069d3",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
+      "symbol": "FRAX3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "poolId": 0,
+    "version": "basic",
+    "protocol": "yearn",
+    "chain": "ethereum",
     "address": "0xbe4afe6737ccf34ca21cdef461e5c7547adc8c77",
     "token": {
       "chain": "ethereum",
@@ -1966,9 +1958,9 @@
     "address": "0xc1f3c276bf73396c020e8354bca581846171649d",
     "token": {
       "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
       "symbol": "wstETH",
-      "decimals": 18,
-      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+      "decimals": 18
     }
   },
   {
@@ -2925,6 +2917,19 @@
     "version": "basic",
     "protocol": "yearn",
     "chain": "ethereum",
+    "address": "0x58900d761ae3765b75ddfc235c1536b527f25d8f",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x69accb968b19a53790f43e57558f5e443a91af22",
+      "symbol": "yETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "poolId": 0,
+    "version": "basic",
+    "protocol": "yearn",
+    "chain": "ethereum",
     "address": "0x5383c1ab5beac04d6a6e6872cc6a422f2dc25576",
     "token": {
       "chain": "ethereum",
@@ -3165,19 +3170,6 @@
       "symbol": "OP",
       "decimals": 18,
       "address": "0x4200000000000000000000000000000000000042"
-    }
-  },
-  {
-    "poolId": 0,
-    "version": "basic",
-    "protocol": "yearn",
-    "chain": "ethereum",
-    "address": "0x58900d761ae3765b75ddfc235c1536b527f25d8f",
-    "token": {
-      "chain": "ethereum",
-      "address": "0x69accb968b19a53790f43e57558f5e443a91af22",
-      "symbol": "yETH-f",
-      "decimals": 18
     }
   },
   {
@@ -3536,6 +3528,19 @@
     "version": "basic",
     "protocol": "yearn",
     "chain": "optimism",
+    "address": "0xf7d66b41cd4241eae450fd9d2d6995754634d9f3",
+    "token": {
+      "chain": "optimism",
+      "address": "0xa1055762336f92b4b8d2edc032a0ce45ead6280a",
+      "symbol": "sAMMV2-alETH/WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "poolId": 0,
+    "version": "basic",
+    "protocol": "yearn",
+    "chain": "optimism",
     "address": "0x56eef8430dddf95b2b92c58b21edf1ac7f77e6a6",
     "token": {
       "chain": "optimism",
@@ -3554,19 +3559,6 @@
       "chain": "optimism",
       "address": "0xf04458f7b21265b80fc340de7ee598e24485c5bb",
       "symbol": "sAMMV2-USDC/LUSD",
-      "decimals": 18
-    }
-  },
-  {
-    "poolId": 0,
-    "version": "basic",
-    "protocol": "yearn",
-    "chain": "optimism",
-    "address": "0xf7d66b41cd4241eae450fd9d2d6995754634d9f3",
-    "token": {
-      "chain": "optimism",
-      "address": "0xa1055762336f92b4b8d2edc032a0ce45ead6280a",
-      "symbol": "sAMMV2-alETH/WETH",
       "decimals": 18
     }
   },
@@ -4134,19 +4126,6 @@
     "version": "basic",
     "protocol": "yearn",
     "chain": "optimism",
-    "address": "0x27939e33435cc4ee4e74c0f0260914596bceb116",
-    "token": {
-      "chain": "optimism",
-      "address": "0xc3439bc1a747e545887192d6b7f8be47f608473f",
-      "symbol": "vAMMV2-OATH/WETH",
-      "decimals": 18
-    }
-  },
-  {
-    "poolId": 0,
-    "version": "basic",
-    "protocol": "yearn",
-    "chain": "optimism",
     "address": "0xd3668ca9df5d1bba8d264b8d10dd2f0c5962cc4c",
     "token": {
       "chain": "optimism",
@@ -4503,6 +4482,19 @@
       "chain": "base",
       "address": "0x5bfb340fa9305abb164fb0248d0d82fc3d82c3bb",
       "symbol": "sAMM-eUSD/USDbC",
+      "decimals": 18
+    }
+  },
+  {
+    "poolId": 0,
+    "version": "basic",
+    "protocol": "yearn",
+    "chain": "optimism",
+    "address": "0x27939e33435cc4ee4e74c0f0260914596bceb116",
+    "token": {
+      "chain": "optimism",
+      "address": "0xc3439bc1a747e545887192d6b7f8be47f608473f",
+      "symbol": "vAMMV2-OATH/WETH",
       "decimals": 18
     }
   }
