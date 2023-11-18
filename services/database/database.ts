@@ -86,17 +86,21 @@ export default class DatabaseService implements IDatabaseService {
 
     // for query by chain
     actionsCollection.createIndex({ chain: 1, blockNumber: 1 }, { background: true });
-    // for query by tokens
-    actionsCollection.createIndex({ 'tokens.address': 1, blockNumber: 1 }, { background: true });
-    // for query by addresses
-    actionsCollection.createIndex({ addresses: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, action: 1, blockNumber: 1 }, { background: true });
+
     // for query by protocol
     actionsCollection.createIndex({ protocol: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ protocol: 1, action: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, protocol: 1, action: 1, blockNumber: 1 }, { background: true });
+
     // for query by action
     actionsCollection.createIndex({ action: 1, blockNumber: 1 }, { background: true });
-    // for query overall
-    actionsCollection.createIndex({ chain: 1, action: 1, addresses: 1, blockNumber: 1 }, { background: true });
-    actionsCollection.createIndex({ chain: 1, action: 1, 'tokens.address': 1, blockNumber: 1 }, { background: true });
+
+    // for query by tokens
+    actionsCollection.createIndex({ 'tokens.address': 1, blockNumber: 1 }, { background: true });
+
+    // for query by addresses
+    actionsCollection.createIndex({ addresses: 1, blockNumber: 1 }, { background: true });
   }
 
   public async bulkWrite(options: DatabaseBulkWriteOptions): Promise<void> {

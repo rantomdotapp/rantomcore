@@ -18,7 +18,7 @@ export function getRouter(services: ContextServices): Router {
 }
 
 async function handleQueryEvents(services: ContextServices, request: Request, response: Response) {
-  const { chain, protocol, address, actions } = request.body;
+  const { chain, protocols, address, actions } = request.body;
 
   const queryChains: Array<string> = [];
   if (chain && EnvConfig.blockchains[chain]) {
@@ -36,8 +36,10 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
         chain: chain,
       };
 
-      if (protocol) {
-        query.protocol = protocol;
+      if (protocols) {
+        query.protocol = {
+          $in: protocols as Array<string>,
+        };
       }
       if (address) {
         query.addresses = {
