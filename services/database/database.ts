@@ -85,22 +85,13 @@ export default class DatabaseService implements IDatabaseService {
     actionsCollection.createIndex({ chain: 1, transactionHash: 1, logIndex: 1 }, { background: true });
 
     // for query by chain
-    actionsCollection.createIndex({ chain: 1, blockNumber: 1 }, { background: true });
-    actionsCollection.createIndex({ chain: 1, action: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, timestamp: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, action: 1, timestamp: 1 }, { background: true });
 
     // for query by protocol
-    actionsCollection.createIndex({ protocol: 1, blockNumber: 1 }, { background: true });
-    actionsCollection.createIndex({ protocol: 1, action: 1, blockNumber: 1 }, { background: true });
-    actionsCollection.createIndex({ chain: 1, protocol: 1, action: 1, blockNumber: 1 }, { background: true });
-
-    // for query by action
-    actionsCollection.createIndex({ action: 1, blockNumber: 1 }, { background: true });
-
-    // for query by tokens
-    actionsCollection.createIndex({ 'tokens.address': 1, blockNumber: 1 }, { background: true });
-
-    // for query by addresses
-    actionsCollection.createIndex({ addresses: 1, blockNumber: 1 }, { background: true });
+    actionsCollection.createIndex({ protocol: 1, timestamp: 1 }, { background: true });
+    actionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
+    actionsCollection.createIndex({ chain: 1, protocol: 1, action: 1, timestamp: 1 }, { background: true });
   }
 
   public async bulkWrite(options: DatabaseBulkWriteOptions): Promise<void> {

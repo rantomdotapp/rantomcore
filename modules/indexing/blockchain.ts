@@ -1,6 +1,8 @@
 import { DefaultQueryLogsBlockRange } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import logger from '../../lib/logger';
+import { queryBlockTimestamps } from '../../lib/subsgraph';
+import { sleep } from '../../lib/utils';
 import { ContractConfig } from '../../types/configs';
 import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, IBlockchainIndexing } from '../../types/namespaces';
@@ -66,79 +68,96 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
         toBlock,
       });
 
-      const actionOperations: Array<any> = [];
-      for (const log of logs) {
-        const signature = log.topics[0];
+      const blocktimes = await queryBlockTimestamps(
+        EnvConfig.blockchains[chain].blockSubgraph as string,
+        startBlock,
+        toBlock,
+      );
 
-        // first of all, we process logs by adapter hooks
-        for (const [, adapter] of Object.entries(this.adapters)) {
-          await adapter.handleEventLog({
-            chain: chain,
-            log,
-          });
-        }
+      if (blocktimes) {
+        const actionOperations: Array<any> = [];
+        for (const log of logs) {
+          const signature = log.topics[0];
 
-        // process actions
-        for (const [, adapter] of Object.entries(this.adapters)) {
-          if (adapter.supportedSignature(signature)) {
-            const actions: Array<TransactionAction> = await adapter.parseEventLog({
+          // first of all, we process logs by adapter hooks
+          for (const [, adapter] of Object.entries(this.adapters)) {
+            await adapter.handleEventLog({
               chain: chain,
-              log: log,
-              allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
+              log,
             });
+          }
 
-            for (const action of actions) {
-              actionOperations.push({
-                updateOne: {
-                  filter: {
-                    chain: chain,
-                    transactionHash: action.transactionHash,
-                    logIndex: action.logIndex,
-                  },
-                  update: {
-                    $set: {
-                      ...action,
-                    },
-                  },
-                  upsert: true,
-                },
+          // process actions
+          for (const [, adapter] of Object.entries(this.adapters)) {
+            if (adapter.supportedSignature(signature)) {
+              const actions: Array<TransactionAction> = await adapter.parseEventLog({
+                chain: chain,
+                log: log,
+                allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
               });
+
+              for (const action of actions) {
+                actionOperations.push({
+                  updateOne: {
+                    filter: {
+                      chain: chain,
+                      transactionHash: action.transactionHash,
+                      logIndex: action.logIndex,
+                    },
+                    update: {
+                      $set: {
+                        ...action,
+                        timestamp: blocktimes[action.blockNumber] ? blocktimes[action.blockNumber] : 0,
+                      },
+                    },
+                    upsert: true,
+                  },
+                });
+              }
             }
           }
         }
+
+        await this.services.database.bulkWrite({
+          collection: EnvConfig.mongodb.collections.actions,
+          operations: actionOperations,
+        });
+
+        await this.services.database.update({
+          collection: EnvConfig.mongodb.collections.states,
+          keys: {
+            name: stateKey,
+          },
+          updates: {
+            name: stateKey,
+            blockNumber: toBlock,
+          },
+          upsert: true,
+        });
+
+        const endExeTime = Math.floor(new Date().getTime() / 1000);
+        const elapsed = endExeTime - startExeTime;
+
+        logger.info('got blockchain data', {
+          service: this.name,
+          chain: chain,
+          fromBlock: startBlock,
+          toBlock: toBlock,
+          logs: logs.length,
+          actions: actionOperations.length,
+          elapses: `${elapsed}s`,
+        });
+
+        startBlock += DefaultQueryLogsBlockRange;
+      } else {
+        logger.warn('failed to get block timestamp', {
+          service: this.name,
+          chain: chain,
+          fromBlock: startBlock,
+          toBlock: toBlock,
+        });
+        await sleep(5);
       }
-
-      await this.services.database.bulkWrite({
-        collection: EnvConfig.mongodb.collections.actions,
-        operations: actionOperations,
-      });
-
-      await this.services.database.update({
-        collection: EnvConfig.mongodb.collections.states,
-        keys: {
-          name: stateKey,
-        },
-        updates: {
-          name: stateKey,
-          blockNumber: toBlock,
-        },
-        upsert: true,
-      });
-
-      const endExeTime = Math.floor(new Date().getTime() / 1000);
-      const elapsed = endExeTime - startExeTime;
-
-      logger.info('got blockchain data', {
-        service: this.name,
-        chain: chain,
-        fromBlock: startBlock,
-        toBlock: toBlock,
-        logs: logs.length,
-        actions: actionOperations.length,
-        elapses: `${elapsed}s`,
-      });
-
-      startBlock += DefaultQueryLogsBlockRange;
     }
   }
 }

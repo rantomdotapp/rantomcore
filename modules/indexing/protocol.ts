@@ -2,6 +2,8 @@ import { DefaultQueryLogsBlockRangeSingleContract } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import { ProtocolConfigs } from '../../configs/protocols';
 import logger from '../../lib/logger';
+import { queryBlockTimestamps } from '../../lib/subsgraph';
+import { sleep } from '../../lib/utils';
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, IProtocolIndexing } from '../../types/namespaces';
@@ -92,83 +94,100 @@ export default class ProtocolIndexing implements IProtocolIndexing {
             ? latestBlock
             : startBlock + DefaultQueryLogsBlockRangeSingleContract;
 
-        let logs: Array<any> = [];
-        for (const topic0 of contractConfig.topics) {
-          const rawlogs = await web3.eth.getPastLogs({
-            address: contractConfig.address,
+        const blocktimes = await queryBlockTimestamps(
+          EnvConfig.blockchains[contractConfig.chain].blockSubgraph as string,
+          startBlock,
+          toBlock,
+        );
+
+        if (blocktimes) {
+          let logs: Array<any> = [];
+          for (const topic0 of contractConfig.topics) {
+            const rawlogs = await web3.eth.getPastLogs({
+              address: contractConfig.address,
+              fromBlock: startBlock,
+              toBlock: toBlock,
+              topics: [topic0],
+            });
+            logs = logs.concat(rawlogs);
+          }
+
+          let actions: Array<TransactionAction> = [];
+          for (const log of logs) {
+            const transaction = await this.services.blockchain.getTransaction({
+              chain: contractConfig.chain,
+              hash: log.transactionHash,
+            });
+
+            actions = actions.concat(
+              await adapter.parseEventLog({
+                chain: contractConfig.chain,
+                log: log,
+                allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
+                transaction: transaction,
+              }),
+            );
+          }
+
+          const operations: Array<any> = [];
+          for (const action of actions) {
+            operations.push({
+              updateOne: {
+                filter: {
+                  chain: contractConfig.chain,
+                  transactionHash: action.transactionHash,
+                  logIndex: action.logIndex,
+                },
+                update: {
+                  $set: {
+                    ...action,
+                    timestamp: blocktimes[action.blockNumber] ? blocktimes[action.blockNumber] : 0,
+                  },
+                },
+                upsert: true,
+              },
+            });
+          }
+
+          await this.services.database.bulkWrite({
+            collection: EnvConfig.mongodb.collections.actions,
+            operations: operations,
+          });
+
+          await this.services.database.update({
+            collection: EnvConfig.mongodb.collections.states,
+            keys: {
+              name: stateKey,
+            },
+            updates: {
+              name: stateKey,
+              blockNumber: startBlock,
+            },
+            upsert: true,
+          });
+
+          const endExeTime = Math.floor(new Date().getTime() / 1000);
+          const elapsed = endExeTime - startExeTime;
+
+          logger.info('got contract historical data', {
+            service: this.name,
+            chain: contractConfig.chain,
             fromBlock: startBlock,
             toBlock: toBlock,
-            topics: [topic0],
+            actions: actions.length,
+            elapses: `${elapsed}s`,
           });
-          logs = logs.concat(rawlogs);
-        }
 
-        let actions: Array<TransactionAction> = [];
-        for (const log of logs) {
-          const transaction = await this.services.blockchain.getTransaction({
+          startBlock += DefaultQueryLogsBlockRangeSingleContract;
+        } else {
+          logger.warn('failed to get block timestamp', {
+            service: this.name,
             chain: contractConfig.chain,
-            hash: log.transactionHash,
+            fromBlock: startBlock,
+            toBlock: toBlock,
           });
-
-          actions = actions.concat(
-            await adapter.parseEventLog({
-              chain: contractConfig.chain,
-              log: log,
-              allLogs: logs.filter((item) => item.transactionHash === log.transactionHash),
-              transaction: transaction,
-            }),
-          );
+          await sleep(5);
         }
-
-        const operations: Array<any> = [];
-        for (const action of actions) {
-          operations.push({
-            updateOne: {
-              filter: {
-                chain: contractConfig.chain,
-                transactionHash: action.transactionHash,
-                logIndex: action.logIndex,
-              },
-              update: {
-                $set: {
-                  ...action,
-                },
-              },
-              upsert: true,
-            },
-          });
-        }
-
-        await this.services.database.bulkWrite({
-          collection: EnvConfig.mongodb.collections.actions,
-          operations: operations,
-        });
-
-        await this.services.database.update({
-          collection: EnvConfig.mongodb.collections.states,
-          keys: {
-            name: stateKey,
-          },
-          updates: {
-            name: stateKey,
-            blockNumber: startBlock,
-          },
-          upsert: true,
-        });
-
-        const endExeTime = Math.floor(new Date().getTime() / 1000);
-        const elapsed = endExeTime - startExeTime;
-
-        logger.info('got contract historical data', {
-          service: this.name,
-          chain: contractConfig.chain,
-          fromBlock: startBlock,
-          toBlock: toBlock,
-          actions: actions.length,
-          elapses: `${elapsed}s`,
-        });
-
-        startBlock += DefaultQueryLogsBlockRangeSingleContract;
       }
     }
   }

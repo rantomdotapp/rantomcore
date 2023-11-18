@@ -3,7 +3,6 @@ import { Request, Response, Router } from 'express';
 
 import { DefaultQueryResultLimit } from '../../../configs';
 import EnvConfig from '../../../configs/envConfig';
-import { queryBlockTimestamps } from '../../../lib/subsgraph';
 import { ContextServices } from '../../../types/namespaces';
 import { writeResponse } from '../middleware';
 
@@ -18,7 +17,7 @@ export function getRouter(services: ContextServices): Router {
 }
 
 async function handleQueryEvents(services: ContextServices, request: Request, response: Response) {
-  const { chain, protocols, address, actions } = request.body;
+  const { chain, protocols, actions } = request.body;
 
   const queryChains: Array<string> = [];
   if (chain && EnvConfig.blockchains[chain]) {
@@ -41,11 +40,7 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
           $in: protocols as Array<string>,
         };
       }
-      if (address) {
-        query.addresses = {
-          $in: [address],
-        };
-      }
+
       if (actions) {
         query.action = {
           $in: actions as Array<string>,
@@ -58,24 +53,13 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
         options: {
           limit: DefaultQueryResultLimit,
           skip: 0,
-          order: { blockNumber: -1 },
+          order: { timestamp: -1 },
         },
       });
 
-      if (documents.length > 0) {
-        const blocktimes = await queryBlockTimestamps(
-          EnvConfig.blockchains[chain].blockSubgraph as string,
-          documents[documents.length - 1].blockNumber,
-          documents[0].blockNumber,
-        );
-
-        if (blocktimes) {
-          for (const document of documents) {
-            delete document._id;
-            document.timestamp = blocktimes[document.blockNumber];
-            eventActions.push(document);
-          }
-        }
+      for (const document of documents) {
+        delete document._id;
+        eventActions.push(document);
       }
     }
 
