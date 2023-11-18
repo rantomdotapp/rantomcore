@@ -18,7 +18,7 @@ export function getRouter(services: ContextServices): Router {
 }
 
 async function handleQueryEvents(services: ContextServices, request: Request, response: Response) {
-  const { chain, protocol, address } = request.body;
+  const { chain, protocol, address, actions } = request.body;
 
   const queryChains: Array<string> = [];
   if (chain && EnvConfig.blockchains[chain]) {
@@ -30,7 +30,7 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
   }
 
   try {
-    let actions: Array<any> = [];
+    let eventActions: Array<any> = [];
     for (const chain of queryChains) {
       const query: any = {
         chain: chain,
@@ -42,6 +42,11 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
       if (address) {
         query.addresses = {
           $in: [address],
+        };
+      }
+      if (actions) {
+        query.action = {
+          $in: actions as Array<string>,
         };
       }
 
@@ -65,20 +70,20 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
           for (const document of documents) {
             delete document._id;
             document.timestamp = blocktimes[document.blockNumber];
-            actions.push(document);
+            eventActions.push(document);
           }
         }
       }
     }
 
     // sort by timestamp
-    actions = actions.sort(function (a: any, b: any) {
+    eventActions = eventActions.sort(function (a: any, b: any) {
       return a.timestamp > b.timestamp ? -1 : 1;
     });
 
     await writeResponse(services, request, response, HttpStatusCode.Ok, {
       error: null,
-      actions: actions,
+      actions: eventActions,
     });
   } catch (e: any) {
     await writeResponse(services, request, response, HttpStatusCode.InternalServerError, {
