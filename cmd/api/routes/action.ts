@@ -63,9 +63,10 @@ async function handleQueryEvents(services: ContextServices, request: Request, re
       if (documents.length > 0) {
         const blocktimes = await queryBlockTimestamps(
           EnvConfig.blockchains[chain].blockSubgraph as string,
-          documents[0].blockNumber,
           documents[documents.length - 1].blockNumber,
+          documents[0].blockNumber,
         );
+
         if (blocktimes) {
           for (const document of documents) {
             delete document._id;
