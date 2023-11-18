@@ -50,7 +50,7 @@ export default class MorphoAdapter extends Adapter {
     if (token) {
       let action: KnownAction = 'deposit';
       let addresses: Array<string> = [];
-      let amount = formatFromDecimals(event._amount.toString(), token.decimals);
+      let amount = formatFromDecimals(event._amount ? event._amount.toString() : event._amountSeized.toString(), token.decimals);
 
       switch (signature) {
         case MorphoEventSignatures.Supplied: {
@@ -113,7 +113,7 @@ export default class MorphoAdapter extends Adapter {
     if (token) {
       let action: KnownAction = 'deposit';
       let addresses: Array<string> = [];
-      let amount = formatFromDecimals(event.amount ? event.amount : event._amount, token.decimals);
+      let amount = formatFromDecimals(event.amount ? event.amount : event.amountSeized, token.decimals);
 
       switch (signature) {
         case MorphoEventSignatures.Supplied:
