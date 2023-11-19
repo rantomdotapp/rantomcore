@@ -60,7 +60,10 @@ export default class GearboxAdapter extends Adapter {
           case GearboxEventSignatures.Repay: {
             const creditAccount = normalizeAddress(event.creditAccount);
             const creditManager = normalizeAddress(event.creditManager);
-            const amount = formatFromDecimals(event.amount.toString(), pool.token.decimals);
+            const amount = formatFromDecimals(
+              event.amount ? event.amount.toString() : event.borrowedAmount.toString(),
+              pool.token.decimals,
+            );
             const action: KnownAction = signature === GearboxEventSignatures.Borrow ? 'borrow' : 'repay';
 
             actions.push(
