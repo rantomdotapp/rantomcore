@@ -11,12 +11,12 @@ export default class Datastore implements IDatastoreService {
   private _liquidityPools: Array<LiquidityPoolConstant> = [];
   private _stakingPools: Array<StakingPoolConstant> = [];
 
-  constructor() {}
-
-  public async loadData(): Promise<void> {
+  constructor() {
     this._liquidityPools = SourceLiquidityPools;
     this._stakingPools = SourceStakingPools;
+  }
 
+  public async loadData(): Promise<void> {
     logger.info('loaded constant data', {
       service: this.name,
       liquidityPools: Object.keys(this._liquidityPools).length,

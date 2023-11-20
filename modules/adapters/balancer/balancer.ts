@@ -95,20 +95,21 @@ export default class BalancerAdapter extends Adapter {
               hash: options.log.transactionHash,
             });
           }
-          const sender = normalizeAddress(transaction.from);
-
-          actions.push({
-            chain: options.chain,
-            protocol: this.config.protocol,
-            action: 'swap',
-            transactionHash: options.log.transactionHash,
-            logIndex: `${options.log.logIndex}:0`,
-            blockNumber: Number(options.log.blockNumber),
-            contract: normalizeAddress(options.log.address),
-            addresses: [sender],
-            tokens: [tokenIn, tokenOut],
-            tokenAmounts: [amountIn, amountOut],
-          });
+          if (transaction) {
+            const sender = normalizeAddress(transaction.from);
+            actions.push({
+              chain: options.chain,
+              protocol: this.config.protocol,
+              action: 'swap',
+              transactionHash: options.log.transactionHash,
+              logIndex: `${options.log.logIndex}:0`,
+              blockNumber: Number(options.log.blockNumber),
+              contract: normalizeAddress(options.log.address),
+              addresses: [sender],
+              tokens: [tokenIn, tokenOut],
+              tokenAmounts: [amountIn, amountOut],
+            });
+          }
         }
         break;
       }
