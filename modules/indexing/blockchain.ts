@@ -58,11 +58,12 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       toBlock: latestBlock,
     });
 
+    const blockRange = chain === 'polygon' ? 50 : DefaultQueryLogsBlockRange;
     while (startBlock <= latestBlock) {
       const startExeTime = Math.floor(new Date().getTime() / 1000);
 
       const toBlock =
-        startBlock + DefaultQueryLogsBlockRange > latestBlock ? latestBlock : startBlock + DefaultQueryLogsBlockRange;
+        startBlock + blockRange > latestBlock ? latestBlock : startBlock + blockRange;
       const logs: Array<any> = await web3.eth.getPastLogs({
         fromBlock: startBlock,
         toBlock,
@@ -148,7 +149,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
           elapses: `${elapsed}s`,
         });
 
-        startBlock += DefaultQueryLogsBlockRange;
+        startBlock += blockRange;
       } else {
         logger.warn('failed to get block timestamp', {
           service: this.name,
