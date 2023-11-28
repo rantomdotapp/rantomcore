@@ -51,7 +51,7 @@ export default class FraxlendAdapter extends Adapter {
         switch (signature) {
           case FraxlendEventSignatures.Deposit:
           case FraxlendEventSignatures.Withdraw: {
-            const sender = normalizeAddress(event.sender);
+            const sender = normalizeAddress(event.sender ? event.sender : event.caller);
             const owner = normalizeAddress(event.owner);
             const action: KnownAction = signature === FraxlendEventSignatures.Deposit ? 'deposit' : 'withdraw';
             const amount = formatFromDecimals(event.assets.toString(), pair.debtToken.decimals);
