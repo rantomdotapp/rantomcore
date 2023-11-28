@@ -7969,7 +7969,7 @@
   },
   "DEV": {
     "chain": "ethereum",
-    "address": "0x5caf454ba92e6f2c929df14667ee360ed9fd5b26",
+    "address": "0x905ff01bf05bbd2de91b3f09cc86187ea07edec3",
     "symbol": "DEV",
     "decimals": 18
   },
@@ -13184,7 +13184,7 @@
   },
   "HEX": {
     "chain": "ethereum",
-    "address": "0x46f6e9bbcce8638b20ebbc83d33a2b5bfa9b7894",
+    "address": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
     "symbol": "HEX",
     "decimals": 8
   },
@@ -15879,9 +15879,9 @@
   },
   "LDO": {
     "chain": "ethereum",
+    "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
     "symbol": "LDO",
-    "decimals": 18,
-    "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32"
+    "decimals": 18
   },
   "LDO-WETH SLP": {
     "chain": "ethereum",
@@ -16207,9 +16207,9 @@
   },
   "LINK": {
     "chain": "ethereum",
+    "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
     "symbol": "LINK",
-    "decimals": 18,
-    "address": "0x514910771af9ca656af840dff83e8264ecf986ca"
+    "decimals": 18
   },
   "LINK-SDL SLP": {
     "chain": "ethereum",
@@ -16958,7 +16958,7 @@
   },
   "MANA": {
     "chain": "ethereum",
-    "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+    "address": "0xa9c3ac174d95fed00b46cb9b59132170aa3e90ab",
     "symbol": "MANA",
     "decimals": 18
   },
@@ -17102,9 +17102,9 @@
   },
   "MATIC": {
     "chain": "ethereum",
+    "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
     "symbol": "MATIC",
-    "decimals": 18,
-    "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0"
+    "decimals": 18
   },
   "MATICBULL": {
     "chain": "ethereum",
@@ -20964,9 +20964,9 @@
   },
   "PEPE": {
     "chain": "ethereum",
+    "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
     "symbol": "PEPE",
-    "decimals": 18,
-    "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933"
+    "decimals": 18
   },
   "PEPE2.0": {
     "chain": "ethereum",
@@ -29435,7 +29435,7 @@
   },
   "VERSE": {
     "chain": "ethereum",
-    "address": "0x7ae0d42f23c33338de15bfa89c7405c068d9dc0a",
+    "address": "0x249ca82617ec3dfb2589c4c17ab7ec9765350a18",
     "symbol": "VERSE",
     "decimals": 18
   },

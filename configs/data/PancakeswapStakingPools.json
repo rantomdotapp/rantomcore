@@ -9062,5 +9062,18 @@
       "symbol": "Scroll-V3-MOCK",
       "decimals": 18
     }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "address": "0xa5f8c5dbd5f286960b9d90548680ae5ebff07652",
+    "poolId": 172,
+    "version": "masterchef",
+    "token": {
+      "chain": "bnbchain",
+      "address": "0xf97011aad3149f991879600ff6934d809e0c8c80",
+      "symbol": "VECAKE-REWARD",
+      "decimals": 18
+    }
   }
 ]

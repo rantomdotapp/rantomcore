@@ -5,6 +5,7 @@ import Camelotv3LiquidityPools from './data/Camelotv3Pools.json';
 import ConvexStakingPools from './data/ConvexStakingPools.json';
 import DodoLiquidityPools from './data/DodoLiquidityPools.json';
 import MaverickLiquidityPools from './data/MaverickPools.json';
+import PancakeStableSwapLiquidityPools from './data/PancakeStableSwapPools.json';
 import PancakeswapLiquidityPools from './data/PancakeswapPools.json';
 import PancakeswapStakingPools from './data/PancakeswapStakingPools.json';
 import Pancakeswapv3LiquidityPools from './data/Pancakeswapv3Pools.json';
@@ -29,6 +30,7 @@ export const SourceLiquidityPools: Array<LiquidityPoolConstant> = [
   ...(Camelotv3LiquidityPools as Array<LiquidityPoolConstant>),
   ...(PancakeswapLiquidityPools as Array<LiquidityPoolConstant>),
   ...(Pancakeswapv3LiquidityPools as Array<LiquidityPoolConstant>),
+  ...(PancakeStableSwapLiquidityPools as Array<LiquidityPoolConstant>),
   ...(MaverickLiquidityPools as Array<LiquidityPoolConstant>),
   ...(ShibaswapLiquidityPools as Array<LiquidityPoolConstant>),
   ...(StargateLiquidityPools as Array<LiquidityPoolConstant>),

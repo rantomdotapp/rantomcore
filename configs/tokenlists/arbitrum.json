@@ -1,4 +1,10 @@
 {
+  "21": {
+    "chain": "arbitrum",
+    "address": "0xb9ecc82ccfe1c07d2df4e1b3d3b9348c61db2bdc",
+    "symbol": "21",
+    "decimals": 18
+  },
   "$SHARBI": {
     "chain": "arbitrum",
     "address": "0xaa54e84a3e6e5a80288d2c2f8e36ea5ca3a3ca30",
@@ -154,7 +160,7 @@
   },
   "AICODE": {
     "chain": "arbitrum",
-    "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
+    "address": "0x2823f231b8b7121c4ba6b6c0ceef37b6a5bda547",
     "symbol": "AICODE",
     "decimals": 18
   },
@@ -241,9 +247,9 @@
   },
   "ALP": {
     "chain": "arbitrum",
+    "address": "0xb49b6a3fd1f4bb510ef776de7a88a9e65904478a",
     "symbol": "ALP",
-    "decimals": 18,
-    "address": "0xb49b6a3fd1f4bb510ef776de7a88a9e65904478a"
+    "decimals": 18
   },
   "ALPHA": {
     "chain": "arbitrum",
@@ -317,9 +323,9 @@
   },
   "ARBI": {
     "chain": "arbitrum",
+    "address": "0x9db8a10c7fe60d84397860b3af2e686d4f90c2b7",
     "symbol": "ARBI",
-    "decimals": 18,
-    "address": "0x07dd5beaffb65b8ff2e575d500bdf324a05295dc"
+    "decimals": 18
   },
   "ARBINU": {
     "chain": "arbitrum",
@@ -561,9 +567,9 @@
   },
   "BTC": {
     "chain": "arbitrum",
+    "address": "0x9298fe91bffe1e0881ed64602e66789f73ac97c2",
     "symbol": "BTC",
-    "decimals": 18,
-    "address": "0x47904963fc8b2340414262125af798b9655e58cd"
+    "decimals": 18
   },
   "BTC.b": {
     "chain": "arbitrum",
@@ -837,7 +843,7 @@
   },
   "DMT": {
     "chain": "arbitrum",
-    "address": "0x9e92b9ef3c3cc4053591002f4f04d2aef87bf2d2",
+    "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8",
     "symbol": "DMT",
     "decimals": 18
   },
@@ -1416,6 +1422,12 @@
     "symbol": "HOTT",
     "decimals": 18
   },
+  "HUHCAT": {
+    "chain": "arbitrum",
+    "address": "0xf3c266692f8e249de2c973bd5ddc87794e5431e2",
+    "symbol": "HUHCAT",
+    "decimals": 18
+  },
   "HWT": {
     "chain": "arbitrum",
     "address": "0xbcc9c1763d54427bdf5efb6e9eb9494e5a1fbabf",
@@ -1506,7 +1518,7 @@
   },
   "KUKU": {
     "chain": "arbitrum",
-    "address": "0x6eb43522372f6c6ad549d0c3fbe864573d0ad1a9",
+    "address": "0xd10a0a22d0f5220a07c6bbd6e9cdbc5a029df704",
     "symbol": "KUKU",
     "decimals": 18
   },
@@ -1646,9 +1658,9 @@
   },
   "LTC": {
     "chain": "arbitrum",
+    "address": "0xcb65a0e6a5ea78094901fa413ab1804afbed56b7",
     "symbol": "LTC",
-    "decimals": 18,
-    "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764"
+    "decimals": 18
   },
   "LTD": {
     "chain": "arbitrum",
@@ -1765,9 +1777,9 @@
   },
   "MGP": {
     "chain": "arbitrum",
+    "address": "0xa61f74247455a40b01b0559ff6274441fafa22a3",
     "symbol": "MGP",
-    "decimals": 18,
-    "address": "0xa61f74247455a40b01b0559ff6274441fafa22a3"
+    "decimals": 18
   },
   "MIM": {
     "chain": "arbitrum",
@@ -2482,6 +2494,12 @@
     "symbol": "SEX",
     "decimals": 18
   },
+  "SFUND": {
+    "chain": "arbitrum",
+    "address": "0x560363bda52bc6a44ca6c8c9b4a5fadbda32fa60",
+    "symbol": "SFUND",
+    "decimals": 18
+  },
   "SHAKA": {
     "chain": "arbitrum",
     "address": "0xd9ae33e40270c51c4dcdbb23a4bac0c8512542c2",
@@ -2794,7 +2812,7 @@
   },
   "TTT": {
     "chain": "arbitrum",
-    "address": "0xbcc5c2bc45874c25b425252c72375c6ab506f443",
+    "address": "0xfdf8182a409546e965701612ba726b34c2efcbd8",
     "symbol": "TTT",
     "decimals": 18
   },
@@ -3102,9 +3120,9 @@
   },
   "WOO": {
     "chain": "arbitrum",
+    "address": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b",
     "symbol": "WOO",
-    "decimals": 18,
-    "address": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b"
+    "decimals": 18
   },
   "WZT": {
     "chain": "arbitrum",

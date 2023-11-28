@@ -223,6 +223,12 @@
     "decimals": 18
   },
   "BM": { "chain": "base", "address": "0xf9db5875e0bae4557dad700bf35a91c3708727a2", "symbol": "BM", "decimals": 18 },
+  "BMAX2": {
+    "chain": "base",
+    "address": "0x02295d448835c2bc66161de90b5b8607df776594",
+    "symbol": "BMAX2",
+    "decimals": 18
+  },
   "BMIXER": {
     "chain": "base",
     "address": "0xbc5f6cefa5eb16e227a476d95d8ee2c5a4321f38",
@@ -420,7 +426,7 @@
     "symbol": "ESVN",
     "decimals": 18
   },
-  "ETH": { "chain": "base", "address": "0x0000000000000000000000000000000000000000", "symbol": "ETH", "decimals": 18 },
+  "ETH": { "chain": "base", "address": "0x07b03e904f677fc577117cbfe62f9f20808c0bbc", "symbol": "ETH", "decimals": 18 },
   "FARM": {
     "chain": "base",
     "address": "0xd08a2917653d4e460893203471f0000826fb4034",
@@ -540,7 +546,7 @@
   },
   "LEVEL": {
     "chain": "base",
-    "address": "0xd83b70fb86936c89ff77173a076a6cedf4863575",
+    "address": "0xe7aa6cd7dd6c249456d09fad0c38c5cc39431a1b",
     "symbol": "LEVEL",
     "decimals": 18
   },
@@ -659,12 +665,7 @@
     "decimals": 18
   },
   "PEG": { "chain": "base", "address": "0xc3ad7d4326a285faf40521c10f2f91a40ee4600c", "symbol": "PEG", "decimals": 18 },
-  "PEPE": {
-    "chain": "base",
-    "address": "0xf26009c9d912f57f96f81ee4356940b53c01872b",
-    "symbol": "PEPE",
-    "decimals": 18
-  },
+  "PEPE": { "chain": "base", "address": "0x1e346537e4e7dbd039732f9130c7a1e15cc61962", "symbol": "PEPE", "decimals": 8 },
   "PERX": {
     "chain": "base",
     "address": "0x7423ed69228363ebecadc9f53c37004ef78106f7",
@@ -695,6 +696,12 @@
     "symbol": "Punk",
     "decimals": 18
   },
+  "QBAI": {
+    "chain": "base",
+    "address": "0x874952e3906634dfbf82e80ded87c1621035a87d",
+    "symbol": "QBAI",
+    "decimals": 18
+  },
   "RCKT": {
     "chain": "base",
     "address": "0x6653dd4b92a0e5bf8ae570a98906d9d6fd2eec09",
@@ -712,6 +719,12 @@
     "chain": "base",
     "address": "0x955d4320edc79a73a717c105b26bc54014b4a1c2",
     "symbol": "Racer",
+    "decimals": 18
+  },
+  "SABLE": {
+    "chain": "base",
+    "address": "0xe5393cdbc4fe7b62f1d76a990ca7da17ad718313",
+    "symbol": "SABLE",
     "decimals": 18
   },
   "SATO": {
@@ -779,7 +792,7 @@
   },
   "SQUARE": {
     "chain": "base",
-    "address": "0x2a2c03df7947b3b3dd3a7c4132c13dfa8a2db281",
+    "address": "0x0d9c528bc3684efd822c828ca5da1d4e921e9c20",
     "symbol": "SQUARE",
     "decimals": 18
   },
@@ -865,6 +878,7 @@
     "decimals": 18
   },
   "UP": { "chain": "base", "address": "0x35c7aabb90dea1bf2340213be99373977f689c66", "symbol": "UP", "decimals": 18 },
+  "USD+": { "chain": "base", "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376", "symbol": "USD+", "decimals": 6 },
   "USDC": { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 },
   "USDC/USDbC/axlUSDC": {
     "chain": "base",

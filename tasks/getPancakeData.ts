@@ -1,8 +1,10 @@
 // get static data of Uniswap protocol: uniswapv2, uniswapv3
 import fs from 'fs';
 
+import PancakeStableSwapAbi from '../configs/abi/pancake/PancakeStableSwap.json';
 import SushiMasterchefAbi from '../configs/abi/sushi/Masterchef.json';
 import { PublicSubGraphEndpoints } from '../configs/constants/subgraphEndpoints';
+import { normalizeAddress } from '../lib/utils';
 import SushiLibs from '../modules/adapters/sushi/libs';
 import UniswapLibs from '../modules/adapters/uniswap/libs';
 import BlockchainService from '../services/blockchains/blockchain';
@@ -69,6 +71,19 @@ const Masterchefs: Array<any> = [
     version: 'masterchefV2',
     address: '0xa5f8c5dbd5f286960b9d90548680ae5ebff07652',
   },
+];
+
+const StableswapFactory = '0x25a55f9f2279a54951133d503490342b50e5cd15';
+const StableswapPools: Array<string> = [
+  'bnbchain:0x49079d07ef47449af808a4f36c2a8dec975594ec',
+  'bnbchain:0x3efebc418efb585248a0d2140cfb87afcc2c63dd',
+  'bnbchain:0xc2f5b9a3d9138ab2b74d581fc11346219ebf43fe',
+  'bnbchain:0x169f653a54acd441ab34b73da9946e2c451787ef',
+  'bnbchain:0x6d8fba276ec6f1eda2344da48565adbca7e4ffa5',
+  'bnbchain:0x0b03e3d6ec0c5e5bbf993ded8d947c6fb6eec18d',
+  'bnbchain:0x9c138be1d76ee4c5162e0fe9d4eea5542a23d1bd',
+  'bnbchain:0xb1da7d2c257c5700612bde35c8d7187dc80d79f1',
+  'bnbchain:0xfc17919098e9f0a0d72093e25ad052a359ae3e43',
 ];
 
 async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<void> {
@@ -182,4 +197,49 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
       updateToken(token);
     }
   }
+
+  const stableswapPools: Array<LiquidityPoolConstant> = [];
+  const blockchain = new BlockchainService(null);
+  for (const config of StableswapPools) {
+    const [chain, address] = config.split(':');
+    const pool: LiquidityPoolConstant = {
+      chain: chain,
+      protocol: 'pancakeswap',
+      version: 'stableswap',
+      address: normalizeAddress(address),
+      factory: normalizeAddress(StableswapFactory),
+      tokens: [],
+    };
+
+    let i = 0;
+    while (true) {
+      try {
+        const tokenAddress = await blockchain.singlecall({
+          chain,
+          target: address,
+          abi: PancakeStableSwapAbi,
+          method: 'coins',
+          params: [i],
+        });
+        const token = await blockchain.getTokenInfo({
+          chain,
+          address: tokenAddress,
+        });
+        if (token) {
+          updateToken(token);
+          pool.tokens.push(token);
+        } else {
+          console.log(`failed to get token info ${chain} ${tokenAddress}`);
+          process.exit(1);
+        }
+        i += 1;
+      } catch (e: any) {
+        break;
+      }
+    }
+
+    stableswapPools.push(pool);
+  }
+
+  fs.writeFileSync('./configs/data/PancakeStableSwapPools.json', JSON.stringify(stableswapPools));
 })();
