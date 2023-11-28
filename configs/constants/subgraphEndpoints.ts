@@ -57,4 +57,6 @@ export const BlockSubGraphEndpoints: { [key: string]: string } = {
   optimism: 'https://api.thegraph.com/subgraphs/name/ianlapham/uni-testing-subgraph',
   polygon: 'https://api.thegraph.com/subgraphs/name/matthewlilley/polygon-blocks',
   bnbchain: 'https://api.thegraph.com/subgraphs/name/matthewlilley/bsc-blocks',
+  avalanche: 'https://api.thegraph.com/subgraphs/name/matthewlilley/avalanche-blocks',
+  fantom: 'https://api.thegraph.com/subgraphs/name/matthewlilley/fantom-blocks',
 };

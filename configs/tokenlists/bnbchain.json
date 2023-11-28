@@ -667,6 +667,12 @@
     "symbol": "BNB",
     "decimals": 18
   },
+  "BNBx": {
+    "chain": "bnbchain",
+    "address": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+    "symbol": "BNBx",
+    "decimals": 18
+  },
   "BNFY": {
     "chain": "bnbchain",
     "symbol": "BNFY",
@@ -825,6 +831,12 @@
     "decimals": 18,
     "address": "0x5ac52ee5b2a633895292ff6d8a89bb9190451587"
   },
+  "BSW": {
+    "chain": "bnbchain",
+    "address": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+    "symbol": "BSW",
+    "decimals": 18
+  },
   "BTA": {
     "chain": "bnbchain",
     "symbol": "BTA",
@@ -891,6 +903,12 @@
     "symbol": "BTS",
     "decimals": 18,
     "address": "0xc2e1acef50ae55661855e8dcb72adb182a3cc259"
+  },
+  "BTT": {
+    "chain": "bnbchain",
+    "address": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
+    "symbol": "BTT",
+    "decimals": 18
   },
   "BTTOLD": {
     "chain": "bnbchain",
@@ -3530,6 +3548,12 @@
     "symbol": "PINKSALE",
     "decimals": 18
   },
+  "PLANET": {
+    "chain": "bnbchain",
+    "address": "0xca6d678e74f553f0e59cccc03ae644a3c2c5ee7d",
+    "symbol": "PLANET",
+    "decimals": 18
+  },
   "PLAY": {
     "chain": "bnbchain",
     "address": "0xd069599e718f963bd84502b49ba8f8657faf5b3a",
@@ -4579,7 +4603,7 @@
   },
   "TUSD": {
     "chain": "bnbchain",
-    "address": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+    "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
     "symbol": "TUSD",
     "decimals": 18
   },
@@ -4684,9 +4708,9 @@
   },
   "USDC": {
     "chain": "bnbchain",
-    "address": "0xb04906e95ab5d797ada81508115611fee694c2b3",
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
     "symbol": "USDC",
-    "decimals": 6
+    "decimals": 18
   },
   "USDD": {
     "chain": "bnbchain",
@@ -4726,9 +4750,9 @@
   },
   "UST": {
     "chain": "bnbchain",
-    "address": "0x23396cf899ca06c4472205fc903bdb4de249d6fc",
+    "address": "0x3d4350cd54aef9f9b2c29435e0fa809957b3f30a",
     "symbol": "UST",
-    "decimals": 18
+    "decimals": 6
   },
   "USX": {
     "chain": "bnbchain",
@@ -5244,6 +5268,12 @@
     "symbol": "agEUR",
     "decimals": 18
   },
+  "ankrBNB": {
+    "chain": "bnbchain",
+    "address": "0x52f24a5e03aee338da5fd9df68d2b6fae1178827",
+    "symbol": "ankrBNB",
+    "decimals": 18
+  },
   "anyBTC": {
     "chain": "bnbchain",
     "symbol": "anyBTC",
@@ -5538,11 +5568,23 @@
     "decimals": 18,
     "address": "0xc1e3bdf0e580de25d6a8c2a419da8c859589ed9d"
   },
+  "stkBNB": {
+    "chain": "bnbchain",
+    "address": "0xc2e9d07f66a89c44062459a47a0d2dc038e4fb16",
+    "symbol": "stkBNB",
+    "decimals": 18
+  },
   "tBART": {
     "chain": "bnbchain",
     "symbol": "tBART",
     "decimals": 18,
     "address": "0x1bdf1ec9d5e2f6e0e6e95419bca0f65c8e6c26b3"
+  },
+  "wBETH": {
+    "chain": "bnbchain",
+    "address": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+    "symbol": "wBETH",
+    "decimals": 18
   },
   "wBTC": {
     "chain": "bnbchain",

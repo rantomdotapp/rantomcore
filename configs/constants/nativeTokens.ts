@@ -29,4 +29,12 @@ export const NativeTokens: { [key: string]: NativeToken } = {
     symbol: 'BNB',
     decimals: 18,
   },
+  avalanche: {
+    symbol: 'AVAX',
+    decimals: 18,
+  },
+  fantom: {
+    symbol: 'FTM',
+    decimals: 18,
+  },
 };

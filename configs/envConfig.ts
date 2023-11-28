@@ -76,6 +76,22 @@ const envConfig: EnvConfig = {
       nodeRpc: String(process.env.RANTOM_BNBCHAIN_NODE),
       blockSubgraph: BlockSubGraphEndpoints.bnbchain,
     },
+    avalanche: {
+      name: 'avalanche',
+      family: 'evm',
+      chainId: 43114,
+      nativeToken: NativeTokens.avalanche,
+      nodeRpc: String(process.env.RANTOM_AVALANCHE_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.avalanche,
+    },
+    fantom: {
+      name: 'fantom',
+      family: 'evm',
+      chainId: 250,
+      nativeToken: NativeTokens.fantom,
+      nodeRpc: String(process.env.RANTOM_FANTOM_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.fantom,
+    },
   },
 };
 

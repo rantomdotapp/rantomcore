@@ -28,10 +28,6 @@ export default class BlockchainService extends CachingService implements IBlockc
 
   constructor(database: IDatabaseService | null) {
     super(database);
-
-    for (const [chain, config] of Object.entries(EnvConfig.blockchains)) {
-      this.providers[chain] = new Web3(config.nodeRpc);
-    }
   }
 
   public getProvider(chain: string): Web3 {
@@ -45,7 +41,7 @@ export default class BlockchainService extends CachingService implements IBlockc
 
   public async getBlock(chain: string, blockNumber: number): Promise<any> {
     try {
-      return await this.providers[chain].eth.getBlock(blockNumber);
+      return await this.getProvider(chain).eth.getBlock(blockNumber);
     } catch (e: any) {
       logger.warn('failed to get block from blockchain', {
         service: this.name,
@@ -66,7 +62,7 @@ export default class BlockchainService extends CachingService implements IBlockc
     }
 
     try {
-      const block = await this.providers[chain].eth.getBlock(blockNumber);
+      const block = await this.getProvider(chain).eth.getBlock(blockNumber);
       const timestamp = Number(block.timestamp);
       await this.setCachingData(cachingKey, { timestamp });
       return timestamp;
@@ -311,7 +307,7 @@ export default class BlockchainService extends CachingService implements IBlockc
     }
 
     try {
-      const tx = await this.providers[options.chain].eth.getTransaction(options.hash);
+      const tx = await this.getProvider(options.chain).eth.getTransaction(options.hash);
       await this.setCachingData(transactionKey, {
         transaction: tx,
       });
@@ -323,7 +319,7 @@ export default class BlockchainService extends CachingService implements IBlockc
 
   public async getTransactionReceipt(options: GetTransactionOptions): Promise<any | null> {
     try {
-      return await this.providers[options.chain].eth.getTransactionReceipt(options.hash);
+      return await this.getProvider(options.chain).eth.getTransactionReceipt(options.hash);
     } catch (e: any) {
       return null;
     }
@@ -332,7 +328,8 @@ export default class BlockchainService extends CachingService implements IBlockc
   public async singlecall(call: ContractCall): Promise<any> {
     const startExeTime = Math.floor(new Date().getTime() / 1000);
 
-    const contract = new this.providers[call.chain].eth.Contract(call.abi, call.target);
+    const web3 = this.getProvider(call.chain);
+    const contract = new web3.eth.Contract(call.abi, call.target);
 
     let result;
     if (call.blockNumber) {

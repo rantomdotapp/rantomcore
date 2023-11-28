@@ -58,6 +58,7 @@ import SwellAdapter from './swell/swell';
 import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
+import VenusAdapter from './venus/venus';
 import YearnAdapter from './yearn/yearn';
 import YearnyethAdapter from './yearn/yearnyeth';
 import ZeroxAdapter from './zerox/zerox';
@@ -140,5 +141,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     oneinch: new OneinchAdapter(services, ProtocolConfigs.oneinch),
     metamask: new MetamaskAdapter(services, ProtocolConfigs.metamask),
     gearbox: new GearboxAdapter(services, ProtocolConfigs.gearbox),
+    venus: new VenusAdapter(services, ProtocolConfigs.venus),
   };
 }

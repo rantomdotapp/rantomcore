@@ -62,8 +62,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
     while (startBlock <= latestBlock) {
       const startExeTime = Math.floor(new Date().getTime() / 1000);
 
-      const toBlock =
-        startBlock + blockRange > latestBlock ? latestBlock : startBlock + blockRange;
+      const toBlock = startBlock + blockRange > latestBlock ? latestBlock : startBlock + blockRange;
       const logs: Array<any> = await web3.eth.getPastLogs({
         fromBlock: startBlock,
         toBlock,

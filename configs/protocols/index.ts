@@ -62,6 +62,7 @@ import { SushiConfigs, Sushiv3Configs } from './sushi';
 import { SwellConfigs } from './swell';
 import { TraderjoeConfigs, Traderjoev2Configs } from './traderjoe';
 import { Uniswapv2Configs, Uniswapv3Configs } from './uniswap';
+import { VenusConfigs } from './venus';
 import { YearnConfigs, YearnyethConfig } from './yearn';
 import { ZeroxConfigs } from './zerox';
 
@@ -143,4 +144,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   oneinch: OneinchConfigs,
   metamask: MetamaskConfigs,
   gearbox: GearboxConfigs,
+  venus: VenusConfigs,
 };
