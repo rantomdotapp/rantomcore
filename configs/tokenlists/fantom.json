@@ -87,7 +87,7 @@
   },
   "FRAX": {
     "chain": "fantom",
-    "address": "0xaf319e5789945197e365e7f7fbfc56b130523b33",
+    "address": "0xdc301622e621166bd8e82f2ca0a26c13ad0be355",
     "symbol": "FRAX",
     "decimals": 18
   },
@@ -769,5 +769,52 @@
     "symbol": "SCREAM",
     "decimals": 18
   },
-  "BNB": { "chain": "fantom", "address": "0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454", "symbol": "BNB", "decimals": 18 }
+  "BNB": {
+    "chain": "fantom",
+    "address": "0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454",
+    "symbol": "BNB",
+    "decimals": 18
+  },
+  "g3CRV": {
+    "chain": "fantom",
+    "address": "0xd02a30d33153877bc20e5721ee53dedee0422b2f",
+    "symbol": "g3CRV",
+    "decimals": 18
+  },
+  "crv3crypto": {
+    "chain": "fantom",
+    "address": "0x58e57ca18b7a47112b877e31929798cd3d703b0f",
+    "symbol": "crv3crypto",
+    "decimals": 18
+  },
+  "DOLA": {
+    "chain": "fantom",
+    "address": "0x3129662808bec728a27ab6a6b9afd3cbaca8a43c",
+    "symbol": "DOLA",
+    "decimals": 18
+  },
+  "AVAX": {
+    "chain": "fantom",
+    "address": "0x511d35c52a3c244e7b8bd92c0c297755fbd89212",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "BOO": {
+    "chain": "fantom",
+    "address": "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",
+    "symbol": "BOO",
+    "decimals": 18
+  },
+  "fBEETS": {
+    "chain": "fantom",
+    "address": "0xfcef8a994209d6916eb2c86cdd2afd60aa6f54b1",
+    "symbol": "fBEETS",
+    "decimals": 18
+  },
+  "3poolV2-f": {
+    "chain": "fantom",
+    "address": "0x2dd7c9371965472e5a5fd28fbe165007c61439e1",
+    "symbol": "3poolV2-f",
+    "decimals": 18
+  }
 }

@@ -15,6 +15,7 @@ const YearnExporterEndpoints = [
   'arbitrum:::https://api.yexporter.io/v1/chains/42161/vaults/all',
   'optimism:::https://api.yexporter.io/v1/chains/10/vaults/all',
   'base:::https://api.yexporter.io/v1/chains/8453/vaults/all',
+  'fantom:::https://api.yexporter.io/v1/chains/250/vaults/all',
 ];
 
 const YearnyethLiquidityPool = '0x2cced4ffa804adbe1269cdfc22d7904471abde63';
