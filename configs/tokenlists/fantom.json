@@ -1,7 +1,7 @@
 {
   "USDC": {
     "chain": "fantom",
-    "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+    "address": "0x28a92dde19d9989f39a49905d7c9c2fac7799bdf",
     "symbol": "USDC",
     "decimals": 6
   },

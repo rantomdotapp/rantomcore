@@ -47,6 +47,14 @@ const StargatePools = [
   'optimism:0x2F8bC9081c7FCFeC25b9f41a50d97EaA592058ae',
   'optimism:0x3533F5e279bDBf550272a199a223dA798D9eff78',
   'optimism:0x5421FA1A48f9FF81e4580557E86C7C0D24C18036',
+
+  'avalanche:0x1205f31718499dBf1fCa446663B532Ef87481fe1',
+  'avalanche:0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c',
+  'avalanche:0x1c272232Df0bb6225dA87f4dEcD9d37c32f63Eea',
+  'avalanche:0x8736f92646B2542B3e5F3c63590cA7Fe313e283B',
+  'avalanche:0xEAe5c2F6B25933deB62f754f239111413A0A25ef',
+
+  'fantom:0xc647ce76ec30033aa319d472ae9f4462068f2ad7',
 ];
 
 const StargatePoolFilePath = './configs/data/StargateLiquidityPools.json';
@@ -63,7 +71,7 @@ const StargatePoolFilePath = './configs/data/StargateLiquidityPools.json';
 
     if (pools.filter((item) => item.chain === chain && item.address === address).length === 0) {
       const liquidityPool = await StargateLibs.getLiquidityPoolInfo({
-        protocol: 'protocol',
+        protocol: 'stargate',
         services: null,
         chain: chain,
         address: address,
