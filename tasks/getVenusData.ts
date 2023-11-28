@@ -74,7 +74,7 @@ const IronbankMarkets: Array<string> = [
 (async function () {
   const blockchain = new BlockchainService(null);
 
-  const protocol = 'ironbank';
+  const protocol = 'venus';
   const allMarkets: Array<CompoundMarket> = [
     {
       protocol: 'venus',

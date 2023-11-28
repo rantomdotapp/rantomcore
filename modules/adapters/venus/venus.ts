@@ -7,6 +7,7 @@ import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { ContextServices } from '../../../types/namespaces';
 import { ParseEventLogOptions } from '../../../types/options';
+import { CompoundAbiMappings } from '../compound/abis';
 import CompoundAdapter from '../compound/compound';
 import { VenusAbiMappings, VenusEventSignatures } from './abis';
 
@@ -35,14 +36,17 @@ export default class VenusAdapter extends CompoundAdapter {
   }
 
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
-    const supperActions = await super.parseEventLog(options);
-    if (supperActions.length > 0) {
-      return supperActions;
+    const signature = options.log.topics[0];
+
+    if (CompoundAbiMappings[signature]) {
+      const supperActions = await super.parseEventLog(options);
+      if (supperActions.length > 0) {
+        return supperActions;
+      }
     }
 
     const actions: Array<TransactionAction> = [];
-    if (this.supportedContract(options.chain, options.log.address)) {
-      const signature = options.log.topics[0];
+    if (this.supportedContract(options.chain, options.log.address) && options.log.topics.length === 1) {
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event = web3.eth.abi.decodeLog(
         this.eventMappings[signature].abi,

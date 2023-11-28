@@ -4823,9 +4823,9 @@
   },
   "UST": {
     "chain": "bnbchain",
-    "address": "0x23396cf899ca06c4472205fc903bdb4de249d6fc",
+    "address": "0x3d4350cd54aef9f9b2c29435e0fa809957b3f30a",
     "symbol": "UST",
-    "decimals": 18
+    "decimals": 6
   },
   "USX": {
     "chain": "bnbchain",
