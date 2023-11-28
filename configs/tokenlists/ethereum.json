@@ -7425,9 +7425,9 @@
   },
   "DAI": {
     "chain": "ethereum",
+    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
     "symbol": "DAI",
-    "decimals": 18,
-    "address": "0x6b175474e89094c44da98b954eedeac495271d0f"
+    "decimals": 18
   },
   "DAI-WETH SLP": {
     "chain": "ethereum",
@@ -28868,9 +28868,9 @@
   },
   "USDC": {
     "chain": "ethereum",
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     "symbol": "USDC",
-    "decimals": 6,
-    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    "decimals": 6
   },
   "USDC+LP-f": {
     "chain": "ethereum",
@@ -29024,9 +29024,9 @@
   },
   "USDT": {
     "chain": "ethereum",
+    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
     "symbol": "USDT",
-    "decimals": 6,
-    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+    "decimals": 6
   },
   "USDT-DVF SLP": {
     "chain": "ethereum",
@@ -29939,9 +29939,9 @@
   },
   "WBTC": {
     "chain": "ethereum",
+    "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "symbol": "WBTC",
-    "decimals": 8,
-    "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+    "decimals": 8
   },
   "WBTC-BADGER SLP": {
     "chain": "ethereum",
@@ -30116,9 +30116,9 @@
   },
   "WETH": {
     "chain": "ethereum",
+    "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     "symbol": "WETH",
-    "decimals": 18,
-    "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    "decimals": 18
   },
   "WETH-$DG SLP": {
     "chain": "ethereum",
@@ -31090,7 +31090,7 @@
     "symbol": "WooF",
     "decimals": 9
   },
-  "X": { "chain": "ethereum", "address": "0x7f3141c4d6b047fb930991b450f1ed996a51cb26", "symbol": "X", "decimals": 18 },
+  "X": { "chain": "ethereum", "address": "0xa62894d5196bc44e4c3978400ad07e7b30352372", "symbol": "X", "decimals": 9 },
   "X-WETH SLP": {
     "chain": "ethereum",
     "address": "0xc2ce29af8930fc32ca24ccb76c2866fb2bf692fe",

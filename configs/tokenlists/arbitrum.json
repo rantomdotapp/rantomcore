@@ -154,7 +154,7 @@
   },
   "AICODE": {
     "chain": "arbitrum",
-    "address": "0x405e2910a0c8cafff741d558a57e6385c413f66f",
+    "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
     "symbol": "AICODE",
     "decimals": 18
   },
@@ -305,9 +305,9 @@
   },
   "ARB": {
     "chain": "arbitrum",
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
     "symbol": "ARB",
-    "decimals": 18,
-    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    "decimals": 18
   },
   "ARBDAO": {
     "chain": "arbitrum",
@@ -561,9 +561,9 @@
   },
   "BTC": {
     "chain": "arbitrum",
-    "address": "0x9298fe91bffe1e0881ed64602e66789f73ac97c2",
     "symbol": "BTC",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x47904963fc8b2340414262125af798b9655e58cd"
   },
   "BTC.b": {
     "chain": "arbitrum",
@@ -1264,9 +1264,9 @@
   },
   "GMX": {
     "chain": "arbitrum",
+    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
     "symbol": "GMX",
-    "decimals": 18,
-    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a"
+    "decimals": 18
   },
   "GNO": {
     "chain": "arbitrum",
@@ -1294,15 +1294,15 @@
   },
   "GRAI": {
     "chain": "arbitrum",
+    "address": "0x894134a25a5fac1c2c26f1d8fbf05111a3cb9487",
     "symbol": "GRAI",
-    "decimals": 18,
-    "address": "0x894134a25a5fac1c2c26f1d8fbf05111a3cb9487"
+    "decimals": 18
   },
   "GRAIL": {
     "chain": "arbitrum",
+    "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
     "symbol": "GRAIL",
-    "decimals": 18,
-    "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8"
+    "decimals": 18
   },
   "GRT": {
     "chain": "arbitrum",
@@ -1646,9 +1646,9 @@
   },
   "LTC": {
     "chain": "arbitrum",
-    "address": "0xcb65a0e6a5ea78094901fa413ab1804afbed56b7",
     "symbol": "LTC",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764"
   },
   "LTD": {
     "chain": "arbitrum",
@@ -1950,6 +1950,12 @@
     "address": "0xc77a48f8b6589ac3dcd89a140f59a3c9047ee337",
     "symbol": "NOONE",
     "decimals": 18
+  },
+  "NOTE": {
+    "chain": "arbitrum",
+    "address": "0x019be259bc299f3f653688c7655c87f998bc7bc1",
+    "symbol": "NOTE",
+    "decimals": 8
   },
   "NOVE": {
     "chain": "arbitrum",
@@ -2310,9 +2316,9 @@
   },
   "RDNT": {
     "chain": "arbitrum",
+    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
     "symbol": "RDNT",
-    "decimals": 18,
-    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0"
+    "decimals": 18
   },
   "RDNT-WETH": {
     "chain": "arbitrum",
@@ -2843,9 +2849,9 @@
   },
   "USDC": {
     "chain": "arbitrum",
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
     "symbol": "USDC",
-    "decimals": 6,
-    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    "decimals": 6
   },
   "USDC.e": {
     "chain": "arbitrum",
@@ -2861,9 +2867,9 @@
   },
   "USDT": {
     "chain": "arbitrum",
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
     "symbol": "USDT",
-    "decimals": 6,
-    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+    "decimals": 6
   },
   "USDT-USDC.e SSLP": {
     "chain": "arbitrum",
@@ -2964,9 +2970,9 @@
   },
   "WBTC": {
     "chain": "arbitrum",
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
     "symbol": "WBTC",
-    "decimals": 8,
-    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+    "decimals": 8
   },
   "WBTC-WETH SLP": {
     "chain": "arbitrum",
@@ -2982,9 +2988,9 @@
   },
   "WETH": {
     "chain": "arbitrum",
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     "symbol": "WETH",
-    "decimals": 18,
-    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    "decimals": 18
   },
   "WETH-ARB SCPLP": {
     "chain": "arbitrum",
@@ -3637,9 +3643,9 @@
   },
   "swETH": {
     "chain": "arbitrum",
+    "address": "0xbc011a12da28e8f0f528d9ee5e7039e22f91cf18",
     "symbol": "swETH",
-    "decimals": 18,
-    "address": "0xbc011a12da28e8f0f528d9ee5e7039e22f91cf18"
+    "decimals": 18
   },
   "tBTC": {
     "chain": "arbitrum",

@@ -97,14 +97,16 @@ export default class BlockchainService extends CachingService implements IBlockc
       }
 
       // get from mocking
-      for (const [symbol, mockAddress] of Object.entries(MockingTokens)) {
-        if (compareAddress(mockAddress, address)) {
-          return {
-            chain,
-            symbol,
-            decimals: 18,
-            address: normalizeAddress(address),
-          };
+      for (const [symbol, mockAddresses] of Object.entries(MockingTokens)) {
+        for (const mockAddress of mockAddresses) {
+          if (compareAddress(mockAddress, address)) {
+            return {
+              chain,
+              symbol,
+              decimals: 18,
+              address: normalizeAddress(address),
+            };
+          }
         }
       }
 

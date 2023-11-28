@@ -1,21 +1,21 @@
 {
   "USDC.e": {
     "chain": "avalanche",
+    "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
     "symbol": "USDC.e",
-    "decimals": 6,
-    "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664"
+    "decimals": 6
   },
   "WAVAX": {
     "chain": "avalanche",
+    "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
     "symbol": "WAVAX",
-    "decimals": 18,
-    "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    "decimals": 18
   },
   "USDT.e": {
     "chain": "avalanche",
+    "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
     "symbol": "USDT.e",
-    "decimals": 6,
-    "address": "0xc7198437980c041c805a1edcba50c1ce5db95118"
+    "decimals": 6
   },
   "MIM": {
     "chain": "avalanche",
@@ -25,9 +25,9 @@
   },
   "USDC": {
     "chain": "avalanche",
+    "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
     "symbol": "USDC",
-    "decimals": 6,
-    "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    "decimals": 6
   },
   "JOE": {
     "chain": "avalanche",
@@ -373,9 +373,9 @@
   },
   "SOL": {
     "chain": "avalanche",
+    "address": "0xfe6b19286885a4f7f55adad09c3cd1f906d2478f",
     "symbol": "SOL",
-    "decimals": 9,
-    "address": "0xfe6b19286885a4f7f55adad09c3cd1f906d2478f"
+    "decimals": 9
   },
   "FERT": {
     "chain": "avalanche",
@@ -571,9 +571,9 @@
   },
   "zJoe": {
     "chain": "avalanche",
+    "address": "0x769bfeb9faacd6eb2746979a8dd0b7e9920ac2a4",
     "symbol": "zJoe",
-    "decimals": 18,
-    "address": "0x769bfeb9faacd6eb2746979a8dd0b7e9920ac2a4"
+    "decimals": 18
   },
   "BUSD": {
     "chain": "avalanche",
@@ -625,9 +625,9 @@
   },
   "axlUSDC": {
     "chain": "avalanche",
+    "address": "0xfab550568c688d5d8a52c7d794cb93edc26ec0ec",
     "symbol": "axlUSDC",
-    "decimals": 6,
-    "address": "0xfab550568c688d5d8a52c7d794cb93edc26ec0ec"
+    "decimals": 6
   },
   "BOBC": {
     "chain": "avalanche",
@@ -1090,5 +1090,107 @@
     "address": "0xf400b5b2b3ad1e5ad17147f15f79a7fbfc326faf",
     "symbol": "BLASTRR",
     "decimals": 5
+  },
+  "ELK": {
+    "chain": "avalanche",
+    "address": "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee",
+    "symbol": "ELK",
+    "decimals": 18
+  },
+  "VCHF": {
+    "chain": "avalanche",
+    "address": "0x228a48df6819ccc2eca01e2192ebafffdad56c19",
+    "symbol": "VCHF",
+    "decimals": 18
+  },
+  "VEUR": {
+    "chain": "avalanche",
+    "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+    "symbol": "VEUR",
+    "decimals": 18
+  },
+  "MAI": {
+    "chain": "avalanche",
+    "address": "0x5c49b268c9841aff1cc3b0a418ff5c3442ee3f3b",
+    "symbol": "MAI",
+    "decimals": 18
+  },
+  "axlWMAI": {
+    "chain": "avalanche",
+    "address": "0xd889657e1570c5bedd3fa846ab7865a86aaa338a",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "KI": {
+    "chain": "avalanche",
+    "address": "0x3200ba97239ea7042f94919c28d2cdeadceb52dc",
+    "symbol": "KI",
+    "decimals": 18
+  },
+  "ankrAVAX": {
+    "chain": "avalanche",
+    "address": "0xc3344870d52688874b06d844e0c36cc39fc727f6",
+    "symbol": "ankrAVAX",
+    "decimals": 18
+  },
+  "Sifu": {
+    "chain": "avalanche",
+    "address": "0xb168085d608d7ba4931a503d3424bc44ddb6b30d",
+    "symbol": "Sifu",
+    "decimals": 18
+  },
+  "KNC": {
+    "chain": "avalanche",
+    "address": "0x39fc9e94caeacb435842fadedecb783589f50f5f",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "TMV-DEGEN": {
+    "chain": "avalanche",
+    "address": "0xa82209bdb6a0e459b115b927f94d12d42e1b942d",
+    "symbol": "TMV-DEGEN",
+    "decimals": 18
+  },
+  "TMV-BT": {
+    "chain": "avalanche",
+    "address": "0xe7dda817b449a05bcb55daef2b2e8c095ad80993",
+    "symbol": "TMV-BT",
+    "decimals": 18
+  },
+  "COOP": {
+    "chain": "avalanche",
+    "address": "0x12c79e5c2be0a2766ae71af775063d6b039d03f1",
+    "symbol": "COOP",
+    "decimals": 6
+  },
+  "WOOD": {
+    "chain": "avalanche",
+    "address": "0xa886c732703700efcbd8438768822c8e716cb0ec",
+    "symbol": "WOOD",
+    "decimals": 18
+  },
+  "AVAX": {
+    "chain": "avalanche",
+    "address": "0x0000000000000000000000000000000000000000",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "DOGE": {
+    "chain": "avalanche",
+    "symbol": "DOGE",
+    "decimals": 18,
+    "address": "0xc301e6fe31062c557aee806cc6a841ae989a3ac6"
+  },
+  "LTC": {
+    "chain": "avalanche",
+    "symbol": "LTC",
+    "decimals": 18,
+    "address": "0x8e9c35235c38c44b5a53b56a41eaf6db9a430cd6"
+  },
+  "XRP": {
+    "chain": "avalanche",
+    "symbol": "XRP",
+    "decimals": 18,
+    "address": "0x34b2885d617ce2dded4f60ccb49809fc17bb58af"
   }
 }

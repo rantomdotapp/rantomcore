@@ -850,7 +850,7 @@
   },
   "BTC": {
     "chain": "bnbchain",
-    "address": "0x2eb7203a70868614baf1c9d5e7455d050f7fffc6",
+    "address": "0xfc2a0c088c519553595d2b8510e5e3a976f773c3",
     "symbol": "BTC",
     "decimals": 18
   },
@@ -862,9 +862,9 @@
   },
   "BTCB": {
     "chain": "bnbchain",
+    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
     "symbol": "BTCB",
-    "decimals": 18,
-    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
+    "decimals": 18
   },
   "BTCBR": {
     "chain": "bnbchain",
@@ -947,9 +947,9 @@
   },
   "BUSD": {
     "chain": "bnbchain",
+    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
     "symbol": "BUSD",
-    "decimals": 18,
-    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+    "decimals": 18
   },
   "BVSD": {
     "chain": "bnbchain",
@@ -1553,9 +1553,9 @@
   },
   "DOT": {
     "chain": "bnbchain",
+    "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
     "symbol": "DOT",
-    "decimals": 18,
-    "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402"
+    "decimals": 18
   },
   "DPET": {
     "chain": "bnbchain",
@@ -1802,9 +1802,9 @@
   },
   "ETH": {
     "chain": "bnbchain",
+    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
     "symbol": "ETH",
-    "decimals": 18,
-    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+    "decimals": 18
   },
   "ETHM": {
     "chain": "bnbchain",
@@ -4781,9 +4781,9 @@
   },
   "USDC": {
     "chain": "bnbchain",
+    "address": "0xb04906e95ab5d797ada81508115611fee694c2b3",
     "symbol": "USDC",
-    "decimals": 18,
-    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+    "decimals": 6
   },
   "USDD": {
     "chain": "bnbchain",
@@ -4799,9 +4799,9 @@
   },
   "USDT": {
     "chain": "bnbchain",
+    "address": "0x55d398326f99059ff775485246999027b3197955",
     "symbol": "USDT",
-    "decimals": 18,
-    "address": "0x55d398326f99059ff775485246999027b3197955"
+    "decimals": 18
   },
   "USDT+": {
     "chain": "bnbchain",
@@ -4975,9 +4975,9 @@
   },
   "WBNB": {
     "chain": "bnbchain",
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
     "symbol": "WBNB",
-    "decimals": 18,
-    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+    "decimals": 18
   },
   "WDYMEME": {
     "chain": "bnbchain",
@@ -5385,7 +5385,7 @@
   },
   "axlUSDC": {
     "chain": "bnbchain",
-    "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3",
+    "address": "0x686a2ca329bb92ba3e36ec94fd5c208a2938ec07",
     "symbol": "axlUSDC",
     "decimals": 6
   },

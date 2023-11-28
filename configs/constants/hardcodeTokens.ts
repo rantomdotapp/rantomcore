@@ -6,15 +6,12 @@ import EulerTokens from '../data/EulerEAndDTokens.json';
 // these mocking tokens will be used for them
 // for example, synthetix protocol allow trading ADA token
 // but the ADA token doesn't have an address on Optimism
-export const MockingTokens: { [key: string]: string } = {
-  BTC: '0x47904963fc8b2340414262125af798b9655e58cd', // from Gmx v2
-  DOGE: '0xc4da4c24fd591125c3f47b340b6f4f76111883d8', // from Gmx v2
-  LTC: '0xb46a094bc4b0adbd801e14b9db95e05e28962764', // from Gmx v2
-  XRP: '0xc14e065b0067de91534e032868f5ac6ecf2c6868', // from Gmx v2
-  ADA: '0xab1ae161655b7b15f692425a0ffd07395afa67d5', // random
-  ALGO: '0x6a26b547ab55064f9b4be6df20e06f5005255815', // random
-  DOT: '0x21c95e4d9eae57f692a3dd74d79d16ff07e27957', // random
-  EOS: '0x6a4fc4b66aef8c7c503d82fd7f984e2429147e04', // random
+export const MockingTokens: { [key: string]: Array<string> } = {
+  // from Gmx v2
+  BTC: ['0x47904963fc8b2340414262125af798b9655e58cd'],
+  DOGE: ['0xc4da4c24fd591125c3f47b340b6f4f76111883d8', '0xc301e6fe31062c557aee806cc6a841ae989a3ac6'],
+  LTC: ['0xb46a094bc4b0adbd801e14b9db95e05e28962764', '0x8e9c35235c38c44b5a53b56a41eaf6db9a430cd6'],
+  XRP: ['0xc14e065b0067de91534e032868f5ac6ecf2c6868', '0x34b2885d617ce2dded4f60ccb49809fc17bb58af'],
 };
 
 export const HardcodeTokens: { [key: string]: Token } = {

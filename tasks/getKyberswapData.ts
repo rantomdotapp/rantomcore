@@ -37,6 +37,16 @@ const Factories: Array<any> = [
     address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
     subgraph: PublicSubGraphEndpoints.kyberswapElasticBnbchain,
   },
+  {
+    chain: 'avalanche',
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+    subgraph: PublicSubGraphEndpoints.kyberswapElasticAvalanche,
+  },
+  {
+    chain: 'fantom',
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+    subgraph: PublicSubGraphEndpoints.kyberswapElasticFantom,
+  },
 ];
 
 (async function () {
