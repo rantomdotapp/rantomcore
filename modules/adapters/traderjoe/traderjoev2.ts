@@ -46,12 +46,11 @@ export default class Traderjoev2Adapter extends Adapter {
           const amount0In = new BigNumber(event.amountsIn.slice(2).slice(-32), 16);
           const amount1Out = new BigNumber(event.amountsOut.slice(2).slice(0, 32), 16);
           const amount0Out = new BigNumber(event.amountsOut.slice(2).slice(-32), 16);
-          const protocolFees = new BigNumber(event.protocolFees.toString(), 16);
 
           const tokenIn = amount0In.gt(0) ? pool.tokens[0] : pool.tokens[1];
           const tokenOut = amount0In.gt(0) ? pool.tokens[1] : pool.tokens[0];
           const amountIn = formatFromDecimals(
-            amount0In.gt(0) ? amount0In.plus(protocolFees).toString(10) : amount1In.plus(protocolFees).toString(10),
+            amount0In.gt(0) ? amount0In.toString(10) : amount1In.toString(10),
             tokenIn.decimals,
           );
           const amountOut = formatFromDecimals(

@@ -13,6 +13,8 @@ import StargateLiquidityPools from './data/StargateLiquidityPools.json';
 import SushiLiquidityPools from './data/SushiPools.json';
 import SushiStakingPools from './data/SushiStakingPools.json';
 import Sushiv3LiquidityPools from './data/Sushiv3Pools.json';
+import TraderjoeLiquidityPools from './data/TraderjoePools.json';
+import Traderjoev2LiquidityPools from './data/Traderjoev2Pools.json';
 import Uniswapv2LiquidityPools from './data/Uniswapv2Pools.json';
 import Uniswapv3LiquidityPools from './data/Uniswapv3Pools.json';
 import YearnVaults from './data/YearnVaults.json';
@@ -31,6 +33,8 @@ export const SourceLiquidityPools: Array<LiquidityPoolConstant> = [
   ...(ShibaswapLiquidityPools as Array<LiquidityPoolConstant>),
   ...(StargateLiquidityPools as Array<LiquidityPoolConstant>),
   ...(DodoLiquidityPools as Array<LiquidityPoolConstant>),
+  ...(TraderjoeLiquidityPools as Array<LiquidityPoolConstant>),
+  ...(Traderjoev2LiquidityPools as Array<LiquidityPoolConstant>),
 ];
 
 export const SourceStakingPools: Array<StakingPoolConstant> = [

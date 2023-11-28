@@ -43,6 +43,7 @@ export const PublicSubGraphEndpoints: { [key: string]: string } = {
   camelotv3: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm-v3',
 
   // traderjoe
+  traderjoeAvalanche: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/exchange',
   traderjoeArbitrum: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/joe-v1-arbitrum',
   traderjoeBnbchain: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/joe-v1-bnb',
 

@@ -1,6 +1,11 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
 
 const TraderjoeContracts: { [key: string]: ContractConfig } = {
+  factoryAvalanche: {
+    chain: 'avalanche',
+    protocol: 'traderjoe',
+    address: '0x9ad6c38be94206ca50bb0d90783181662f0cfa10',
+  },
   factoryArbitrum: {
     chain: 'arbitrum',
     protocol: 'traderjoe',
@@ -34,6 +39,11 @@ const Traderjoev2Contracts: { [key: string]: ContractConfig } = {
     protocol: 'traderjoev2',
     address: '0x8e42f2f4101563bf679975178e880fd87d3efd4e',
   },
+  factoryAvalanche: {
+    chain: 'avalanche',
+    protocol: 'traderjoev2',
+    address: '0x8e42f2f4101563bf679975178e880fd87d3efd4e',
+  },
 };
 
 export const Traderjoev2Configs: ProtocolConfig = {
@@ -42,5 +52,6 @@ export const Traderjoev2Configs: ProtocolConfig = {
     Traderjoev2Contracts.factoryEthereum,
     Traderjoev2Contracts.factoryArbitrum,
     Traderjoev2Contracts.factoryBnbchain,
+    Traderjoev2Contracts.factoryAvalanche,
   ],
 };

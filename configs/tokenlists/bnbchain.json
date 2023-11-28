@@ -450,6 +450,12 @@
     "decimals": 18,
     "address": "0xd909840613fcb0fadc6ee7e5ecf30cdef4281a68"
   },
+  "BBZ": {
+    "chain": "bnbchain",
+    "address": "0x863a02b83b4b49c242abd925321d19cd202a1559",
+    "symbol": "BBZ",
+    "decimals": 12
+  },
   "BCH": {
     "chain": "bnbchain",
     "address": "0x8ff795a6f4d97e7887c79bea79aba5cc76444adf",
@@ -539,10 +545,9 @@
   },
   "BETS": {
     "chain": "bnbchain",
-    "symbol": "BETS",
-    "decimals": 18,
     "address": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
-    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x94025780a1aB58868D9B2dBBB775f44b32e8E6e5/logo.png"
+    "symbol": "BETS",
+    "decimals": 18
   },
   "BFHT": {
     "chain": "bnbchain",
@@ -853,14 +858,13 @@
     "chain": "bnbchain",
     "symbol": "BTC.b",
     "decimals": 8,
-    "address": "0x2297aebd383787a160dd0d9f71508148769342e3",
-    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x2297aEbD383787A160DD0d9F71508148769342E3/logo.png"
+    "address": "0x2297aebd383787a160dd0d9f71508148769342e3"
   },
   "BTCB": {
     "chain": "bnbchain",
-    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
     "symbol": "BTCB",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
   },
   "BTCBR": {
     "chain": "bnbchain",
@@ -943,9 +947,9 @@
   },
   "BUSD": {
     "chain": "bnbchain",
-    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
     "symbol": "BUSD",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
   },
   "BVSD": {
     "chain": "bnbchain",
@@ -1792,9 +1796,9 @@
   },
   "ETH": {
     "chain": "bnbchain",
-    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
     "symbol": "ETH",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
   },
   "ETHM": {
     "chain": "bnbchain",
@@ -1807,6 +1811,12 @@
     "symbol": "ETNA",
     "decimals": 18,
     "address": "0x51f35073ff7cf54c9e86b7042e59a8cc9709fc46"
+  },
+  "ETPEPE": {
+    "chain": "bnbchain",
+    "address": "0x2ac0946d07bf0aeefa71aa3587b82957dd0cad43",
+    "symbol": "ETPEPE",
+    "decimals": 18
   },
   "EULER": {
     "chain": "bnbchain",
@@ -2124,11 +2134,17 @@
     "symbol": "GMT",
     "decimals": 8
   },
+  "GNO": {
+    "chain": "bnbchain",
+    "address": "0x418a7c55a6b9298a1d866ddecddb4672b8487928",
+    "symbol": "GNO",
+    "decimals": 18
+  },
   "GOAT": {
     "chain": "bnbchain",
+    "address": "0xff19952351e9bf7dc3c71d91f84d3f535df7515f",
     "symbol": "GOAT",
-    "decimals": 18,
-    "address": "0x7c67dccb04b67d4666fd97b2a00bb6d9b8d82e3f"
+    "decimals": 18
   },
   "GOFI": {
     "chain": "bnbchain",
@@ -2417,6 +2433,12 @@
     "decimals": 18,
     "address": "0x6814dc8f102adc36c4000cd6aa54ef90994da20c"
   },
+  "IHOP": {
+    "chain": "bnbchain",
+    "address": "0x676376d0ea251d37d3e04bcc447b89b670a119fa",
+    "symbol": "IHOP",
+    "decimals": 9
+  },
   "IMO": {
     "chain": "bnbchain",
     "symbol": "IMO",
@@ -2501,8 +2523,7 @@
     "chain": "bnbchain",
     "symbol": "JOE",
     "decimals": 18,
-    "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
-    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x371c7ec6D8039ff7933a2AA28EB827Ffe1F52f07/logo.png"
+    "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07"
   },
   "JULb": {
     "chain": "bnbchain",
@@ -2541,6 +2562,12 @@
     "symbol": "KAVA",
     "decimals": 6,
     "address": "0x5f88ab06e8dfe89df127b2430bba4af600866035"
+  },
+  "KDM": {
+    "chain": "bnbchain",
+    "address": "0xa9c04f23ee2298613285a102a41267922c6cc205",
+    "symbol": "KDM",
+    "decimals": 18
   },
   "KEBAB": {
     "chain": "bnbchain",
@@ -3106,10 +3133,9 @@
   },
   "MULTI": {
     "chain": "bnbchain",
-    "symbol": "MULTI",
-    "decimals": 18,
     "address": "0x9fb9a33956351cf4fa040f65a13b835a3c8764e3",
-    "logoURI": "https://assets.coingecko.com/coins/images/22087/thumb/1_Wyot-SDGZuxbjdkaOeT2-A.png?1640764238"
+    "symbol": "MULTI",
+    "decimals": 18
   },
   "MVN": {
     "chain": "bnbchain",
@@ -3578,6 +3604,12 @@
     "decimals": 18,
     "address": "0x8d4fbb3ac63bf33851dce80d63613df1a515bc00"
   },
+  "PNB": {
+    "chain": "bnbchain",
+    "address": "0xf5bde7eb378661f04c841b22ba057326b0370153",
+    "symbol": "PNB",
+    "decimals": 18
+  },
   "PNDA": {
     "chain": "bnbchain",
     "symbol": "PNDA",
@@ -3868,6 +3900,12 @@
     "decimals": 18,
     "address": "0x833f307ac507d47309fd8cdd1f835bef8d702a93",
     "logoURI": "https://assets.coingecko.com/coins/images/12373/thumb/REVV_TOKEN_Refined_2021_%281%29.png?1627652390"
+  },
+  "RFO": {
+    "chain": "bnbchain",
+    "address": "0xe379a1cabb18d17db3ea3ad4d34d5f0ef99d8a61",
+    "symbol": "RFO",
+    "decimals": 18
   },
   "RGP": {
     "chain": "bnbchain",
@@ -4248,9 +4286,9 @@
   },
   "STG": {
     "chain": "bnbchain",
-    "address": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
     "symbol": "STG",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b"
   },
   "STOCH": {
     "chain": "bnbchain",
@@ -4708,9 +4746,9 @@
   },
   "USDC": {
     "chain": "bnbchain",
-    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
     "symbol": "USDC",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
   },
   "USDD": {
     "chain": "bnbchain",
@@ -4726,9 +4764,9 @@
   },
   "USDT": {
     "chain": "bnbchain",
-    "address": "0x55d398326f99059ff775485246999027b3197955",
     "symbol": "USDT",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x55d398326f99059ff775485246999027b3197955"
   },
   "USDT+": {
     "chain": "bnbchain",
@@ -4778,6 +4816,12 @@
     "symbol": "VAULT",
     "decimals": 18,
     "address": "0xd456be0ff7007b3d8ad656136487a23e771f5762"
+  },
+  "VBCE": {
+    "chain": "bnbchain",
+    "address": "0x0797907abbbc526c042e8f0e708b957f18a34c1a",
+    "symbol": "VBCE",
+    "decimals": 18
   },
   "VGD": {
     "chain": "bnbchain",
@@ -4896,9 +4940,9 @@
   },
   "WBNB": {
     "chain": "bnbchain",
-    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
     "symbol": "WBNB",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
   },
   "WDYMEME": {
     "chain": "bnbchain",
@@ -4984,6 +5028,12 @@
     "chain": "bnbchain",
     "address": "0xad2c9433c8cada6aa01271edb300975a68db7d02",
     "symbol": "WOFO1",
+    "decimals": 18
+  },
+  "WOJAK": {
+    "chain": "bnbchain",
+    "address": "0x4c44b1cab1c4ca44d4326b38964a0372cfb52533",
+    "symbol": "WOJAK",
     "decimals": 18
   },
   "WOO": {
