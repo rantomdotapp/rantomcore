@@ -27,6 +27,11 @@ const BalancerContracts: { [key: string]: ContractConfig } = {
     protocol: 'balancer',
     address: '0xba12222222228d8ba445958a75a0704d566bf2c8',
   },
+  vaultAvalanche: {
+    chain: 'avalanche',
+    protocol: 'balancer',
+    address: '0xba12222222228d8ba445958a75a0704d566bf2c8',
+  },
 };
 
 export const BalancerVeBalStaking: StakingPoolConstant = {
@@ -51,5 +56,6 @@ export const BalancerConfigs: ProtocolConfig = {
     BalancerContracts.vaultArbitrum,
     BalancerContracts.vaultBase,
     BalancerContracts.vaultPolygon,
+    BalancerContracts.vaultAvalanche,
   ],
 };
