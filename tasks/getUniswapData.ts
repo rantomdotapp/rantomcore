@@ -37,6 +37,11 @@ const Uniswapv3Factories: Array<any> = [
     address: '0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7',
     subgraph: PublicSubGraphEndpoints.uniswapv3Bnbchain,
   },
+  {
+    chain: 'avalanche',
+    address: '0x740b1c1de25031c31ff4fc9a62f554a55cdc1bad',
+    subgraph: PublicSubGraphEndpoints.uniswapv3Avalanche,
+  },
 ];
 
 (async function () {

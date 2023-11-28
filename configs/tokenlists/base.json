@@ -206,7 +206,7 @@
   },
   "BINU": {
     "chain": "base",
-    "address": "0x63e71271719f03d7233f4fa306b6ea868d0f52ff",
+    "address": "0x1f7366fce31f54295fb9a58210e1b32631872e37",
     "symbol": "BINU",
     "decimals": 18
   },
@@ -312,7 +312,7 @@
   "CATS": { "chain": "base", "address": "0x2760c3e34eb533f74332743971b9d77b082c77a7", "symbol": "CATS", "decimals": 8 },
   "CIVIC": {
     "chain": "base",
-    "address": "0x5071a604f6362d0bd22e2de309857bc5eea59afe",
+    "address": "0x5ba689a51eaf00546dc086e76c06815fa9b35e22",
     "symbol": "CIVIC",
     "decimals": 18
   },
@@ -447,6 +447,12 @@
     "symbol": "Free",
     "decimals": 18
   },
+  "Fren Pet": {
+    "chain": "base",
+    "address": "0xff0c532fdb8cd566ae169c1cb157ff2bdc83e105",
+    "symbol": "Fren Pet",
+    "decimals": 18
+  },
   "GECKO": {
     "chain": "base",
     "address": "0xee9e3123dbb3ac5e75c65a1fc4617b2acc082d85",
@@ -579,7 +585,7 @@
   "MIM": { "chain": "base", "address": "0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d", "symbol": "MIM", "decimals": 18 },
   "MOCHI": {
     "chain": "base",
-    "address": "0xe1f9ac62a2f34881f6fe0f84322de9d7024c2b8e",
+    "address": "0xa4220a2b0cb10bf5fdc3b8c3d9e13728f5e7ca56",
     "symbol": "MOCHI",
     "decimals": 8
   },
@@ -808,7 +814,7 @@
   "TIP": { "chain": "base", "address": "0x6b0bd2ececc394bc42b54f251abaa8beb1cd3226", "symbol": "TIP", "decimals": 18 },
   "TOSHI": {
     "chain": "base",
-    "address": "0x8544fe9d190fd7ec52860abbf45088e81ee24a8c",
+    "address": "0x064f6d3ed291428b61c4369c08e47db2a5ff0d0f",
     "symbol": "TOSHI",
     "decimals": 18
   },

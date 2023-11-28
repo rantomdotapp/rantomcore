@@ -30,6 +30,16 @@ const SushiFactories: Array<any> = [
     address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
     subgraph: PublicSubGraphEndpoints.sushiBnbchain,
   },
+  {
+    chain: 'avalanche',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+    subgraph: PublicSubGraphEndpoints.sushiAvalanche,
+  },
+  {
+    chain: 'fantom',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+    subgraph: PublicSubGraphEndpoints.sushiFantom,
+  },
 ];
 
 const Sushiv3Factories: Array<any> = [
@@ -62,6 +72,16 @@ const Sushiv3Factories: Array<any> = [
     chain: 'bnbchain',
     address: '0x126555dd55a39328f69400d6ae4f782bd4c34abb',
     subgraph: PublicSubGraphEndpoints.sushiv3Bnbchain,
+  },
+  {
+    chain: 'avalanche',
+    address: '0x3e603c14af37ebdad31709c4f848fc6ad5bec715',
+    subgraph: PublicSubGraphEndpoints.sushiv3Avalanche,
+  },
+  {
+    chain: 'fantom',
+    address: '0x7770978eed668a3ba661d51a773d3a992fc9ddcb',
+    subgraph: PublicSubGraphEndpoints.sushiv3Fantom,
   },
 ];
 

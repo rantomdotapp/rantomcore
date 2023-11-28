@@ -21,6 +21,16 @@ const SushiContracts: { [key: string]: ContractConfig } = {
     protocol: 'sushi',
     address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
   },
+  factoryAvalanche: {
+    chain: 'avalanche',
+    protocol: 'sushi',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+  },
+  factoryFantom: {
+    chain: 'fantom',
+    protocol: 'sushi',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+  },
 };
 
 export const SushiConfigs: ProtocolConfig = {
@@ -30,6 +40,8 @@ export const SushiConfigs: ProtocolConfig = {
     SushiContracts.factoryArbitrum,
     SushiContracts.factoryPolygon,
     SushiContracts.factoryBnbchain,
+    SushiContracts.factoryAvalanche,
+    SushiContracts.factoryFantom,
 
     {
       chain: 'ethereum',
@@ -85,6 +97,16 @@ const Sushiv3Contracts: { [key: string]: ContractConfig } = {
     protocol: 'sushiv3',
     address: '0x126555dd55a39328f69400d6ae4f782bd4c34abb',
   },
+  factoryAvalanche: {
+    chain: 'avalanche',
+    protocol: 'sushiv3',
+    address: '0x3e603c14af37ebdad31709c4f848fc6ad5bec715',
+  },
+  factoryFantom: {
+    chain: 'fantom',
+    protocol: 'sushiv3',
+    address: '0x7770978eed668a3ba661d51a773d3a992fc9ddcb',
+  },
 };
 
 export const Sushiv3Configs: ProtocolConfig = {
@@ -96,5 +118,7 @@ export const Sushiv3Configs: ProtocolConfig = {
     Sushiv3Contracts.factoryPolygon,
     Sushiv3Contracts.factoryOptimism,
     Sushiv3Contracts.factoryBnbchain,
+    Sushiv3Contracts.factoryAvalanche,
+    Sushiv3Contracts.factoryFantom,
   ],
 };

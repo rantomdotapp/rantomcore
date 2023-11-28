@@ -734,6 +734,12 @@
     "address": "0x4c28f48448720e9000907bc2611f73022fdce1fa",
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png"
   },
+  "EAC": {
+    "chain": "polygon",
+    "address": "0xddd550b75d41a1980170a4b2e4b8c61557084af2",
+    "symbol": "EAC",
+    "decimals": 18
+  },
   "EASY": {
     "chain": "polygon",
     "symbol": "EASY",
@@ -1254,7 +1260,7 @@
   },
   "JPYC": {
     "chain": "polygon",
-    "address": "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb",
+    "address": "0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c",
     "symbol": "JPYC",
     "decimals": 18
   },
@@ -1976,6 +1982,12 @@
     "symbol": "ROUTE (PoS)",
     "decimals": 18
   },
+  "ROYA": {
+    "chain": "polygon",
+    "address": "0x0bd820ad2d7ab7305b5c9538ba824c9b9beb0561",
+    "symbol": "ROYA",
+    "decimals": 18
+  },
   "RVF": {
     "chain": "polygon",
     "address": "0x2ce13e4199443fdfff531abb30c9b6594446bbc7",
@@ -2027,6 +2039,12 @@
     "address": "0xabcc2d69431f0a4ce29cd13bf4a85981aadff2e3",
     "symbol": "SLi",
     "decimals": 8
+  },
+  "SMT": {
+    "chain": "polygon",
+    "address": "0xe631dabef60c37a37d70d3b4f812871df663226f",
+    "symbol": "SMT",
+    "decimals": 18
   },
   "SNX": {
     "chain": "polygon",

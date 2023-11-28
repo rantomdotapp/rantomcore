@@ -45,6 +45,11 @@ const Uniswapv3Contracts: { [key: string]: ContractConfig } = {
     protocol: 'uniswapv3',
     address: '0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7',
   },
+  factoryAvalanche: {
+    chain: 'avalanche',
+    protocol: 'uniswapv3',
+    address: '0x740b1c1de25031c31ff4fc9a62f554a55cdc1bad',
+  },
 };
 
 export const Uniswapv3Configs: ProtocolConfig = {
@@ -56,5 +61,6 @@ export const Uniswapv3Configs: ProtocolConfig = {
     Uniswapv3Contracts.factoryOptimism,
     Uniswapv3Contracts.factoryPolygon,
     Uniswapv3Contracts.factoryBnbchain,
+    Uniswapv3Contracts.factoryAvalanche,
   ],
 };

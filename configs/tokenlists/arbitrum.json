@@ -154,7 +154,7 @@
   },
   "AICODE": {
     "chain": "arbitrum",
-    "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
+    "address": "0x405e2910a0c8cafff741d558a57e6385c413f66f",
     "symbol": "AICODE",
     "decimals": 18
   },
@@ -305,9 +305,9 @@
   },
   "ARB": {
     "chain": "arbitrum",
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
     "symbol": "ARB",
-    "decimals": 18,
-    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    "decimals": 18
   },
   "ARBDAO": {
     "chain": "arbitrum",
@@ -567,9 +567,9 @@
   },
   "BTC.b": {
     "chain": "arbitrum",
+    "address": "0x2297aebd383787a160dd0d9f71508148769342e3",
     "symbol": "BTC.b",
-    "decimals": 8,
-    "address": "0x2297aebd383787a160dd0d9f71508148769342e3"
+    "decimals": 8
   },
   "BTCBR": {
     "chain": "arbitrum",
@@ -606,6 +606,12 @@
     "chain": "arbitrum",
     "address": "0xbaafa3eb03cf7e4cc98da1352fc3953062ede1dc",
     "symbol": "BiuBiu",
+    "decimals": 18
+  },
+  "BlackFriday": {
+    "chain": "arbitrum",
+    "address": "0xa0ab26a20c519b8f3f6372760b6dc673e8613869",
+    "symbol": "BlackFriday",
     "decimals": 18
   },
   "CANTO": {
@@ -769,9 +775,9 @@
   },
   "DAI": {
     "chain": "arbitrum",
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
     "symbol": "DAI",
-    "decimals": 18,
-    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+    "decimals": 18
   },
   "DAI-USDC.e SSLP": {
     "chain": "arbitrum",
@@ -831,7 +837,7 @@
   },
   "DMT": {
     "chain": "arbitrum",
-    "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8",
+    "address": "0x9e92b9ef3c3cc4053591002f4f04d2aef87bf2d2",
     "symbol": "DMT",
     "decimals": 18
   },
@@ -1258,9 +1264,9 @@
   },
   "GMX": {
     "chain": "arbitrum",
+    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
     "symbol": "GMX",
-    "decimals": 18,
-    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a"
+    "decimals": 18
   },
   "GNO": {
     "chain": "arbitrum",
@@ -1579,9 +1585,9 @@
   },
   "LINK": {
     "chain": "arbitrum",
+    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
     "symbol": "LINK",
-    "decimals": 18,
-    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+    "decimals": 18
   },
   "LIQD": {
     "chain": "arbitrum",
@@ -1676,9 +1682,9 @@
   },
   "MAGIC": {
     "chain": "arbitrum",
+    "address": "0x539bde0d7dbd336b79148aa742883198bbf60342",
     "symbol": "MAGIC",
-    "decimals": 18,
-    "address": "0x539bde0d7dbd336b79148aa742883198bbf60342"
+    "decimals": 18
   },
   "MAGIC-WETH SLP": {
     "chain": "arbitrum",
@@ -1951,6 +1957,12 @@
     "symbol": "NOVE",
     "decimals": 9
   },
+  "NPM": {
+    "chain": "arbitrum",
+    "address": "0x57f12fe6a4e5fe819eec699fadf9db2d06606bb4",
+    "symbol": "NPM",
+    "decimals": 18
+  },
   "NTT": {
     "chain": "arbitrum",
     "address": "0x7cdca712811fe7b5175e2e589dde203da29c3d90",
@@ -2083,9 +2095,9 @@
   },
   "PENDLE": {
     "chain": "arbitrum",
+    "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
     "symbol": "PENDLE",
-    "decimals": 18,
-    "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8"
+    "decimals": 18
   },
   "PEPE": {
     "chain": "arbitrum",
@@ -2114,9 +2126,9 @@
   },
   "PLS": {
     "chain": "arbitrum",
+    "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f",
     "symbol": "PLS",
-    "decimals": 18,
-    "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f"
+    "decimals": 18
   },
   "PNP": {
     "chain": "arbitrum",
@@ -2298,9 +2310,9 @@
   },
   "RDNT": {
     "chain": "arbitrum",
+    "address": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
     "symbol": "RDNT",
-    "decimals": 18,
-    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0"
+    "decimals": 18
   },
   "RDNT-WETH": {
     "chain": "arbitrum",
@@ -2597,9 +2609,9 @@
   },
   "STG": {
     "chain": "arbitrum",
+    "address": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
     "symbol": "STG",
-    "decimals": 18,
-    "address": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6"
+    "decimals": 18
   },
   "STORJ": {
     "chain": "arbitrum",
@@ -2831,9 +2843,9 @@
   },
   "USDC": {
     "chain": "arbitrum",
+    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
     "symbol": "USDC",
-    "decimals": 6,
-    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    "decimals": 6
   },
   "USDC.e": {
     "chain": "arbitrum",
@@ -2849,9 +2861,9 @@
   },
   "USDT": {
     "chain": "arbitrum",
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
     "symbol": "USDT",
-    "decimals": 6,
-    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+    "decimals": 6
   },
   "USDT-USDC.e SSLP": {
     "chain": "arbitrum",
@@ -2952,9 +2964,9 @@
   },
   "WBTC": {
     "chain": "arbitrum",
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
     "symbol": "WBTC",
-    "decimals": 8,
-    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+    "decimals": 8
   },
   "WBTC-WETH SLP": {
     "chain": "arbitrum",
@@ -2970,9 +2982,9 @@
   },
   "WETH": {
     "chain": "arbitrum",
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     "symbol": "WETH",
-    "decimals": 18,
-    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    "decimals": 18
   },
   "WETH-ARB SCPLP": {
     "chain": "arbitrum",
@@ -3401,9 +3413,9 @@
   },
   "fUSDC": {
     "chain": "arbitrum",
+    "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a",
     "symbol": "fUSDC",
-    "decimals": 6,
-    "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a"
+    "decimals": 6
   },
   "g.": {
     "chain": "arbitrum",
@@ -3533,7 +3545,7 @@
   },
   "pogai": {
     "chain": "arbitrum",
-    "address": "0x6fd58f5a2f3468e35feb098b5f59f04157002407",
+    "address": "0xca38bef611d630a9376a749f3bed35940bf2866b",
     "symbol": "pogai",
     "decimals": 18
   },
