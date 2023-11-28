@@ -403,9 +403,9 @@
   },
   "BAKE": {
     "chain": "bnbchain",
-    "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
     "symbol": "BAKE",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5"
   },
   "BALL": {
     "chain": "bnbchain",
@@ -862,9 +862,9 @@
   },
   "BTCB": {
     "chain": "bnbchain",
-    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
     "symbol": "BTCB",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
   },
   "BTCBR": {
     "chain": "bnbchain",
@@ -947,9 +947,9 @@
   },
   "BUSD": {
     "chain": "bnbchain",
-    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
     "symbol": "BUSD",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
   },
   "BVSD": {
     "chain": "bnbchain",
@@ -1339,9 +1339,9 @@
   },
   "DAI": {
     "chain": "bnbchain",
-    "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
     "symbol": "DAI",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
   },
   "DAO": {
     "chain": "bnbchain",
@@ -1535,9 +1535,9 @@
   },
   "DOGE": {
     "chain": "bnbchain",
-    "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
     "symbol": "DOGE",
-    "decimals": 8
+    "decimals": 8,
+    "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43"
   },
   "DOGEBASE": {
     "chain": "bnbchain",
@@ -1553,9 +1553,9 @@
   },
   "DOT": {
     "chain": "bnbchain",
-    "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
     "symbol": "DOT",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402"
   },
   "DPET": {
     "chain": "bnbchain",
@@ -1802,9 +1802,9 @@
   },
   "ETH": {
     "chain": "bnbchain",
-    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
     "symbol": "ETH",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
   },
   "ETHM": {
     "chain": "bnbchain",
@@ -2911,8 +2911,7 @@
     "chain": "bnbchain",
     "symbol": "MASK",
     "decimals": 18,
-    "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3",
-    "logoURI": "https://tokens.pancakeswap.finance/images/0x2eD9a5C8C13b93955103B9a7C167B67Ef4d568a3.png"
+    "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3"
   },
   "MATH": {
     "chain": "bnbchain",
@@ -4782,9 +4781,9 @@
   },
   "USDC": {
     "chain": "bnbchain",
-    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
     "symbol": "USDC",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
   },
   "USDD": {
     "chain": "bnbchain",
@@ -4800,9 +4799,9 @@
   },
   "USDT": {
     "chain": "bnbchain",
-    "address": "0x55d398326f99059ff775485246999027b3197955",
     "symbol": "USDT",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x55d398326f99059ff775485246999027b3197955"
   },
   "USDT+": {
     "chain": "bnbchain",
@@ -4976,9 +4975,9 @@
   },
   "WBNB": {
     "chain": "bnbchain",
-    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
     "symbol": "WBNB",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
   },
   "WDYMEME": {
     "chain": "bnbchain",
@@ -5202,9 +5201,9 @@
   },
   "XVS": {
     "chain": "bnbchain",
-    "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
     "symbol": "XVS",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63"
   },
   "XWG": {
     "chain": "bnbchain",

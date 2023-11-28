@@ -41,6 +41,7 @@ import { MaverickConfigs } from './maverick';
 import { MetamaskConfigs } from './metmask';
 import { MorphoConfigs } from './morpho';
 import { MuxConfigs } from './mux';
+import { NativeConfigs } from './native';
 import { OdosConfigs } from './odos';
 import { OneinchConfigs } from './oneinch';
 import { OpenoceanConfigs } from './openocean';
@@ -145,4 +146,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   metamask: MetamaskConfigs,
   gearbox: GearboxConfigs,
   venus: VenusConfigs,
+  native: NativeConfigs,
 };

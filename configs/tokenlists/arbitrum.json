@@ -305,9 +305,9 @@
   },
   "ARB": {
     "chain": "arbitrum",
-    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
     "symbol": "ARB",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
   },
   "ARBDAO": {
     "chain": "arbitrum",
@@ -1264,9 +1264,9 @@
   },
   "GMX": {
     "chain": "arbitrum",
-    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
     "symbol": "GMX",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a"
   },
   "GNO": {
     "chain": "arbitrum",
@@ -2310,9 +2310,9 @@
   },
   "RDNT": {
     "chain": "arbitrum",
-    "address": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
     "symbol": "RDNT",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0"
   },
   "RDNT-WETH": {
     "chain": "arbitrum",
@@ -2843,9 +2843,9 @@
   },
   "USDC": {
     "chain": "arbitrum",
-    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
     "symbol": "USDC",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
   },
   "USDC.e": {
     "chain": "arbitrum",
@@ -2861,9 +2861,9 @@
   },
   "USDT": {
     "chain": "arbitrum",
-    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
     "symbol": "USDT",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
   },
   "USDT-USDC.e SSLP": {
     "chain": "arbitrum",
@@ -2964,9 +2964,9 @@
   },
   "WBTC": {
     "chain": "arbitrum",
-    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
     "symbol": "WBTC",
-    "decimals": 8
+    "decimals": 8,
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
   },
   "WBTC-WETH SLP": {
     "chain": "arbitrum",
@@ -2982,9 +2982,9 @@
   },
   "WETH": {
     "chain": "arbitrum",
-    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     "symbol": "WETH",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
   },
   "WETH-ARB SCPLP": {
     "chain": "arbitrum",

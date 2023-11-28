@@ -1,21 +1,21 @@
 {
   "USDC.e": {
     "chain": "avalanche",
-    "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
     "symbol": "USDC.e",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664"
   },
   "WAVAX": {
     "chain": "avalanche",
-    "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
     "symbol": "WAVAX",
-    "decimals": 18
+    "decimals": 18,
+    "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
   },
   "USDT.e": {
     "chain": "avalanche",
-    "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
     "symbol": "USDT.e",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0xc7198437980c041c805a1edcba50c1ce5db95118"
   },
   "MIM": {
     "chain": "avalanche",
@@ -25,9 +25,9 @@
   },
   "USDC": {
     "chain": "avalanche",
-    "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
     "symbol": "USDC",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
   },
   "JOE": {
     "chain": "avalanche",
@@ -853,9 +853,9 @@
   },
   "USDT": {
     "chain": "avalanche",
-    "address": "0xde3a24028580884448a5397872046a019649b084",
     "symbol": "USDT",
-    "decimals": 6
+    "decimals": 6,
+    "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
   },
   "AvSTRM": {
     "chain": "avalanche",

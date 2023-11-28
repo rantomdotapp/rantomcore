@@ -42,6 +42,7 @@ import MaverickAdapter from './maverick/maverick';
 import MetamaskAdapter from './metamask/metamask';
 import MorphoAdapter from './morpho/morpho';
 import MuxAdapter from './mux/mux';
+import NativeAdapter from './native/native';
 import OdosAdapter from './odos/odos';
 import OneinchAdapter from './oneinch/oneinch';
 import OpenoceanAdapter from './openocean/openocean';
@@ -142,5 +143,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     metamask: new MetamaskAdapter(services, ProtocolConfigs.metamask),
     gearbox: new GearboxAdapter(services, ProtocolConfigs.gearbox),
     venus: new VenusAdapter(services, ProtocolConfigs.venus),
+    native: new NativeAdapter(services, ProtocolConfigs.native),
   };
 }
