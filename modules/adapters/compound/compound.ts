@@ -49,7 +49,7 @@ export default class CompoundAdapter extends Adapter {
   public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
     const actions: Array<TransactionAction> = [];
 
-    if (this.supportedContract(options.chain, options.log.address)) {
+    if (this.supportedContract(options.chain, options.log.address) && options.log.topics.length === 1) {
       const signature = options.log.topics[0];
       const web3 = this.services.blockchain.getProvider(options.chain);
       const event = web3.eth.abi.decodeLog(
