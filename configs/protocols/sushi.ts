@@ -31,6 +31,11 @@ const SushiContracts: { [key: string]: ContractConfig } = {
     protocol: 'sushi',
     address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
   },
+  factoryCelo: {
+    chain: 'celo',
+    protocol: 'sushi',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+  },
 };
 
 export const SushiConfigs: ProtocolConfig = {
@@ -42,6 +47,7 @@ export const SushiConfigs: ProtocolConfig = {
     SushiContracts.factoryBnbchain,
     SushiContracts.factoryAvalanche,
     SushiContracts.factoryFantom,
+    SushiContracts.factoryCelo,
 
     {
       chain: 'ethereum',

@@ -84,22 +84,22 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x31ac258b911af9a0d2669ebdfc4e39d92e96b772",
+    "address": "0x801ccfae9d2c77893b545e8d0e4637c055cd26cb",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
-      { "chain": "ethereum", "address": "0x6b175474e89094c44da98b954eedeac495271d0f", "symbol": "DAI", "decimals": 18 },
-      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 }
+      { "chain": "ethereum", "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x801ccfae9d2c77893b545e8d0e4637c055cd26cb",
+    "address": "0x31ac258b911af9a0d2669ebdfc4e39d92e96b772",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
-      { "chain": "ethereum", "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "symbol": "WBTC", "decimals": 8 },
-      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+      { "chain": "ethereum", "address": "0x6b175474e89094c44da98b954eedeac495271d0f", "symbol": "DAI", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -257,6 +257,17 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
+    "address": "0xf5137594b0666ef240edef9897e26a6cc438c632",
+    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
+    "tokens": [
+      { "chain": "ethereum", "address": "0x1fe24f25b1cf609b9c4e7e12d802e3640dfa5e43", "symbol": "CGG", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "ethereum",
+    "version": "univ3",
     "address": "0x8da41d45c183e63d5eb2ecacd30ed6dd4a640cc2",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
@@ -282,17 +293,6 @@
         "symbol": "RELIGION",
         "decimals": 18
       },
-      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "ethereum",
-    "version": "univ3",
-    "address": "0xf5137594b0666ef240edef9897e26a6cc438c632",
-    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
-    "tokens": [
-      { "chain": "ethereum", "address": "0x1fe24f25b1cf609b9c4e7e12d802e3640dfa5e43", "symbol": "CGG", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -526,27 +526,6 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x8a587ee3d7e16c772f3f39c18934dcbe096f3ed8",
-    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
-    "tokens": [
-      {
-        "chain": "ethereum",
-        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "symbol": "WETH",
-        "decimals": 18
-      },
-      {
-        "chain": "ethereum",
-        "address": "0xe4b48b6bbafca1f82ad2976e30a81c800c249aa3",
-        "symbol": "FATMOM",
-        "decimals": 18
-      }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "ethereum",
-    "version": "univ3",
     "address": "0xafd99f6983546bdb450c1ebbb5dd403551008edf",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
@@ -560,6 +539,27 @@
         "chain": "ethereum",
         "address": "0xf1376bcef0f78459c0ed0ba5ddce976f1ddf51f4",
         "symbol": "uniETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "ethereum",
+    "version": "univ3",
+    "address": "0x8a587ee3d7e16c772f3f39c18934dcbe096f3ed8",
+    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xe4b48b6bbafca1f82ad2976e30a81c800c249aa3",
+        "symbol": "FATMOM",
         "decimals": 18
       }
     ]
@@ -703,10 +703,10 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x5ea783525631f0c22f07d5a9791921c59fd98f00",
+    "address": "0x23f12937456fb34688d0f6aeb8c78429f60873a7",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
-      { "chain": "ethereum", "address": "0x905ff01bf05bbd2de91b3f09cc86187ea07edec3", "symbol": "DEV", "decimals": 18 },
+      { "chain": "ethereum", "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f", "symbol": "SNX", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -714,10 +714,10 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
-    "address": "0x23f12937456fb34688d0f6aeb8c78429f60873a7",
+    "address": "0x5ea783525631f0c22f07d5a9791921c59fd98f00",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
-      { "chain": "ethereum", "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f", "symbol": "SNX", "decimals": 18 },
+      { "chain": "ethereum", "address": "0x905ff01bf05bbd2de91b3f09cc86187ea07edec3", "symbol": "DEV", "decimals": 18 },
       { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -853,6 +853,17 @@
         "symbol": "SUPRA",
         "decimals": 10
       }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "ethereum",
+    "version": "univ3",
+    "address": "0x5718def5e263b5ae26f25d1bdd09ef2cdcda3dfb",
+    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
+    "tokens": [
+      { "chain": "ethereum", "address": "0x112b08621e27e10773ec95d250604a041f36c582", "symbol": "KAS", "decimals": 8 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -1315,6 +1326,22 @@
     "protocol": "sushiv3",
     "chain": "ethereum",
     "version": "univ3",
+    "address": "0xa493bbff30b1bf3d52653f92c9b131208253954b",
+    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "ethereum", "address": "0xce391315b414d4c7555956120461d21808a69f3a", "symbol": "BAO", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "ethereum",
+    "version": "univ3",
     "address": "0x9d38d6f6c85c5af853d4b5a7da9a59ff580e0435",
     "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
     "tokens": [
@@ -1395,38 +1422,6 @@
         "decimals": 18
       },
       { "chain": "ethereum", "address": "0xff20817765cb7f73d4bde2e66e067e58d11095c2", "symbol": "AMP", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "ethereum",
-    "version": "univ3",
-    "address": "0x2b212e204359c2f49cdd6c754e293d88edc4584f",
-    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
-    "tokens": [
-      {
-        "chain": "ethereum",
-        "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "symbol": "WETH",
-        "decimals": 18
-      },
-      {
-        "chain": "ethereum",
-        "address": "0xe90ab0c4d0c3d971513c7852e5f67ec413e747c4",
-        "symbol": "DUTAT",
-        "decimals": 18
-      }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "ethereum",
-    "version": "univ3",
-    "address": "0x1a29903c3909cb72eff058e8ec2632bc6c9c3f55",
-    "factory": "0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f",
-    "tokens": [
-      { "chain": "ethereum", "address": "0x6b175474e89094c44da98b954eedeac495271d0f", "symbol": "DAI", "decimals": 18 },
-      { "chain": "ethereum", "address": "0xdac17f958d2ee523a2206206994597c13d831ec7", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -1915,22 +1910,22 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x6f10667f314498649eb2f80da244e8c6e9f031d5",
+    "address": "0x3ee8547e12ce2090a3dfa9ecb4409692d7733206",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
-      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x3ee8547e12ce2090a3dfa9ecb4409692d7733206",
+    "address": "0x6f10667f314498649eb2f80da244e8c6e9f031d5",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
-      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -2077,17 +2072,6 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x5dcf1aa6b3422d8a59dc0e00904e02a1c1ea5a58",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
-      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0xda6c8882772555319e03189ca779c197411c2567",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
@@ -2103,6 +2087,33 @@
         "symbol": "GHUNTER",
         "decimals": 18
       }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x5dcf1aa6b3422d8a59dc0e00904e02a1c1ea5a58",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x2b760e9fdaeeae6f45af5ddb79bee914182de613",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x8d9ba570d6cb60c7e3e0f31343efe75ab8e65fb1", "symbol": "gOHM", "decimals": 18 }
     ]
   },
   {
@@ -2146,16 +2157,11 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x2b760e9fdaeeae6f45af5ddb79bee914182de613",
+    "address": "0x00043186a1f34aea3bbf254e90530c9fb7fbb8c3",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-        "symbol": "WETH",
-        "decimals": 18
-      },
-      { "chain": "arbitrum", "address": "0x8d9ba570d6cb60c7e3e0f31343efe75ab8e65fb1", "symbol": "gOHM", "decimals": 18 }
+      { "chain": "arbitrum", "address": "0x57f12fe6a4e5fe819eec699fadf9db2d06606bb4", "symbol": "NPM", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -2194,17 +2200,6 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x00043186a1f34aea3bbf254e90530c9fb7fbb8c3",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x57f12fe6a4e5fe819eec699fadf9db2d06606bb4", "symbol": "NPM", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0x5990e075e8f807b91a56073f2d10274304808787",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
@@ -2214,17 +2209,6 @@
         "symbol": "RDNT",
         "decimals": 18
       },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0x7d85d39b41203c9545e08a87ba4bd924db6e757c",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0x1a4cb170a76611b5a9b362c6fdcca875d1cca62e", "symbol": "g.", "decimals": 18 },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -2242,6 +2226,17 @@
         "decimals": 18
       },
       { "chain": "arbitrum", "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4", "symbol": "LINK", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7d85d39b41203c9545e08a87ba4bd924db6e757c",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x1a4cb170a76611b5a9b362c6fdcca875d1cca62e", "symbol": "g.", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -2355,17 +2350,6 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xd9815867eb546432215321511d86728f9fd8cd24",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      { "chain": "arbitrum", "address": "0xee9801669c6138e84bd50deb500827b776777d28", "symbol": "O3", "decimals": 18 },
-      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0x9a528325cc76aec0da05b4a9b5a839fae6edd733",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
@@ -2381,6 +2365,17 @@
         "symbol": "SUSHI",
         "decimals": 18
       }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd9815867eb546432215321511d86728f9fd8cd24",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xee9801669c6138e84bd50deb500827b776777d28", "symbol": "O3", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -2429,6 +2424,27 @@
         "decimals": 6
       },
       { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x151fcbdf0dfc3d1719de1c4202ff10ac3bae1180",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0xcb060e2d87070ad7ce414f93c5c764725ec1c101",
+        "symbol": "ACCRU",
+        "decimals": 18
+      }
     ]
   },
   {
@@ -2526,27 +2542,6 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0x151fcbdf0dfc3d1719de1c4202ff10ac3bae1180",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-        "symbol": "WETH",
-        "decimals": 18
-      },
-      {
-        "chain": "arbitrum",
-        "address": "0xcb060e2d87070ad7ce414f93c5c764725ec1c101",
-        "symbol": "ACCRU",
-        "decimals": 18
-      }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
     "address": "0x4dfa3eb490b983df2badf76045cda9674344628f",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
@@ -2592,6 +2587,22 @@
         "address": "0x580e933d90091b9ce380740e3a4a39c67eb85b4c",
         "symbol": "GSWIFT",
         "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd1cfd5aeb1c2917e1cfd1d91ae727a0c156118e2",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a",
+        "symbol": "fUSDC",
+        "decimals": 6
       },
       { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
@@ -2669,6 +2680,22 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
+    "address": "0x9c657a4140ed352f86dc6d3a8825991431db2201",
+    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x60b42e0de164d18fe6822c115daf2e0f18867ae7",
+        "symbol": "mpETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "arbitrum",
+    "version": "univ3",
     "address": "0x38a9b4858608cfd754b5f1a324123253515633f8",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
@@ -2684,22 +2711,6 @@
         "symbol": "BABYCOMMEX",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0x9c657a4140ed352f86dc6d3a8825991431db2201",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x60b42e0de164d18fe6822c115daf2e0f18867ae7",
-        "symbol": "mpETH",
-        "decimals": 18
-      },
-      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -2748,22 +2759,6 @@
         "symbol": "DiamondPepe",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "arbitrum",
-    "version": "univ3",
-    "address": "0xd1cfd5aeb1c2917e1cfd1d91ae727a0c156118e2",
-    "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
-    "tokens": [
-      {
-        "chain": "arbitrum",
-        "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a",
-        "symbol": "fUSDC",
-        "decimals": 6
-      },
-      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -2977,16 +2972,16 @@
     "protocol": "sushiv3",
     "chain": "arbitrum",
     "version": "univ3",
-    "address": "0xe39ec1fc60e58b3cd65468b5524ec45987a2c830",
+    "address": "0xe9f9634faecf86a28112076e7b8f164424a1b4b6",
     "factory": "0x1af415a1eba07a4986a52b6f2e7de7003d82231e",
     "tokens": [
       {
         "chain": "arbitrum",
-        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-        "symbol": "WETH",
+        "address": "0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af",
+        "symbol": "SPELL",
         "decimals": 18
       },
-      { "chain": "arbitrum", "address": "0xa54b8e178a49f8e5405a4d44bb31f496e5564a05", "symbol": "PEPE", "decimals": 18 }
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -3603,10 +3598,10 @@
     "protocol": "sushiv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x6c686eab24d0ab8fcdcef69ee2f8764de47730d2",
+    "address": "0x0a7dc3d5746d97b659d2bf02b2b4fdf6dcef8822",
     "factory": "0xc35dadb65012ec5796536bd9864ed8773abc74c4",
     "tokens": [
-      { "chain": "base", "address": "0x00000000aaf9055749845c6851a823ba7a58ec21", "symbol": "𝕏", "decimals": 18 },
+      { "chain": "base", "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f", "symbol": "AXL", "decimals": 6 },
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -3614,10 +3609,10 @@
     "protocol": "sushiv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0x0a7dc3d5746d97b659d2bf02b2b4fdf6dcef8822",
+    "address": "0x6c686eab24d0ab8fcdcef69ee2f8764de47730d2",
     "factory": "0xc35dadb65012ec5796536bd9864ed8773abc74c4",
     "tokens": [
-      { "chain": "base", "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f", "symbol": "AXL", "decimals": 6 },
+      { "chain": "base", "address": "0x00000000aaf9055749845c6851a823ba7a58ec21", "symbol": "𝕏", "decimals": 18 },
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -3768,22 +3763,22 @@
     "protocol": "sushiv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xa79d35f7296b48d9fc80aaa7842981fc01922571",
+    "address": "0xe319ea90611bba5d03bc548c320a90d6973d30ca",
     "factory": "0xc35dadb65012ec5796536bd9864ed8773abc74c4",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xe1f9ac62a2f34881f6fe0f84322de9d7024c2b8e", "symbol": "MOCHI", "decimals": 8 }
+      { "chain": "base", "address": "0xa4220a2b0cb10bf5fdc3b8c3d9e13728f5e7ca56", "symbol": "MOCHI", "decimals": 8 }
     ]
   },
   {
     "protocol": "sushiv3",
     "chain": "base",
     "version": "univ3",
-    "address": "0xe319ea90611bba5d03bc548c320a90d6973d30ca",
+    "address": "0xa79d35f7296b48d9fc80aaa7842981fc01922571",
     "factory": "0xc35dadb65012ec5796536bd9864ed8773abc74c4",
     "tokens": [
       { "chain": "base", "address": "0x4200000000000000000000000000000000000006", "symbol": "WETH", "decimals": 18 },
-      { "chain": "base", "address": "0xa4220a2b0cb10bf5fdc3b8c3d9e13728f5e7ca56", "symbol": "MOCHI", "decimals": 8 }
+      { "chain": "base", "address": "0xe1f9ac62a2f34881f6fe0f84322de9d7024c2b8e", "symbol": "MOCHI", "decimals": 8 }
     ]
   },
   {
@@ -4287,6 +4282,17 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0xaabfa6dc0541033c1a2eb685f358d0ea937bb026",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      { "chain": "polygon", "address": "0x140a4e80dd8184536acc45f1c452d7540472e6e1", "symbol": "PKR", "decimals": 18 },
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0x4e53f993cda59e38fb7bffbfff623e05bdee761d",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -4303,33 +4309,11 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0xaabfa6dc0541033c1a2eb685f358d0ea937bb026",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0x140a4e80dd8184536acc45f1c452d7540472e6e1", "symbol": "PKR", "decimals": 18 },
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0xbc09a47545d34ed033dc3f3146fc00a544befeb9",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
       { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
       { "chain": "polygon", "address": "0x2ab4f9ac80f33071211729e45cfc346c1f8446d5", "symbol": "CGG", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0xa2decb2f871c4210d518858e82f11feaea17329b",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 },
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -4352,15 +4336,10 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0xdb0101be2132408e65b30246aa662e4d6f49599c",
+    "address": "0xa2decb2f871c4210d518858e82f11feaea17329b",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
+      { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 },
       { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
@@ -4373,6 +4352,22 @@
     "tokens": [
       { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 },
       { "chain": "polygon", "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063", "symbol": "DAI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0xdb0101be2132408e65b30246aa662e4d6f49599c",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -4406,10 +4401,10 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x743b474d5d85cfd8379ad2b3e91a57fbee605fbd",
+    "address": "0x849fa17dae23b1036d7cfb37c7acdec44f7d4f4d",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
-      { "chain": "polygon", "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "polygon", "address": "0x2ab4f9ac80f33071211729e45cfc346c1f8446d5", "symbol": "CGG", "decimals": 18 },
       { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -4433,10 +4428,10 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x849fa17dae23b1036d7cfb37c7acdec44f7d4f4d",
+    "address": "0x743b474d5d85cfd8379ad2b3e91a57fbee605fbd",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
-      { "chain": "polygon", "address": "0x2ab4f9ac80f33071211729e45cfc346c1f8446d5", "symbol": "CGG", "decimals": 18 },
+      { "chain": "polygon", "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6", "symbol": "WBTC", "decimals": 8 },
       { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 }
     ]
   },
@@ -4672,17 +4667,6 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x6cdc02fdac8f4dc030602db2a75725556a710d64",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      { "chain": "polygon", "address": "0x4e78011ce80ee02d2c3e649fb657e45898257815", "symbol": "KLIMA", "decimals": 9 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x919e87666b2ca5196ad4859b02258b3a9a629e00",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -4693,6 +4677,17 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x2ce13e4199443fdfff531abb30c9b6594446bbc7", "symbol": "RVF", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x6cdc02fdac8f4dc030602db2a75725556a710d64",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
+      { "chain": "polygon", "address": "0x4e78011ce80ee02d2c3e649fb657e45898257815", "symbol": "KLIMA", "decimals": 9 }
     ]
   },
   {
@@ -4789,17 +4784,6 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x1e72481a2e7c54808722f259cbe83ac9add11191",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0xabcc2d69431f0a4ce29cd13bf4a85981aadff2e3", "symbol": "SLi", "decimals": 8 },
-      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0xc18d8f8f561a85855d7f4c439d6020d2a9ba2c28",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -4810,6 +4794,17 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0xef938b6da8576a896f6e0321ef80996f4890f9c4", "symbol": "DG", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x1e72481a2e7c54808722f259cbe83ac9add11191",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      { "chain": "polygon", "address": "0xabcc2d69431f0a4ce29cd13bf4a85981aadff2e3", "symbol": "SLi", "decimals": 8 },
+      { "chain": "polygon", "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f", "symbol": "USDT", "decimals": 6 }
     ]
   },
   {
@@ -4886,6 +4881,22 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x0ca828901f3eb3a2c4ff93610a4f7649a491bb86",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0xbbba073c31bf03b8acf7c28ef0738decf3695683", "symbol": "SAND", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0xa212000723094caec7d7359cc6a5811e71bbf1c0",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -4929,16 +4940,11 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x0ca828901f3eb3a2c4ff93610a4f7649a491bb86",
+    "address": "0x90f239c7e9f2dc2614a597795592fbd3c5ae5910",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0xbbba073c31bf03b8acf7c28ef0738decf3695683", "symbol": "SAND", "decimals": 18 }
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
+      { "chain": "polygon", "address": "0xe631dabef60c37a37d70d3b4f812871df663226f", "symbol": "SMT", "decimals": 18 }
     ]
   },
   {
@@ -4993,6 +4999,22 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x7315e86932969f481697ba144269506e9572802a",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0xddd550b75d41a1980170a4b2e4b8c61557084af2", "symbol": "EAC", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0xa0f8657c0242eedaef5d04798b1b551a4a2d3e66",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -5035,17 +5057,6 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x90f239c7e9f2dc2614a597795592fbd3c5ae5910",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      { "chain": "polygon", "address": "0xe631dabef60c37a37d70d3b4f812871df663226f", "symbol": "SMT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x074081df5d3e899ab84d1b9ab3114c68b7031923",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -5062,22 +5073,6 @@
     "tokens": [
       { "chain": "polygon", "address": "0x311434160d7537be358930def317afb606c0d737", "symbol": "NAKA", "decimals": 18 },
       { "chain": "polygon", "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619", "symbol": "WETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x87da827dbb5a09ad1e2a35afbc1799bb51ee4dc2",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0x5abd74c7192e7688f81206d8a4f6b9c298f3d282", "symbol": "KPAPA", "decimals": 18 }
     ]
   },
   {
@@ -5105,7 +5100,7 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x7315e86932969f481697ba144269506e9572802a",
+    "address": "0x87da827dbb5a09ad1e2a35afbc1799bb51ee4dc2",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
       {
@@ -5114,7 +5109,7 @@
         "symbol": "WMATIC",
         "decimals": 18
       },
-      { "chain": "polygon", "address": "0xddd550b75d41a1980170a4b2e4b8c61557084af2", "symbol": "EAC", "decimals": 18 }
+      { "chain": "polygon", "address": "0x5abd74c7192e7688f81206d8a4f6b9c298f3d282", "symbol": "KPAPA", "decimals": 18 }
     ]
   },
   {
@@ -5310,6 +5305,22 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
+    "address": "0x610db1faae7b874d94181ad43569fdcdd2d29e4c",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0x45c32fa6df82ead1e2ef74d17b76547eddfaff89", "symbol": "FRAX", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
     "address": "0x0739504602aff8c5aaa20a7fcbdf07707f8cdedb",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -5320,6 +5331,17 @@
         "decimals": 18
       },
       { "chain": "polygon", "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063", "symbol": "DAI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "polygon",
+    "version": "univ3",
+    "address": "0x84429c9f34dcf92c697fe04460fc8dd4fe4b7d36",
+    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
+    "tokens": [
+      { "chain": "polygon", "address": "0x0bd820ad2d7ab7305b5c9538ba824c9b9beb0561", "symbol": "ROYA", "decimals": 18 },
+      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
     ]
   },
   {
@@ -5347,7 +5369,7 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x610db1faae7b874d94181ad43569fdcdd2d29e4c",
+    "address": "0x9d15024d9b0955f621b796131e248ba02f07d58b",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
       {
@@ -5356,7 +5378,7 @@
         "symbol": "WMATIC",
         "decimals": 18
       },
-      { "chain": "polygon", "address": "0x45c32fa6df82ead1e2ef74d17b76547eddfaff89", "symbol": "FRAX", "decimals": 18 }
+      { "chain": "polygon", "address": "0xc2395e317bf12a11ec7a17fb36b9e9d3cb742f1b", "symbol": "FLI", "decimals": 18 }
     ]
   },
   {
@@ -5374,22 +5396,6 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x9d15024d9b0955f621b796131e248ba02f07d58b",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      {
-        "chain": "polygon",
-        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
-        "symbol": "WMATIC",
-        "decimals": 18
-      },
-      { "chain": "polygon", "address": "0xc2395e317bf12a11ec7a17fb36b9e9d3cb742f1b", "symbol": "FLI", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
     "address": "0x554b3b0ef87d40676e15eaac86b9c659ede5156f",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
@@ -5399,17 +5405,6 @@
         "symbol": "WMATIC",
         "decimals": 18
       },
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "polygon",
-    "version": "univ3",
-    "address": "0x84429c9f34dcf92c697fe04460fc8dd4fe4b7d36",
-    "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
-    "tokens": [
-      { "chain": "polygon", "address": "0x0bd820ad2d7ab7305b5c9538ba824c9b9beb0561", "symbol": "ROYA", "decimals": 18 },
       { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 }
     ]
   },
@@ -5471,32 +5466,32 @@
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x103d440715291a8afa6be06bb37f37fcbc886e10",
+    "address": "0xc862ad662ec5c593c630b665fba9052077071141",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
-      { "chain": "polygon", "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", "symbol": "USDC", "decimals": 6 },
-      { "chain": "polygon", "address": "0x2ab4f9ac80f33071211729e45cfc346c1f8446d5", "symbol": "CGG", "decimals": 18 }
+      {
+        "chain": "polygon",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
+        "decimals": 18
+      },
+      { "chain": "polygon", "address": "0xc3c7d422809852031b44ab29eec9f1eff2a58756", "symbol": "LDO", "decimals": 18 }
     ]
   },
   {
     "protocol": "sushiv3",
     "chain": "polygon",
     "version": "univ3",
-    "address": "0x0178834cccc68990f203a59fadec2b7fc8a22b8c",
+    "address": "0x1655c7ae52f487a269306ae3aaec5d590adbdf56",
     "factory": "0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2",
     "tokens": [
       {
         "chain": "polygon",
-        "address": "0x8f1549718b9ad2632dc426ecc89305a83c1f03c8",
-        "symbol": "STARD",
+        "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "symbol": "WMATIC",
         "decimals": 18
       },
-      {
-        "chain": "polygon",
-        "address": "0xd289c01528921b5f6d5b111a50a99456d495bf78",
-        "symbol": "STARV2",
-        "decimals": 18
-      }
+      { "chain": "polygon", "address": "0x714db550b574b3e927af3d93e26127d15721d4c2", "symbol": "GMT", "decimals": 8 }
     ]
   },
   {
@@ -6732,6 +6727,22 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x3faee5dc784129d6aa41b0cc66d3c273668e7e15",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x0cf8e180350253271f4b917ccfb0accc4862f262",
+        "symbol": "BTCBR",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0x291a1e01b835fa8b0c1220be20d281a74883bf3b",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
@@ -6748,13 +6759,24 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x3faee5dc784129d6aa41b0cc66d3c273668e7e15",
+    "address": "0xc9a924422012087bbb93438c932bae19a99bf552",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x1613957159e9b0ac6c80e824f7eea748a32a0ae2", "symbol": "CGG", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x3740976ff9452dc370d604e2504ec48cd17520e7",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
       {
         "chain": "bnbchain",
-        "address": "0x0cf8e180350253271f4b917ccfb0accc4862f262",
-        "symbol": "BTCBR",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
@@ -6779,22 +6801,6 @@
         "symbol": "Metis",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x3740976ff9452dc370d604e2504ec48cd17520e7",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
   },
   {
@@ -6849,11 +6855,16 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0xc9a924422012087bbb93438c932bae19a99bf552",
+    "address": "0x111566dd3e1983c4271477775259eb5e4736c811",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
-      { "chain": "bnbchain", "address": "0x1613957159e9b0ac6c80e824f7eea748a32a0ae2", "symbol": "CGG", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 }
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xc14a7747cfec02cfea62e72bb93538de6b2078e6", "symbol": "GBL", "decimals": 18 }
     ]
   },
   {
@@ -6946,6 +6957,17 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x845a80b0fad7f9fc2ecc587222cb83c684712564",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df", "symbol": "SOL", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xfa4fa764f15d0f6e20aaec8e0d696870e5b77c6e", "symbol": "FSN", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0xff5449bafaf5ed1181e3f5b88852fddcf004dcb6",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
@@ -6965,6 +6987,22 @@
         "address": "0x62ca3c6250e221fc136639bbd1f484e0dbb0c55b",
         "symbol": "HTEST2",
         "decimals": 9
+      },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
+    "address": "0x2fe2cacd77053f0258c3b4f0b5d9d2312a97df58",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "symbol": "USDC",
+        "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
     ]
@@ -7064,22 +7102,6 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
-    "address": "0x2fe2cacd77053f0258c3b4f0b5d9d2312a97df58",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-        "symbol": "USDC",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
     "address": "0xc1321153e049044631f98f24adc4d99a74dfe6f5",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
@@ -7090,33 +7112,6 @@
         "decimals": 18
       },
       { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x845a80b0fad7f9fc2ecc587222cb83c684712564",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      { "chain": "bnbchain", "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df", "symbol": "SOL", "decimals": 18 },
-      { "chain": "bnbchain", "address": "0xfa4fa764f15d0f6e20aaec8e0d696870e5b77c6e", "symbol": "FSN", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x111566dd3e1983c4271477775259eb5e4736c811",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0x55d398326f99059ff775485246999027b3197955",
-        "symbol": "USDT",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xc14a7747cfec02cfea62e72bb93538de6b2078e6", "symbol": "GBL", "decimals": 18 }
     ]
   },
   {
@@ -7509,6 +7504,22 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x09d327b16d1f66a8937c951c23a64b2e9e21f557",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xfca4dbb00858030ef0dfae7ebb60b1aa7ac151b1", "symbol": "MEXP", "decimals": 9 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0x0587b58d11bf8f357c5f73dcd13098f7415d7780",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
@@ -7589,22 +7600,6 @@
     "tokens": [
       { "chain": "bnbchain", "address": "0x0859716ff42c80382d6889c58a3e4822af17aa2b", "symbol": "DAH", "decimals": 18 },
       { "chain": "bnbchain", "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8", "symbol": "ETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x09d327b16d1f66a8937c951c23a64b2e9e21f557",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xfca4dbb00858030ef0dfae7ebb60b1aa7ac151b1", "symbol": "MEXP", "decimals": 9 }
     ]
   },
   {
@@ -7803,6 +7798,17 @@
     "protocol": "sushiv3",
     "chain": "bnbchain",
     "version": "univ3",
+    "address": "0x944d70af2fba6ad4790223dfd79cb122cf65550d",
+    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x1651f961d5cead3f42a06eefe4a1fba3b408fda2", "symbol": "VPC", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "bnbchain",
+    "version": "univ3",
     "address": "0x9437d39fdf86f7272f9e557380e2af6ea136c2b1",
     "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
     "tokens": [
@@ -7888,22 +7894,6 @@
         "symbol": "2LIFE",
         "decimals": 18
       }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "bnbchain",
-    "version": "univ3",
-    "address": "0x70d01970ea6c7fa04339df85a9923a128f5b96c9",
-    "factory": "0x126555dd55a39328f69400d6ae4f782bd4c34abb",
-    "tokens": [
-      {
-        "chain": "bnbchain",
-        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-        "symbol": "WBNB",
-        "decimals": 18
-      },
-      { "chain": "bnbchain", "address": "0xd98438889ae7364c7e2a3540547fad042fb24642", "symbol": "CELL", "decimals": 18 }
     ]
   },
   {
@@ -8376,6 +8366,27 @@
         "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
         "symbol": "USDt",
         "decimals": 6
+      },
+      {
+        "chain": "avalanche",
+        "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "symbol": "WAVAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "avalanche",
+    "version": "univ3",
+    "address": "0x996d64eca0b55a310952cf04f316889bb87437f3",
+    "factory": "0x3e603c14af37ebdad31709c4f848fc6ad5bec715",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0x0cbd6fadcf8096cc9a43d90b45f65826102e3ece",
+        "symbol": "CDT",
+        "decimals": 18
       },
       {
         "chain": "avalanche",
@@ -9001,6 +9012,17 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0xb3b31b6568503fc84c548443230d10b03fa8ec89",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x01e77288b38b416f972428d562454fb329350bac", "symbol": "MMY", "decimals": 18 },
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0x69fc28f102833969449ec9ce35c2b265c62f3949",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
@@ -9056,6 +9078,17 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0xad7df457d1bfcf44b7c226e9481ac1310443d3ac",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x042b1131089f4ab50fa7fd61e2d59269e529029f", "symbol": "wTV", "decimals": 18 },
+      { "chain": "fantom", "address": "0x8eda53a05002440818a2d089ec293d94fda17941", "symbol": "TV", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0x8dd173fc36aaea9407f5af30f7ab1072a235200c",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
@@ -9067,11 +9100,33 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0xd124d0c04704235231bbc3dfd71db6050260e32a",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0xf9eddca6b1e548b0ec8cddec131464f462b8310d", "symbol": "oFVM", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0xdb115e23f391edbd561e1fa8478386b960e50271",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
       { "chain": "fantom", "address": "0x7d016eec9c25232b01f23ef992d98ca97fc2af5a", "symbol": "FXS", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xb4d517bd85842acf20b47b6ea835cff9fc8bb026",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x695921034f0387eac4e11620ee91b1b15a6a09fe", "symbol": "WETH", "decimals": 18 }
     ]
   },
   {
@@ -9111,10 +9166,26 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xb3b31b6568503fc84c548443230d10b03fa8ec89",
+    "address": "0xdb60b823a3bc60b9e59136511b7535facef2eab4",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      { "chain": "fantom", "address": "0x01e77288b38b416f972428d562454fb329350bac", "symbol": "MMY", "decimals": 18 },
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x3fd3a0c85b70754efc07ac9ac0cbbdce664865a6", "symbol": "EQUAL", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xdad46fbd752863096431c550a7ec732083381a63",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      {
+        "chain": "fantom",
+        "address": "0x05e31a691405d06708a355c029599c12d5da8b28",
+        "symbol": "fSONIC",
+        "decimals": 18
+      },
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 }
     ]
   },
@@ -9122,11 +9193,27 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xd124d0c04704235231bbc3dfd71db6050260e32a",
+    "address": "0x613f811f9a141bc8927ae8951838dccde1362110",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xf9eddca6b1e548b0ec8cddec131464f462b8310d", "symbol": "oFVM", "decimals": 18 }
+      { "chain": "fantom", "address": "0x8eda53a05002440818a2d089ec293d94fda17941", "symbol": "TV", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x537776face855d18e470b6c5708a5ed384c9c389",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      {
+        "chain": "fantom",
+        "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+        "symbol": "SPIRIT-LP",
+        "decimals": 18
+      },
+      { "chain": "fantom", "address": "0x321162cd933e2be498cd2267a90534a804051b11", "symbol": "BTC", "decimals": 8 }
     ]
   },
   {
@@ -9149,6 +9236,17 @@
     "tokens": [
       { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
       { "chain": "fantom", "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc", "symbol": "SUSHI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x9a480815d55340b457f1a861a600654703c0c075",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0xd3fdcb837dafdb7c9c3ebd48fe22a53f6dd3d7d7", "symbol": "QI", "decimals": 18 }
     ]
   },
   {
@@ -9226,17 +9324,6 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0x9a480815d55340b457f1a861a600654703c0c075",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xd3fdcb837dafdb7c9c3ebd48fe22a53f6dd3d7d7", "symbol": "QI", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
     "address": "0x56dac420498905e7e7437649321cdd98212988b6",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
@@ -9259,16 +9346,11 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xdad46fbd752863096431c550a7ec732083381a63",
+    "address": "0x0e0f2b70dfc8713b9c7a0a8e44610ba81b2ff2ce",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      {
-        "chain": "fantom",
-        "address": "0x05e31a691405d06708a355c029599c12d5da8b28",
-        "symbol": "fSONIC",
-        "decimals": 18
-      },
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 }
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x5cc61a78f164885776aa610fb0fe1257df78e59b", "symbol": "SPIRIT", "decimals": 18 }
     ]
   },
   {
@@ -9335,11 +9417,16 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xb4d517bd85842acf20b47b6ea835cff9fc8bb026",
+    "address": "0x3eaa0daea93781534affffa4bdd11d3f0dd9285d",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x695921034f0387eac4e11620ee91b1b15a6a09fe", "symbol": "WETH", "decimals": 18 }
+      { "chain": "fantom", "address": "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9", "symbol": "LQDR", "decimals": 18 },
+      {
+        "chain": "fantom",
+        "address": "0x4b6b3d425f82248996d77ecc3f3df1e500aac1db",
+        "symbol": "axlLqdr",
+        "decimals": 18
+      }
     ]
   },
   {
@@ -9379,14 +9466,14 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0x3eaa0daea93781534affffa4bdd11d3f0dd9285d",
+    "address": "0x24ea9c6e08997317df579abe13f2e49dd60b463f",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      { "chain": "fantom", "address": "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9", "symbol": "LQDR", "decimals": 18 },
+      { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
       {
         "chain": "fantom",
-        "address": "0x4b6b3d425f82248996d77ecc3f3df1e500aac1db",
-        "symbol": "axlLqdr",
+        "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+        "symbol": "SPIRIT-LP",
         "decimals": 18
       }
     ]
@@ -9428,11 +9515,33 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0xcf63e1276a7f785c3ed69447e80df7d5bff5b3b4",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 },
+      { "chain": "fantom", "address": "0x74b23882a30290451a17c44f4f05243b6b58c76d", "symbol": "ETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0xa9f1d8112a3515c391628871019e8c9e409d7f37",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
       { "chain": "fantom", "address": "0x30ae1270aa7a817ed3002a9a04f7593f488810c1", "symbol": "PEPEUP", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x9f7a8ddab7e0b624fa6ba16320d6335188ae6a27",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0xf719c92f112638e43ec971b737c7f86f6ef2fadd", "symbol": "USDC", "decimals": 4 }
     ]
   },
   {
@@ -9450,11 +9559,11 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0x9f7a8ddab7e0b624fa6ba16320d6335188ae6a27",
+    "address": "0xb59ba13956f806941abb3d9be3763785a07e1d16",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xf719c92f112638e43ec971b737c7f86f6ef2fadd", "symbol": "USDC", "decimals": 4 }
+      { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
+      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 }
     ]
   },
   {
@@ -9483,6 +9592,33 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0x69e8f07ea30edb54c7159e70928100511166f345",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x049d68029688eabf473097a2fc38ef61633a3c7a", "symbol": "fUSDT", "decimals": 6 },
+      { "chain": "fantom", "address": "0x7edd142bb40bedba8db3e9dce042039489fda8db", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x55ddb50b3249a5f89e874ec6683ca9f22405c433",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      {
+        "chain": "fantom",
+        "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+        "symbol": "SPIRIT-LP",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0x5417cfb4211443269d3a7046107d262d4aab77cd",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
@@ -9494,11 +9630,60 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0x474b2bb92378178c6feb6b395afd10e7afa4a47e",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x4d3542b37de890ea8f1e06f0bdc9042ed8e76943", "symbol": "ETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x442ab4ac3fc43c247ca440a12a3f48e800dc48a7",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
+      { "chain": "fantom", "address": "0x778f565593224c7931f8a8012e4dba9d16abbb12", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0x238683fa7b9dab35eb177adb0fe74a1333c93702",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
       { "chain": "fantom", "address": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590", "symbol": "STG", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xed27b6d95b99633338608627d2891914565b79f9",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      {
+        "chain": "fantom",
+        "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+        "symbol": "SPIRIT-LP",
+        "decimals": 18
+      },
+      { "chain": "fantom", "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc", "symbol": "SUSHI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xdab5e16afcbcff58629170dd0b8f4d66c540cc0b",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc", "symbol": "SUSHI", "decimals": 18 }
     ]
   },
   {
@@ -9527,6 +9712,28 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
+    "address": "0xc0891095a6a3e66b5591f20a6786f536baf198e9",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x4d93239b7782430300c0bd398bcb6ee660723008", "symbol": "XRP", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xb12977aa364c75efe504232185b3b1fe8dfedcd2",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0xf4081524bad61e0944c38d79f752678138d3b8c6", "symbol": "HUNX", "decimals": 8 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
     "address": "0x8897a17ad2dc6cd8ec926fd8add0dd805d92f0eb",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
@@ -9543,6 +9750,17 @@
     "tokens": [
       { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
       { "chain": "fantom", "address": "0xb355f4f4cc84a9429a59d5c2b98d77016f7ec482", "symbol": "BTCBR", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x46cc9aadffd6346a48918d313e8dd9b5311ba615",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x91fa20244fb509e8289ca630e5db3e9166233fdc", "symbol": "gOHM", "decimals": 18 }
     ]
   },
   {
@@ -9571,11 +9789,27 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xb59ba13956f806941abb3d9be3763785a07e1d16",
+    "address": "0xc66826f2df63795fa8ed8a385daccfc3eb359563",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x7edd142bb40bedba8db3e9dce042039489fda8db", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xb09b1851d87207794f0592d6b9e0b15c34770719",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
-      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 }
+      {
+        "chain": "fantom",
+        "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+        "symbol": "SPIRIT-LP",
+        "decimals": 18
+      }
     ]
   },
   {
@@ -9594,6 +9828,17 @@
     "chain": "fantom",
     "version": "univ3",
     "address": "0x82db8a96cb14eceb08e73977346b610d809bd7bd",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
+      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x71fa37d86e54ee4d04ef7198f79a037e9fd0b368",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
@@ -9626,22 +9871,11 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0x442ab4ac3fc43c247ca440a12a3f48e800dc48a7",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
-      { "chain": "fantom", "address": "0x778f565593224c7931f8a8012e4dba9d16abbb12", "symbol": "USDT", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x0e0f2b70dfc8713b9c7a0a8e44610ba81b2ff2ce",
+    "address": "0x21ef913a4d3dc9d773d19d254c93300170c03fac",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x5cc61a78f164885776aa610fb0fe1257df78e59b", "symbol": "SPIRIT", "decimals": 18 }
+      { "chain": "fantom", "address": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590", "symbol": "STG", "decimals": 18 }
     ]
   },
   {
@@ -9653,6 +9887,17 @@
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
       { "chain": "fantom", "address": "0x2c952cbbca98e2a695f78fe095ce2937f5be347b", "symbol": "Toy", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0xe66b3a105180d6f196765d6aa2e04b8f0108b09b",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 },
+      { "chain": "fantom", "address": "0x658b0c7613e890ee50b8c4bc6a3f41ef411208ad", "symbol": "FETH", "decimals": 18 }
     ]
   },
   {
@@ -9692,11 +9937,11 @@
     "protocol": "sushiv3",
     "chain": "fantom",
     "version": "univ3",
-    "address": "0xb12977aa364c75efe504232185b3b1fe8dfedcd2",
+    "address": "0xa3434e1ae36de3d73ebe08ff6b0e862210361315",
     "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
     "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xf4081524bad61e0944c38d79f752678138d3b8c6", "symbol": "HUNX", "decimals": 8 }
+      { "chain": "fantom", "address": "0x042b1131089f4ab50fa7fd61e2d59269e529029f", "symbol": "wTV", "decimals": 18 },
+      { "chain": "fantom", "address": "0x1b6382dbdea11d97f24495c9a90b7c88469134a4", "symbol": "axlUSDC", "decimals": 6 }
     ]
   },
   {
@@ -9708,6 +9953,17 @@
     "tokens": [
       { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
       { "chain": "fantom", "address": "0x97eac5e9ebaf751bd57617984f7005414b1ed7b2", "symbol": "DADDY", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "sushiv3",
+    "chain": "fantom",
+    "version": "univ3",
+    "address": "0x40ddaae00e0373af50413492578c99fca8f4beaa",
+    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
+    "tokens": [
+      { "chain": "fantom", "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d", "symbol": "USDT", "decimals": 18 },
+      { "chain": "fantom", "address": "0x658b0c7613e890ee50b8c4bc6a3f41ef411208ad", "symbol": "FETH", "decimals": 18 }
     ]
   },
   {
@@ -9730,220 +9986,6 @@
     "tokens": [
       { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
       { "chain": "fantom", "address": "0x3eda36088b931098e8e472748840b3df78268c72", "symbol": "POTION", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x21ef913a4d3dc9d773d19d254c93300170c03fac",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590", "symbol": "STG", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x0199466a409fc975de88bc186b1b74c739466feb",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      {
-        "chain": "fantom",
-        "address": "0xc8bc2c96cb1169a2a3f9c31cc546fa72d11db63f",
-        "symbol": "LASTBOSS",
-        "decimals": 18
-      }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xf88d1c1044c66db66c0c3a993252d8b9ef4d58be",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xdb9fb447a2e0dd7c1b4e78da38ea1a03d9e973b4", "symbol": "DNR", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xe870a9c6fd05807d6db5189856583d27ea897c0e",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x2aa27e8ce35ef0fae727d14bf188576d7bc5f827", "symbol": "COSMOS", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xdd53bc95a6a7959531419f9d7e1ffae1e516de73",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75", "symbol": "USDC", "decimals": 6 },
-      { "chain": "fantom", "address": "0x35b5e032efe62ffc28674ae297690d39af615b3c", "symbol": "USDM", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xdab5e16afcbcff58629170dd0b8f4d66c540cc0b",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc", "symbol": "SUSHI", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xcc30270c5bfa6dd87e429e48bb1b494c12c92fe7",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x1e4f97b9f9f913c46f1632781732927b9019c68b", "symbol": "CRV", "decimals": 18 },
-      { "chain": "fantom", "address": "0x74b23882a30290451a17c44f4f05243b6b58c76d", "symbol": "ETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xba24ccfb986d8b1d01bc1e60f6c8a9c0971e3e75",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x9585d336248094b911397da106321bf47c858969", "symbol": "LGG", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xa3218e7c202fe22f5634e3419af5b6f141936971",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x121b994d5c0ba13642e5b962866ac000c6abffb7", "symbol": "MSF", "decimals": 18 },
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0xa1c60719338eeb2b7500c3551e2241bcb4dad2a6",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xf16e81dce15b08f326220742020379b855b87df9", "symbol": "ICE", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x997849b404e6bb73fc79bb6daa009c2448edb856",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x78be30f2a60d63244425aa2466b90ca677d5aa77", "symbol": "GDXen", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x91779a96bcf55cb25b440ab8eb2e96237d30d463",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x54447cfa919c096d095d58c2b5814669897bffcd", "symbol": "TWVENOM", "decimals": 9 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x8830974b9569d962c870a1ce76579362ecece75e",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x695921034f0387eac4e11620ee91b1b15a6a09fe", "symbol": "WETH", "decimals": 18 },
-      { "chain": "fantom", "address": "0x9e73f99ee061c8807f69f9c6ccc44ea3d8c373ee", "symbol": "frxETH", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x671a8252a1e0af045e0a9c4a2bd25f6d52919001",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x815061142787359d8f5e798175de06915208ba12", "symbol": "usdc", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x1e682b46afa0656b7b69f952e39220183d970c2e",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x5a33869045db8a6a16c9f351293501cfd92cf7ed", "symbol": "BSGG", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x0a0bdd2915487494b362b230373d6fbb79b00d11",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0xfa1fbb8ef55a4855e5688c0ee13ac3f202486286", "symbol": "FHM", "decimals": 9 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x77174cac2d7c7205f67ea1401b50f93f54df5646",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x567223a47789772755351a9cd8b6bf274142963e", "symbol": "PEG", "decimals": 6 },
-      { "chain": "fantom", "address": "0xc84f4ab6d5a9935354df75a27a17de418a2f8f0c", "symbol": "USDx", "decimals": 6 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x46cc9aadffd6346a48918d313e8dd9b5311ba615",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x91fa20244fb509e8289ca630e5db3e9166233fdc", "symbol": "gOHM", "decimals": 18 }
-    ]
-  },
-  {
-    "protocol": "sushiv3",
-    "chain": "fantom",
-    "version": "univ3",
-    "address": "0x2075bfa98f0fae919995590a8ddd6315517b250a",
-    "factory": "0x7770978eed668a3ba661d51a773d3a992fc9ddcb",
-    "tokens": [
-      { "chain": "fantom", "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83", "symbol": "WFTM", "decimals": 18 },
-      { "chain": "fantom", "address": "0x5930f6b5991b719a47328cce1d6ce8f637ac63c3", "symbol": "STOP", "decimals": 6 }
     ]
   }
 ]

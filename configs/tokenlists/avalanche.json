@@ -853,9 +853,9 @@
   },
   "USDT": {
     "chain": "avalanche",
+    "address": "0xde3a24028580884448a5397872046a019649b084",
     "symbol": "USDT",
-    "decimals": 6,
-    "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
+    "decimals": 6
   },
   "AvSTRM": {
     "chain": "avalanche",
@@ -1192,5 +1192,11 @@
     "symbol": "XRP",
     "decimals": 18,
     "address": "0x34b2885d617ce2dded4f60ccb49809fc17bb58af"
+  },
+  "CDT": {
+    "chain": "avalanche",
+    "address": "0x0cbd6fadcf8096cc9a43d90b45f65826102e3ece",
+    "symbol": "CDT",
+    "decimals": 18
   }
 }

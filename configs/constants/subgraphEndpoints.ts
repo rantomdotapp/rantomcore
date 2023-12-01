@@ -18,6 +18,7 @@ export const PublicSubGraphEndpoints: { [key: string]: string } = {
   sushiBnbchain: 'https://api.thegraph.com/subgraphs/name/sushiswap/bsc-exchange',
   sushiFantom: 'https://api.thegraph.com/subgraphs/name/sushiswap/fantom-exchange',
   sushiAvalanche: 'https://api.thegraph.com/subgraphs/name/sushiswap/avalanche-exchange',
+  sushiCelo: 'https://api.thegraph.com/subgraphs/name/sushiswap/celo-exchange',
 
   sushiv3: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-ethereum',
   sushiv3Arbitrum: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-arbitrum',

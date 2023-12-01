@@ -1167,9 +1167,9 @@
   },
   "AGIX": {
     "chain": "ethereum",
+    "address": "0x5b7533812759b45c2b44c19e320ba2cd2681b542",
     "symbol": "AGIX",
-    "decimals": 8,
-    "address": "0x5b7533812759b45c2b44c19e320ba2cd2681b542"
+    "decimals": 8
   },
   "AGLD": {
     "chain": "ethereum",
@@ -3013,7 +3013,7 @@
   },
   "BAO": {
     "chain": "ethereum",
-    "address": "0x374cb8c27130e2c9e04f44303f3c8351b9de61c1",
+    "address": "0xce391315b414d4c7555956120461d21808a69f3a",
     "symbol": "BAO",
     "decimals": 18
   },
@@ -7969,7 +7969,7 @@
   },
   "DEV": {
     "chain": "ethereum",
-    "address": "0x905ff01bf05bbd2de91b3f09cc86187ea07edec3",
+    "address": "0x5caf454ba92e6f2c929df14667ee360ed9fd5b26",
     "symbol": "DEV",
     "decimals": 18
   },
@@ -13184,7 +13184,7 @@
   },
   "HEX": {
     "chain": "ethereum",
-    "address": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+    "address": "0x46f6e9bbcce8638b20ebbc83d33a2b5bfa9b7894",
     "symbol": "HEX",
     "decimals": 8
   },
@@ -15011,6 +15011,12 @@
     "decimals": 4,
     "address": "0xdfe691f37b6264a90ff507eb359c45d55037951c"
   },
+  "KAS": {
+    "chain": "ethereum",
+    "address": "0x112b08621e27e10773ec95d250604a041f36c582",
+    "symbol": "KAS",
+    "decimals": 8
+  },
   "KASHI": {
     "chain": "ethereum",
     "address": "0x56ac96168a58196084ac8e881adc538b2d1cf4c4",
@@ -16715,9 +16721,9 @@
   },
   "LUNA": {
     "chain": "ethereum",
-    "address": "0xbd31ea8212119f94a611fa969881cba3ea06fa3d",
+    "address": "0xd2877702675e6ceb975b4a1dff9fb7baf4c91ea9",
     "symbol": "LUNA",
-    "decimals": 6
+    "decimals": 18
   },
   "LUNCH": {
     "chain": "ethereum",
@@ -19980,7 +19986,7 @@
   },
   "OHM": {
     "chain": "ethereum",
-    "address": "0x383518188c0c6d7730d91b2c03a03c837814a899",
+    "address": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
     "symbol": "OHM",
     "decimals": 9
   },
@@ -27849,9 +27855,9 @@
   },
   "TRU": {
     "chain": "ethereum",
-    "address": "0xf65b5c5104c4fafd4b709d9d60a185eae063276c",
+    "address": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
     "symbol": "TRU",
-    "decimals": 18
+    "decimals": 8
   },
   "TRU-WETH SLP": {
     "chain": "ethereum",
@@ -31090,7 +31096,7 @@
     "symbol": "WooF",
     "decimals": 9
   },
-  "X": { "chain": "ethereum", "address": "0xa62894d5196bc44e4c3978400ad07e7b30352372", "symbol": "X", "decimals": 9 },
+  "X": { "chain": "ethereum", "address": "0x7f3141c4d6b047fb930991b450f1ed996a51cb26", "symbol": "X", "decimals": 18 },
   "X-WETH SLP": {
     "chain": "ethereum",
     "address": "0xc2ce29af8930fc32ca24ccb76c2866fb2bf692fe",

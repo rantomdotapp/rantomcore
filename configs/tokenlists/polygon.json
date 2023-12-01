@@ -1098,6 +1098,12 @@
     "symbol": "GLM",
     "decimals": 18
   },
+  "GMT": {
+    "chain": "polygon",
+    "address": "0x714db550b574b3e927af3d93e26127d15721d4c2",
+    "symbol": "GMT",
+    "decimals": 8
+  },
   "GNO": {
     "chain": "polygon",
     "symbol": "GNO",
@@ -1260,7 +1266,7 @@
   },
   "JPYC": {
     "chain": "polygon",
-    "address": "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb",
+    "address": "0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c",
     "symbol": "JPYC",
     "decimals": 18
   },
@@ -2333,7 +2339,7 @@
   },
   "USDC": {
     "chain": "polygon",
-    "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
     "symbol": "USDC",
     "decimals": 6
   },

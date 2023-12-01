@@ -40,6 +40,11 @@ const SushiFactories: Array<any> = [
     address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
     subgraph: PublicSubGraphEndpoints.sushiFantom,
   },
+  {
+    chain: 'celo',
+    address: '0xc35dadb65012ec5796536bd9864ed8773abc74c4',
+    subgraph: PublicSubGraphEndpoints.sushiCelo,
+  },
 ];
 
 const Sushiv3Factories: Array<any> = [

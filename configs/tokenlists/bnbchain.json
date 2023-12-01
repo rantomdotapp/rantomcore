@@ -415,9 +415,9 @@
   },
   "BAKE": {
     "chain": "bnbchain",
+    "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
     "symbol": "BAKE",
-    "decimals": 18,
-    "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5"
+    "decimals": 18
   },
   "BALL": {
     "chain": "bnbchain",
@@ -868,7 +868,7 @@
   },
   "BTC": {
     "chain": "bnbchain",
-    "address": "0xfc2a0c088c519553595d2b8510e5e3a976f773c3",
+    "address": "0x2eb7203a70868614baf1c9d5e7455d050f7fffc6",
     "symbol": "BTC",
     "decimals": 18
   },
@@ -4889,9 +4889,9 @@
   },
   "UST": {
     "chain": "bnbchain",
-    "address": "0x3d4350cd54aef9f9b2c29435e0fa809957b3f30a",
+    "address": "0x23396cf899ca06c4472205fc903bdb4de249d6fc",
     "symbol": "UST",
-    "decimals": 6
+    "decimals": 18
   },
   "USX": {
     "chain": "bnbchain",
@@ -4959,6 +4959,12 @@
     "address": "0x7f792db54b0e580cdc755178443f0430cf799aca",
     "symbol": "VOLT",
     "decimals": 9
+  },
+  "VPC": {
+    "chain": "bnbchain",
+    "address": "0x1651f961d5cead3f42a06eefe4a1fba3b408fda2",
+    "symbol": "VPC",
+    "decimals": 18
   },
   "VRM": {
     "chain": "bnbchain",
