@@ -565,9 +565,9 @@
   },
   "w3ULL": {
     "chain": "avalanche",
+    "address": "0xa77e70d0af1ac7ff86726740db1bd065c3566937",
     "symbol": "w3ULL",
-    "decimals": 18,
-    "address": "0xa77e70d0af1ac7ff86726740db1bd065c3566937"
+    "decimals": 18
   },
   "zJoe": {
     "chain": "avalanche",

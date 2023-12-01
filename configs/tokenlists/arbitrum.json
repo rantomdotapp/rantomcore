@@ -160,7 +160,7 @@
   },
   "AICODE": {
     "chain": "arbitrum",
-    "address": "0x2823f231b8b7121c4ba6b6c0ceef37b6a5bda547",
+    "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
     "symbol": "AICODE",
     "decimals": 18
   },
@@ -2328,7 +2328,7 @@
   },
   "RDNT": {
     "chain": "arbitrum",
-    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+    "address": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
     "symbol": "RDNT",
     "decimals": 18
   },
@@ -2867,7 +2867,7 @@
   },
   "USDC": {
     "chain": "arbitrum",
-    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
     "symbol": "USDC",
     "decimals": 6
   },
@@ -3569,7 +3569,7 @@
   },
   "pogai": {
     "chain": "arbitrum",
-    "address": "0xca38bef611d630a9376a749f3bed35940bf2866b",
+    "address": "0x6fd58f5a2f3468e35feb098b5f59f04157002407",
     "symbol": "pogai",
     "decimals": 18
   },

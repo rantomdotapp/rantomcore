@@ -37,4 +37,8 @@ export const NativeTokens: { [key: string]: NativeToken } = {
     symbol: 'FTM',
     decimals: 18,
   },
+  celo: {
+    symbol: 'CELO',
+    decimals: 18,
+  },
 };

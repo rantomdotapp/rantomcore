@@ -9,6 +9,7 @@ export const PublicSubGraphEndpoints: { [key: string]: string } = {
   uniswapv3Polygon: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon',
   uniswapv3Bnbchain: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-bsc',
   uniswapv3Avalanche: 'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-avax',
+  uniswapv3Celo: 'https://api.thegraph.com/subgraphs/name/jesse-sawa/uniswap-celo?source=uniswap',
 
   // sushi
   sushi: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
@@ -33,11 +34,17 @@ export const PublicSubGraphEndpoints: { [key: string]: string } = {
   pancakeswapArbitrum: 'https://api.studio.thegraph.com/query/45376/exchange-v2-arbitrum/version/latest',
   pancakeswapBase: 'https://api.studio.thegraph.com/query/45376/exchange-v2-base/version/latest',
   pancakeswapBnbchain: 'https://proxy-worker.pancake-swap.workers.dev/bsc-exchange',
+  pancakeswapLinea: 'https://graph-query.linea.build/subgraphs/name/pancakeswap/exhange-v2',
+  pancakeswapZksyncera: 'https://api.studio.thegraph.com/query/45376/exchange-v2-zksync/version/latest',
+  pancakeswapPolygonzkevm: 'https://api.studio.thegraph.com/query/45376/exchange-v2-polygon-zkevm/version/latest',
 
   pancakeswapv3: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-eth',
   pancakeswapv3Arbitrum: 'https://api.studio.thegraph.com/query/45376/exchange-v3-arbitrum/version/latest',
   pancakeswapv3Base: 'https://api.studio.thegraph.com/query/45376/exchange-v3-base/version/latest',
   pancakeswapv3Bnbchain: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-bsc',
+  pancakeswapv3Linea: 'https://graph-query.linea.build/subgraphs/name/pancakeswap/exchange-v3-linea',
+  pancakeswapv3Zksyncera: 'https://api.studio.thegraph.com/query/45376/exchange-v3-zksync/version/latest',
+  pancakeswapv3Polygonzkevm: 'https://api.studio.thegraph.com/query/45376/exchange-v3-polygon-zkevm/v0.0.0',
 
   // kyberswap
   kyberswapElastic: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-mainnet',
@@ -71,4 +78,8 @@ export const BlockSubGraphEndpoints: { [key: string]: string } = {
   bnbchain: 'https://api.thegraph.com/subgraphs/name/matthewlilley/bsc-blocks',
   avalanche: 'https://api.thegraph.com/subgraphs/name/matthewlilley/avalanche-blocks',
   fantom: 'https://api.thegraph.com/subgraphs/name/matthewlilley/fantom-blocks',
+  zksyncera: 'https://api.studio.thegraph.com/query/45376/blocks-zksync/version/latest',
+  polygonzkevm: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
+  linea: 'https://graph-query.linea.build/subgraphs/name/kybernetwork/linea-blocks',
+  celo: 'https://api.thegraph.com/subgraphs/name/jesse-sawa/celo-blocks',
 };

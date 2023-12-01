@@ -3,6 +3,7 @@ import fs from 'fs';
 
 import PancakeStableSwapAbi from '../configs/abi/pancake/PancakeStableSwap.json';
 import SushiMasterchefAbi from '../configs/abi/sushi/Masterchef.json';
+import { ChainLinea, ChainPolygonZkEVM, ChainZksyncEra } from '../configs/constants/chains';
 import { PublicSubGraphEndpoints } from '../configs/constants/subgraphEndpoints';
 import { normalizeAddress } from '../lib/utils';
 import SushiLibs from '../modules/adapters/sushi/libs';
@@ -33,6 +34,21 @@ const Factories: Array<any> = [
     address: '0xca143ce32fe78f1f7019d7d551a6402fc5350c73',
     subgraph: PublicSubGraphEndpoints.pancakeswapBnbchain,
   },
+  {
+    chain: ChainLinea,
+    address: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
+    subgraph: PublicSubGraphEndpoints.pancakeswapLinea,
+  },
+  {
+    chain: ChainZksyncEra,
+    address: '0xd03d8d566183f0086d8d09a84e1e30b58dd5619d',
+    subgraph: PublicSubGraphEndpoints.pancakeswapZksyncera,
+  },
+  {
+    chain: ChainPolygonZkEVM,
+    address: '0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e',
+    subgraph: PublicSubGraphEndpoints.pancakeswapPolygonzkevm,
+  },
 ];
 
 const v3Factories: Array<any> = [
@@ -55,6 +71,21 @@ const v3Factories: Array<any> = [
     chain: 'bnbchain',
     address: '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865',
     subgraph: PublicSubGraphEndpoints.pancakeswapv3Bnbchain,
+  },
+  {
+    chain: ChainLinea,
+    address: '0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865',
+    subgraph: PublicSubGraphEndpoints.pancakeswapv3Linea,
+  },
+  {
+    chain: ChainZksyncEra,
+    address: '0x1BB72E0CbbEA93c08f535fc7856E0338D7F7a8aB',
+    subgraph: PublicSubGraphEndpoints.pancakeswapv3Zksyncera,
+  },
+  {
+    chain: ChainPolygonZkEVM,
+    address: '0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865',
+    subgraph: PublicSubGraphEndpoints.pancakeswapv3Polygonzkevm,
   },
 ];
 

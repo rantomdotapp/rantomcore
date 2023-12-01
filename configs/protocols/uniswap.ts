@@ -50,6 +50,11 @@ const Uniswapv3Contracts: { [key: string]: ContractConfig } = {
     protocol: 'uniswapv3',
     address: '0x740b1c1de25031c31ff4fc9a62f554a55cdc1bad',
   },
+  factoryCelo: {
+    chain: 'celo',
+    protocol: 'uniswapv3',
+    address: '0xafe208a311b21f13ef87e33a90049fc17a7acdec',
+  },
 };
 
 export const Uniswapv3Configs: ProtocolConfig = {
@@ -62,5 +67,6 @@ export const Uniswapv3Configs: ProtocolConfig = {
     Uniswapv3Contracts.factoryPolygon,
     Uniswapv3Contracts.factoryBnbchain,
     Uniswapv3Contracts.factoryAvalanche,
+    Uniswapv3Contracts.factoryCelo,
   ],
 };

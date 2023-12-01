@@ -42,6 +42,11 @@ const Uniswapv3Factories: Array<any> = [
     address: '0x740b1c1de25031c31ff4fc9a62f554a55cdc1bad',
     subgraph: PublicSubGraphEndpoints.uniswapv3Avalanche,
   },
+  {
+    chain: 'celo',
+    address: '0xafe208a311b21f13ef87e33a90049fc17a7acdec',
+    subgraph: PublicSubGraphEndpoints.uniswapv3Celo,
+  },
 ];
 
 (async function () {

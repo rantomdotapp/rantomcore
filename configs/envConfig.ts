@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 
 import { EnvConfig } from '../types/configs';
+import { ChainCelo, ChainLinea, ChainPolygonZkEVM, ChainZksyncEra } from './constants/chains';
 import { NativeTokens } from './constants/nativeTokens';
 import { BlockSubGraphEndpoints } from './constants/subgraphEndpoints';
 
@@ -91,6 +92,38 @@ const envConfig: EnvConfig = {
       nativeToken: NativeTokens.fantom,
       nodeRpc: String(process.env.RANTOM_FANTOM_NODE),
       blockSubgraph: BlockSubGraphEndpoints.fantom,
+    },
+    linea: {
+      name: ChainLinea,
+      family: 'evm',
+      chainId: 59144,
+      nativeToken: NativeTokens.ethereum,
+      nodeRpc: String(process.env.RANTOM_LINEA_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.linea,
+    },
+    zksyncera: {
+      name: ChainZksyncEra,
+      family: 'evm',
+      chainId: 324,
+      nativeToken: NativeTokens.ethereum,
+      nodeRpc: String(process.env.RANTOM_ZKSYNCERA_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.zksyncera,
+    },
+    polygonzkevm: {
+      name: ChainPolygonZkEVM,
+      family: 'evm',
+      chainId: 1101,
+      nativeToken: NativeTokens.ethereum,
+      nodeRpc: String(process.env.RANTOM_POLYGONZKEVM_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.polygonzkevm,
+    },
+    celo: {
+      name: ChainCelo,
+      family: 'evm',
+      chainId: 42220,
+      nativeToken: NativeTokens.celo,
+      nodeRpc: String(process.env.RANTOM_CELO_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.celo,
     },
   },
 };

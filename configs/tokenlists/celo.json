@@ -1,0 +1,187 @@
+{
+  "CELO": {
+    "chain": "celo",
+    "address": "0x471ece3750da237f93b8e339c536989b8978a438",
+    "symbol": "CELO",
+    "decimals": 18
+  },
+  "cUSD": {
+    "chain": "celo",
+    "address": "0x765de816845861e75a25fca122bb6898b8b1282a",
+    "symbol": "cUSD",
+    "decimals": 18
+  },
+  "cEUR": {
+    "chain": "celo",
+    "address": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
+    "symbol": "cEUR",
+    "decimals": 18
+  },
+  "ETHIX": {
+    "chain": "celo",
+    "address": "0x9995cc8f20db5896943afc8ee0ba463259c931ed",
+    "symbol": "ETHIX",
+    "decimals": 18
+  },
+  "NCT": { "chain": "celo", "address": "0x02de4766c272abc10bc88c220d214a26960a7e92", "symbol": "NCT", "decimals": 18 },
+  "WETH": {
+    "chain": "celo",
+    "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "USDC": { "chain": "celo", "address": "0x37f750b7cc259a2f741af45294f6a16572cf5cad", "symbol": "USDC", "decimals": 6 },
+  "PLASTIK": {
+    "chain": "celo",
+    "address": "0x27cd006548df7c8c8e9fdc4a67fa05c2e3ca5cf9",
+    "symbol": "PLASTIK",
+    "decimals": 9
+  },
+  "JMPT": {
+    "chain": "celo",
+    "address": "0x1d18d0386f51ab03e7e84e71bda1681eba865f1f",
+    "symbol": "JMPT",
+    "decimals": 18
+  },
+  "cMCO2": {
+    "chain": "celo",
+    "address": "0x32a9fe697a32135bfd313a6ac28792dae4d9979d",
+    "symbol": "cMCO2",
+    "decimals": 18
+  },
+  "G$": { "chain": "celo", "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a", "symbol": "G$", "decimals": 18 },
+  "cREAL": {
+    "chain": "celo",
+    "address": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
+    "symbol": "cREAL",
+    "decimals": 18
+  },
+  "KNOX": {
+    "chain": "celo",
+    "address": "0x833fd14f0fd4eaa47433a07428a46d1ac60fa591",
+    "symbol": "KNOX",
+    "decimals": 18
+  },
+  "USDGLO": {
+    "chain": "celo",
+    "address": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3",
+    "symbol": "USDGLO",
+    "decimals": 18
+  },
+  "PACT": {
+    "chain": "celo",
+    "address": "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58",
+    "symbol": "PACT",
+    "decimals": 18
+  },
+  "agEUR": {
+    "chain": "celo",
+    "address": "0xc16b81af351ba9e64c1a069e3ab18c244a1e3049",
+    "symbol": "agEUR",
+    "decimals": 18
+  },
+  "SOURCE": {
+    "chain": "celo",
+    "address": "0x74c0c58b99b68cf16a717279ac2d056a34ba2bfe",
+    "symbol": "SOURCE",
+    "decimals": 18
+  },
+  "WBTC": { "chain": "celo", "address": "0xd71ffd0940c920786ec4dbb5a12306669b5b81ef", "symbol": "WBTC", "decimals": 8 },
+  "gcUSD": {
+    "chain": "celo",
+    "address": "0xfb42e2e90fc79cfa6a6b4eba4877d5faf4e29287",
+    "symbol": "gcUSD",
+    "decimals": 18
+  },
+  "AVAX": {
+    "chain": "celo",
+    "address": "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "kUSD": {
+    "chain": "celo",
+    "address": "0x266c13ded5a1d636e502fd56b3f76d38c3107ec2",
+    "symbol": "kUSD",
+    "decimals": 18
+  },
+  "cRECY": {
+    "chain": "celo",
+    "address": "0x34c11a932853ae24e845ad4b633e3cef91afe583",
+    "symbol": "cRECY",
+    "decimals": 18
+  },
+  "IMTX": {
+    "chain": "celo",
+    "address": "0x84084b3a9ff2cb1f617355d0773eb37722ba1d49",
+    "symbol": "IMTX",
+    "decimals": 18
+  },
+  "BTC": { "chain": "celo", "address": "0xd629eb00deced2a080b7ec630ef6ac117e614f1b", "symbol": "BTC", "decimals": 18 },
+  "cETH": {
+    "chain": "celo",
+    "address": "0x2def4285787d58a2f811af24755a8150622f4361",
+    "symbol": "cETH",
+    "decimals": 18
+  },
+  "stabilUSD": {
+    "chain": "celo",
+    "address": "0x0a60c25ef6021fc3b479914e6bca7c03c18a97f1",
+    "symbol": "stabilUSD",
+    "decimals": 18
+  },
+  "CRV": { "chain": "celo", "address": "0x173fd7434b8b50df08e3298f173487ebdb35fd14", "symbol": "CRV", "decimals": 18 },
+  "DAI": { "chain": "celo", "address": "0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd", "symbol": "DAI", "decimals": 18 },
+  "KNX": { "chain": "celo", "address": "0xa81d9a2d29373777e4082d588958678a6df5645c", "symbol": "KNX", "decimals": 18 },
+  "ERUND": {
+    "chain": "celo",
+    "address": "0xcc82ce5fa524dc69fa94a9bdec9525123b611b6a",
+    "symbol": "ERUND",
+    "decimals": 18
+  },
+  "UBE": { "chain": "celo", "address": "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec", "symbol": "UBE", "decimals": 18 },
+  "stCELO": {
+    "chain": "celo",
+    "address": "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24",
+    "symbol": "stCELO",
+    "decimals": 18
+  },
+  "ATLASX": {
+    "chain": "celo",
+    "address": "0xc3377ea71f1dc8e55ba360724eff2d7ad62a8670",
+    "symbol": "ATLASX",
+    "decimals": 18
+  },
+  "WERUND": {
+    "chain": "celo",
+    "address": "0x60163d35494f2a9db815f78299abbb5c99f0193c",
+    "symbol": "WERUND",
+    "decimals": 18
+  },
+  "mCUSD": {
+    "chain": "celo",
+    "address": "0x918146359264c492bd6934071c6bd31c854edbc3",
+    "symbol": "mCUSD",
+    "decimals": 18
+  },
+  "mCEUR": {
+    "chain": "celo",
+    "address": "0xe273ad7ee11dcfaa87383ad5977ee1504ac07568",
+    "symbol": "mCEUR",
+    "decimals": 18
+  },
+  "CPCO2": {
+    "chain": "celo",
+    "address": "0xd7dd367ea602be314e5050c3334a3d4c2fdefe21",
+    "symbol": "CPCO2",
+    "decimals": 18
+  },
+  "axlWBTC": {
+    "chain": "celo",
+    "address": "0x1a35ee4640b0a3b87705b0a4b45d227ba60ca2ad",
+    "symbol": "axlWBTC",
+    "decimals": 8
+  },
+  "IMMO": { "chain": "celo", "address": "0xe685d21b7b0fc7a248a6a8e03b8db22d013aa2ee", "symbol": "IMMO", "decimals": 9 },
+  "SYMM": { "chain": "celo", "address": "0x8427bd503dd3169ccc9aff7326c15258bc305478", "symbol": "SYMM", "decimals": 18 }
+}

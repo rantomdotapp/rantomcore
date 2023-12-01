@@ -206,7 +206,7 @@
   },
   "BINU": {
     "chain": "base",
-    "address": "0x1f7366fce31f54295fb9a58210e1b32631872e37",
+    "address": "0x63e71271719f03d7233f4fa306b6ea868d0f52ff",
     "symbol": "BINU",
     "decimals": 18
   },
@@ -309,6 +309,12 @@
   },
   "CA": { "chain": "base", "address": "0x514ca85aa81e8c3cca5e26a917abcc1ba913fa17", "symbol": "CA", "decimals": 18 },
   "CAKE": { "chain": "base", "address": "0x03f01333bd86e1049e6b57afa17cc03329795c21", "symbol": "CAKE", "decimals": 8 },
+  "CAROL": {
+    "chain": "base",
+    "address": "0x4a0a76645941d8c7ba059940b3446228f0db8972",
+    "symbol": "CAROL",
+    "decimals": 18
+  },
   "CASINO": {
     "chain": "base",
     "address": "0xf54d1bf5ff3457d6812e6826d549a939302612ae",
@@ -318,7 +324,7 @@
   "CATS": { "chain": "base", "address": "0x2760c3e34eb533f74332743971b9d77b082c77a7", "symbol": "CATS", "decimals": 8 },
   "CIVIC": {
     "chain": "base",
-    "address": "0x5ba689a51eaf00546dc086e76c06815fa9b35e22",
+    "address": "0x5071a604f6362d0bd22e2de309857bc5eea59afe",
     "symbol": "CIVIC",
     "decimals": 18
   },
@@ -591,7 +597,7 @@
   "MIM": { "chain": "base", "address": "0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d", "symbol": "MIM", "decimals": 18 },
   "MOCHI": {
     "chain": "base",
-    "address": "0xa4220a2b0cb10bf5fdc3b8c3d9e13728f5e7ca56",
+    "address": "0xe1f9ac62a2f34881f6fe0f84322de9d7024c2b8e",
     "symbol": "MOCHI",
     "decimals": 8
   },
@@ -792,7 +798,7 @@
   },
   "SQUARE": {
     "chain": "base",
-    "address": "0x0d9c528bc3684efd822c828ca5da1d4e921e9c20",
+    "address": "0xe0da5a3074aacf0ed77ae8899e580b2507128b02",
     "symbol": "SQUARE",
     "decimals": 18
   },
@@ -811,6 +817,7 @@
   },
   "SWI": { "chain": "base", "address": "0xec4cb1148ec60e00a6bfcfce4482db724db6bdde", "symbol": "SWI", "decimals": 18 },
   "Sats": { "chain": "base", "address": "0x72e2b62f52e2b653196556b42b5509f7de1e74cf", "symbol": "Sats", "decimals": 9 },
+  "T": { "chain": "base", "address": "0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29", "symbol": "T", "decimals": 18 },
   "TEST": {
     "chain": "base",
     "address": "0xda961c48b131c66d692c5055f12d1aeb8bdc1a69",
@@ -827,7 +834,7 @@
   "TIP": { "chain": "base", "address": "0x6b0bd2ececc394bc42b54f251abaa8beb1cd3226", "symbol": "TIP", "decimals": 18 },
   "TOSHI": {
     "chain": "base",
-    "address": "0x064f6d3ed291428b61c4369c08e47db2a5ff0d0f",
+    "address": "0x8544fe9d190fd7ec52860abbf45088e81ee24a8c",
     "symbol": "TOSHI",
     "decimals": 18
   },
@@ -888,7 +895,7 @@
   },
   "USDT": {
     "chain": "base",
-    "address": "0xe19de3613eb12c3ea3ff85c8cc2c893d984eb905",
+    "address": "0x74b5d65333bcb1bfd8ee6c88dab5b3f5786b3b22",
     "symbol": "USDT",
     "decimals": 18
   },

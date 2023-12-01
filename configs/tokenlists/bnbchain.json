@@ -1363,9 +1363,9 @@
   },
   "DAI": {
     "chain": "bnbchain",
+    "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
     "symbol": "DAI",
-    "decimals": 18,
-    "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
+    "decimals": 18
   },
   "DAO": {
     "chain": "bnbchain",
@@ -1501,6 +1501,12 @@
     "symbol": "DIESEL",
     "decimals": 18,
     "address": "0xe1ea2e1907d93f154234ce3b5a7418faf175fe11"
+  },
+  "DINA": {
+    "chain": "bnbchain",
+    "address": "0xa75e17a061ed826c65f138b7a85b44c5d3156aff",
+    "symbol": "DINA",
+    "decimals": 9
   },
   "DINO": {
     "chain": "bnbchain",
@@ -3878,6 +3884,12 @@
     "chain": "bnbchain",
     "address": "0x197bdc90d262ba26b70a8a273d167bd93b66e1e1",
     "symbol": "QGEM",
+    "decimals": 18
+  },
+  "QILIN": {
+    "chain": "bnbchain",
+    "address": "0xa2ef8fd3b704048ca4e5f613f7f5b1b94374af8c",
+    "symbol": "QILIN",
     "decimals": 18
   },
   "QUACK": {
