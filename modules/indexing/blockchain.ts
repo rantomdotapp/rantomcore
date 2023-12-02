@@ -1,4 +1,4 @@
-import { DefaultQueryLogsBlockRange } from '../../configs';
+import { DefaultQueryLogsBlockRange, DefaultQueryLogsRanges } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import logger from '../../lib/logger';
 import { queryBlockTimestamps } from '../../lib/subsgraph';
@@ -58,7 +58,7 @@ export default class BlockchainIndexing implements IBlockchainIndexing {
       toBlock: latestBlock,
     });
 
-    const blockRange = chain === 'polygon' ? 50 : DefaultQueryLogsBlockRange;
+    const blockRange = DefaultQueryLogsRanges[chain] ? DefaultQueryLogsRanges[chain] : DefaultQueryLogsBlockRange;
     while (startBlock <= latestBlock) {
       const startExeTime = Math.floor(new Date().getTime() / 1000);
 

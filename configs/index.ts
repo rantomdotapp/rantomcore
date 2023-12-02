@@ -34,6 +34,13 @@ export const TokenList: {
 export const DefaultQueryLogsBlockRange = 50;
 export const DefaultQueryLogsBlockRangeSingleContract = 5000;
 
+// chain => ethereum
+export const DefaultQueryLogsRanges: { [key: string]: number } = {
+  polygon: 50,
+  linea: 50,
+  zksyncera: 20,
+};
+
 // we save latest parsed transactions into database for fast query
 // this value is the number of seconds of the caching
 export const DefaultParserCachingTime = 5 * 60;
