@@ -1,10 +1,16 @@
 import { Token } from '../types/configs';
 import TokenListArbitrum from './tokenlists/arbitrum.json';
+import TokenListAvalanche from './tokenlists/avalanche.json';
 import TokenListBase from './tokenlists/base.json';
 import TokenListBnbchain from './tokenlists/bnbchain.json';
+import TokenListCelo from './tokenlists/celo.json';
 import TokenListEthereum from './tokenlists/ethereum.json';
+import TokenListFantom from './tokenlists/fantom.json';
+import TokenListLinea from './tokenlists/linea.json';
 import TokenListOptimism from './tokenlists/optimism.json';
 import TokenListPolygon from './tokenlists/polygon.json';
+import TokenListPolygonzkevm from './tokenlists/polygonzkevm.json';
+import TokenListZksyncera from './tokenlists/zksyncera.json';
 
 export const TokenList: {
   [key: string]: {
@@ -17,6 +23,12 @@ export const TokenList: {
   optimism: TokenListOptimism,
   polygon: TokenListPolygon,
   bnbchain: TokenListBnbchain,
+  avalanche: TokenListAvalanche,
+  fantom: TokenListFantom,
+  linea: TokenListLinea,
+  zksyncera: TokenListZksyncera,
+  polygonzkevm: TokenListPolygonzkevm,
+  celo: TokenListCelo,
 };
 
 export const DefaultQueryLogsBlockRange = 100;

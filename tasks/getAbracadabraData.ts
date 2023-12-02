@@ -36,6 +36,16 @@ const AbracadabraMarkets: Array<string> = [
 
   'bnbchain:2:0x692CF15F80415D83E8c0e139cAbcDA67fcc12C90', // BNB
   'bnbchain:2:0xF8049467F3A9D50176f4816b20cDdd9bB8a93319', // CAKE
+
+  'avalanche:2:0x3CFEd0439aB822530b1fFBd19536d897EF30D2a2', // AVAX
+  'avalanche:2:0xAcc6821d0F368b02d223158F8aDA4824dA9f28E3', // AVAX/MIM SLP
+
+  'fantom:2:0x8E45Af6743422e488aFAcDad842cE75A09eaEd34',
+  'fantom:2:0xd4357d43545F793101b592bACaB89943DC89d11b',
+  'fantom:2:0xed745b045f9495B8bfC7b58eeA8E0d0597884e12',
+  'fantom:2:0xa3Fc1B4b7f06c2391f7AD7D4795C1cD28A59917e',
+  'fantom:2:0x7208d9F9398D7b02C5C22c334c2a7A3A98c0A45d',
+  'fantom:2:0x4fdfFa59bf8dda3F4d5b38F260EAb8BFaC6d7bC1',
 ];
 
 (async function () {

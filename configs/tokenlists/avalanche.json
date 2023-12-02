@@ -1198,5 +1198,11 @@
     "address": "0x0cbd6fadcf8096cc9a43d90b45f65826102e3ece",
     "symbol": "CDT",
     "decimals": 18
+  },
+  "SLP": {
+    "chain": "avalanche",
+    "address": "0xcbb424fd93cdec0ef330d8a8c985e8b147f62339",
+    "symbol": "SLP",
+    "decimals": 18
   }
 }

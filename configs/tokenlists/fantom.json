@@ -826,9 +826,32 @@
   },
   "SPIRIT-LP": {
     "chain": "fantom",
-    "address": "0x2f6b46613d90166a4dfabcff9f65cf4cafa910af",
+    "address": "0xb32b31dfafbd53e310390f641c7119b5b9ea0488",
     "symbol": "SPIRIT-LP",
     "decimals": 18
   },
-  "XRP": { "chain": "fantom", "address": "0x4d93239b7782430300c0bd398bcb6ee660723008", "symbol": "XRP", "decimals": 18 }
+  "XRP": {
+    "chain": "fantom",
+    "address": "0x4d93239b7782430300c0bd398bcb6ee660723008",
+    "symbol": "XRP",
+    "decimals": 18
+  },
+  "yvWFTM": {
+    "chain": "fantom",
+    "address": "0x0dec85e74a92c52b7f708c4b10207d9560cefaf0",
+    "symbol": "yvWFTM",
+    "decimals": 18
+  },
+  "xBOO": {
+    "chain": "fantom",
+    "address": "0xa48d959ae2e88f1daa7d5f611e01908106de7598",
+    "symbol": "xBOO",
+    "decimals": 18
+  },
+  "spLP": {
+    "chain": "fantom",
+    "address": "0x6f86e65b255c9111109d2d2325ca2dfc82456efc",
+    "symbol": "spLP",
+    "decimals": 18
+  }
 }

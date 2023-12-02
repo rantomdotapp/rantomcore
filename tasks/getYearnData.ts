@@ -20,6 +20,19 @@ const YearnExporterEndpoints = [
 
 const YearnyethLiquidityPool = '0x2cced4ffa804adbe1269cdfc22d7904471abde63';
 
+const YearnV3Vaults: Array<string> = [
+  'polygon:0xA013Fbd4b711f9ded6fB09C1c0d358E2FbC2EAA0',
+  'polygon:0x28F53bA70E5c8ce8D03b1FaD41E9dF11Bb646c36',
+  'polygon:0x305F25377d0a39091e99B975558b1bdfC3975654',
+  'polygon:0xdB92B89Ca415c0dab40Dc96E99Fc411C08F20780',
+  'polygon:0xb1403908F772E4374BB151F7C67E88761a0Eb4f1',
+  'polygon:0x7486325A843590b84c98563c6962C58655569EcA',
+  'polygon:0xBEDA9A5300393e00229dc15cC54D5185E7646c56',
+  'polygon:0x12c3Ad898e8eB1C0ec0Bb74f9748F36C46593F68',
+  'polygon:0x2a42A69F48EfffDF2d4Fb079Af60D98D3e34D49C',
+  'polygon:0x5136c2F7aB13E202eD42bc1AE82Dd63475919653',
+];
+
 (async function () {
   const blockchain = new BlockchainService(null);
 

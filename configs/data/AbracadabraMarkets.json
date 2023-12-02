@@ -6,15 +6,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
+      "address": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
       "symbol": "ALCX",
-      "decimals": 18,
-      "address": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df"
+      "decimals": 18
     }
   },
   {
@@ -24,9 +24,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -42,15 +42,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
+      "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
       "symbol": "SHIB",
-      "decimals": 18,
-      "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce"
+      "decimals": 18
     }
   },
   {
@@ -60,15 +60,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
+      "address": "0x090185f2135308bad17527004364ebcc2d37e5f6",
       "symbol": "SPELL",
-      "decimals": 18,
-      "address": "0x090185f2135308bad17527004364ebcc2d37e5f6"
+      "decimals": 18
     }
   },
   {
@@ -78,9 +78,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -96,16 +96,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
-      "symbol": "WBTC",
-      "decimals": 8,
       "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
+      "symbol": "WBTC",
+      "decimals": 8
     }
   },
   {
@@ -115,16 +114,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
-      "symbol": "WETH",
-      "decimals": 18,
       "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      "logoURI": "https://cdn.paraswap.io/token/WETH.png"
+      "symbol": "WETH",
+      "decimals": 18
     }
   },
   {
@@ -134,9 +132,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -152,9 +150,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -170,15 +168,15 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
+      "address": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
       "symbol": "xSUSHI",
-      "decimals": 18,
-      "address": "0x8798249c2e607446efb7ad49ec89dd1865ff4272"
+      "decimals": 18
     }
   },
   {
@@ -188,9 +186,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -206,9 +204,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -224,9 +222,9 @@
     "version": 2,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -242,9 +240,9 @@
     "version": 3,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -260,9 +258,9 @@
     "version": 3,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -278,9 +276,9 @@
     "version": 3,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -296,9 +294,9 @@
     "version": 3,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -314,9 +312,9 @@
     "version": 3,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -332,16 +330,15 @@
     "version": 4,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
-      "symbol": "CRV",
-      "decimals": 18,
       "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
-      "logoURI": "https://cdn.paraswap.io/token/CRV.png"
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -351,9 +348,9 @@
     "version": 4,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -369,9 +366,9 @@
     "version": 4,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -387,9 +384,9 @@
     "version": 4,
     "debtToken": {
       "chain": "ethereum",
+      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "ethereum",
@@ -405,16 +402,15 @@
     "version": 2,
     "debtToken": {
       "chain": "arbitrum",
+      "address": "0xfea7a6a0b346362bf88a9e4a88416b77a57d6c2a",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0xb20a02dffb172c474bc4bda3fd6f4ee70c04daf2",
-      "logoURI": "https://assets.coingecko.com/coins/images/16786/thumb/mimlogopng.png?1624979612"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      "decimals": 18
     }
   },
   {
@@ -424,10 +420,9 @@
     "version": 4,
     "debtToken": {
       "chain": "arbitrum",
+      "address": "0xfea7a6a0b346362bf88a9e4a88416b77a57d6c2a",
       "symbol": "MIM",
-      "decimals": 18,
-      "address": "0xb20a02dffb172c474bc4bda3fd6f4ee70c04daf2",
-      "logoURI": "https://assets.coingecko.com/coins/images/16786/thumb/mimlogopng.png?1624979612"
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "arbitrum",
@@ -443,17 +438,15 @@
     "version": 2,
     "debtToken": {
       "chain": "bnbchain",
-      "symbol": "MIM",
-      "decimals": 18,
       "address": "0xfe19f0b51438fd612f6fd59c1dbb3ea319f433ba",
-      "logoURI": "https://assets.coingecko.com/coins/images/16786/thumb/mimlogopng.png?1624979612"
+      "symbol": "MIM",
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "bnbchain",
-      "symbol": "WBNB",
-      "decimals": 18,
       "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-      "logoURI": "https://tokens.pancakeswap.finance/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+      "symbol": "WBNB",
+      "decimals": 18
     }
   },
   {
@@ -463,10 +456,9 @@
     "version": 2,
     "debtToken": {
       "chain": "bnbchain",
-      "symbol": "MIM",
-      "decimals": 18,
       "address": "0xfe19f0b51438fd612f6fd59c1dbb3ea319f433ba",
-      "logoURI": "https://assets.coingecko.com/coins/images/16786/thumb/mimlogopng.png?1624979612"
+      "symbol": "MIM",
+      "decimals": 18
     },
     "collateralToken": {
       "chain": "bnbchain",
@@ -474,6 +466,150 @@
       "decimals": 18,
       "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png"
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "avalanche",
+    "address": "0x3cfed0439ab822530b1ffbd19536d897ef30d2a2",
+    "version": 2,
+    "debtToken": {
+      "chain": "avalanche",
+      "address": "0x130966628846bfd36ff31a822705796e8cb8c18d",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "avalanche",
+    "address": "0xacc6821d0f368b02d223158f8ada4824da9f28e3",
+    "version": 2,
+    "debtToken": {
+      "chain": "avalanche",
+      "address": "0x130966628846bfd36ff31a822705796e8cb8c18d",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "avalanche",
+      "address": "0xcbb424fd93cdec0ef330d8a8c985e8b147f62339",
+      "symbol": "SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0x8e45af6743422e488afacdad842ce75a09eaed34",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+      "symbol": "WFTM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0xd4357d43545f793101b592bacab89943dc89d11b",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+      "symbol": "WFTM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0xed745b045f9495b8bfc7b58eea8e0d0597884e12",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0x0dec85e74a92c52b7f708c4b10207d9560cefaf0",
+      "symbol": "yvWFTM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0xa3fc1b4b7f06c2391f7ad7d4795c1cd28a59917e",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0xa48d959ae2e88f1daa7d5f611e01908106de7598",
+      "symbol": "xBOO",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0x7208d9f9398d7b02c5c22c334c2a7a3a98c0a45d",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0xb32b31dfafbd53e310390f641c7119b5b9ea0488",
+      "symbol": "SPIRIT-LP",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "abracadabra",
+    "chain": "fantom",
+    "address": "0x4fdffa59bf8dda3f4d5b38f260eab8bfac6d7bc1",
+    "version": 2,
+    "debtToken": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "collateralToken": {
+      "chain": "fantom",
+      "address": "0x6f86e65b255c9111109d2d2325ca2dfc82456efc",
+      "symbol": "spLP",
+      "decimals": 18
     }
   }
 ]
