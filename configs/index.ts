@@ -31,7 +31,7 @@ export const TokenList: {
   celo: TokenListCelo,
 };
 
-export const DefaultQueryLogsBlockRange = 100;
+export const DefaultQueryLogsBlockRange = 50;
 export const DefaultQueryLogsBlockRangeSingleContract = 5000;
 
 // we save latest parsed transactions into database for fast query
