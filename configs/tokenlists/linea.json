@@ -112,5 +112,77 @@
     "address": "0x2314342912d9968fd3b40a542bdb1fc6b918f35e",
     "symbol": "$MENDI",
     "decimals": 18
-  }
+  },
+  "KNC": { "chain": "linea", "address": "0x3b2f62d42db19b30588648bf1c184865d4c3b1d6", "symbol": "KNC", "decimals": 18 },
+  "LAB": { "chain": "linea", "address": "0xb97f21d1f2508ff5c73e7b5af02847640b1ff75d", "symbol": "LAB", "decimals": 18 },
+  "BUSD": {
+    "chain": "linea",
+    "address": "0x7d43aabc515c356145049227cee54b608342c0ad",
+    "symbol": "BUSD",
+    "decimals": 18
+  },
+  "STONE": {
+    "chain": "linea",
+    "address": "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116",
+    "symbol": "STONE",
+    "decimals": 18
+  },
+  "axlKNC": {
+    "chain": "linea",
+    "address": "0xb448ec505c924944ca8b2c55ef05c299ee0781df",
+    "symbol": "axlKNC",
+    "decimals": 18
+  },
+  "AXL": { "chain": "linea", "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f", "symbol": "AXL", "decimals": 6 },
+  "HAPI": {
+    "chain": "linea",
+    "address": "0x0e5f2ee8c29e7ebc14e45da7ff90566d8c407db7",
+    "symbol": "HAPI",
+    "decimals": 18
+  },
+  "axlTIA": {
+    "chain": "linea",
+    "address": "0x41b94c5867f7f6217c9a30520cb3e793b1ee1b97",
+    "symbol": "axlTIA",
+    "decimals": 6
+  },
+  "MATIC": {
+    "chain": "linea",
+    "address": "0x265b25e22bcd7f10a5bd6e6410f10537cc7567e8",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "LYU": { "chain": "linea", "address": "0xb20116ee399f15647bb1eef9a74f6ef3b58bc951", "symbol": "LYU", "decimals": 18 },
+  "WEFI": {
+    "chain": "linea",
+    "address": "0x60892e742d91d16be2cb0ffe847e85445989e30b",
+    "symbol": "WEFI",
+    "decimals": 18
+  },
+  "AVAX": {
+    "chain": "linea",
+    "address": "0x5471ea8f739dd37e9b81be9c5c77754d8aa953e4",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "GRAI": {
+    "chain": "linea",
+    "address": "0x894134a25a5fac1c2c26f1d8fbf05111a3cb9487",
+    "symbol": "GRAI",
+    "decimals": 18
+  },
+  "axlWMAI": {
+    "chain": "linea",
+    "address": "0x88dfaaabaf06f3a41d2606ea98bc8eda109abebb",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "MAI": { "chain": "linea", "address": "0xf3b001d64c656e30a62fbaaca003b1336b4ce12a", "symbol": "MAI", "decimals": 18 },
+  "5pct": {
+    "chain": "linea",
+    "address": "0x10f14fe82bf985d63d49152d2edd1a1a4d078d22",
+    "symbol": "5pct",
+    "decimals": 18
+  },
+  "GDX": { "chain": "linea", "address": "0x91c415fecd651f11d24ac4b72ed08dbeb9868d43", "symbol": "GDX", "decimals": 18 }
 }

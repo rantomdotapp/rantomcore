@@ -56,6 +56,9 @@ export const PublicSubGraphEndpoints: { [key: string]: string } = {
   kyberswapElasticBnbchain: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-bsc',
   kyberswapElasticAvalanche: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-avalanche',
   kyberswapElasticFantom: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-fantom',
+  kyberswapElasticLinea: 'https://graph-query.linea.build/subgraphs/name/kybernetwork/kyberswap-elastic-linea',
+  kyberswapElasticPolygonzkevm:
+    'https://polygon-zkevm-graph.kyberengineering.io/subgraphs/name/kybernetwork/kyberswap-elastic-polygon-zkevm',
 
   // camelot
   camelot: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm',

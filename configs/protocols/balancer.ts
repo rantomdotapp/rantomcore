@@ -1,5 +1,6 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
 import { StakingPoolConstant } from '../../types/domains';
+import { ChainPolygonZkEVM } from '../constants/chains';
 
 const BalancerContracts: { [key: string]: ContractConfig } = {
   vault: {
@@ -32,6 +33,11 @@ const BalancerContracts: { [key: string]: ContractConfig } = {
     protocol: 'balancer',
     address: '0xba12222222228d8ba445958a75a0704d566bf2c8',
   },
+  vaultPolygonzkevm: {
+    chain: ChainPolygonZkEVM,
+    protocol: 'balancer',
+    address: '0xba12222222228d8ba445958a75a0704d566bf2c8',
+  },
 };
 
 export const BalancerVeBalStaking: StakingPoolConstant = {
@@ -57,5 +63,6 @@ export const BalancerConfigs: ProtocolConfig = {
     BalancerContracts.vaultBase,
     BalancerContracts.vaultPolygon,
     BalancerContracts.vaultAvalanche,
+    BalancerContracts.vaultPolygonzkevm,
   ],
 };

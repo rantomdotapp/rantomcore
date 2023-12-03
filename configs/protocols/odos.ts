@@ -1,4 +1,5 @@
 import { ProtocolConfig } from '../../types/configs';
+import { ChainPolygonZkEVM, ChainZksyncEra } from '../constants/chains';
 
 export const OdosConfigs: ProtocolConfig = {
   protocol: 'odos',
@@ -32,6 +33,26 @@ export const OdosConfigs: ProtocolConfig = {
       chain: 'bnbchain',
       protocol: 'odos',
       address: '0x89b8aa89fdd0507a99d334cbe3c808fafc7d850e',
+    },
+    {
+      chain: 'avalanche',
+      protocol: 'odos',
+      address: '0x88de50b233052e4fb783d4f6db78cc34fea3e9fc',
+    },
+    {
+      chain: 'fantom',
+      protocol: 'odos',
+      address: '0xd0c22a5435f4e8e5770c1fafb5374015fc12f7cd',
+    },
+    {
+      chain: ChainPolygonZkEVM,
+      protocol: 'odos',
+      address: '0x2b8b3f0949dfb616602109d2aabba11311ec7aec',
+    },
+    {
+      chain: ChainZksyncEra,
+      protocol: 'odos',
+      address: '0x4bba932e9792a2b917d47830c93a9bc79320e4f7',
     },
   ],
 };

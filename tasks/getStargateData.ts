@@ -55,6 +55,8 @@ const StargatePools = [
   'avalanche:0xEAe5c2F6B25933deB62f754f239111413A0A25ef',
 
   'fantom:0xc647ce76ec30033aa319d472ae9f4462068f2ad7',
+
+  'linea:0xAad094F6A75A14417d39f04E690fC216f080A41a', // ETH
 ];
 
 const StargatePoolFilePath = './configs/data/StargateLiquidityPools.json';

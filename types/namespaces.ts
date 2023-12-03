@@ -5,6 +5,7 @@ import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
 import {
   BlockchainIndexingRunOptions,
+  EventlogIndexingRunOptions,
   HandleHookEventLogOptions,
   ParseEventLogOptions,
   ParseTransactionOptions,
@@ -58,6 +59,12 @@ export interface ITransferAdapter extends IModule {
 // after that, it passes them into every single adapter hooks to handle logs
 export interface IBlockchainIndexing extends IModule {
   run: (options: BlockchainIndexingRunOptions) => Promise<void>;
+}
+
+// this indexing service query all logs from blockchain in a range
+// after that, it passes them into every single adapter hooks to handle logs
+export interface IEventlogIndexing extends IModule {
+  run: (options: EventlogIndexingRunOptions) => Promise<void>;
 }
 
 // index historical data of a given protocol

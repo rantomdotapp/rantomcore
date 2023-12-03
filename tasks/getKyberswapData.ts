@@ -1,6 +1,7 @@
 // get static data of kyberswap elastic
 import fs from 'fs';
 
+import { ChainPolygonZkEVM } from '../configs/constants/chains';
 import { PublicSubGraphEndpoints } from '../configs/constants/subgraphEndpoints';
 import UniswapLibs from '../modules/adapters/uniswap/libs';
 import { LiquidityPoolConstant } from '../types/domains';
@@ -46,6 +47,16 @@ const Factories: Array<any> = [
     chain: 'fantom',
     address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
     subgraph: PublicSubGraphEndpoints.kyberswapElasticFantom,
+  },
+  {
+    chain: 'linea',
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+    subgraph: PublicSubGraphEndpoints.kyberswapElasticLinea,
+  },
+  {
+    chain: ChainPolygonZkEVM,
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+    subgraph: PublicSubGraphEndpoints.kyberswapElasticPolygonzkevm,
   },
 ];
 

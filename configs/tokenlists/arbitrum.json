@@ -160,7 +160,7 @@
   },
   "AICODE": {
     "chain": "arbitrum",
-    "address": "0x405e2910a0c8cafff741d558a57e6385c413f66f",
+    "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
     "symbol": "AICODE",
     "decimals": 18
   },
@@ -2328,7 +2328,7 @@
   },
   "RDNT": {
     "chain": "arbitrum",
-    "address": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
+    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
     "symbol": "RDNT",
     "decimals": 18
   },

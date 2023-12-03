@@ -38,7 +38,7 @@ import { LidoConfigs } from './lido';
 import { LiquityConfigs } from './liquity';
 import { MakerConfigs } from './maker';
 import { MaverickConfigs } from './maverick';
-import { MetamaskConfigs } from './metmask';
+import { MetamaskConfigs } from './metamask';
 import { MorphoConfigs } from './morpho';
 import { MuxConfigs } from './mux';
 import { NativeConfigs } from './native';

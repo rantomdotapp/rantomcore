@@ -4808,9 +4808,9 @@
   },
   "BTRFLY": {
     "chain": "ethereum",
-    "address": "0xc0d4ceb216b3ba9c3701b291766fdcba977cec3a",
+    "address": "0xc55126051b22ebb829d00368f4b12bde432de5da",
     "symbol": "BTRFLY",
-    "decimals": 9
+    "decimals": 18
   },
   "BTRFLYETH-f": {
     "chain": "ethereum",
@@ -31096,7 +31096,7 @@
     "symbol": "WooF",
     "decimals": 9
   },
-  "X": { "chain": "ethereum", "address": "0x7f3141c4d6b047fb930991b450f1ed996a51cb26", "symbol": "X", "decimals": 18 },
+  "X": { "chain": "ethereum", "address": "0xa62894d5196bc44e4c3978400ad07e7b30352372", "symbol": "X", "decimals": 9 },
   "X-WETH SLP": {
     "chain": "ethereum",
     "address": "0xc2ce29af8930fc32ca24ccb76c2866fb2bf692fe",
@@ -35791,6 +35791,12 @@
     "chain": "ethereum",
     "address": "0x2e848426aec6dbf2260535a5bea048ed94d9ff3d",
     "symbol": "wbETH-wstETH",
+    "decimals": 18
+  },
+  "weETH": {
+    "chain": "ethereum",
+    "address": "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee",
+    "symbol": "weETH",
     "decimals": 18
   },
   "wstETH": {

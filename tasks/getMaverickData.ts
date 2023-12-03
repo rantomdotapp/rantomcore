@@ -1,6 +1,7 @@
 // get static data of Maverick protocol: mav.xyz
 import fs from 'fs';
 
+import { ChainZksyncEra } from '../configs/constants/chains';
 import { normalizeAddress } from '../lib/utils';
 import { MaverickAbiMappings } from '../modules/adapters/maverick/abis';
 import BlockchainService from '../services/blockchains/blockchain';
@@ -25,6 +26,12 @@ const Factories: Array<any> = [
     protocol: 'maverick',
     birthblock: 29241050,
     address: '0x76311728ff86054ad4ac52d2e9ca005bc702f589',
+  },
+  {
+    chain: ChainZksyncEra,
+    protocol: 'maverick',
+    birthblock: 3002731,
+    address: '0x2c1a605f843a2e18b7d7772f0ce23c236accf7f5',
   },
 ];
 

@@ -87,7 +87,7 @@
   },
   "FRAX": {
     "chain": "fantom",
-    "address": "0xaf319e5789945197e365e7f7fbfc56b130523b33",
+    "address": "0xdc301622e621166bd8e82f2ca0a26c13ad0be355",
     "symbol": "FRAX",
     "decimals": 18
   },
@@ -852,6 +852,12 @@
     "chain": "fantom",
     "address": "0x6f86e65b255c9111109d2d2325ca2dfc82456efc",
     "symbol": "spLP",
+    "decimals": 18
+  },
+  "TUSD": {
+    "chain": "fantom",
+    "address": "0x9879abdea01a879644185341f7af7d8343556b7a",
+    "symbol": "TUSD",
     "decimals": 18
   }
 }

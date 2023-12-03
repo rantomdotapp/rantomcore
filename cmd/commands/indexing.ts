@@ -1,13 +1,13 @@
 import EnvConfig from '../../configs/envConfig';
 import { sleep } from '../../lib/utils';
-import BlockchainIndexing from '../../modules/indexing/blockchain';
+import EventlogIndexing from '../../modules/indexing/eventlog';
 import ProtocolIndexing from '../../modules/indexing/protocol';
-import { ContextServices, IBlockchainIndexing, IProtocolIndexing } from '../../types/namespaces';
+import { ContextServices, IProtocolIndexing } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
 export class IndexCommand extends BasicCommand {
   public readonly name: string = 'index';
-  public readonly describe: string = 'Run blockchains or protocols indexing services';
+  public readonly describe: string = 'Run eventlog, blockchain or protocol indexing services';
 
   constructor() {
     super();
@@ -18,8 +18,8 @@ export class IndexCommand extends BasicCommand {
     await super.preHook(services);
 
     while (true) {
-      if (argv.type === 'blockchain') {
-        const indexing: IBlockchainIndexing = new BlockchainIndexing(services);
+      if (argv.type === 'eventlog') {
+        const indexing = new EventlogIndexing(services);
         await indexing.run({
           chain: argv.chain,
           fromBlock: argv.fromBlock,
@@ -45,7 +45,7 @@ export class IndexCommand extends BasicCommand {
     return yargs.option({
       type: {
         type: 'string',
-        default: 'blockchain',
+        default: 'eventlog',
         describe: 'Given indexing service type: blockchain, or contract.',
       },
       chain: {

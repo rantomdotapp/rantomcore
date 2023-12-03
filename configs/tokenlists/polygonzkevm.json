@@ -142,5 +142,17 @@
     "address": "0x3d09d99838208be578057822508fa61ce97c6f17",
     "symbol": "COP",
     "decimals": 18
+  },
+  "KNC": {
+    "chain": "polygonzkevm",
+    "address": "0x6a80a465409ce8d36c513129c0feea61bed579ba",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "RAI": {
+    "chain": "polygonzkevm",
+    "address": "0xdcb8125a0fa9ad694ced4ba482a9fbef14c6c26f",
+    "symbol": "RAI",
+    "decimals": 18
   }
 }

@@ -1204,5 +1204,11 @@
     "address": "0xcbb424fd93cdec0ef330d8a8c985e8b147f62339",
     "symbol": "SLP",
     "decimals": 18
+  },
+  "ALPHA.e": {
+    "chain": "avalanche",
+    "address": "0x2147efff675e4a4ee1c2f918d181cdbd7a8e208f",
+    "symbol": "ALPHA.e",
+    "decimals": 18
   }
 }

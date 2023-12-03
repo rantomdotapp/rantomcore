@@ -35,5 +35,15 @@ export const OneinchConfigs: ProtocolConfig = {
       protocol,
       address: '0x1111111254eeb25477b68fb85ed929f73a960582', // router v5
     },
+    {
+      chain: 'avalanche',
+      protocol,
+      address: '0x1111111254eeb25477b68fb85ed929f73a960582', // router v5
+    },
+    {
+      chain: 'fantom',
+      protocol,
+      address: '0x1111111254eeb25477b68fb85ed929f73a960582', // router v5
+    },
   ],
 };

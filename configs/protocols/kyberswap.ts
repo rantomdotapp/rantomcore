@@ -1,4 +1,5 @@
 import { ContractConfig, ProtocolConfig } from '../../types/configs';
+import { ChainLinea, ChainPolygonZkEVM, ChainZksyncEra } from '../constants/chains';
 
 const KyberswapElasticContracts: { [key: string]: ContractConfig } = {
   factory: {
@@ -38,6 +39,16 @@ const KyberswapElasticContracts: { [key: string]: ContractConfig } = {
   },
   factoryFantom: {
     chain: 'fantom',
+    protocol: 'kyberswap-elastic',
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+  },
+  factoryLinea: {
+    chain: ChainLinea,
+    protocol: 'kyberswap-elastic',
+    address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
+  },
+  factoryPolygonzkevm: {
+    chain: ChainPolygonZkEVM,
     protocol: 'kyberswap-elastic',
     address: '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a',
   },
@@ -81,6 +92,11 @@ export const KyberswapAggregatorConfigs: ProtocolConfig = {
       address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
     },
     {
+      chain: 'polygon',
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
       chain: 'bnbchain',
       protocol: 'kyberswap-aggregator',
       address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
@@ -94,6 +110,21 @@ export const KyberswapAggregatorConfigs: ProtocolConfig = {
       chain: 'fantom',
       protocol: 'kyberswap-aggregator',
       address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: ChainLinea,
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: ChainPolygonZkEVM,
+      protocol: 'kyberswap-aggregator',
+      address: '0x6131b5fae19ea4f9d964eac0408e4408b66337b5',
+    },
+    {
+      chain: ChainZksyncEra,
+      protocol: 'kyberswap-aggregator',
+      address: '0x3f95ef3f2eaca871858dbe20a93c01daf6c2e923',
     },
   ],
 };

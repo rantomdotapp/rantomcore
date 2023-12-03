@@ -868,7 +868,7 @@
   },
   "BTC": {
     "chain": "bnbchain",
-    "address": "0x2eb7203a70868614baf1c9d5e7455d050f7fffc6",
+    "address": "0xfc2a0c088c519553595d2b8510e5e3a976f773c3",
     "symbol": "BTC",
     "decimals": 18
   },
@@ -1823,6 +1823,12 @@
     "symbol": "ERC20",
     "decimals": 18,
     "address": "0x58730ae0faa10d73b0cddb5e7b87c3594f7a20cb"
+  },
+  "ERN": {
+    "chain": "bnbchain",
+    "address": "0xce1e3cc1950d2aaeb47de04de2dec2dc86380e0a",
+    "symbol": "ERN",
+    "decimals": 18
   },
   "ESWAP": {
     "chain": "bnbchain",
@@ -4881,6 +4887,12 @@
     "symbol": "USDTc",
     "decimals": 6
   },
+  "USDV": {
+    "chain": "bnbchain",
+    "address": "0x323665443cef804a3b5206103304bd4872ea4253",
+    "symbol": "USDV",
+    "decimals": 6
+  },
   "USH": {
     "chain": "bnbchain",
     "address": "0x91d6d6af7635b7b23a8ced9508117965180e2362",
@@ -5463,7 +5475,7 @@
   },
   "axlUSDC": {
     "chain": "bnbchain",
-    "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3",
+    "address": "0x686a2ca329bb92ba3e36ec94fd5c208a2938ec07",
     "symbol": "axlUSDC",
     "decimals": 6
   },

@@ -33,5 +33,20 @@ export const ZeroxConfigs: ProtocolConfig = {
       protocol: 'zerox',
       address: '0xdef1c0ded9bec7f1a1670819833240f027b25eff',
     },
+    {
+      chain: 'avalanche',
+      protocol: 'zerox',
+      address: '0xdef1c0ded9bec7f1a1670819833240f027b25eff',
+    },
+    {
+      chain: 'fantom',
+      protocol: 'zerox',
+      address: '0xdef1c0ded9bec7f1a1670819833240f027b25eff',
+    },
+    {
+      chain: 'celo',
+      protocol: 'zerox',
+      address: '0xdef1c0ded9bec7f1a1670819833240f027b25eff',
+    },
   ],
 };

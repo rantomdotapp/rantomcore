@@ -5,6 +5,13 @@ export interface BlockchainIndexingRunOptions {
   fromBlock: number;
 }
 
+export interface EventlogIndexingRunOptions {
+  chain: string;
+
+  // force to sync from the contract birthBlock
+  fromBlock: number;
+}
+
 export interface ProtocolIndexingRunOptions {
   protocol: string;
 

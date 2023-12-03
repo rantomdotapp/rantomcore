@@ -3,8 +3,8 @@ import express from 'express';
 import path from 'path';
 
 import logger from '../../lib/logger';
+import getRouter from '../../modules/api/api';
 import { ContextServices } from '../../types/namespaces';
-import getRouter from '../api/api';
 import { BasicCommand } from '../basic';
 
 export class ServeCommand extends BasicCommand {
