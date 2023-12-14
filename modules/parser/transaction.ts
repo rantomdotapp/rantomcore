@@ -1,7 +1,5 @@
-import { DefaultParserCachingTime } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
-import { getTimestamp } from '../../lib/utils';
-import { TransactionAction, TransactionInsight } from '../../types/domains';
+import { TransactionAction } from '../../types/domains';
 import { ContextServices, IAdapter, ITransactionParser, ITransferAdapter } from '../../types/namespaces';
 import { ParseTransactionOptions } from '../../types/options';
 import { getAdapters } from '../adapters';
@@ -22,131 +20,137 @@ export default class TransactionParser implements ITransactionParser {
     this.transferAdapter = new TransferAdapter(services);
   }
 
-  public async parseTransaction(options: ParseTransactionOptions): Promise<Array<TransactionInsight>> {
-    const transactions: Array<TransactionInsight> = [];
+  public async fetchTransaction(options: ParseTransactionOptions): Promise<Array<any>> {
+    const transactions: Array<any> = [];
 
-    if (EnvConfig.policies.enableParserCaching) {
-      const document = await this.services.database.find({
-        collection: EnvConfig.mongodb.collections.caching,
-        query: {
-          name: options.hash,
-        },
-      });
-
-      if (document) {
-        const timestamp = getTimestamp();
-        const elapsed = timestamp - document.timestamp;
-        if (elapsed <= DefaultParserCachingTime) {
-          return document.transactions as Array<TransactionInsight>;
-        }
+    const documents = await this.services.database.query({
+      collection: EnvConfig.mongodb.collections.transactions,
+      query: {
+        hash: options.hash,
+      },
+    });
+    if (documents.length > 0) {
+      for (const document of documents) {
+        delete document._id;
+        transactions.push(document);
       }
+
+      return transactions;
     }
 
-    // caching is not enabled, not found or expired
     for (const [chain] of Object.entries(EnvConfig.blockchains)) {
       if (!options.chain || options.chain === chain) {
-        const transaction = await this.services.blockchain.getTransaction({
+        let transaction = await this.services.blockchain.getTransaction({
           chain: chain,
           hash: options.hash,
         });
         if (transaction) {
+          transaction.chain = chain;
+
           const receipt = await this.services.blockchain.getTransactionReceipt({
             chain: chain,
             hash: options.hash,
           });
-          if (receipt) {
-            const transactionInsight: TransactionInsight = {
-              chain: chain,
-              hash: options.hash,
-              timestamp: 0,
-              rawdata: transaction,
-              receipt: receipt,
-              actions: [],
-              inputDecoded: null,
-              transfers: [],
-              addressLabels: {},
-            };
 
+          if (receipt) {
+            transaction.receipt = receipt;
             const block = await this.services.blockchain.getBlock(chain, Number(transaction.blockNumber));
             if (block) {
-              transactionInsight.timestamp = Number(block.timestamp);
+              transaction.block = block;
             }
-
-            // parse transaction input
-            for (const [, adapter] of Object.entries(this.adapters)) {
-              const inputActions = await adapter.parseInputData({
-                chain: chain,
-                log: receipt.logs[0], // don't care
-                allLogs: receipt.logs,
-                transaction: transaction,
-              });
-              for (const action of inputActions) {
-                transactionInsight.actions.push(action);
-              }
-              if (inputActions.length > 0) {
-                // stop going to the next adapter
-                break;
-              }
-            }
-
-            // parse transaction receipt logs
-            for (const log of receipt.logs) {
-              if (this.transferAdapter.supportedSignature(log.topics[0])) {
-                const tokenTransfer = await this.transferAdapter.parseEventLog({
-                  chain: chain,
-                  log: log,
-                  allLogs: receipt.logs,
-                  transaction: transaction,
-                });
-                if (tokenTransfer) {
-                  transactionInsight.transfers.push(tokenTransfer);
-                }
-              }
-
-              for (const [, adapter] of Object.entries(this.adapters)) {
-                if (adapter.supportedSignature(log.topics[0])) {
-                  const actions: Array<TransactionAction> = await adapter.parseEventLog({
-                    chain: chain,
-                    log: log,
-                    allLogs: receipt.logs,
-                    transaction: transaction,
-                    onchain: true,
-                  });
-
-                  for (const action of actions) {
-                    transactionInsight.actions.push(action);
-                  }
-
-                  if (actions.length > 0) {
-                    // stop going to the next adapter
-                    break;
-                  }
-                }
-              }
-            }
-
-            transactions.push(transactionInsight);
           }
+          transactions.push(transaction);
         }
       }
     }
 
-    if (EnvConfig.policies.enableParserCaching) {
-      // save to database
+    for (const transaction of transactions) {
       await this.services.database.update({
-        collection: EnvConfig.mongodb.collections.caching,
+        collection: EnvConfig.mongodb.collections.transactions,
         keys: {
-          name: options.hash,
+          chain: transaction.chain,
+          hash: transaction.hash,
         },
         updates: {
-          name: options.hash,
-          timestamp: getTimestamp(),
-          transactions: transactions,
+          ...transaction,
         },
         upsert: true,
       });
     }
 
     return transactions;
+  }
+
+  public async parseTransaction(options: ParseTransactionOptions): Promise<Array<any>> {
+    const parsedTransactions: Array<any> = [];
+
+    const transactions = await this.fetchTransaction(options);
+    for (const transaction of transactions) {
+      const parsedTransaction = {
+        ...transaction,
+        actions: [],
+        transfers: [],
+        inputDecoded: null,
+        addressLabels: {},
+      };
+
+      // parse transaction input
+      for (const [, adapter] of Object.entries(this.adapters)) {
+        const inputActions = await adapter.parseInputData({
+          chain: transaction.chain,
+          log: transaction.receipt.logs[0], // don't care
+          allLogs: transaction.receipt.logs,
+          transaction: transaction,
+        });
+
+        for (const inputAction of inputActions) {
+          parsedTransaction.actions.push(inputAction);
+        }
+
+        if (inputActions.length > 0) {
+          // stop going to the next adapter
+          break;
+        }
+      }
+
+      // parse transaction receipt logs
+      for (const log of transaction.receipt.logs) {
+        if (this.transferAdapter.supportedSignature(log.topics[0])) {
+          const tokenTransfer = await this.transferAdapter.parseEventLog({
+            chain: transaction.chain,
+            log: log,
+            allLogs: transaction.receipt.logs,
+            transaction: transaction,
+          });
+
+          parsedTransaction.transfers.push(tokenTransfer);
+        }
+
+        for (const [, adapter] of Object.entries(this.adapters)) {
+          if (adapter.supportedSignature(log.topics[0])) {
+            const actions: Array<TransactionAction> = await adapter.parseEventLog({
+              chain: transaction.chain,
+              log: log,
+              allLogs: transaction.receipt.logs,
+              transaction: transaction,
+              onchain: true,
+            });
+
+            for (const action of actions) {
+              parsedTransaction.actions.push(action);
+            }
+
+            if (actions.length > 0) {
+              // stop going to the next adapter
+              break;
+            }
+          }
+        }
+      }
+
+      parsedTransactions.push(parsedTransaction);
+    }
+
+    return parsedTransactions;
   }
 }

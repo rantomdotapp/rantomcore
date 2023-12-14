@@ -73,6 +73,7 @@ export default class DatabaseService implements IDatabaseService {
     const tokensCollection = await this.getCollection(envConfig.mongodb.collections.tokens);
     const nonFungibleTokensCollection = await this.getCollection(envConfig.mongodb.collections.nonFungibleTokens);
     const actionsCollection = await this.getCollection(envConfig.mongodb.collections.actions);
+    const transactionsCollection = await this.getCollection(envConfig.mongodb.collections.transactions);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
     cachingCollection.createIndex({ name: 1 }, { background: true });
@@ -92,6 +93,9 @@ export default class DatabaseService implements IDatabaseService {
     actionsCollection.createIndex({ protocol: 1, timestamp: 1 }, { background: true });
     actionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
     actionsCollection.createIndex({ chain: 1, protocol: 1, action: 1, timestamp: 1 }, { background: true });
+
+    // for write
+    transactionsCollection.createIndex({ chain: 1, hash: 1, blockNumber: 1 }, { background: true });
   }
 
   public async bulkWrite(options: DatabaseBulkWriteOptions): Promise<void> {

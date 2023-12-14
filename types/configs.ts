@@ -66,6 +66,9 @@ export interface EnvConfig {
 
       // save transaction actions
       actions: string;
+
+      // save raw transactions
+      transactions: string;
     };
   };
 

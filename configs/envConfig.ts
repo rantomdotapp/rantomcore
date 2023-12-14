@@ -20,6 +20,7 @@ const envConfig: EnvConfig = {
       tokens: `${MongodbPrefix}.core.tokens`,
       nonFungibleTokens: `${MongodbPrefix}.core.nonFungibleTokens`,
       actions: `${MongodbPrefix}.core.actions`,
+      transactions: `${MongodbPrefix}.core.transactions`,
     },
   },
   sentry: {

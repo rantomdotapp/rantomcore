@@ -137,50 +137,9 @@ export interface TransactionAction {
   addition?: any;
 }
 
-export interface TransactionInputDecoded {
-  // the protocol that own the contract
-  protocol: string;
-
-  // the called method in contract
-  method: string;
-
-  // the abi was used to decode params
-  abi: any;
-
-  // decoded call params
-  params: any;
-}
-
 export interface TokenTransfer {
   token: Token | NonFungibleToken;
   from: string;
   to: string;
   amount: string;
-}
-
-export interface TransactionInsight {
-  chain: string;
-  hash: string;
-
-  // evm chains do not have transaction timestamp
-  // this field will be injected from the block timestamp
-  timestamp: number;
-
-  // the raw transaction data returned from nodes
-  rawdata: any;
-
-  // the transaction receipt
-  receipt: any;
-
-  // all parsed actions
-  actions: Array<TransactionAction>;
-
-  // decoded transaction input
-  inputDecoded: TransactionInputDecoded | null;
-
-  // token transfer
-  transfers: Array<TokenTransfer>;
-
-  // found address labels
-  addressLabels: { [key: string]: string };
 }

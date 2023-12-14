@@ -2,7 +2,7 @@ import { IBlockchainService } from '../services/blockchains/domains';
 import { IDatabaseService } from '../services/database/domains';
 import { IDatastoreService } from '../services/datastore/domains';
 import { ProtocolConfig } from './configs';
-import { TokenTransfer, TransactionAction, TransactionInsight } from './domains';
+import { TokenTransfer, TransactionAction } from './domains';
 import {
   BlockchainIndexingRunOptions,
   EventlogIndexingRunOptions,
@@ -75,5 +75,9 @@ export interface IProtocolIndexing extends IModule {
 
 // the entry point for parser service
 export interface ITransactionParser extends IModule {
-  parseTransaction: (options: ParseTransactionOptions) => Promise<Array<TransactionInsight>>;
+  // fetch raw transaction data
+  fetchTransaction: (options: ParseTransactionOptions) => Promise<Array<any>>;
+
+  // fetch and parser transaction logs
+  parseTransaction: (options: ParseTransactionOptions) => Promise<Array<any>>;
 }
